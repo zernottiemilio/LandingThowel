@@ -28,39 +28,53 @@ window.addEventListener('scroll', () => {
 // CAROUSEL - PRODUCTOS SIMILARES
 // ========================================
 
-const carouselTrack = document.querySelector('.carousel-track');
-const carouselItems = document.querySelectorAll('.carousel-item');
+let currentSlide = 0;
+const track = document.getElementById('catalogTrack');
+const prevBtn = document.getElementById('prevBtn');
+const nextBtn = document.getElementById('nextBtn');
 const indicators = document.querySelectorAll('.indicator');
+const totalSlides = document.querySelectorAll('.catalog-slide').length;
 
-let currentIndex = 1; // Comienza en el segundo item (el destacado)
-const totalItems = carouselItems.length;
-
-// Función para actualizar el carousel
-function updateCarousel(index) {
-    // Remover clase active de todos los items e indicators
-    carouselItems.forEach(item => item.classList.remove('active'));
-    indicators.forEach(indicator => indicator.classList.remove('active'));
+// Función para ir a un slide específico
+function goToSlide(slideIndex) {
+    currentSlide = slideIndex;
+    // Cada slide ocupa el 50% del ancho total del track
+    track.style.transform = `translateX(-${slideIndex * 50}%)`;
     
-    // Agregar clase active al item e indicator actual
-    carouselItems[index].classList.add('active');
-    indicators[index].classList.add('active');
-    
-    currentIndex = index;
+    // Actualizar indicadores
+    indicators.forEach((indicator, index) => {
+        indicator.classList.toggle('active', index === slideIndex);
+    });
 }
 
-// Event listeners para los indicadores
+// Botón anterior
+if (prevBtn) {
+    prevBtn.addEventListener('click', () => {
+        currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+        goToSlide(currentSlide);
+    });
+}
+
+// Botón siguiente
+if (nextBtn) {
+    nextBtn.addEventListener('click', () => {
+        currentSlide = (currentSlide + 1) % totalSlides;
+        goToSlide(currentSlide);
+    });
+}
+
+// Indicadores clickeables
 indicators.forEach((indicator, index) => {
     indicator.addEventListener('click', () => {
-        updateCarousel(index);
+        goToSlide(index);
     });
 });
 
-// Auto-rotate carousel (opcional)
-// Descomenta las siguientes líneas si quieres que el carousel rote automáticamente
+// Auto-rotate carousel (opcional - descomenta para activar)
 /*
 setInterval(() => {
-    let nextIndex = (currentIndex + 1) % totalItems;
-    updateCarousel(nextIndex);
+    currentSlide = (currentSlide + 1) % totalSlides;
+    goToSlide(currentSlide);
 }, 5000); // Cambia cada 5 segundos
 */
 
