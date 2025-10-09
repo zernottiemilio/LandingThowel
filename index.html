@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THOWEL - Soluciones de Herrajes</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/styles.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <section class="header-section">
+        <!-- Imagen portada -->
+        <img src="assets/portada.png" alt="Portada" class="portada-img">
+
+        <!-- Navbar flotante -->
+        <nav class="navbar">
+            <ul>
+                <li><a href="#inicio">INICIO</a></li>
+                <li>
+                    <a href="#productos" class="productos-link">PRODUCTOS</a>
+                    <div class="dropdown">
+                        <a href="#cajones">CAJONES</a>
+                        <div class="dropdown-item">
+                            <a href="#bisagras">BISAGRAS</a>
+                            <div class="subdropdown">
+                                <a href="#bisagra-cup-3d">BISAGRA CUP 3D</a>
+                                <a href="/HTML/bisagras.html">BISAGRA SOFT CLOSING</a>
+                                <a href="/HTML/bisagraCazoletaEstandar.html">BISAGRA CAZOLETA</a>
+                                <a href="#bisagra-push-open">BISAGRA PUSH OPEN</a>
+                                <a href="#bisagra-cazoleta-155-175">BISAGRA CAZOLETA 155° Y 175°</a>
+                                <a href="#reten-expulsor">RETÉN EXPULSOR</a>
+                                <a href="#piston-a-gas">PISTÓN A GAS</a>
+                            </div>
+                        </div>
+                        <a href="#guias">GUÍAS Y CORREDERAS</a>
+                        <a href="#tiradores">TIRADORES, MANIJAS Y SISTEMAS DE APOYO</a>
+                    </div>
+                </li>
+                <li><a href="/index.html" class="logo"><img src="/assets/logoHeader.png" alt="THOWEL"></a></li>
+                <li><a href="/HTML/sobreNosotros.html">SOBRE NOSOTROS</a></li>
+                <li><a href="/HTML/contacto.html">CONTACTOS</a></li>
+            </ul>
+        </nav>
+
+        <!-- Texto encima de la portada -->
+        <div class="main-content">
+            <div class="main-text">
+                <h1>Explorá nuestra línea de productos</h1>
+                <p>y encontrá la solución perfecta para cada necesidad</p>
+            </div>
+        </div>
+
+        <!-- Flecha -->
+        <div class="scroll-indicator">
+            <img src="/assets/FLECHAINICIO.png" alt="Flecha" class="flecha-img">
+        </div>
+    </section>
+    
+    <!-- Unified Product Showcase Section -->
+    <section class="unified-product-section" id="products-showcase">
+        <!-- Background Images Container -->
+        <div class="background-images">
+            <!-- SMOOTH Section -->
+            <div class="product-section active" data-product="smooth">
+                <div class="split-image left-image">
+                    <img src="assets/FondoSmooth.png" alt="SMOOTH Left">
+                </div>
+                <div class="split-image right-image">
+                    <img src="assets/CAJONESESPECIAS.png" alt="SMOOTH Right">
+                </div>
+            </div>
+            
+            <!-- TOUCH Section -->
+            <div class="product-section" data-product="touch">
+                <div class="split-image left-image">
+                    <img src="assets/FondoTouch.png" alt="TOUCH Left">
+                </div>
+                <div class="split-image right-image">
+                    <img src="assets/touch.png" alt="TOUCH Right">
+                </div>
+            </div>
+            
+            <!-- ESTÁNDAR Section -->
+            <div class="product-section" data-product="estandar">
+                <div class="split-image left-image">
+                    <img src="assets/FondoEstandar.png" alt="ESTÁNDAR Left">
+                </div>
+                <div class="split-image right-image">
+                    <img src="assets/PISTONAGAS.png" alt="ESTÁNDAR Right">
+                </div>
+            </div>
+        </div>
+        
+        <!-- Content Overlay -->
+        <div class="product-content-overlay">
+            <!-- SMOOTH Content -->
+            <div class="product-info active" data-product="smooth">
+                <div class="product-logo">
+                    <img src="assets/S.png" alt="SMOOTH">
+                </div>
+                
+                <p class="product-description">
+                    Nuestra tecnología SMOOTH permite cierres amortiguados y silenciosos, lo cual aporta gran confort a los amoblamientos.
+                </p>
+            </div>
+            
+            <!-- TOUCH Content -->
+            <div class="product-info" data-product="touch">
+                <div class="product-logo">
+                    <img src="assets/T.png" alt="TOUCH">
+                </div>
+                
+                <p class="product-description">
+                    La innovadora tecnologia TOUCH, permite aperturas completamente mecanicas, sin esfuerzo y frentes de amoblamientos sin manijas o tiradores.
+                    
+                </p>
+            </div>
+            
+            <!-- ESTÁNDAR Content -->
+            <div class="product-info" data-product="estandar">
+                <div class="product-logo">
+                    <img src="assets/E.png" alt="ESTÁNDAR">
+                </div>
+                
+                <p class="product-description">
+                    La tecnología ESTÁNDAR garantiza gran durabilidad y excelentes prestaciones para los productos que desarrollamos, es por eso que la misma es aplicada a muchos de nuestros diseños.
+                </p>
+            </div>
+        </div>
+        
+        <!-- Progress Indicator -->
+        <div class="product-progress">
+            <div class="progress-bar"></div>
+            <div class="progress-dots">
+                <span class="dot active" data-product="smooth"></span>
+                <span class="dot" data-product="touch"></span>
+                <span class="dot" data-product="estandar"></span>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Nueva Sección de Catálogo -->
+    <section class="catalog-section" id="catalogo">
+        <div class="catalog-container">
+            <!-- Header -->
+            <div class="catalog-header">
+                <div class="catalog-title-section">
+                    <h2 class="catalog-title">CATÁLOGO</h2>
+                    <div class="catalog-arrow">
+                        <img src="assets/FLECHACATALOGO.png" alt="Flecha Catálogo">
+                    </div>
+                </div>
+                
+                <div class="catalog-description-section">
+                    <p class="catalog-description">
+                        Descubre nuestros herrajes creados para ofrecer funcionalidad, estilo y 
+                        durabilidad en cada proyecto. Con tecnología de vanguardia y diseños innovadores, 
+                        cada producto está diseñado para superar las expectativas más exigentes.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Carousel Container -->
+            <div class="catalog-carousel">
+                <!-- Navigation Arrows -->
+                <button class="carousel-nav prev-btn" id="prevBtn">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="carousel-nav next-btn" id="nextBtn">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+
+                <!-- Carousel Track -->
+                <div class="catalog-track" id="catalogTrack">
+                    <!-- Slide 1 -->
+                    <div class="catalog-slide">
+                        <div class="catalog-item">
+                            <img src="assets/BISAGRAANGULOSESPECIALES135.png" alt="Bisagra Ángulos Especiales 135">
+                            <div class="catalog-overlay">
+                                <div class="catalog-overlay-text">BISAGRA ANGULOS ESPECIALES 135</div>
+                            </div>
+                        </div>
+                        <div class="catalog-item">
+                            <img src="assets/BISAGRAANGULOSESPECIALES175.png" alt="Bisagra Ángulos Especiales 175">
+                            <div class="catalog-overlay">
+                                <div class="catalog-overlay-text">BISAGRAS ANGULOS ESPECIALES 175</div>
+                            </div>
+                        </div>
+                        <div class="catalog-item">
+                            <img src="assets/BISAGRACAZOLETAESTANDAR.png" alt="Bisagra Cazoleta Estandar">
+                            <div class="catalog-overlay">
+                                <div class="catalog-overlay-text">BISAGRA CAZOLETA ESTANDAR</div>
+                            </div>
+                        </div>
+                        <div class="catalog-item">
+                            <img src="assets/BISAGRACLIP.png" alt="Bisagra Clip">
+                            <div class="catalog-overlay">
+                                <div class="catalog-overlay-text">BISAGRA CLIP</div>
+                            </div>
+                        </div>
+                        <div class="catalog-item">
+                            <img src="assets/BISAGRAPUSHOPEN.png" alt="Bisagra Push Open">
+                            <div class="catalog-overlay">
+                                <div class="catalog-overlay-text">BISAGRA PUSH OPEN</div>
+                            </div>
+                        </div>
+                        <div class="catalog-item">
+                            <img src="assets/BISAGRASOFTCLOSING.png" alt="Bisagra Soft Closing">
+                            <div class="catalog-overlay">
+                                <div class="catalog-overlay-text">BISAGRA SOFT CLOSING</div>
+                            </div>
+                        </div>
+                        <div class="catalog-item">
+                            <img src="assets/guias-premium.jpg" alt="Guías Premium">
+                            <div class="catalog-overlay">
+                                <div class="catalog-overlay-text">GUÍAS PREMIUM</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 2 - Puedes agregar más productos aquí -->
+                    <div class="catalog-slide">
+                        <div class="catalog-item">
+                            <img src="assets/correderas.jpg" alt="Producto 9">
+                            <div class="catalog-overlay">
+                                <div class="catalog-overlay-text">PRODUCTO 9</div>
+                            </div>
+                        </div>
+                        <div class="catalog-item">
+                            <img src="assets/bisagra.png" alt="Producto 10">
+                            <div class="catalog-overlay">
+                                <div class="catalog-overlay-text">PRODUCTO 10</div>
+                            </div>
+                        </div>
+                        <div class="catalog-item">
+                            <img src="assets/tiradores.jpg" alt="Producto 11">
+                            <div class="catalog-overlay">
+                                <div class="catalog-overlay-text">PRODUCTO 11</div>
+                            </div>
+                        </div>
+                        <div class="catalog-item">
+                            <img src="assets/accesorios.jpg" alt="Producto 12">
+                            <div class="catalog-overlay">
+                                <div class="catalog-overlay-text">PRODUCTO 12</div>
+                            </div>
+                        </div>
+                        <div class="catalog-item">
+                            <img src="assets/push-systems.jpg" alt="Producto 13">
+                            <div class="catalog-overlay">
+                                <div class="catalog-overlay-text">PRODUCTO 13</div>
+                            </div>
+                        </div>
+                        <div class="catalog-item">
+                            <img src="assets/herrajes-especiales.jpg" alt="Producto 14">
+                            <div class="catalog-overlay">
+                                <div class="catalog-overlay-text">PRODUCTO 14</div>
+                            </div>
+                        </div>
+                        <div class="catalog-item">
+                            <img src="assets/elevacion.jpg" alt="Producto 15">
+                            <div class="catalog-overlay">
+                                <div class="catalog-overlay-text">PRODUCTO 15</div>
+                            </div>
+                        </div>
+                        <div class="catalog-item">
+                            <img src="assets/guias-premium.jpg" alt="Producto 16">
+                            <div class="catalog-overlay">
+                                <div class="catalog-overlay-text">PRODUCTO 16</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Indicators -->
+                <div class="carousel-indicators" id="carouselIndicators">
+                    <div class="indicator active" data-slide="0"></div>
+                    <div class="indicator" data-slide="1"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+<!-- Footer rojo con hexágonos -->
+<footer class="footer-red">
+    <div class="footer-container">
+        <!-- Hexágonos decorativos -->
+        <div class="footer-hexagons">
+            <i><div class="hexagon hex-1"></div></i>
+            <div class="hexagon hex-2"></div>
+        </div>
+        
+        <!-- Contenido del footer -->
+        <div class="footer-content">
+            <p>&copy; 2024 THOWEL. Todos los derechos reservados.</p>
+        </div>
+    </div>
+</footer>
+    <script src="JS/script.js"></script>
+</body>
+</html>
