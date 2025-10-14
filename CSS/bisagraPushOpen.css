@@ -243,16 +243,17 @@ body {
 
 .producto-section {
   width: 100%;
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
   align-items: stretch;
   margin: 0;
+  overflow: hidden;
 }
 
 .dual-content {
   display: flex;
   width: 100%;
-  min-height: 100vh;
+  height: 100%;
   margin: 0;
 }
 
@@ -263,7 +264,7 @@ body {
   align-items: center;
   justify-content: center;
   padding: 0;
-  height: auto;
+  height: 100%;
   width: 50%;
 }
 
@@ -292,17 +293,8 @@ body {
 
 
 /* ========================================
-   SECCIÓN 1 - BISAGRA CAZOLETA ESTÁNDAR
+   SECCIÓN 1 - BISAGRA PUSH OPEN
    ======================================== */
-
-.section-1 .right-content {
-  background: white;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  padding: 120px 60px 40px;
-  position: relative;
-}
 
 .section-1 .left-content img {
     object-position: center;
@@ -313,7 +305,8 @@ body {
     background: white;
     flex-direction: column;
     align-items: flex-start;
-    justify-content: center;
+    justify-content: flex-start;
+    padding: 120px 60px 40px;
     position: relative;
 }
 
@@ -363,7 +356,7 @@ body {
 }
 
 /* ========================================
-   SECCIÓN 2 - VIDEO DEL HERRAJE SOLO
+   SECCIÓN 2 - ESPECIFICACIONES
    ======================================== */
 
 .section-2 .left-content {
@@ -732,7 +725,8 @@ body {
     }
     
     .navbar {
-        padding: 5px 30px}
+        padding: 5px 30px;
+    }
     
     .navbar ul {
         gap: 30px;
@@ -750,6 +744,19 @@ body {
     .catalog-overlay-text {
         font-size: 12px;
         padding: 15px;
+    }
+    
+    .section-1 .right-content {
+        padding: 100px 40px 40px 40px;
+    }
+    
+    .badge-thowel {
+        top: 20px;
+        right: 40px;
+    }
+    
+    .badge-thowel img {
+        width: 80px;
     }
 }
 
@@ -781,7 +788,7 @@ body {
         font-size: 28px;
     }
     
-        .catalog-slide {
+    .catalog-slide {
         flex-wrap: wrap;
         gap: 15px;
         justify-content: center;
@@ -814,6 +821,19 @@ body {
         width: 18px;
         height: 14px;
         font-size: 10px;
+    }
+    
+    .section-1 .right-content {
+        padding: 80px 30px 30px 30px;
+    }
+    
+    .badge-thowel {
+        top: 15px;
+        right: 30px;
+    }
+    
+    .badge-thowel img {
+        width: 70px;
     }
 }
 
@@ -873,5 +893,21 @@ body {
         height: 12px;
         font-size: 8px;
     }
+    
+    .section-1 .right-content {
+        padding: 70px 20px 20px 20px;
+    }
+    
+    .badge-thowel {
+        top: 10px;
+        right: 20px;
+    }
+    
+    .badge-thowel img {
+        width: 60px;
+    }
+    
+    .diagrama-tecnico {
+        margin-left: 0;
+    }
 }
-

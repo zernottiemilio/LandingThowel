@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contactos - THOWEL</title>
+    <link rel="stylesheet" href="/CSS/contacto.css">
+</head>
+<body>
+    <!-- Navbar flotante -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="/index.html">INICIO</a></li>
+            <li>
+                <a href="#productos" class="productos-link">PRODUCTOS</a>
+                <div class="dropdown">
+                    <a href="#cajones">CAJONES</a>
+                    <div class="dropdown-item">
+                        <a href="#bisagras">BISAGRAS</a>
+                        <div class="subdropdown">
+                            <a href="#bisagra-cup-3d">BISAGRA CUP 3D</a>
+                            <a href="/HTML/bisagras.html">BISAGRA SOFT CLOSING</a>
+                            <a href="/HTML/bisagraCazoletaEstandar.html">BISAGRA CAZOLETA</a>
+                            <a href="#bisagra-push-open">BISAGRA PUSH OPEN</a>
+                            <a href="#bisagra-cazoleta-155-175">BISAGRA CAZOLETA 155° Y 175°</a>
+                            <a href="#reten-expulsor">RETÉN EXPULSOR</a>
+                            <a href="#piston-a-gas">PISTÓN A GAS</a>
+                        </div>
+                    </div>
+                    <a href="#guias">GUÍAS Y CORREDERAS</a>
+                    <a href="#tiradores">TIRADORES, MANIJAS Y SISTEMAS DE APOYO</a>
+                </div>
+            </li>
+            <li><a href="/index.html" class="logo"><img src="/assets/logoHeader.png" alt="THOWEL"></a></li>
+            <li><a href="/HTML/sobreNosotros.html">SOBRE NOSOTROS</a></li>
+            <li><a href="/HTML/contacto.html">CONTACTOS</a></li>
+        </ul>
+    </nav>
+
+    <!-- Header Section con imagen de fondo -->
+    <section class="header-section">
+        <img src="/assets/portada.png" alt="Portada" class="portada-img">
+        <div class="header-overlay">
+            <h1 class="header-title">
+                Ponete en <span class="highlight">contacto</span> con nosotros y recibí la<br>
+                <span class="highlight">atención personalizada</span> que tu proyecto necesita.
+            </h1>
+        </div>
+        <div class="scroll-indicator">
+            <img src="/assets/FLECHAINICIO.png" alt="Flecha" class="flecha-img">
+        </div>
+    </section>
+
+    <!-- Sección Formulario de Contacto -->
+    <section class="contacto-section">
+        <div class="contacto-container">
+            <h2 class="contacto-titulo">CONTACTANOS</h2>
+            
+            <form class="contacto-form" id="contactoForm">
+                <div class="form-group">
+                    <input 
+                        type="text" 
+                        name="nombre" 
+                        placeholder="Nombre:" 
+                        required
+                        class="form-input"
+                    >
+                </div>
+                
+                <div class="form-group">
+                    <input 
+                        type="tel" 
+                        name="numero" 
+                        placeholder="Número:" 
+                        required
+                        class="form-input"
+                    >
+                </div>
+                
+                <div class="form-group">
+                    <input 
+                        type="email" 
+                        name="mail" 
+                        placeholder="Mail:" 
+                        required
+                        class="form-input"
+                    >
+                </div>
+                
+                <div class="form-group">
+                    <textarea 
+                        name="mensaje" 
+                        placeholder="Mensaje:" 
+                        rows="5"
+                        required
+                        class="form-input form-textarea"
+                    ></textarea>
+                </div>
+                
+                <button type="submit" class="form-submit">ENVIAR</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-red">
+        <div class="footer-container">
+            <div class="footer-hexagons">
+                <div class="hexagon hex-1"></div>
+                <div class="hexagon hex-2"></div>
+            </div>
+            <div class="footer-content">
+                <p>&copy; 2024 THOWEL. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/JS/contacto.js"></script>
+</body>
+</html>
