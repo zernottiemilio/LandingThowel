@@ -425,7 +425,8 @@ body {
    SECCIÓN 3 - CODAZOS
    ======================================== */
 
-.section-3 .left-content {
+
+   .section-3 .left-content {
     background: #d4d4d4;
     padding: 0;
 }
@@ -455,6 +456,7 @@ body {
     height: auto;
     display: block;
 }
+
 
 /* ========================================
    SECCIÓN 4 - VIDEO ELABORADO
