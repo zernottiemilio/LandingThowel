@@ -350,25 +350,32 @@ body {
 .section-2 .right-content {
     background: white;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
+    gap: 40px;
 }
 
 .specs-intro {
     font-size: 18px;
     color: #1e3a8a;
     line-height: 1.8;
-    margin-bottom: 30px;
+    margin-bottom: 0;
     max-width: 600px;
+    text-align: center;
 }
 
 .specs-table-image {
     width: 100%;
     max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
 }
 
 .specs-table-image img {
-    width: 100%;
+    width: 80%;
+    max-width: 300px;
     height: auto;
     display: block;
 }
@@ -818,5 +825,3 @@ body {
         width: 60px;
     }
 }
-
-
