@@ -216,6 +216,28 @@ body {
 }
 
 /* ========================================
+   HEADER SECTION
+   ======================================== */
+
+.header-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    z-index: 100;
+}
+
+.portada-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+/* ========================================
    SECCIONES DE PRODUCTO - DUAL CONTENT
    ======================================== */
 
@@ -245,6 +267,7 @@ body {
   width: 50%;
 }
 
+/* izquierda (solo imagen, sin fondo beige) */
 /* izquierda (solo imagen, sin fondo) */
 .left-content {
   background: none !important; 
@@ -268,6 +291,9 @@ body {
   background: #fff;
 }
 
+
+/* ========================================
+   SECCIÓN 1 - BISAGRA SOFT CLOSING
 /* ========================================
    SECCIÓN 1 - RETÉN EXPULSOR
    ======================================== */
@@ -284,6 +310,14 @@ body {
 .section-1 .left-content img {
     object-position: center;
     width: 100vh;
+}
+
+.section-1 .right-content {
+    background: white;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    position: relative;
 }
 
 .badge-thowel {
@@ -332,6 +366,7 @@ body {
 }
 
 /* ========================================
+   SECCIÓN 2 - VIDEO DEL HERRAJE SOLO
    SECCIÓN 2 - ESPECIFICACIONES
    ======================================== */
 
@@ -350,6 +385,25 @@ body {
 .section-2 .right-content {
     background: white;
     flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.video-container {
+    width: 100%;
+}
+
+.video-titulo {
+    font-size: 36px;
+    font-weight: 900;
+    color: #000;
+    margin-bottom: 30px;
+}
+
+.video-container img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
     align-items: center;
     justify-content: center;
     gap: 40px;
@@ -359,6 +413,8 @@ body {
     font-size: 18px;
     color: #1e3a8a;
     line-height: 1.8;
+    margin-bottom: 30px;
+    max-width: 600px;
     margin-bottom: 0;
     max-width: 600px;
     text-align: center;
@@ -367,6 +423,10 @@ body {
 .specs-table-image {
     width: 100%;
     max-width: 600px;
+}
+
+.specs-table-image img {
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -545,6 +605,7 @@ body {
 
 /* CATALOG SLIDE */
 .catalog-slide {
+    width: 85%;
     width: 100%;
     height: 100%;
     display: flex;
@@ -599,6 +660,7 @@ body {
 /* EFECTO HOVER */
 .catalog-item:hover {
     border: 15px solid #003399;
+    border-color: #003399;
     transform: scale(1);
     z-index: 30;
 }
@@ -610,6 +672,16 @@ body {
 
 .catalog-item:hover .catalog-overlay {
     bottom: 0;
+}
+
+.catalog-item::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border: 10px solid #003399;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
 }
 
 /* INDICATORS */
@@ -640,6 +712,7 @@ body {
 .indicator:hover {
     background: rgba(0, 51, 153, 0.8);
 }
+
 
 /* ========================================
    FOOTER
@@ -816,6 +889,28 @@ body {
         right: 10px;
     }
     
+    .indicator {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .dual-content {
+        flex-direction: column;
+    }
+    .left-content, .right-content {
+        width: 100%;
+        min-height: auto;
+        padding: 20px;
+    }
+    .producto-titulo {
+        font-size: 36px;
+    }
+    .estandar {
+        font-size: 28px;
+    }
+}
     .badge-thowel {
         top: 60px;
         right: 20px;
