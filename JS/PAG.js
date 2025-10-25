@@ -369,7 +369,6 @@ class PersianaEffect {
         section.style.opacity = '1';
         section.style.transform = 'translateY(0)';
 
-        // Animar contenido interno con efecto cascada (stagger)
         const elements = section.querySelectorAll(
             '.producto-titulo, .producto-descripcion, .diagrama-tecnico, ' +
             '.specs-intro, .specs-table-image, .codazos-imagenes img, ' +
