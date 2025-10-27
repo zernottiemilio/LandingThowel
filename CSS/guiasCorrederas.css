@@ -1,5 +1,5 @@
 /* ========================================
-   GUÍAS Y CORREDERAS CSS - THOWEL
+   GUÍAS Y CORREDERAS CSS - THOWEL (MEJORADO)
    ======================================== */
 
    @font-face {
@@ -56,7 +56,7 @@ body {
 }
 
 /* ========================================
-   NAVBAR - NAVIGATION
+   NAVBAR - NAVIGATION (MEJORADO)
    ======================================== */
 
 .navbar {
@@ -87,7 +87,7 @@ body {
     gap: 70px;
 }
 
-.navbar li {
+.navbar > ul > li {
     position: relative;
 }
 
@@ -104,6 +104,7 @@ body {
     font-size: 14px;
     background: transparent;
     white-space: nowrap;
+    display: block;
 }
 
 .navbar a:hover {
@@ -136,48 +137,74 @@ body {
     color: inherit;
 }
 
-/* Dropdown Principal */
+/* ========================================
+   DROPDOWN PRINCIPAL (MEJORADO)
+   ======================================== */
+
 .dropdown {
     position: absolute;
-    top: 100%;
-    left: 0;
+    top: calc(100% + 5px);
+    left: 50%;
+    transform: translateX(-50%);
     background: white;
-    min-width: 280px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    border-radius: 10px;
-    padding: 15px 0;
+    min-width: 320px;
+    max-width: 400px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+    border-radius: 15px;
+    padding: 20px 0;
     opacity: 0;
     visibility: hidden;
-    transform: translateY(-10px);
-    transition: all 0.3s ease;
+    transform: translateX(-50%) translateY(-10px);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     z-index: 1001;
     text-align: left;
 }
 
-.navbar li:hover .dropdown {
+.navbar li:hover > .dropdown {
     opacity: 1;
     visibility: visible;
-    transform: translateY(0);
+    transform: translateX(-50%) translateY(0);
 }
 
-.dropdown a {
+.dropdown > a {
     display: block;
-    padding: 12px 20px;
-    color: #666;
-    font-size: 14px;
+    padding: 14px 25px;
+    color: #555;
+    font-size: 13px;
     text-transform: uppercase;
     border-radius: 0;
     white-space: nowrap;
     margin: 0;
     position: relative;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
 }
 
-.dropdown a:hover {
-    background: rgba(231, 76, 60, 0.1);
+.dropdown > a:hover {
+    background: rgba(231, 76, 60, 0.08);
+    color: #e74c3c;
+    padding-left: 30px;
+}
+
+/* Indicador visual para items con subdropdown */
+.dropdown-item > a::after {
+    content: '›';
+    position: absolute;
+    right: 20px;
+    font-size: 18px;
+    font-weight: 700;
+    transition: all 0.3s ease;
+}
+
+.dropdown-item:hover > a::after {
+    right: 15px;
     color: #e74c3c;
 }
 
-/* Dropdown secundario */
+/* ========================================
+   SUBDROPDOWN (MEJORADO)
+   ======================================== */
+
 .dropdown-item {
     position: relative;
 }
@@ -185,20 +212,21 @@ body {
 .subdropdown {
     position: absolute;
     top: 0;
-    left: 100%;
+    left: calc(100% + 10px);
     background: white;
-    min-width: 300px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    border-radius: 10px;
-    padding: 15px 0;
+    min-width: 320px;
+    max-width: 380px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+    border-radius: 15px;
+    padding: 20px 0;
     opacity: 0;
     visibility: hidden;
-    transform: translateX(-10px);
-    transition: all 0.3s ease;
+    transform: translateX(-15px);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     z-index: 1002;
 }
 
-.dropdown-item:hover .subdropdown {
+.dropdown-item:hover > .subdropdown {
     opacity: 1;
     visibility: visible;
     transform: translateX(0);
@@ -206,17 +234,28 @@ body {
 
 .subdropdown a {
     display: block;
-    padding: 10px 20px;
-    color: #666;
-    font-size: 13px;
+    padding: 12px 25px;
+    color: #555;
+    font-size: 12px;
     text-transform: uppercase;
     border-radius: 0;
-    white-space: nowrap;
+    white-space: normal;
+    line-height: 1.4;
+    margin: 0;
+    letter-spacing: 0.3px;
+    transition: all 0.3s ease;
 }
 
 .subdropdown a:hover {
-    background: rgba(231, 76, 60, 0.1);
+    background: rgba(231, 76, 60, 0.08);
     color: #e74c3c;
+    padding-left: 30px;
+}
+
+/* Separadores visuales */
+.dropdown > a:not(:last-child),
+.subdropdown a:not(:last-child) {
+    border-bottom: 1px solid rgba(0,0,0,0.05);
 }
 
 /* ========================================
@@ -677,6 +716,22 @@ body {
    ======================================== */
 
 @media (max-width: 1024px) {
+    .navbar {
+        padding: 5px 30px;
+    }
+    
+    .navbar ul {
+        gap: 30px;
+    }
+    
+    .dropdown {
+        min-width: 280px;
+    }
+    
+    .subdropdown {
+        min-width: 260px;
+    }
+    
     .dual-content {
         flex-direction: column;
     }
@@ -685,14 +740,6 @@ body {
     .right-content {
         width: 100%;
         min-height: 50vh;
-    }
-    
-    .navbar {
-        padding: 5px 30px;
-    }
-    
-    .navbar ul {
-        gap: 30px;
     }
     
     .producto-titulo {
@@ -713,16 +760,32 @@ body {
 @media (max-width: 768px) {
     .navbar {
         padding: 5px 20px;
+        border-radius: 30px;
     }
     
     .navbar ul {
-        gap: 20px;
+        gap: 15px;
     }
     
     .navbar a {
-        font-size: 12px;
-        padding: 8px 15px;
-        margin: 10px;
+        font-size: 11px;
+        padding: 8px 12px;
+        margin: 8px;
+    }
+    
+    .dropdown {
+        min-width: 250px;
+        left: 0;
+        transform: none;
+    }
+    
+    .navbar li:hover > .dropdown {
+        transform: translateY(0);
+    }
+    
+    .subdropdown {
+        min-width: 220px;
+        left: 100%;
     }
     
     .left-content,
