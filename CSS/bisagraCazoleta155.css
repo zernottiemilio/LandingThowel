@@ -1,0 +1,830 @@
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-ExtraLight.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+}
+
+/* ========================================
+   NAVBAR - NAVIGATION
+   ======================================== */
+
+.navbar {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 5px 100px;
+    border-radius: 50px;
+    margin: 20px auto;
+    width: fit-content;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.navbar.hidden {
+    transform: translateX(-50%) translateY(-100px);
+    opacity: 0;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    gap: 70px;
+}
+
+.navbar li {
+    position: relative;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #333;
+    margin: 15px;
+    text-align: center;
+    font-weight: 500;
+    padding: 10px 20px;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    font-size: 14px;
+    background: transparent;
+    white-space: nowrap;
+}
+
+.navbar a:hover {
+    background: rgba(231, 76, 60, 0.1);
+    color: #e74c3c;
+}
+
+.navbar a:not(:hover) {
+    background: transparent;
+    color: #333;
+}
+
+.navbar .logo {
+    padding: 0; 
+    margin: 0;
+    background: none !important;
+    border-radius: 0;
+    display: flex;
+    align-items: center;
+}
+
+.navbar .logo img {
+    height: 60px;
+    width: auto;
+    display: block;
+}
+
+.navbar .logo:hover {
+    background: none !important;
+    color: inherit;
+}
+
+/* Dropdown Principal */
+.dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    min-width: 280px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    padding: 15px 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    z-index: 1001;
+    text-align: left;
+}
+
+.navbar li:hover .dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown a {
+    display: block;
+    padding: 12px 20px;
+    color: #666;
+    font-size: 14px;
+    text-transform: uppercase;
+    border-radius: 0;
+    white-space: nowrap;
+    margin: 0;
+    position: relative;
+}
+
+.dropdown a:hover {
+    background: rgba(231, 76, 60, 0.1);
+    color: #e74c3c;
+}
+
+/* Dropdown secundario para BISAGRAS */
+.dropdown-item {
+    position: relative;
+}
+
+.subdropdown {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    background: white;
+    min-width: 250px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    padding: 15px 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(-10px);
+    transition: all 0.3s ease;
+    z-index: 1002;
+}
+
+.dropdown-item:hover .subdropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+}
+
+.subdropdown a {
+    display: block;
+    padding: 10px 20px;
+    color: #666;
+    font-size: 13px;
+    text-transform: uppercase;
+    border-radius: 0;
+    white-space: nowrap;
+}
+
+.subdropdown a:hover {
+    background: rgba(231, 76, 60, 0.1);
+    color: #e74c3c;
+}
+
+/* ========================================
+   HEADER SECTION
+   ======================================== */
+
+.header-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    z-index: 100;
+}
+
+.portada-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+/* ========================================
+   SECCIONES DE PRODUCTO - DUAL CONTENT
+   ======================================== */
+
+.producto-section {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: stretch;
+  margin: 0;
+}
+
+.dual-content {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.left-content,
+.right-content {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  height: auto;
+  width: 50%;
+}
+
+/* izquierda (solo imagen, sin fondo beige) */
+.left-content {
+  background: none !important; 
+}
+
+.left-content img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* derecha (texto) */
+.right-content {
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 60px;
+  background: #fff;
+}
+
+
+/* ========================================
+   SECCIÓN 1 - BISAGRA CAZOLETA 155°
+   ======================================== */
+
+.section-1 .right-content {
+  background: white;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 120px 60px 40px;
+  position: relative;
+}
+
+.section-1 .left-content img {
+    object-position: center;
+    width: 100vh;
+}
+
+.section-1 .right-content {
+    background: white;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    position: relative;
+}
+
+.badge-thowel {
+    position: absolute;
+    top: 130px;
+    right: 100px;
+}
+
+.badge-thowel img {
+    width: 120px;
+    height: auto;
+}
+
+.producto-titulo {
+    font-size: 64px;
+    font-weight: 900;
+    color: #1e3a8a;
+    line-height: 1.1;
+    margin-bottom: 30px;
+}
+
+.estandar {
+  font-size: clamp(28px, 4vw, 60px);
+  font-weight: 400;
+  color: #e74c3c;
+  margin-bottom: 20px;
+}
+
+.producto-descripcion {
+    font-size: 18px;
+    color: #333;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    max-width: 600px;
+}
+
+.diagrama-tecnico {
+    margin-top: 0px;
+    margin-left: 150px;
+}
+
+.diagrama-tecnico img {
+  max-width: 350px;
+  width: 100%;
+  height: auto;
+}
+
+/* ========================================
+   SECCIÓN 2 - VIDEO DEL HERRAJE SOLO
+   ======================================== */
+
+.section-2 .left-content {
+    background: white;
+    padding: 0;
+}
+
+.section-2 .left-content img {
+    object-position: center;
+    width: 100vh;
+    height: 100%;
+    object-fit: cover;
+}
+
+.section-2 .right-content {
+    background: white;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.video-container {
+    width: 100%;
+}
+
+.video-titulo {
+    font-size: 36px;
+    font-weight: 900;
+    color: #000;
+    margin-bottom: 30px;
+}
+
+.video-container img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+}
+
+.specs-intro {
+    font-size: 18px;
+    color: #1e3a8a;
+    line-height: 1.8;
+    margin-bottom: 30px;
+    max-width: 600px;
+}
+
+.specs-table-image {
+    width: 100%;
+    max-width: 600px;
+}
+
+.specs-table-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ========================================
+   SECCIÓN 3 - CODAZOS
+   ======================================== */
+
+.section-3 .left-content {
+    background: #d4d4d4;
+    padding: 0;
+}
+
+.section-3 .left-content img {
+    object-position: center;
+    width: 100vh;
+}
+
+.section-3 .right-content {
+    background: white;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.codazos-imagenes {
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.codazos-imagenes img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ========================================
+   SECCIÓN 4 - VIDEO ELABORADO
+   ======================================== */
+
+.section-4 .left-content {
+    background: #e8e8e8;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.section-4 .right-content {
+    background: #2c2c2c;
+}
+
+.video-elaborado-container {
+    width: 100%;
+}
+
+.video-placeholder img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+}
+
+/* ========================================
+   PRODUCTOS SIMILARES - CAROUSEL
+   ======================================== */
+
+.productos-similares {
+    width: 100%;
+    padding: 60px 0 0 0;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.similares-titulo {
+    font-size: 36px;
+    font-weight: 900;
+    color: #1e3a8a;
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 0 60px;
+}
+
+/* CAROUSEL CONTAINER */
+.catalog-carousel {
+    position: relative;
+    width: 100%;
+    flex: 1;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+/* NAVIGATION ARROWS */
+.carousel-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 51, 153, 0.8);
+    color: white;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 100;
+    font-size: 18px;
+}
+
+.carousel-nav:hover {
+    background: #003399;
+    transform: translateY(-50%) scale(1.1);
+}
+
+.prev-btn {
+    left: 20px;
+}
+
+.next-btn {
+    right: 20px;
+}
+
+/* CAROUSEL TRACK */
+.catalog-track {
+    display: flex;
+    width: 200%;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* CATALOG SLIDE */
+.catalog-slide {
+    width: 85%;
+    height: 100%;
+    display: flex;
+    flex: none;
+}
+
+/* CATALOG ITEMS */
+.catalog-item {
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    flex: 1;
+    height: 100%;
+    min-height: 600px;
+    overflow: hidden;
+    background: #f8f9fa;
+}
+
+.catalog-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+/* OVERLAY - OCULTO POR DEFECTO */
+.catalog-overlay {
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 51, 153, 0.9);
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+    font-weight: 600;
+    font-size: 1rem;
+    text-transform: uppercase;
+    transition: bottom 0.3s ease;
+}
+
+.catalog-overlay-text {
+    font-weight: 700;
+    text-align: center;
+    font-size: 1rem;
+    text-transform: uppercase;
+    line-height: 1.2;
+    padding: 20px;
+}
+
+/* EFECTO HOVER */
+.catalog-item:hover {
+    border: 15px solid #003399;
+    border-color: #003399;
+    transform: scale(1);
+    z-index: 30;
+}
+
+.catalog-item:hover img {
+    transform: translateY(-20px);
+    height: 110%;
+}
+
+.catalog-item:hover .catalog-overlay {
+    bottom: 0;
+}
+
+.catalog-item::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border: 10px solid #003399;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+/* INDICATORS */
+.carousel-indicators {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 100;
+}
+
+.indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.indicator.active {
+    background: #003399;
+    transform: scale(1.2);
+}
+
+.indicator:hover {
+    background: rgba(0, 51, 153, 0.8);
+}
+
+
+/* ========================================
+   FOOTER
+   ======================================== */
+
+.footer-red { 
+    background: #e74c3c; 
+    color: #fff; 
+    text-align: center; 
+    padding: 15px 0; 
+    font-weight: 500; 
+    font-size: 0.9rem; 
+    position: relative; 
+    z-index: 101;
+    margin: 0;
+    flex-shrink: 0;
+}
+
+.footer-hexagons {
+    position: absolute;
+    bottom: 15px;
+    left: 40px;
+    display: flex;
+    gap: 8px;
+    z-index: 3;
+}
+
+.hexagon {
+    width: 25px;
+    height: 20px;
+    background: #fff;
+    position: relative;
+    clip-path: polygon(
+        25% 0%,
+        75% 0%,
+        100% 50%,
+        75% 100%,
+        25% 100%,
+        0% 50%
+    );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    color: #e74c3c;
+    cursor: pointer;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.hexagon:hover {
+    background: #f1f1f1;
+    transform: scale(1.1);
+}
+
+/* ========================================
+   RESPONSIVE
+   ======================================== */
+
+@media (max-width: 1024px) {
+    .dual-content {
+        flex-direction: column;
+    }
+    
+    .left-content,
+    .right-content {
+        width: 100%;
+        min-height: 50vh;
+    }
+    
+    .navbar {
+        padding: 5px 30px}
+    
+    .navbar ul {
+        gap: 30px;
+    }
+    
+    .producto-titulo {
+        font-size: 36px;
+    }
+    
+    .catalog-slide {
+        gap: 15px;
+        padding: 15px;
+    }
+    
+    .catalog-overlay-text {
+        font-size: 12px;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 5px 20px;
+    }
+    
+    .navbar ul {
+        gap: 20px;
+    }
+    
+    .navbar a {
+        font-size: 12px;
+        padding: 8px 15px;
+        margin: 10px;
+    }
+    
+    .left-content,
+    .right-content {
+        padding: 40px 30px;
+    }
+    
+    .producto-titulo {
+        font-size: 32px;
+    }
+    
+    .similares-titulo {
+        font-size: 28px;
+    }
+    
+    .catalog-slide {
+        flex-wrap: wrap;
+        gap: 10px;
+        padding: 10px;
+    }
+    
+    .catalog-item {
+        flex: 1 1 calc(50% - 10px);
+        min-width: 150px;
+    }
+    
+    .carousel-nav {
+        width: 40px;
+        height: 40px;
+        font-size: 14px;
+    }
+    
+    .prev-btn {
+        left: 10px;
+    }
+    
+    .next-btn {
+        right: 10px;
+    }
+    
+    .indicator {
+        width: 30px;
+        height: 30px;
+    }
+    
+    @media (max-width: 1024px) {
+        .dual-content {
+            flex-direction: column;
+        }
+        .left-content, .right-content {
+            width: 100%;
+            min-height: auto;
+            padding: 20px;
+        }
+        .producto-titulo {
+            font-size: 36px;
+        }
+        .estandar {
+            font-size: 28px;
+        }
+    }
+}
