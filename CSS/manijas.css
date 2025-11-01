@@ -50,6 +50,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Montserrat', sans-serif;
     overflow-x: hidden;
@@ -231,6 +235,11 @@ body {
     margin: 0;
 }
 
+/* Ajuste para navegación con navbar fijo */
+.producto-section[id] {
+    scroll-margin-top: 120px;
+}
+
 .dual-content {
     display: flex;
     width: 100%;
@@ -367,12 +376,47 @@ body {
 .specs-table-image {
     width: 100%;
     max-width: 600px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 30px 40px;
+    align-items: center;
 }
 
 .specs-table-image img {
-    width: 100%;
+    max-width: 120px;
+    width: auto;
     height: auto;
     display: block;
+}
+
+/* Logos pequeños (acero, peso, negro, plastico) */
+.specs-table-image img[src*="acero"],
+.specs-table-image img[src*="peso"],
+.specs-table-image img[src*="negro"],
+.specs-table-image img[src*="plastico"] {
+    max-width: 100px;
+}
+
+/* Iconos de información (unidades, ciclos) */
+.specs-table-image img[src*="unidades"],
+.specs-table-image img[src*="ciclos"] {
+    max-width: 150px;
+}
+
+/* Tablas técnicas grandes */
+.specs-table-image img[src*="tabla"],
+.specs-table-image img[src*="especificaciones"] {
+    max-width: 450px;
+    flex-basis: 100%;
+}
+
+/* Dibujos técnicos y planos */
+.specs-table-image img[src*="dibujo"],
+.specs-table-image img[src*="plano"],
+.specs-table-image img[src*="componentes"] {
+    max-width: 500px;
+    flex-basis: 100%;
 }
 
 /* ========================================
@@ -400,14 +444,40 @@ body {
     width: 100%;
     max-width: 600px;
     display: flex;
-    flex-direction: column;
-    gap: 30px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 30px 40px;
+    align-items: center;
 }
 
 .variantes-imagenes img {
-    width: 100%;
+    max-width: 120px;
+    width: auto;
     height: auto;
     display: block;
+}
+
+/* Logos pequeños */
+.variantes-imagenes img[src*="acero"],
+.variantes-imagenes img[src*="peso"],
+.variantes-imagenes img[src*="negro"],
+.variantes-imagenes img[src*="plastico"] {
+    max-width: 100px;
+}
+
+/* Imágenes medianas (unidades, ciclos) */
+.variantes-imagenes img[src*="unidades"],
+.variantes-imagenes img[src*="ciclos"] {
+    max-width: 150px;
+}
+
+/* Imágenes de variantes grandes (fotos de producto, ambiente) */
+.variantes-imagenes img[src*="DETALLE"],
+.variantes-imagenes img[src*="detalle"],
+.variantes-imagenes img[src*="ambiente"],
+.variantes-imagenes img[src*="real"] {
+    max-width: 400px;
+    flex-basis: 100%;
 }
 
 /* ========================================
@@ -527,6 +597,14 @@ body {
     min-height: 600px;
     overflow: hidden;
     background: #f8f9fa;
+}
+
+.catalog-item a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: inherit;
 }
 
 .catalog-item img {
@@ -699,57 +777,136 @@ body {
     .navbar {
         padding: 5px 20px;
     }
-    
+
     .navbar ul {
         gap: 20px;
     }
-    
+
     .navbar a {
         font-size: 12px;
         padding: 8px 15px;
         margin: 10px;
     }
-    
+
     .left-content,
     .right-content {
         padding: 40px 30px;
     }
-    
+
     .producto-titulo {
         font-size: 32px;
     }
-    
+
     .similares-titulo {
         font-size: 28px;
     }
-    
+
     .catalog-slide {
         flex-wrap: wrap;
         gap: 10px;
         padding: 10px;
     }
-    
+
     .catalog-item {
         flex: 1 1 calc(50% - 10px);
         min-width: 150px;
     }
-    
+
     .carousel-nav {
         width: 40px;
         height: 40px;
         font-size: 14px;
     }
-    
+
     .prev-btn {
         left: 10px;
     }
-    
+
     .next-btn {
         right: 10px;
     }
-    
+
     .indicator {
         width: 30px;
         height: 30px;
     }
+
+    /* Ajustes para imágenes pequeñas en móviles */
+    .specs-table-image,
+    .variantes-imagenes {
+        gap: 20px 30px;
+        justify-content: center;
+    }
+
+    .specs-table-image img,
+    .variantes-imagenes img {
+        max-width: 80px;
+    }
+
+    .specs-table-image img[src*="tabla"],
+    .specs-table-image img[src*="dibujo"],
+    .specs-table-image img[src*="plano"],
+    .specs-table-image img[src*="componentes"] {
+        max-width: 300px;
+    }
+
+    .variantes-imagenes img[src*="DETALLE"],
+    .variantes-imagenes img[src*="ambiente"],
+    .variantes-imagenes img[src*="real"] {
+        max-width: 280px;
+    }
+}
+/* ========================================
+   SISTEMA DE TAMAÑOS ESTANDARIZADO - MANIJAS
+   ======================================== */
+
+/* Badges y logos de material (acero, plastico, etc.) */
+.badge-thowel img {
+    width: 100px;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Iconos de información pequeños */
+.specs-table-image img[src*="acero"],
+.specs-table-image img[src*="peso"],
+.specs-table-image img[src*="negro"],
+.specs-table-image img[src*="plastico"] {
+    max-width: 100px;
+    width: 100px;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Iconos de información medianos (unidades) */
+.specs-table-image img[src*="unidades"],
+.specs-table-image img[src*="50 unidades"],
+.specs-table-image img[src*="5o unidades"],
+.specs-table-image img[src*="200 unidades"],
+.specs-table-image img[src*="4 a 200"] {
+    max-width: 140px;
+    width: 140px;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Tablas técnicas */
+.specs-table-image img[src*="tabla"],
+.specs-table-image img[src*="Tabla"],
+.diagrama-tecnico img {
+    max-width: 100%;
+    width: 350px;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Imágenes de componentes y detalles */
+.specs-table-image img[src*="componentes"],
+.specs-table-image img[src*="image deco"],
+.codazos-imagenes img,
+.variantes-imagenes img {
+    max-width: 250px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
 }
