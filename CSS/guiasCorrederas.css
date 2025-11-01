@@ -421,12 +421,47 @@ body {
 .specs-table-image {
     width: 100%;
     max-width: 600px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 30px 40px;
+    align-items: center;
 }
 
 .specs-table-image img {
-    width: 100%;
+    max-width: 120px;
+    width: auto;
     height: auto;
     display: block;
+}
+
+/* Logos pequeños (acero, peso, negro, plastico) */
+.specs-table-image img[src*="acero"],
+.specs-table-image img[src*="peso"],
+.specs-table-image img[src*="negro"],
+.specs-table-image img[src*="plastico"] {
+    max-width: 100px;
+}
+
+/* Iconos de información (unidades, ciclos) */
+.specs-table-image img[src*="unidades"],
+.specs-table-image img[src*="ciclos"] {
+    max-width: 150px;
+}
+
+/* Tablas técnicas grandes */
+.specs-table-image img[src*="tabla"],
+.specs-table-image img[src*="especificaciones"] {
+    max-width: 450px;
+    flex-basis: 100%;
+}
+
+/* Dibujos técnicos y planos */
+.specs-table-image img[src*="dibujo"],
+.specs-table-image img[src*="plano"],
+.specs-table-image img[src*="componentes"] {
+    max-width: 500px;
+    flex-basis: 100%;
 }
 
 /* ========================================
@@ -454,14 +489,40 @@ body {
     width: 100%;
     max-width: 600px;
     display: flex;
-    flex-direction: column;
-    gap: 30px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 30px 40px;
+    align-items: center;
 }
 
 .variantes-imagenes img {
-    width: 100%;
+    max-width: 120px;
+    width: auto;
     height: auto;
     display: block;
+}
+
+/* Logos pequeños */
+.variantes-imagenes img[src*="acero"],
+.variantes-imagenes img[src*="peso"],
+.variantes-imagenes img[src*="negro"],
+.variantes-imagenes img[src*="plastico"] {
+    max-width: 100px;
+}
+
+/* Imágenes medianas (unidades, ciclos) */
+.variantes-imagenes img[src*="unidades"],
+.variantes-imagenes img[src*="ciclos"] {
+    max-width: 150px;
+}
+
+/* Imágenes de variantes grandes (fotos de producto, ambiente) */
+.variantes-imagenes img[src*="DETALLE"],
+.variantes-imagenes img[src*="detalle"],
+.variantes-imagenes img[src*="ambiente"],
+.variantes-imagenes img[src*="real"] {
+    max-width: 400px;
+    flex-basis: 100%;
 }
 
 /* ========================================
@@ -762,72 +823,97 @@ body {
         padding: 5px 20px;
         border-radius: 30px;
     }
-    
+
     .navbar ul {
         gap: 15px;
     }
-    
+
     .navbar a {
         font-size: 11px;
         padding: 8px 12px;
         margin: 8px;
     }
-    
+
     .dropdown {
         min-width: 250px;
         left: 0;
         transform: none;
     }
-    
+
     .navbar li:hover > .dropdown {
         transform: translateY(0);
     }
-    
+
     .subdropdown {
         min-width: 220px;
         left: 100%;
     }
-    
+
     .left-content,
     .right-content {
         padding: 40px 30px;
     }
-    
+
     .producto-titulo {
         font-size: 32px;
     }
-    
+
     .similares-titulo {
         font-size: 28px;
     }
-    
+
     .catalog-slide {
         flex-wrap: wrap;
         gap: 10px;
         padding: 10px;
     }
-    
+
     .catalog-item {
         flex: 1 1 calc(50% - 10px);
         min-width: 150px;
     }
-    
+
     .carousel-nav {
         width: 40px;
         height: 40px;
         font-size: 14px;
     }
-    
+
     .prev-btn {
         left: 10px;
     }
-    
+
     .next-btn {
         right: 10px;
     }
-    
+
     .indicator {
         width: 30px;
         height: 30px;
+    }
+
+    /* Ajustes para imágenes pequeñas en móviles */
+    .specs-table-image,
+    .variantes-imagenes {
+        gap: 20px 30px;
+        justify-content: center;
+    }
+
+    .specs-table-image img,
+    .variantes-imagenes img {
+        max-width: 80px;
+    }
+
+    .specs-table-image img[src*="tabla"],
+    .specs-table-image img[src*="dibujo"],
+    .specs-table-image img[src*="plano"],
+    .specs-table-image img[src*="componentes"] {
+        max-width: 300px;
+    }
+
+    .variantes-imagenes img[src*="DETALLE"],
+    .variantes-imagenes img[src*="ambiente"],
+    .variantes-imagenes img[src*="real"] {
+        max-width: 280px;
     }
 }
