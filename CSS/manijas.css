@@ -856,3 +856,57 @@ body {
         max-width: 280px;
     }
 }
+/* ========================================
+   SISTEMA DE TAMAÑOS ESTANDARIZADO - MANIJAS
+   ======================================== */
+
+/* Badges y logos de material (acero, plastico, etc.) */
+.badge-thowel img {
+    width: 100px;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Iconos de información pequeños */
+.specs-table-image img[src*="acero"],
+.specs-table-image img[src*="peso"],
+.specs-table-image img[src*="negro"],
+.specs-table-image img[src*="plastico"] {
+    max-width: 100px;
+    width: 100px;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Iconos de información medianos (unidades) */
+.specs-table-image img[src*="unidades"],
+.specs-table-image img[src*="50 unidades"],
+.specs-table-image img[src*="5o unidades"],
+.specs-table-image img[src*="200 unidades"],
+.specs-table-image img[src*="4 a 200"] {
+    max-width: 140px;
+    width: 140px;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Tablas técnicas */
+.specs-table-image img[src*="tabla"],
+.specs-table-image img[src*="Tabla"],
+.diagrama-tecnico img {
+    max-width: 100%;
+    width: 350px;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Imágenes de componentes y detalles */
+.specs-table-image img[src*="componentes"],
+.specs-table-image img[src*="image deco"],
+.codazos-imagenes img,
+.variantes-imagenes img {
+    max-width: 250px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+}

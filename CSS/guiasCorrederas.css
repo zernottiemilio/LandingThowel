@@ -917,3 +917,49 @@ body {
         max-width: 280px;
     }
 }
+/* ========================================
+   SISTEMA DE TAMAÑOS ESTANDARIZADO
+   ======================================== */
+
+/* Badges y logos de tecnología (acero, plastico, etc.) */
+.badge-thowel img,
+.specs-table-image img[src*="acero"],
+.specs-table-image img[src*="peso"],
+.specs-table-image img[src*="negro"],
+.specs-table-image img[src*="plastico"] {
+    max-width: 100px;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Iconos de información (unidades, ciclos) */
+.specs-table-image img[src*="unidades"],
+.specs-table-image img[src*="ciclos"],
+.specs-table-image img[src*="mil"] {
+    max-width: 140px;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Tablas técnicas y especificaciones */
+.specs-table-image img[src*="tabla"],
+.specs-table-image img[src*="especificaciones"],
+.specs-table-image img[src*="Tabla"] {
+    max-width: 100%;
+    width: 450px;
+    height: auto;
+    flex-basis: 100%;
+    object-fit: contain;
+}
+
+/* Dibujos técnicos, planos y diagramas */
+.specs-table-image img[src*="dibujo"],
+.specs-table-image img[src*="plano"],
+.specs-table-image img[src*="componentes"],
+.specs-table-image img[src*="Diagrama"],
+.diagrama-tecnico img {
+    max-width: 100%;
+    width: 350px;
+    height: auto;
+    object-fit: contain;
+}
