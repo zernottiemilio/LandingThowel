@@ -827,4 +827,135 @@ body {
             font-size: 28px;
         }
     }
-}
+    /* ============================================
+   PREMIUM PARALLAX & FADE-IN EFFECTS
+   ============================================ */
+
+/* Configuración base para elementos con parallax */
+[data-parallax-speed] {
+    will-change: transform;
+    backface-visibility: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  /* Contenedores con overflow hidden para efecto de profundidad */
+  .parallax-container {
+    overflow: hidden;
+    position: relative;
+  }
+  
+  /* Items con parallax y fade-in */
+  .parallax-item {
+    opacity: 0;
+    transform: translate3d(0, 40px, 0);
+    transition: opacity 0.8s cubic-bezier(0.34, 1.56, 0.64, 1), transform 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+    will-change: opacity, transform;
+  }
+  
+  .parallax-item.parallax-visible {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+  
+  /* Imagenes con parallax suave */
+  .parallax-item img {
+    display: block;
+    width: 100%;
+    height: auto;
+    filter: brightness(0.98);
+    transition: filter 0.3s ease;
+  }
+  
+  .parallax-item:hover img {
+    filter: brightness(1.05);
+  }
+  
+  /* Efecto parallax diferenciado por velocidad */
+  .parallax-slow {
+    --parallax-speed: 0.3;
+  }
+  
+  .parallax-medium {
+    --parallax-speed: 0.5;
+  }
+  
+  .parallax-fast {
+    --parallax-speed: 0.7;
+  }
+  
+  /* Contenedores duales mejorados */
+  .dual-content-parallax {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    margin: 0;
+  }
+  
+  .left-content-parallax {
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+  }
+  
+  .right-content-parallax {
+    padding: 2rem;
+  }
+  
+  /* Efecto de profundidad en secciones */
+  .section-parallax {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .section-parallax::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.01), rgba(0, 0, 0, 0.02));
+    pointer-events: none;
+    z-index: 1;
+  }
+  
+  /* Stagger animation para múltiples elementos */
+  .parallax-item:nth-child(1) {
+    transition-delay: 0.1s;
+  }
+  
+  .parallax-item:nth-child(2) {
+    transition-delay: 0.2s;
+  }
+  
+  .parallax-item:nth-child(3) {
+    transition-delay: 0.3s;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .dual-content-parallax {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+  
+    .parallax-item {
+      transform: translate3d(0, 20px, 0);
+    }
+  
+    [data-parallax-speed] {
+      /* Reducir parallax en móvil para mejor rendimiento */
+      animation: none !important;
+    }
+  }
+  
+  /* Optimización de rendimiento */
+  @media (prefers-reduced-motion: reduce) {
+    [data-parallax-speed],
+    .parallax-item {
+      animation: none !important;
+      transition: none !important;
+    }
+  }
+}  
