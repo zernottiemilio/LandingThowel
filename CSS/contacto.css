@@ -254,17 +254,14 @@ body {
 }
 
 .header-title {
-    font-size: 3rem;
-    font-weight: 400;
+    font-size: 4rem;
+    font-weight: 700;
     color: white;
     text-align: center;
     line-height: 1.4;
     max-width: 1000px;
     padding: 0 40px;
-}
-
-.header-title .highlight {
-    font-weight: 700;
+    letter-spacing: 2px;
 }
 
 .scroll-indicator {

@@ -312,6 +312,10 @@ body {
     min-height: 100vh;
 }
 
+.dual-content.reverse {
+    flex-direction: row-reverse;
+}
+
 .left-content,
 .right-content {
     flex: 1;
@@ -352,6 +356,14 @@ body {
     color: #999;
     line-height: 1.8;
     max-width: 600px;
+}
+
+.section-description p {
+    margin-bottom: 20px;
+}
+
+.section-description p:last-child {
+    margin-bottom: 0;
 }
 
 /* ========================================
