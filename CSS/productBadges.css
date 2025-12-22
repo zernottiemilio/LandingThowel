@@ -1,0 +1,119 @@
+/* ========================================
+   BADGES Y ICONOS ESTANDARIZADOS - THOWEL
+   Para mantener consistencia en todas las páginas de productos
+   ======================================== */
+
+/* Contenedor de badges en la sección de especificaciones */
+.product-badges-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    margin: 40px 0;
+    padding: 20px;
+}
+
+/* Badge individual (unidades, ciclos, peso, etc.) */
+.product-badge {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 180px;
+    max-width: 200px;
+}
+
+.product-badge img {
+    width: 100%;
+    height: auto;
+    max-width: 180px;
+    max-height: 120px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.product-badge:hover img {
+    transform: scale(1.05);
+}
+
+/* Badges específicos por tipo */
+.badge-unidades img {
+    max-height: 100px;
+}
+
+.badge-ciclos img {
+    max-height: 100px;
+}
+
+.badge-peso img {
+    max-height: 100px;
+}
+
+.badge-material img {
+    max-height: 80px;
+}
+
+/* Badge de material/tecnología (acero, smooth, etc.) */
+.badge-thowel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.badge-thowel img {
+    width: auto;
+    height: 60px;
+    max-width: 150px;
+    object-fit: contain;
+}
+
+/* Tabla de especificaciones */
+.specs-table-image {
+    margin: 30px 0;
+    text-align: center;
+}
+
+.specs-table-image img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Diagrama técnico */
+.diagrama-tecnico {
+    margin: 30px 0;
+    text-align: center;
+}
+
+.diagrama-tecnico img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .product-badges-container {
+        gap: 20px;
+        padding: 15px;
+    }
+
+    .product-badge {
+        min-width: 140px;
+        max-width: 160px;
+    }
+
+    .product-badge img {
+        max-width: 140px;
+        max-height: 100px;
+    }
+
+    .badge-thowel img {
+        height: 50px;
+        max-width: 120px;
+    }
+}
