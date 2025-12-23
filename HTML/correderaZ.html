@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corredera Z - THOWEL</title>
+    <link rel="icon" type="image/png" href="/assets/LOGO-11.png">
+    <link rel="stylesheet" href="/CSS/guiasCorrederas.css">
+</head>
+<body class="page-corredera-z">
+    <!-- Navbar flotante -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="/index.html">INICIO</a></li>
+            <li>
+                <a href="#productos" class="productos-link">PRODUCTOS</a>
+                <div class="dropdown">
+                    <div class="dropdown-item">
+                        <a href="#cajones">CAJONES</a>
+                        <div class="subdropdown">
+                            <a href="/HTML/ThowelBoxCristal.html">THOWEL BOX CRISTAL</a>
+                            <a href="/HTML/thowelBoxPlus.html">THOWEL BOX PLUS</a>
+                            <a href="/HTML/thowelBox.html">THOWEL BOX</a>
+                        </div>
+                    </div>
+                    <div class="dropdown-item">
+                        <a href="#bisagras">BISAGRAS</a>
+                        <div class="subdropdown">
+                            <a href="/HTML/bisagraClip3D.html">BISAGRA CLIP 3D</a>
+                            <a href="/HTML/bisagras.html">BISAGRA SOFT CLOSING</a>
+                            <a href="/HTML/bisagraCazoletaEstandar.html">BISAGRA CAZOLETA</a>
+                            <a href="/HTML/bisagraPushOpen.html">BISAGRA PUSH OPEN</a>
+                            <a href="/HTML/bisagraCazoleta155.html">BISAGRA ANGULOS ESPECIALES</a>
+                            <a href="/HTML/retenExpulsor.html">RET�N EXPULSOR</a>
+                            <a href="/HTML/PistonAGAS.html">PIST�N A GAS</a>
+                        </div>
+                    </div>
+                    <div class="dropdown-item">
+                        <a href="#guias">GUIAS Y CORREDERAS</a>
+                        <div class="subdropdown">
+                            <a href="/HTML/guiaOculta3DSoftClosing.html">GUIA OCULTA 3D SOFT CLOSING</a>
+                            <a href="/HTML/guiaOcultaPushOpen.html">GUIA OCULTA PUSH OPEN</a>
+                            <a href="/HTML/correderaTelescopicaSoftClosing.html">CORREDERA TELESCIPICA SOFT CLOSING</a>
+                            <a href="/HTML/correderaTelescopicaPushOpen.html">CORREDERA TELESCIPICA PUSH OPEN</a>
+                            <a href="/HTML/correderaTelescopicaEstandarH45.html">CORREDERA TELESCIPICA ESTINDAR H45</a>
+                            <a href="/HTML/correderaTelescopicaEstandarH35.html">CORREDERA TELESCIPICA ESTINDAR H35</a>
+                            <a href="/HTML/correderaZ.html">CORREDERA Z</a>
+                        </div>
+                    </div>
+                    <div class="dropdown-item">
+                        <a href="#tiradores">TIRADORES, MANIJAS Y SISTEMAS DE APOYO</a>
+                        <div class="subdropdown">
+                            <a href="/HTML/manijas.html">MANIJAS</a>
+                            <a href="/HTML/sistemasApoyo.html">SISTEMAS DE APOYO</a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li><a href="/index.html" class="logo"><img src="/assets/logoHeader.png" alt="THOWEL"></a></li>
+            <li><a href="/HTML/sobreNosotros.html">SOBRE NOSOTROS</a></li>
+            <li><a href="/HTML/contacto.html">CONTACTOS</a></li>
+        </ul>
+    </nav>
+
+
+    <!-- Secci�n 1: Corredera Z -->
+    <section class="producto-section section-1">
+        <div class="dual-content">
+            <div class="left-content">
+                <img src="/assets/CORREDERA Z (2).JPG" alt="Corredera Z">
+            </div>
+            <div class="right-content">
+                <div class="badge-thowel">
+                    <img src="/assets/estandar.png" alt="Estandar Badge">
+                </div>
+                <h1 class="producto-titulo"><b>
+                    CORREDERA Z<br></b>
+                    <span class="estandar">ESTANDAR</span>
+                </h1>
+                <p class="producto-descripcion">
+                    Diseñada para aplicaciones especificas, la corredera Z ofrece una <strong>solucion practica y confiable</strong> para diversos tipos de mobiliario.
+                </p>
+                <p class="producto-descripcion">
+                    Con tecnologia <strong>ESTANDAR</strong>, garantiza durabilidad y funcionamiento suave en el uso diario.
+                </p>
+                <div class="specs-all-logos">
+                    <img src="/assets/Corredera telescópica soft closing/acero.png" alt="Material Acero">
+                    <img src="/assets/Corredera telescópica soft closing/50mil ciclos de uso.png" alt="Ciclos de uso">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seccion 2: Especificaciones -->
+    <section class="producto-section section-2">
+        <div class="dual-content">
+            <div class="left-content">
+                <img src="/assets/CORREDERA Z.JPG" alt="Corredera Z Detalle">
+            </div>
+            <div class="right-content">
+                <div class="specs-all-logos">
+                    <img src="/assets/Corredera telescópica soft closing/15 unidades.png" alt="15 Unidades">
+                    <img src="/assets/corredera telescópica push Open/peso.png" alt="Peso">
+                </div>
+                <p class="specs-intro">
+                    Fabricadas en <strong>acero de alta calidad</strong>, las correderas Z ofrecen resistencia y funcionalidad para multiples aplicaciones en muebles y sistemas de almacenamiento.
+                </p>
+                
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Secci�n 5: Productos Similares (Carousel) -->
+    <section class="productos-similares">
+        <h2 class="similares-titulo">PRODUCTOS SIMILARES</h2>
+        <div class="catalog-carousel">
+            <button class="carousel-nav prev-btn" id="prevBtn"><i class="fas fa-chevron-left"></i></button>
+            <button class="carousel-nav next-btn" id="nextBtn"><i class="fas fa-chevron-right"></i></button>
+            <div class="catalog-track" id="catalogTrack">
+                <!-- Slide 1: Cajones, Bisagras y Gu�as -->
+                <div class="catalog-slide">
+                    <!-- CAJONES -->
+                    <a href="/HTML/ThowelBoxCristal.html" class="catalog-item">
+                        <img src="/assets/THOWELBOXCRISTAL.png" alt="Thowel Box Cristal">
+                        <div class="catalog-overlay"><div class="catalog-overlay-text">THOWEL BOX CRISTAL</div></div>
+                    </a>
+                    <a href="/HTML/thowelBoxPlus.html" class="catalog-item">
+                        <img src="/assets/THOWELBOXPLUS.png" alt="Thowel Box Plus">
+                        <div class="catalog-overlay"><div class="catalog-overlay-text">THOWEL BOX PLUS</div></div>
+                    </a>
+
+                    <!-- BISAGRAS -->
+                    <a href="/HTML/bisagraClip3D.html" class="catalog-item">
+                        <img src="/assets/BISAGRACLIP.png" alt="Bisagra Clip 3D">
+                        <div class="catalog-overlay"><div class="catalog-overlay-text">BISAGRA CLIP 3D</div></div>
+                    </a>
+                    <a href="/HTML/bisagraSoftClosing.html" class="catalog-item">
+                        <img src="/assets/BISAGRASOFTCLOSING.png" alt="Bisagra Soft Closing">
+                        <div class="catalog-overlay"><div class="catalog-overlay-text">BISAGRA SOFT CLOSING</div></div>
+                    </a>
+                    <a href="/HTML/bisagraCazoletaEstandar.html" class="catalog-item">
+                        <img src="/assets/BISAGRACAZOLETAESTANDAR.png" alt="Bisagra Cazoleta">
+                        <div class="catalog-overlay"><div class="catalog-overlay-text">BISAGRA CAZOLETA</div></div>
+                    </a>
+                    <a href="/HTML/bisagraPushOpen.html" class="catalog-item">
+                        <img src="/assets/BISAGRAPUSHOPEN.png" alt="Bisagra Push Open">
+                        <div class="catalog-overlay"><div class="catalog-overlay-text">BISAGRA PUSH OPEN</div></div>
+                    </a>
+                    <a href="/HTML/PistonAGAS.html" class="catalog-item">
+                        <img src="/assets/PISTONAGAS.png" alt="Pist�n a Gas">
+                        <div class="catalog-overlay"><div class="catalog-overlay-text">PIST�N A GAS</div></div>
+                    </a>
+                </div>
+
+                <!-- Slide 2: Gu�as y Correderas -->
+                <div class="catalog-slide">
+                    <a href="/HTML/guiaOculta3DSoftClosing.html" class="catalog-item">
+                        <img src="/assets/GUIA_OCULTA_3D.png" alt="Gu�a Oculta 3D">
+                        <div class="catalog-overlay"><div class="catalog-overlay-text">GU�A OCULTA 3D SOFT CLOSING</div></div>
+                    </a>
+                    <a href="/HTML/guiaOcultaPushOpen.html" class="catalog-item">
+                        <img src="/assets/GUIA_OCULTA_PUSH.png" alt="Gu�a Oculta Push">
+                        <div class="catalog-overlay"><div class="catalog-overlay-text">GU�A OCULTA PUSH OPEN</div></div>
+                    </a>
+                    <a href="/HTML/correderaTelescopicaSoftClosing.html" class="catalog-item">
+                        <img src="/assets/CORREDERA_TELE_SOFT.png" alt="Corredera Telesc�pica Soft">
+                        <div class="catalog-overlay"><div class="catalog-overlay-text">CORREDERA TELESC�PICA SOFT CLOSING</div></div>
+                    </a>
+                    <a href="/HTML/correderaTelescopicaPushOpen.html" class="catalog-item">
+                        <img src="/assets/CORREDERA_TELE_PUSH.png" alt="Corredera Telesc�pica Push">
+                        <div class="catalog-overlay"><div class="catalog-overlay-text">CORREDERA TELESC�PICA PUSH OPEN</div></div>
+                    </a>
+                    <a href="/HTML/correderaTelescopicaEstandarH45.html" class="catalog-item">
+                        <img src="/assets/CORREDERA_H45.png" alt="Corredera H45">
+                        <div class="catalog-overlay"><div class="catalog-overlay-text">CORREDERA TELESC�PICA H45</div></div>
+                    </a>
+                    <a href="/HTML/correderaTelescopicaEstandarH35.html" class="catalog-item">
+                        <img src="/assets/CORREDERA_H35.png" alt="Corredera H35">
+                        <div class="catalog-overlay"><div class="catalog-overlay-text">CORREDERA TELESC�PICA H35</div></div>
+                    </a>
+                    <a href="/HTML/correderaZ.html" class="catalog-item">
+                        <img src="/assets/CORREDERA_Z.png" alt="Corredera Z">
+                        <div class="catalog-overlay"><div class="catalog-overlay-text">CORREDERA Z</div></div>
+                    </a>
+                </div>
+            </div>
+            <div class="carousel-indicators" id="carouselIndicators">
+                <div class="indicator active" data-slide="0"></div>
+                <div class="indicator" data-slide="1"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-red">
+        <div class="footer-container">
+            <div class="footer-hexagons">
+                <div class="hexagon hex-1"></div>
+                <div class="hexagon hex-2"></div>
+            </div>
+            <div class="footer-content">
+                <p>&copy; 2025 THOWEL. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/JS/common.js"></script>
+    <script src="/JS/guiasCorrederas.js"></script>
+</body>
+</html>

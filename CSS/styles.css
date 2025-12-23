@@ -344,20 +344,23 @@ body {
     width: 100%;
     height: 100vh;
     display: flex;
-    opacity: 0;
-    transition: opacity 0.8s ease-in-out;
+    opacity: 1;
+    transition: none;
     z-index: 1;
+    pointer-events: none;
 }
 
 .product-section.active {
     opacity: 1;
     z-index: 2;
+    pointer-events: auto;
 }
 
 .split-image {
     flex: 1;
     position: relative;
     overflow: hidden;
+    will-change: transform, opacity;
 }
 
 .split-image img {
@@ -365,6 +368,27 @@ body {
     height: 100%;
     object-fit: cover;
     display: block;
+    will-change: transform;
+}
+
+/* Estado inicial de imágenes para animación */
+.product-section:not(.active) .split-image.left-image {
+    opacity: 0;
+    transform: translateX(-100px) scale(0.9);
+    transition: none;
+}
+
+.product-section:not(.active) .split-image.right-image {
+    opacity: 0;
+    transform: translateX(100px) scale(0.9);
+    transition: none;
+}
+
+/* Imágenes visibles en sección activa */
+.product-section.active .split-image.left-image,
+.product-section.active .split-image.right-image {
+    /* Las animaciones son manejadas por anime.js */
+    transition: none;
 }
 
 .product-content-overlay {

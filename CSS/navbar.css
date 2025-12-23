@@ -1,0 +1,174 @@
+/* ========================================
+   NAVBAR COMPARTIDO - THOWEL
+   Este archivo contiene los estilos del navbar
+   que se usan en todas las páginas del sitio
+   ======================================== */
+
+/* Navigation - Con funcionalidad de esconder */
+.navbar {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 5px 100px;
+    border-radius: 50px;
+    margin: 20px auto;
+    width: fit-content;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.navbar.hidden {
+    transform: translateX(-50%) translateY(-100px);
+    opacity: 0;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    gap: 70px;
+}
+
+.navbar li {
+    position: relative;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #333;
+    margin: 15px;
+    text-align: center;
+    font-weight: 500;
+    padding: 10px 20px;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    font-size: 14px;
+    background: transparent;
+    white-space: nowrap;
+}
+
+.navbar a:hover {
+    background: rgba(231, 76, 60, 0.1);
+    color: #e74c3c;
+}
+
+.navbar a:not(:hover) {
+    background: transparent;
+    color: #333;
+}
+
+.logo img {
+    height: 60px;
+    width: auto;
+    display: block;
+}
+
+/* Logo como enlace */
+.navbar .logo {
+    padding: 0;
+    margin: 0;
+    background: none !important;
+    border-radius: 0;
+    display: flex;
+    align-items: center;
+}
+
+.navbar .logo img {
+    height: 60px;
+    width: auto;
+    display: block;
+}
+
+/* Evita efecto hover de los links en el logo */
+.navbar .logo:hover {
+    background: none !important;
+    color: inherit;
+}
+
+/* Dropdown Principal */
+.dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    min-width: 280px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    padding: 15px 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    z-index: 1001;
+    text-align: left;
+}
+
+.navbar li:hover .dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown a {
+    display: block;
+    padding: 12px 20px;
+    color: #666;
+    font-size: 14px;
+    text-transform: uppercase;
+    border-radius: 0;
+    white-space: nowrap;
+    margin: 0;
+    position: relative;
+}
+
+.dropdown a:hover {
+    background: rgba(231, 76, 60, 0.1);
+    color: #e74c3c;
+}
+
+/* Dropdown secundario para BISAGRAS */
+.dropdown-item {
+    position: relative;
+}
+
+.subdropdown {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    background: white;
+    min-width: 250px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    padding: 15px 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(-10px);
+    transition: all 0.3s ease;
+    z-index: 1002;
+}
+
+.dropdown-item:hover .subdropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+}
+
+.subdropdown a {
+    display: block;
+    padding: 10px 20px;
+    color: #666;
+    font-size: 13px;
+    text-transform: uppercase;
+    border-radius: 0;
+    white-space: nowrap;
+}
+
+.subdropdown a:hover {
+    background: rgba(231, 76, 60, 0.1);
+    color: #e74c3c;
+}

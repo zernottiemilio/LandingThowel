@@ -1,0 +1,60 @@
+/* Estilos para animaciones de páginas de productos - THOWEL */
+
+/* Preparar elementos para animación */
+.producto-section {
+    overflow: hidden;
+}
+
+/* Estado inicial - ocultar contenido antes de animar */
+.producto-section:not(.animated) .left-content {
+    opacity: 0;
+    transform: translateX(-100px);
+}
+
+.producto-section:not(.animated) .right-content {
+    opacity: 0;
+    transform: translateX(100px);
+}
+
+/* Estado inicial de elementos hijos */
+.producto-section:not(.animated) .producto-titulo,
+.producto-section:not(.animated) .producto-descripcion,
+.producto-section:not(.animated) .specs-intro,
+.producto-section:not(.animated) .diagrama-tecnico,
+.producto-section:not(.animated) .specs-table-image,
+.producto-section:not(.animated) .badge-thowel {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+/* Optimización de rendimiento para animaciones */
+.left-content,
+.right-content {
+    will-change: transform, opacity;
+}
+
+.left-content img,
+.right-content img {
+    will-change: transform;
+    transition: transform 0.1s ease-out;
+}
+
+/* Contenido animado - estado visible */
+.producto-section.animated .left-content,
+.producto-section.animated .right-content {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Asegurar que las imágenes tengan un contenedor con overflow hidden para el parallax */
+.left-content,
+.right-content {
+    overflow: hidden;
+    position: relative;
+}
+
+/* Mejorar el rendimiento del scroll */
+.producto-section {
+    transform: translateZ(0);
+    backface-visibility: hidden;
+}

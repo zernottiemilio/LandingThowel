@@ -232,7 +232,7 @@ body {
 
 .producto-section {
     width: 100%;
-    min-height: 100vh;
+    min-height: auto;
     display: flex;
     align-items: stretch;
     margin: 0;
@@ -246,7 +246,7 @@ body {
 .dual-content {
     display: flex;
     width: 100%;
-    min-height: 100vh;
+    min-height: auto;
     margin: 0;
 }
 
@@ -291,13 +291,30 @@ body {
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-    padding: 120px 60px 40px;
+    padding: 120px 60px 20px;
     position: relative;
 }
 
 .section-1 .left-content img {
     object-position: center;
     width: 100vh;
+    height: 100vh;
+    object-fit: cover;
+}
+
+/* Solo la primera sección (Manija Barral) ocupa toda la altura */
+#manija-barral .left-content img {
+    height: 100vh;
+}
+
+/* Manija Botón - imagen más alta */
+#manija-boton .left-content img {
+    height: 80vh;
+}
+
+/* Manija Oval - imagen más alta */
+#manija-oval .left-content img {
+    height: 85vh;
 }
 
 .badge-thowel {
@@ -334,13 +351,35 @@ body {
     max-width: 600px;
 }
 
-.diagrama-tecnico {
+/* Contenedor para poner imágenes lado a lado */
+.imagenes-lado-a-lado {
+    display: flex;
+    gap: 20px;
     margin-top: 30px;
-    margin-left: 150px;
+    width: 100%;
+    align-items: flex-start;
+}
+
+.diagrama-tecnico {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
 }
 
 .diagrama-tecnico img {
-    max-width: 350px;
+    max-width: 1100px;
+    width: 100%;
+    height: auto;
+}
+
+.imagenes-lado-a-lado .specs-table-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.imagenes-lado-a-lado .specs-table-image img {
+    max-width: 250px;
     width: 100%;
     height: auto;
 }
@@ -348,6 +387,16 @@ body {
 /* ========================================
    SECCIÓN 2 - ESPECIFICACIONES
    ======================================== */
+
+/* Primera sección 2 (Manija Barral) - margen reducido para que sea visible */
+#manija-barral + .section-2 {
+    margin-top: -50px;
+}
+
+/* Otras secciones 2 - más cerca */
+.section-2 {
+    margin-top: -200px;
+}
 
 .section-2 .left-content {
     background: white;
@@ -357,7 +406,7 @@ body {
 .section-2 .left-content img {
     object-position: center;
     width: 100vh;
-    height: 100%;
+    height: 50vh;
     object-fit: cover;
 }
 

@@ -5,6 +5,7 @@ class ProductShowcase {
         this.currentProduct = 0;
         this.isTransitioning = false;
         this.init();
+        this.initAnimeScrollEffects();
     }
 
     init() {
@@ -12,9 +13,16 @@ class ProductShowcase {
         this.updateShowcase();
     }
 
+    initAnimeScrollEffects() {
+        // No necesitamos ocultar las imágenes aquí porque las secciones
+        // ya tienen opacity: 0 cuando no están activas
+        // Las animaciones se aplicarán cuando una sección se active
+    }
+
     bindEvents() {
         window.addEventListener('scroll', () => {
             this.updateShowcase();
+            this.updateParallaxEffect();
         }, { passive: true });
 
         // Dot navigation
@@ -25,13 +33,34 @@ class ProductShowcase {
         });
     }
 
+    updateParallaxEffect() {
+        const activeSection = document.querySelector('.product-section.active');
+        if (!activeSection) return;
+
+        const scrollY = window.pageYOffset;
+        const sectionRect = activeSection.getBoundingClientRect();
+        const sectionTop = sectionRect.top + scrollY;
+
+        // Calcular el offset de parallax basado en la posición del scroll
+        const offset = (scrollY - sectionTop) * 0.15;
+
+        const leftImage = activeSection.querySelector('.split-image.left-image img');
+        const rightImage = activeSection.querySelector('.split-image.right-image img');
+
+        if (leftImage && rightImage) {
+            // Aplicar efecto parallax sutil
+            leftImage.style.transform = `translateY(${offset}px)`;
+            rightImage.style.transform = `translateY(${-offset}px)`;
+        }
+    }
+
     updateShowcase() {
         const showcase = document.querySelector('.unified-product-section');
         if (!showcase) return;
 
         const scrollY = window.pageYOffset;
         const windowHeight = window.innerHeight;
-        
+
         // Solo activar productos después del header (100vh)
         if (scrollY < windowHeight) {
             return; // No mostrar nada hasta salir del header
@@ -42,8 +71,8 @@ class ProductShowcase {
         const showcaseHeight = showcaseRect.height;
 
         // Calculate progress through the showcase (0 to 1)
-        const progress = Math.max(0, Math.min(1, 
-            (scrollY - showcaseTop + windowHeight * 0.3) / 
+        const progress = Math.max(0, Math.min(1,
+            (scrollY - showcaseTop + windowHeight * 0.3) /
             (showcaseHeight - windowHeight * 0.6)
         ));
 
@@ -60,31 +89,107 @@ class ProductShowcase {
 
     transitionToProduct(newProduct) {
         if (newProduct < 0 || newProduct >= this.products.length) return;
-        
+        if (newProduct === this.currentProduct) return;
+
         this.isTransitioning = true;
+        const oldProduct = this.currentProduct;
         this.currentProduct = newProduct;
 
-        // Hide current content
-        document.querySelectorAll('.product-info').forEach(info => {
-            info.classList.remove('active');
-        });
-        document.querySelectorAll('.product-section').forEach(section => {
-            section.classList.remove('active');
-        });
-        document.querySelectorAll('.dot').forEach(dot => {
-            dot.classList.remove('active');
-        });
+        // Obtener la sección actual (que se va a ocultar)
+        const oldSection = document.querySelector(`[data-product="${this.products[oldProduct]}"].product-section`);
+        const newSection = document.querySelector(`[data-product="${this.products[newProduct]}"].product-section`);
 
-        // Show new content with delay
+        // PASO 1: Animar salida de la sección anterior
+        if (oldSection && typeof anime !== 'undefined') {
+            const oldLeftImage = oldSection.querySelector('.split-image.left-image');
+            const oldRightImage = oldSection.querySelector('.split-image.right-image');
+
+            // Determinar dirección de salida (izquierda si vamos hacia adelante, derecha si retrocedemos)
+            const direction = newProduct > oldProduct ? -1 : 1;
+
+            // Animar salida de imágenes
+            anime({
+                targets: oldLeftImage,
+                translateX: direction * -150 + 'px',
+                scale: 0.85,
+                opacity: 0,
+                duration: 600,
+                easing: 'easeInExpo'
+            });
+
+            anime({
+                targets: oldRightImage,
+                translateX: direction * 150 + 'px',
+                scale: 0.85,
+                opacity: 0,
+                duration: 600,
+                easing: 'easeInExpo'
+            });
+        }
+
+        // PASO 2: Actualizar clases después de la animación de salida
         setTimeout(() => {
+            // Remover clases activas
+            document.querySelectorAll('.product-info').forEach(info => {
+                info.classList.remove('active');
+            });
+            document.querySelectorAll('.product-section').forEach(section => {
+                section.classList.remove('active');
+            });
+            document.querySelectorAll('.dot').forEach(dot => {
+                dot.classList.remove('active');
+            });
+
+            // Activar nueva sección
             document.querySelector(`[data-product="${this.products[newProduct]}"].product-info`)?.classList.add('active');
-            document.querySelector(`[data-product="${this.products[newProduct]}"].product-section`)?.classList.add('active');
+            newSection?.classList.add('active');
             document.querySelectorAll('.dot')[newProduct]?.classList.add('active');
-            
+
+            // PASO 3: Animar entrada de la nueva sección
+            if (newSection && typeof anime !== 'undefined') {
+                const leftImage = newSection.querySelector('.split-image.left-image');
+                const rightImage = newSection.querySelector('.split-image.right-image');
+
+                // Determinar dirección de entrada (opuesta a la salida)
+                const direction = newProduct > oldProduct ? 1 : -1;
+
+                // Reset estilos inline
+                if (leftImage) {
+                    leftImage.style.opacity = '';
+                    leftImage.style.transform = '';
+                }
+                if (rightImage) {
+                    rightImage.style.opacity = '';
+                    rightImage.style.transform = '';
+                }
+
+                // Animar entrada imagen izquierda
+                anime({
+                    targets: leftImage,
+                    translateX: [direction * -120 + 'px', '0px'],
+                    scale: [0.9, 1],
+                    opacity: [0, 1],
+                    duration: 1000,
+                    easing: 'easeOutExpo',
+                    delay: 50
+                });
+
+                // Animar entrada imagen derecha
+                anime({
+                    targets: rightImage,
+                    translateX: [direction * 120 + 'px', '0px'],
+                    scale: [0.9, 1],
+                    opacity: [0, 1],
+                    duration: 1000,
+                    easing: 'easeOutExpo',
+                    delay: 150
+                });
+            }
+
             setTimeout(() => {
                 this.isTransitioning = false;
-            }, 400);
-        }, 100);
+            }, 1000);
+        }, 650);
     }
 
     updateProgressBar(progress) {
@@ -297,7 +402,46 @@ function startAutoAdvance() {
 document.addEventListener('DOMContentLoaded', () => {
     // Initialize product showcase
     productShowcaseInstance = new ProductShowcase();
-    
+
+    // Animar la primera sección activa al cargar
+    setTimeout(() => {
+        const firstSection = document.querySelector('.product-section.active');
+        if (firstSection && typeof anime !== 'undefined') {
+            const leftImage = firstSection.querySelector('.split-image.left-image');
+            const rightImage = firstSection.querySelector('.split-image.right-image');
+
+            // Reset estilos inline antes de animar
+            if (leftImage) {
+                leftImage.style.opacity = '';
+                leftImage.style.transform = '';
+            }
+            if (rightImage) {
+                rightImage.style.opacity = '';
+                rightImage.style.transform = '';
+            }
+
+            anime({
+                targets: leftImage,
+                translateX: ['-100px', '0px'],
+                scale: [0.9, 1],
+                opacity: [0, 1],
+                duration: 1200,
+                easing: 'easeOutExpo',
+                delay: 300
+            });
+
+            anime({
+                targets: rightImage,
+                translateX: ['100px', '0px'],
+                scale: [0.9, 1],
+                opacity: [0, 1],
+                duration: 1200,
+                easing: 'easeOutExpo',
+                delay: 400
+            });
+        }
+    }, 500);
+
     // Initialize catalog carousel
     catalogCarouselInstance = new CatalogCarousel();
     
