@@ -1,0 +1,125 @@
+{
+  "nav": {
+    "home": "HOME",
+    "products": "PRODUCTS",
+    "drawers": "DRAWERS",
+    "hinges": "HINGES",
+    "slides": "SLIDES AND RUNNERS",
+    "handles": "HANDLES, PULLS AND SUPPORT SYSTEMS",
+    "about": "ABOUT US",
+    "contact": "CONTACT"
+  },
+  "products": {
+    "thowelBoxCristal": "THOWEL BOX CRYSTAL",
+    "thowelBoxPlus": "THOWEL BOX PLUS",
+    "thowelBox": "THOWEL BOX",
+    "hingeClip3d": "CLIP 3D HINGE",
+    "hingeSoftClosing": "SOFT CLOSING HINGE",
+    "hingeCup": "CUP HINGE",
+    "hingePushOpen": "PUSH OPEN HINGE",
+    "hingeCup155": "CUP HINGE 155° AND 175°",
+    "hingeAngles": "SPECIAL ANGLES HINGE",
+    "retainerExpeller": "RETAINER EXPELLER",
+    "gasPiston": "GAS PISTON",
+    "hiddenSlide3d": "3D HIDDEN SLIDE SOFT CLOSING",
+    "hiddenSlidePush": "HIDDEN SLIDE PUSH OPEN",
+    "telescopicSlideSoft": "TELESCOPIC RUNNER SOFT CLOSING",
+    "telescopicSlidePush": "TELESCOPIC RUNNER PUSH OPEN",
+    "telescopicSlideH45": "STANDARD TELESCOPIC RUNNER H45",
+    "telescopicSlideH35": "STANDARD TELESCOPIC RUNNER H35",
+    "slideZ": "Z RUNNER",
+    "handles": "HANDLES",
+    "supportSystems": "SUPPORT SYSTEMS",
+    "plasticLeg": "PLASTIC LEG",
+    "nylonWheel": "NYLON WHEEL"
+  },
+  "home": {
+    "hero": {
+      "title": "Explore our product line",
+      "subtitle": "and find the perfect solution for every need"
+    },
+    "technology": {
+      "smooth": {
+        "description": "Our SMOOTH technology allows cushioned and silent closures, which provides great comfort to furniture."
+      },
+      "touch": {
+        "description": "The innovative TOUCH technology allows completely mechanical openings, effortlessly and furniture fronts without handles or pulls."
+      },
+      "standard": {
+        "description": "The STANDARD technology guarantees great durability and excellent performance for the products we develop, that's why it is applied to many of our designs."
+      }
+    },
+    "catalog": {
+      "title": "CATALOG",
+      "description": "Discover our hardware created to offer functionality, style and durability in every project. With cutting-edge technology and innovative designs, each product is designed to exceed the most demanding expectations."
+    }
+  },
+  "about": {
+    "headerTitle": "We create <span class=\"highlight\">hardware</span> designed to <span class=\"highlight\">improve</span><br>every project.",
+    "sectionTitle": "ABOUT US",
+    "paragraph1": "The brand began from a personal impulse in 2016, as we are the third generation in the commercialization of products for the furniture industry. From which there is experience and also motivation to continue learning and innovating.",
+    "paragraph2": "In the beginning we manufactured basic items. Subsequently, in 2017, we carried out market and product studies in order to be inspired by novelties worldwide, bringing originality to each project. At the same time, we ventured into technical creation, where quality and durability also represent our direction.",
+    "paragraph3": "The goal is and continues to be to facilitate access to modern products that will contribute to realizing each idea easily, effectively and persistently.",
+    "mission": {
+      "title": "MISSION",
+      "description": "To listen and understand traditional and new customers who trust the brand to deploy products with the best technology and quality standards."
+    },
+    "vision": {
+      "title": "VISION",
+      "paragraph1": "To create and develop products for the manufacturing and application of each furniture piece, optimizing every space, and withstanding demands of daily use in the long term.",
+      "paragraph2": "To strengthen the brand in future markets, transcend generations, and leave a mark on each experience of its use."
+    }
+  },
+  "contact": {
+    "title": "CONTACT US",
+    "form": {
+      "name": "Name:",
+      "phone": "Phone:",
+      "email": "Email:",
+      "message": "Message:",
+      "submit": "SEND"
+    }
+  },
+  "productPage": {
+    "standard": "STANDARD",
+    "similarProducts": "SIMILAR PRODUCTS",
+    "handles": {
+      "barral": {
+        "title": "BAR<br>HANDLE",
+        "description1": "Developed under our <strong>STANDARD</strong> technology ensures excellent performance and resistance in daily use.",
+        "description2": "Widely used in the furniture industry, <strong>standing out for its reliability, ergonomics and ease of installation.</strong>",
+        "specs": "Made of <strong>high quality</strong> steel with various finishes, they offer a <strong>versatile and durable solution</strong> for all types of furniture."
+      },
+      "boton": {
+        "title": "KNOB<br>HANDLE",
+        "description1": "Developed under our <strong>STANDARD</strong> technology ensures excellent performance and resistance in daily use.",
+        "description2": "Widely used in the furniture industry, <strong>standing out for its compact design, ergonomics and ease of installation.</strong>",
+        "specs": "Made of <strong>high quality</strong> steel with various finishes, they offer a <strong>versatile and durable solution</strong> for all types of furniture."
+      },
+      "oval": {
+        "title": "OVAL<br>HANDLE",
+        "description1": "Developed under our <strong>STANDARD</strong> technology ensures excellent performance and resistance in daily use.",
+        "description2": "Widely used in the furniture industry, <strong>standing out for its elegant design, ergonomics and ease of installation.</strong>",
+        "specs": "Made of <strong>high quality</strong> steel with various finishes, they offer a <strong>versatile and durable solution</strong> for all types of furniture."
+      }
+    },
+    "hinges": {
+      "cup": {
+        "title": "CUP<br>HINGE",
+        "description1": "Developed under our <strong>STANDARD</strong> technology ensures excellent performance and resistance in daily use.",
+        "description2": "Widely used in the furniture industry, <strong>standing out for its reliability and ease of installation.</strong>",
+        "specs": "Made of <strong>high-quality</strong> steel meeting strict production standards, they offer a <strong>durable and efficient solution</strong> for all types of furniture."
+      },
+      "softClosing": {
+        "title": "SOFT<br>CLOSING",
+        "tag": "HINGE",
+        "description1": "Developed under our <strong>STANDARD</strong> technology ensures excellent performance and resistance in daily use.",
+        "description2": "Widely used in the furniture industry, <strong>standing out for its reliability and ease of installation.</strong>",
+        "specs": "Made of <strong>high-quality</strong> steel meeting strict production standards, they offer a <strong>durable and efficient solution</strong> for all types of furniture."
+      }
+    }
+  },
+  "footer": {
+    "copyright": "© 2024 THOWEL. All rights reserved."
+  }
+}

@@ -7,50 +7,58 @@
     <link rel="icon" type="image/png" href="/assets/LOGO-11.png">
     <link rel="stylesheet" href="/CSS/manijas.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/i18next@23.7.6/i18next.min.js"></script>
 </head>
 <body>
     <nav class="navbar">
         <ul>
-            <li><a href="/index.html">INICIO</a></li>
+            <li><a href="/index.html" data-i18n="nav.home">INICIO</a></li>
             <li>
-                <a href="#productos" class="productos-link">PRODUCTOS</a>
+                <a href="#productos" class="productos-link" data-i18n="nav.products">PRODUCTOS</a>
                 <div class="dropdown">
-                    <a href="#cajones">CAJONES</a>
+                    <a href="#cajones" data-i18n="nav.drawers">CAJONES</a>
                     <div class="dropdown-item">
-                        <a href="#bisagras">BISAGRAS</a>
+                        <a href="#bisagras" data-i18n="nav.hinges">BISAGRAS</a>
                         <div class="subdropdown">
-                            <a href="#bisagra-cup-3d">BISAGRA CUP 3D</a>
-                            <a href="/HTML/bisagras.html">BISAGRA SOFT CLOSING</a>
-                            <a href="/HTML/bisagraCazoletaEstandar.html">BISAGRA CAZOLETA</a>
-                            <a href="#bisagra-push-open">BISAGRA PUSH OPEN</a>
-                            <a href="#bisagra-cazoleta-155-175">BISAGRA ANGULOS ESPECIALES</a>
-                            <a href="#reten-expulsor">RETÉN EXPULSOR</a>
-                            <a href="#piston-a-gas">PISTÓN A GAS</a>
+                            <a href="/HTML/bisagraClip3D.html" data-i18n="products.hingeClip3d">BISAGRA CLIP 3D</a>
+                            <a href="/HTML/bisagras.html" data-i18n="products.hingeSoftClosing">BISAGRA SOFT CLOSING</a>
+                            <a href="/HTML/bisagraCazoletaEstandar.html" data-i18n="products.hingeCup">BISAGRA CAZOLETA</a>
+                            <a href="/HTML/bisagraPushOpen.html" data-i18n="products.hingePushOpen">BISAGRA PUSH OPEN</a>
+                            <a href="/HTML/bisagraCazoleta155.html" data-i18n="products.hingeAngles">BISAGRA ANGULOS ESPECIALES</a>
+                            <a href="/HTML/retenExpulsor.html" data-i18n="products.retainerExpeller">RETÉN EXPULSOR</a>
+                            <a href="/HTML/PistonAGAS.html" data-i18n="products.gasPiston">PISTÓN A GAS</a>
                         </div>
                     </div>
                     <div class="dropdown-item">
-                        <a href="#guias">GUÍAS Y CORREDERAS</a>
+                        <a href="#guias" data-i18n="nav.slides">GUÍAS Y CORREDERAS</a>
                         <div class="subdropdown">
-                            <a href="/HTML/guiaOculta3DSoftClosing.html">GUÍA OCULTA 3D SOFT CLOSING</a>
-                            <a href="/HTML/guiaOcultaPushOpen.html">GUÍA OCULTA PUSH OPEN</a>
-                            <a href="/HTML/correderaTelescopicaSoftClosing.html">CORREDERA TELESCÓPICA SOFT CLOSING</a>
-                            <a href="/HTML/correderaTelescopicaPushOpen.html">CORREDERA TELESCÓPICA PUSH OPEN</a>
-                            <a href="/HTML/correderaTelescopicaEstandarH45.html">CORREDERA TELESCÓPICA ESTÁNDAR H45</a>
-                            <a href="/HTML/correderaTelescopicaEstandarH35.html">CORREDERA TELESCÓPICA ESTÁNDAR H35</a>
-                            <a href="/HTML/correderaZ.html">CORREDERA Z</a>
+                            <a href="/HTML/guiaOculta3DSoftClosing.html" data-i18n="products.hiddenSlide3d">GUÍA OCULTA 3D SOFT CLOSING</a>
+                            <a href="/HTML/guiaOcultaPushOpen.html" data-i18n="products.hiddenSlidePush">GUÍA OCULTA PUSH OPEN</a>
+                            <a href="/HTML/correderaTelescopicaSoftClosing.html" data-i18n="products.telescopicSlideSoft">CORREDERA TELESCÓPICA SOFT CLOSING</a>
+                            <a href="/HTML/correderaTelescopicaPushOpen.html" data-i18n="products.telescopicSlidePush">CORREDERA TELESCÓPICA PUSH OPEN</a>
+                            <a href="/HTML/correderaTelescopicaEstandarH45.html" data-i18n="products.telescopicSlideH45">CORREDERA TELESCÓPICA ESTÁNDAR H45</a>
+                            <a href="/HTML/correderaTelescopicaEstandarH35.html" data-i18n="products.telescopicSlideH35">CORREDERA TELESCÓPICA ESTÁNDAR H35</a>
+                            <a href="/HTML/correderaZ.html" data-i18n="products.slideZ">CORREDERA Z</a>
                         </div>
                     </div>                        
                     <div class="dropdown-item">
-                        <a href="#tiradores">TIRADORES, MANIJAS Y SISTEMAS DE APOYO</a>
+                        <a href="#tiradores" data-i18n="nav.handles">TIRADORES, MANIJAS Y SISTEMAS DE APOYO</a>
                         <div class="subdropdown">
-                            <a href="/HTML/manijas.html">MANIJAS</a>
-                            <a href="/HTML/sistemasApoyo.html">SISTEMAS DE APOYO</a>
+                            <a href="/HTML/manijas.html" data-i18n="products.handles">MANIJAS</a>
+                            <a href="/HTML/sistemasApoyo.html" data-i18n="products.supportSystems">SISTEMAS DE APOYO</a>
                         </div>
                     </div>                    
             </li>
             <li><a href="/index.html" class="logo"><img src="/assets/logoHeader.png" alt="THOWEL"></a></li>
-            <li><a href="/HTML/sobreNosotros.html">SOBRE NOSOTROS</a></li>
-            <li><a href="/HTML/contacto.html">CONTACTOS</a></li>
+            <li><a href="/HTML/sobreNosotros.html" data-i18n="nav.about">SOBRE NOSOTROS</a></li>
+            <li><a href="/HTML/contacto.html" data-i18n="nav.contact">CONTACTOS</a></li>
+            <li class="language-selector-nav">
+                <button class="language-btn" data-lang="es">ES</button>
+                <span class="language-separator">|</span>
+                <button class="language-btn" data-lang="en">EN</button>
+                <span class="language-separator">|</span>
+                <button class="language-btn" data-lang="pt">PT</button>
+            </li>
         </ul>
     </nav>
 
@@ -66,15 +74,14 @@
                 <div class="badge-thowel">
                     <img src="/assets/manija barral/acero.png" alt="Acero">
                 </div>
-                <h1 class="producto-titulo"><b>
-                    MANIJA<br>
-                    BARRAL<br></b>
-                    <span class="estandar">ESTÁNDAR</span>
+                <h1 class="producto-titulo">
+                    <b data-i18n="productPage.handles.barral.title" data-i18n-html="true">MANIJA<br>BARRAL</b>
+                    <span class="estandar" data-i18n="productPage.standard">ESTÁNDAR</span>
                 </h1>
-                <p class="producto-descripcion">
+                <p class="producto-descripcion" data-i18n="productPage.handles.barral.description1" data-i18n-html="true">
                     Desarrollada bajo nuestra tecnología <strong>ESTÁNDAR</strong> asegura un excelente rendimiento y resistencia en el uso diario.
                 </p>
-                <p class="producto-descripcion">
+                <p class="producto-descripcion" data-i18n="productPage.handles.barral.description2" data-i18n-html="true">
                     Ampliamente utilizada en la industria del mueble, <strong>destacándose por su fiabilidad, ergonomía y facilidad de instalación.</strong>
                 </p>
                 <div class="diagrama-tecnico">
@@ -91,7 +98,7 @@
                 <img src="/assets/manijas y tiradores amb/IMG_1380.JPG" alt="Ambiente Manija Barral">
             </div>
             <div class="right-content">
-                <p class="specs-intro">
+                <p class="specs-intro" data-i18n="productPage.handles.barral.specs" data-i18n-html="true">
                     Fabricadas en acero de <strong>alta calidad</strong> con acabados diversos, ofrecen una <strong>solución versátil y duradera</strong> para todo tipo de amoblamientos.
                 </p>
                 <div class="specs-table-image">
@@ -113,15 +120,14 @@
                 <div class="badge-thowel">
                     <img src="/assets/manija boton/acero.png" alt="Acero">
                 </div>
-                <h1 class="producto-titulo"><b>
-                    MANIJA<br>
-                    BOTÓN<br></b>
-                    <span class="estandar">ESTÁNDAR</span>
+                <h1 class="producto-titulo">
+                    <b data-i18n="productPage.handles.boton.title" data-i18n-html="true">MANIJA<br>BOTÓN</b>
+                    <span class="estandar" data-i18n="productPage.standard">ESTÁNDAR</span>
                 </h1>
-                <p class="producto-descripcion">
+                <p class="producto-descripcion" data-i18n="productPage.handles.boton.description1" data-i18n-html="true">
                     Desarrollada bajo nuestra tecnología <strong>ESTÁNDAR</strong> asegura un excelente rendimiento y resistencia en el uso diario.
                 </p>
-                <p class="producto-descripcion">
+                <p class="producto-descripcion" data-i18n="productPage.handles.boton.description2" data-i18n-html="true">
                     Ampliamente utilizada en la industria del mueble, <strong>destacándose por su diseño compacto, ergonomía y facilidad de instalación.</strong>
                 </p>
                 <div class="diagrama-tecnico">
@@ -138,7 +144,7 @@
                 <img src="/assets/manijas y tiradores amb/IMG_1387.JPG" alt="Ambiente Manija Botón">
             </div>
             <div class="right-content">
-                <p class="specs-intro">
+                <p class="specs-intro" data-i18n="productPage.handles.boton.specs" data-i18n-html="true">
                     Fabricadas en acero de <strong>alta calidad</strong> con acabados diversos, ofrecen una <strong>solución versátil y duradera</strong> para todo tipo de amoblamientos.
                 </p>
                 <div class="specs-table-image">
@@ -160,15 +166,14 @@
                 <div class="badge-thowel">
                     <img src="/assets/manija oval/acero.png" alt="Acero">
                 </div>
-                <h1 class="producto-titulo"><b>
-                    MANIJA<br>
-                    OVAL<br></b>
-                    <span class="estandar">ESTÁNDAR</span>
+                <h1 class="producto-titulo">
+                    <b data-i18n="productPage.handles.oval.title" data-i18n-html="true">MANIJA<br>OVAL</b>
+                    <span class="estandar" data-i18n="productPage.standard">ESTÁNDAR</span>
                 </h1>
-                <p class="producto-descripcion">
+                <p class="producto-descripcion" data-i18n="productPage.handles.oval.description1" data-i18n-html="true">
                     Desarrollada bajo nuestra tecnología <strong>ESTÁNDAR</strong> asegura un excelente rendimiento y resistencia en el uso diario.
                 </p>
-                <p class="producto-descripcion">
+                <p class="producto-descripcion" data-i18n="productPage.handles.oval.description2" data-i18n-html="true">
                     Ampliamente utilizada en la industria del mueble, <strong>destacándose por su diseño elegante, ergonomía y facilidad de instalación.</strong>
                 </p>
                 <div class="diagrama-tecnico">
@@ -183,7 +188,7 @@
         <div class="dual-content">
             
             <div class="right-content">
-                <p class="specs-intro">
+                <p class="specs-intro" data-i18n="productPage.handles.oval.specs" data-i18n-html="true">
                     Fabricadas en acero de <strong>alta calidad</strong> con acabados diversos, ofrecen una <strong>solución versátil y duradera</strong> para todo tipo de amoblamientos.
                 </p>
                 <div class="specs-table-image">
@@ -197,7 +202,7 @@
          PRODUCTOS SIMILARES - CAROUSEL
          ============================================ -->
     <section class="productos-similares">
-        <h2 class="similares-titulo">PRODUCTOS SIMILARES</h2>
+        <h2 class="similares-titulo" data-i18n="productPage.similarProducts">PRODUCTOS SIMILARES</h2>
         <div class="catalog-carousel">
             <!-- Navigation Arrows -->
             <button class="carousel-nav prev-btn" id="prevBtn">
@@ -215,7 +220,7 @@
                         <a href="#manija-barral">
                             <img src="/assets/MANIJA BARRAL.JPG" alt="Manija Barral">
                             <div class="catalog-overlay">
-                                <div class="catalog-overlay-text">MANIJA BARRAL</div>
+                                <div class="catalog-overlay-text" data-i18n="productPage.handles.barral.title" data-i18n-html="true">MANIJA BARRAL</div>
                             </div>
                         </a>
                     </div>
@@ -223,7 +228,7 @@
                         <a href="#manija-boton">
                             <img src="/assets/MANIJA BOTON.JPG" alt="Manija Botón">
                             <div class="catalog-overlay">
-                                <div class="catalog-overlay-text">MANIJA BOTÓN</div>
+                                <div class="catalog-overlay-text" data-i18n="productPage.handles.boton.title" data-i18n-html="true">MANIJA BOTÓN</div>
                             </div>
                         </a>
                     </div>
@@ -231,7 +236,7 @@
                         <a href="/HTML/manijasPlatica.html">
                             <img src="/assets/PATA PLASTICA.JPG" alt="Pata Plástica">
                             <div class="catalog-overlay">
-                                <div class="catalog-overlay-text">PATA PLÁSTICA</div>
+                                <div class="catalog-overlay-text" data-i18n="products.plasticLeg">PATA PLÁSTICA</div>
                             </div>
                         </a>
                     </div>
@@ -239,7 +244,7 @@
                         <a href="/HTML/manijasRueda.html">
                             <img src="/assets/RUEDA NYLON.JPG" alt="Rueda Nylon">
                             <div class="catalog-overlay">
-                                <div class="catalog-overlay-text">RUEDA NYLON</div>
+                                <div class="catalog-overlay-text" data-i18n="products.nylonWheel">RUEDA NYLON</div>
                             </div>
                         </a>
                     </div>
@@ -247,7 +252,7 @@
                         <a href="/HTML/bisagraSoftClosing.html">
                             <img src="/assets/BSC.png" alt="Bisagra Soft Closing">
                             <div class="catalog-overlay">
-                                <div class="catalog-overlay-text">BISAGRA SOFT CLOSING</div>
+                                <div class="catalog-overlay-text" data-i18n="products.hingeSoftClosing">BISAGRA SOFT CLOSING</div>
                             </div>
                         </a>
                     </div>
@@ -255,7 +260,7 @@
                         <a href="/HTML/bisagraClip3D.html">
                             <img src="/assets/BC3D.png" alt="Bisagra Clip 3D">
                             <div class="catalog-overlay">
-                                <div class="catalog-overlay-text">BISAGRA CLIP 3D</div>
+                                <div class="catalog-overlay-text" data-i18n="products.hingeClip3d">BISAGRA CLIP 3D</div>
                             </div>
                         </a>
                     </div>
@@ -263,7 +268,7 @@
                         <a href="/HTML/retenExpulsor.html">
                             <img src="/assets/Reten.png" alt="Retén Expulsor">
                             <div class="catalog-overlay">
-                                <div class="catalog-overlay-text">RETÉN EXPULSOR</div>
+                                <div class="catalog-overlay-text" data-i18n="products.retainerExpeller">RETÉN EXPULSOR</div>
                             </div>
                         </a>
                     </div>
@@ -275,7 +280,7 @@
                         <a href="/HTML/PistonAGAS.html">
                             <img src="/assets/PISTONAGAS.png" alt="Pistón a Gas">
                             <div class="catalog-overlay">
-                                <div class="catalog-overlay-text">PISTÓN A GAS</div>
+                                <div class="catalog-overlay-text" data-i18n="products.gasPiston">PISTÓN A GAS</div>
                             </div>
                         </a>
                     </div>
@@ -283,7 +288,7 @@
                         <a href="/HTML/bisagraPushOpen.html">
                             <img src="/assets/BISAGRAPUSHOPEN.png" alt="Bisagra Push Open">
                             <div class="catalog-overlay">
-                                <div class="catalog-overlay-text">BISAGRA PUSH OPEN</div>
+                                <div class="catalog-overlay-text" data-i18n="products.hingePushOpen">BISAGRA PUSH OPEN</div>
                             </div>
                         </a>
                     </div>
@@ -291,7 +296,7 @@
                         <a href="/HTML/bisagraCazoletaEstandar.html">
                             <img src="/assets/BCE.png" alt="Bisagra Cazoleta">
                             <div class="catalog-overlay">
-                                <div class="catalog-overlay-text">BISAGRA CAZOLETA</div>
+                                <div class="catalog-overlay-text" data-i18n="products.hingeCup">BISAGRA CAZOLETA</div>
                             </div>
                         </a>
                     </div>
@@ -299,7 +304,7 @@
                         <a href="/HTML/guiaOculta3DSoftClosing.html">
                             <img src="/assets/manijas y tiradores amb/IMG_1390.JPG" alt="Guía Oculta 3D">
                             <div class="catalog-overlay">
-                                <div class="catalog-overlay-text">GUÍA OCULTA 3D</div>
+                                <div class="catalog-overlay-text" data-i18n="products.hiddenSlide3d">GUÍA OCULTA 3D</div>
                             </div>
                         </a>
                     </div>
@@ -307,7 +312,7 @@
                         <a href="/HTML/correderaTelescopicaSoftClosing.html">
                             <img src="/assets/ambiente.png" alt="Corredera Telescópica">
                             <div class="catalog-overlay">
-                                <div class="catalog-overlay-text">CORREDERA TELESCÓPICA</div>
+                                <div class="catalog-overlay-text" data-i18n="products.telescopicSlideSoft">CORREDERA TELESCÓPICA</div>
                             </div>
                         </a>
                     </div>
@@ -315,7 +320,7 @@
                         <a href="/HTML/ThowelBoxCristal.html">
                             <img src="/assets/THOWELBOXCRISTAL.png" alt="Thowel Box Cristal">
                             <div class="catalog-overlay">
-                                <div class="catalog-overlay-text">THOWEL BOX CRISTAL</div>
+                                <div class="catalog-overlay-text" data-i18n="products.thowelBoxCristal">THOWEL BOX CRISTAL</div>
                             </div>
                         </a>
                     </div>
@@ -323,7 +328,7 @@
                         <a href="/HTML/bisagraCazoleta155.html">
                             <img src="/assets/BisagraCazoleta155Cerca.png" alt="Bisagra Cazoleta 155°">
                             <div class="catalog-overlay">
-                                <div class="catalog-overlay-text">BISAGRA CAZOLETA 155°</div>
+                                <div class="catalog-overlay-text" data-i18n="products.hingeCup155">BISAGRA CAZOLETA 155°</div>
                             </div>
                         </a>
                     </div>
@@ -346,12 +351,13 @@
                 <div class="hexagon hex-2"></div>
             </div>
             <div class="footer-content">
-                <p>&copy; 2024 THOWEL. Todos los derechos reservados.</p>
+                <p data-i18n="footer.copyright">&copy; 2024 THOWEL. Todos los derechos reservados.</p>
             </div>
         </div>
     </footer>
 
     <script src="/JS/common.js"></script>
     <script src="/JS/manijas.js"></script>
+    <script src="/JS/i18n.js"></script>
 </body>
 </html>
