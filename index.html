@@ -8,6 +8,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="CSS/navbar.css">
     <link rel="stylesheet" href="CSS/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/i18next@23.7.6/i18next.min.js"></script>
 </head>
 <body>
     <section class="header-section">
@@ -15,62 +16,69 @@
 
         <nav class="navbar">
             <ul>
-                <li><a href="#inicio">INICIO</a></li>
+                <li><a href="#inicio" data-i18n="nav.home">INICIO</a></li>
                 <li>
-                    <a href="#productos" class="productos-link">PRODUCTOS</a>
+                    <a href="#productos" class="productos-link" data-i18n="nav.products">PRODUCTOS</a>
                     <div class="dropdown">
                         <div class="dropdown-item">
-                            <a href="#cajones">CAJONES</a>
+                            <a href="#cajones" data-i18n="nav.drawers">CAJONES</a>
                             <div class="subdropdown">
-                                <a href="/HTML/ThowelBoxCristal.html">THOWEL BOX CRISTAL</a>
-                                <a href="/HTML/thowelBoxPlus.html">THOWEL BOX PLUS</a>
-                                <a href="/HTML/thowelBox.html">THOWEL BOX</a>
+                                <a href="/HTML/ThowelBoxCristal.html" data-i18n="products.thowelBoxCristal">THOWEL BOX CRISTAL</a>
+                                <a href="/HTML/thowelBoxPlus.html" data-i18n="products.thowelBoxPlus">THOWEL BOX PLUS</a>
+                                <a href="/HTML/thowelBox.html" data-i18n="products.thowelBox">THOWEL BOX</a>
                             </div>
                         </div>
-                        
+
                         <div class="dropdown-item">
-                            <a href="#bisagras">BISAGRAS</a>
+                            <a href="#bisagras" data-i18n="nav.hinges">BISAGRAS</a>
                             <div class="subdropdown">
-                                <a href="/HTML/bisagraClip3D.html">BISAGRA CLIP 3D</a>
-                                <a href="/HTML/bisagras.html">BISAGRA SOFT CLOSING</a>
-                                <a href="/HTML/bisagraCazoletaEstandar.html">BISAGRA CAZOLETA</a>
-                                <a href="/HTML/bisagraPushOpen.html">BISAGRA PUSH OPEN</a>
-                                <a href="/HTML/bisagraCazoleta155.html">BISAGRA CAZOLETA 155° Y 175°</a>
-                                <a href="/HTML/retenExpulsor.html">RETÉN EXPULSOR</a>
-                                <a href="/HTML/PistonAGAS.html">PISTÓN A GAS</a>
+                                <a href="/HTML/bisagraClip3D.html" data-i18n="products.hingeClip3d">BISAGRA CLIP 3D</a>
+                                <a href="/HTML/bisagras.html" data-i18n="products.hingeSoftClosing">BISAGRA SOFT CLOSING</a>
+                                <a href="/HTML/bisagraCazoletaEstandar.html" data-i18n="products.hingeCup">BISAGRA CAZOLETA</a>
+                                <a href="/HTML/bisagraPushOpen.html" data-i18n="products.hingePushOpen">BISAGRA PUSH OPEN</a>
+                                <a href="/HTML/bisagraCazoleta155.html" data-i18n="products.hingeCup155">BISAGRA CAZOLETA 155° Y 175°</a>
+                                <a href="/HTML/retenExpulsor.html" data-i18n="products.retainerExpeller">RETÉN EXPULSOR</a>
+                                <a href="/HTML/PistonAGAS.html" data-i18n="products.gasPiston">PISTÓN A GAS</a>
                             </div>
                         </div>
                         <div class="dropdown-item">
-                            <a href="#guias">GUÍAS Y CORREDERAS</a>
+                            <a href="#guias" data-i18n="nav.slides">GUÍAS Y CORREDERAS</a>
                             <div class="subdropdown">
-                                <a href="/HTML/guiaOculta3DSoftClosing.html">GUÍA OCULTA 3D SOFT CLOSING</a>
-                                <a href="/HTML/guiaOcultaPushOpen.html">GUÍA OCULTA PUSH OPEN</a>
-                                <a href="/HTML/correderaTelescopicaSoftClosing.html">CORREDERA TELESCÓPICA SOFT CLOSING</a>
-                                <a href="/HTML/correderaTelescopicaPushOpen.html">CORREDERA TELESCÓPICA PUSH OPEN</a>
-                                <a href="/HTML/correderaTelescopicaEstandarH45.html">CORREDERA TELESCÓPICA ESTÁNDAR H45</a>
-                                <a href="/HTML/correderaTelescopicaEstandarH35.html">CORREDERA TELESCÓPICA ESTÁNDAR H35</a>
-                                <a href="/HTML/correderaZ.html">CORREDERA Z</a>
+                                <a href="/HTML/guiaOculta3DSoftClosing.html" data-i18n="products.hiddenSlide3d">GUÍA OCULTA 3D SOFT CLOSING</a>
+                                <a href="/HTML/guiaOcultaPushOpen.html" data-i18n="products.hiddenSlidePush">GUÍA OCULTA PUSH OPEN</a>
+                                <a href="/HTML/correderaTelescopicaSoftClosing.html" data-i18n="products.telescopicSlideSoft">CORREDERA TELESCÓPICA SOFT CLOSING</a>
+                                <a href="/HTML/correderaTelescopicaPushOpen.html" data-i18n="products.telescopicSlidePush">CORREDERA TELESCÓPICA PUSH OPEN</a>
+                                <a href="/HTML/correderaTelescopicaEstandarH45.html" data-i18n="products.telescopicSlideH45">CORREDERA TELESCÓPICA ESTÁNDAR H45</a>
+                                <a href="/HTML/correderaTelescopicaEstandarH35.html" data-i18n="products.telescopicSlideH35">CORREDERA TELESCÓPICA ESTÁNDAR H35</a>
+                                <a href="/HTML/correderaZ.html" data-i18n="products.slideZ">CORREDERA Z</a>
                             </div>
-                        </div>                        
+                        </div>
                         <div class="dropdown-item">
-                            <a href="#tiradores">TIRADORES, MANIJAS Y SISTEMAS DE APOYO</a>
+                            <a href="#tiradores" data-i18n="nav.handles">TIRADORES, MANIJAS Y SISTEMAS DE APOYO</a>
                             <div class="subdropdown">
-                                <a href="/HTML/manijas.html">MANIJAS</a>
-                                <a href="/HTML/sistemasApoyo.html">SISTEMAS DE APOYO</a>
+                                <a href="/HTML/manijas.html" data-i18n="products.handles">MANIJAS</a>
+                                <a href="/HTML/sistemasApoyo.html" data-i18n="products.supportSystems">SISTEMAS DE APOYO</a>
                             </div>
                         </div>                    
                 </li>
                 <li><a href="/index.html" class="logo"><img src="/assets/logoHeader.png" alt="THOWEL"></a></li>
-                <li><a href="/HTML/sobreNosotros.html">SOBRE NOSOTROS</a></li>
-                <li><a href="/HTML/contacto.html">CONTACTOS</a></li>
+                <li><a href="/HTML/sobreNosotros.html" data-i18n="nav.about">SOBRE NOSOTROS</a></li>
+                <li><a href="/HTML/contacto.html" data-i18n="nav.contact">CONTACTOS</a></li>
+                <li class="language-selector-nav">
+                    <button class="language-btn" data-lang="es">ES</button>
+                    <span class="language-separator">|</span>
+                    <button class="language-btn" data-lang="en">EN</button>
+                    <span class="language-separator">|</span>
+                    <button class="language-btn" data-lang="pt">PT</button>
+                </li>
             </ul>
         </nav>
 
         <!-- Texto encima de la portada -->
         <div class="main-content">
             <div class="main-text">
-                <h1>Explorá nuestra línea de productos</h1>
-                <p>y encontrá la solución perfecta para cada necesidad</p>
+                <h1 data-i18n="home.hero.title">Explorá nuestra línea de productos</h1>
+                <p data-i18n="home.hero.subtitle">y encontrá la solución perfecta para cada necesidad</p>
             </div>
         </div>
         <div class="scroll-indicator">
@@ -119,31 +127,31 @@
                 <div class="product-logo">
                     <img src="assets/S.png" alt="SMOOTH">
                 </div>
-                
-                <p class="product-description">
+
+                <p class="product-description" data-i18n="home.technology.smooth.description">
                     Nuestra tecnología SMOOTH permite cierres amortiguados y silenciosos, lo cual aporta gran confort a los amoblamientos.
                 </p>
             </div>
-            
+
             <!-- TOUCH Content -->
             <div class="product-info" data-product="touch">
                 <div class="product-logo">
                     <img src="assets/T.png" alt="TOUCH">
                 </div>
-                
-                <p class="product-description">
+
+                <p class="product-description" data-i18n="home.technology.touch.description">
                     La innovadora tecnologia TOUCH, permite aperturas completamente mecanicas, sin esfuerzo y frentes de amoblamientos sin manijas o tiradores.
-                    
+
                 </p>
             </div>
-            
+
             <!-- ESTÁNDAR Content -->
             <div class="product-info" data-product="estandar">
                 <div class="product-logo">
                     <img src="assets/E.png" alt="ESTÁNDAR">
                 </div>
-                
-                <p class="product-description">
+
+                <p class="product-description" data-i18n="home.technology.standard.description">
                     La tecnología ESTÁNDAR garantiza gran durabilidad y excelentes prestaciones para los productos que desarrollamos, es por eso que la misma es aplicada a muchos de nuestros diseños.
                 </p>
             </div>
@@ -166,16 +174,16 @@
             <!-- Header -->
             <div class="catalog-header">
                 <div class="catalog-title-section">
-                    <h2 class="catalog-title">CATÁLOGO</h2>
+                    <h2 class="catalog-title" data-i18n="home.catalog.title">CATÁLOGO</h2>
                     <div class="catalog-arrow">
                         <img src="assets/FLECHACATALOGO.png" alt="Flecha Catálogo">
                     </div>
                 </div>
-                
+
                 <div class="catalog-description-section">
-                    <p class="catalog-description">
-                        Descubre nuestros herrajes creados para ofrecer funcionalidad, estilo y 
-                        durabilidad en cada proyecto. Con tecnología de vanguardia y diseños innovadores, 
+                    <p class="catalog-description" data-i18n="home.catalog.description">
+                        Descubre nuestros herrajes creados para ofrecer funcionalidad, estilo y
+                        durabilidad en cada proyecto. Con tecnología de vanguardia y diseños innovadores,
                         cada producto está diseñado para superar las expectativas más exigentes.
                     </p>
                 </div>
@@ -312,11 +320,12 @@
         
 
         <div class="footer-content">
-            <p>&copy; 2024 THOWEL. Todos los derechos reservados.</p>
+            <p data-i18n="footer.copyright">&copy; 2024 THOWEL. Todos los derechos reservados.</p>
         </div>
     </div>
 </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
     <script src="JS/script.js"></script>
+    <script src="JS/i18n.js"></script>
 </body>
 </html>

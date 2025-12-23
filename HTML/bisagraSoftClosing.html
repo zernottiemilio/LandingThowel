@@ -6,61 +6,69 @@
     <title>Bisagra Soft Closing - THOWEL</title>
     <link rel="icon" type="image/png" href="/assets/LOGO-11.png">
     <link rel="stylesheet" href="/CSS/bisagraSoftClosing.css">
+    <script src="https://cdn.jsdelivr.net/npm/i18next@23.7.6/i18next.min.js"></script>
 </head>
 <body>
     <nav class="navbar">
         <ul>
-            <li><a href="/index.html">INICIO</a></li>
+            <li><a href="/index.html" data-i18n="nav.home">INICIO</a></li>
             <li>
-                <a href="#productos" class="productos-link">PRODUCTOS</a>
+                <a href="#productos" class="productos-link" data-i18n="nav.products">PRODUCTOS</a>
                 <div class="dropdown">
                     <div class="dropdown-item">
-                        <a href="#cajones">CAJONES</a>
+                        <a href="#cajones" data-i18n="nav.drawers">CAJONES</a>
                         <div class="subdropdown">
-                            <a href="/HTML/ThowelBoxCristal.html">THOWEL BOX CRISTAL</a>
-                            <a href="/HTML/thowelBoxPlus.html">THOWEL BOX PLUS</a>
-                            <a href="/HTML/thowelBox.html">THOWEL BOX</a>
+                            <a href="/HTML/ThowelBoxCristal.html" data-i18n="products.thowelBoxCristal">THOWEL BOX CRISTAL</a>
+                            <a href="/HTML/thowelBoxPlus.html" data-i18n="products.thowelBoxPlus">THOWEL BOX PLUS</a>
+                            <a href="/HTML/thowelBox.html" data-i18n="products.thowelBox">THOWEL BOX</a>
                         </div>
                     </div>
                     <div class="dropdown-item">
-                        <a href="#bisagras">BISAGRAS</a>
+                        <a href="#bisagras" data-i18n="nav.hinges">BISAGRAS</a>
                         <div class="subdropdown">
-                            <a href="/HTML/bisagraClip3D.html">BISAGRA CLIP 3D</a>
-                            <a href="#BisagraSoftClosing">BISAGRA SOFT CLOSING</a>
-                            <a href="/HTML/bisagraCazoletaEstandar.html">BISAGRA CAZOLETA</a>
-                            <a href="/HTML/bisagraPushOpen.html">BISAGRA PUSH OPEN</a>
-                            <a href="/HTML/bisagraCazoleta155.html">BISAGRA ANGULOS ESPECIALES</a>
-                            <a href="/HTML/retenExpulsor.html">RETÉN EXPULSOR</a>
-                            <a href="/HTML/PistonAGAS.html">PISTÓN A GAS</a>
+                            <a href="/HTML/bisagraClip3D.html" data-i18n="products.hingeClip3d">BISAGRA CLIP 3D</a>
+                            <a href="#BisagraSoftClosing" data-i18n="products.hingeSoftClosing">BISAGRA SOFT CLOSING</a>
+                            <a href="/HTML/bisagraCazoletaEstandar.html" data-i18n="products.hingeCup">BISAGRA CAZOLETA</a>
+                            <a href="/HTML/bisagraPushOpen.html" data-i18n="products.hingePushOpen">BISAGRA PUSH OPEN</a>
+                            <a href="/HTML/bisagraCazoleta155.html" data-i18n="products.hingeAngles">BISAGRA ANGULOS ESPECIALES</a>
+                            <a href="/HTML/retenExpulsor.html" data-i18n="products.retainerExpeller">RETÉN EXPULSOR</a>
+                            <a href="/HTML/PistonAGAS.html" data-i18n="products.gasPiston">PISTÓN A GAS</a>
                         </div>
                     </div>
                     <div class="dropdown-item">
-                        <a href="#guias">GUÍAS Y CORREDERAS</a>
+                        <a href="#guias" data-i18n="nav.slides">GUÍAS Y CORREDERAS</a>
                         <div class="subdropdown">
-                            <a href="/HTML/guiaOculta3DSoftClosing.html">GUÍA OCULTA 3D SOFT CLOSING</a>
-                            <a href="/HTML/guiaOcultaPushOpen.html">GUÍA OCULTA PUSH OPEN</a>
-                            <a href="/HTML/correderaTelescopicaSoftClosing.html">CORREDERA TELESCÓPICA SOFT CLOSING</a>
-                            <a href="/HTML/correderaTelescopicaPushOpen.html">CORREDERA TELESCÓPICA PUSH OPEN</a>
-                            <a href="/HTML/correderaTelescopicaEstandarH45.html">CORREDERA TELESCÓPICA ESTÁNDAR H45</a>
-                            <a href="/HTML/correderaTelescopicaEstandarH35.html">CORREDERA TELESCÓPICA ESTÁNDAR H35</a>
-                            <a href="/HTML/correderaZ.html">CORREDERA Z</a>
+                            <a href="/HTML/guiaOculta3DSoftClosing.html" data-i18n="products.hiddenSlide3d">GUÍA OCULTA 3D SOFT CLOSING</a>
+                            <a href="/HTML/guiaOcultaPushOpen.html" data-i18n="products.hiddenSlidePush">GUÍA OCULTA PUSH OPEN</a>
+                            <a href="/HTML/correderaTelescopicaSoftClosing.html" data-i18n="products.telescopicSlideSoft">CORREDERA TELESCÓPICA SOFT CLOSING</a>
+                            <a href="/HTML/correderaTelescopicaPushOpen.html" data-i18n="products.telescopicSlidePush">CORREDERA TELESCÓPICA PUSH OPEN</a>
+                            <a href="/HTML/correderaTelescopicaEstandarH45.html" data-i18n="products.telescopicSlideH45">CORREDERA TELESCÓPICA ESTÁNDAR H45</a>
+                            <a href="/HTML/correderaTelescopicaEstandarH35.html" data-i18n="products.telescopicSlideH35">CORREDERA TELESCÓPICA ESTÁNDAR H35</a>
+                            <a href="/HTML/correderaZ.html" data-i18n="products.slideZ">CORREDERA Z</a>
                         </div>
                     </div>                        
                     <div class="dropdown-item">
-                        <a href="#tiradores">TIRADORES, MANIJAS Y SISTEMAS DE APOYO</a>
+                        <a href="#tiradores" data-i18n="nav.handles">TIRADORES, MANIJAS Y SISTEMAS DE APOYO</a>
                         <div class="subdropdown">
-                            <a href="/HTML/manijasBarral.html">MANIJA BARRAL</a>
-                            <a href="/HTML/manijasBoton.html">MANIJA BOTÓN</a>
-                            <a href="/HTML/manijasOval.html">MANIJA OVAL</a>
-                            <a href="/HTML/manijasPlatica.html">PATA PLÁSTICA</a>
-                            <a href="/HTML/manijasRueda.html">MANIJA RUEDA NYLON</a>
+                            <a href="/HTML/manijasBarral.html" data-i18n="productPage.handles.barral.title" data-i18n-html="true">MANIJA BARRAL</a>
+                            <a href="/HTML/manijasBoton.html" data-i18n="productPage.handles.boton.title" data-i18n-html="true">MANIJA BOTÓN</a>
+                            <a href="/HTML/manijasOval.html" data-i18n="productPage.handles.oval.title" data-i18n-html="true">MANIJA OVAL</a>
+                            <a href="/HTML/manijasPlatica.html" data-i18n="products.plasticLeg">PATA PLÁSTICA</a>
+                            <a href="/HTML/manijasRueda.html" data-i18n="products.nylonWheel">MANIJA RUEDA NYLON</a>
                         </div>
                     </div>
                 </div>
             </li>
             <li><a href="/index.html" class="logo"><img src="/assets/logoHeader.png" alt="THOWEL"></a></li>
-            <li><a href="/HTML/sobreNosotros.html">SOBRE NOSOTROS</a></li>
-            <li><a href="/HTML/contacto.html">CONTACTOS</a></li>
+            <li><a href="/HTML/sobreNosotros.html" data-i18n="nav.about">SOBRE NOSOTROS</a></li>
+            <li><a href="/HTML/contacto.html" data-i18n="nav.contact">CONTACTOS</a></li>
+            <li class="language-selector-nav">
+                <button class="language-btn" data-lang="es">ES</button>
+                <span class="language-separator">|</span>
+                <button class="language-btn" data-lang="en">EN</button>
+                <span class="language-separator">|</span>
+                <button class="language-btn" data-lang="pt">PT</button>
+            </li>
         </ul>
     </nav>
 
@@ -74,15 +82,14 @@
                 <div class="badge-thowel">
                     <img src="/assets/TecnologiaSmooth.png" alt="Thowel Badge">
                 </div>
-                <h1 class="producto-titulo"><b>
-                    BISAGRA<br>
-                    SOFT<br></b>
-                    <span class="estandar">CLOSING</span>
+                <h1 class="producto-titulo">
+                    <b data-i18n="productPage.hinges.softClosing.title" data-i18n-html="true">BISAGRA<br>SOFT</b>
+                    <span class="estandar" data-i18n="productPage.hinges.softClosing.tag">CLOSING</span>
                 </h1>
-                <p class="producto-descripcion">
+                <p class="producto-descripcion" data-i18n="productPage.hinges.softClosing.description1" data-i18n-html="true">
                     Desarrolladas bajo nuestra tecnología <strong>ESTÁNDAR</strong> aseguran un excelente rendimiento y resistencia en el uso diario.
                 </p>
-                <p class="producto-descripcion">
+                <p class="producto-descripcion" data-i18n="productPage.hinges.softClosing.description2" data-i18n-html="true">
                     Ampliamente utilizadas en la industria del mueble, <strong>destacándose por su fiabilidad y facilidad de instalación.</strong>
                 </p>
                 <div class="diagrama-tecnico">
@@ -99,7 +106,7 @@
                 <img src="/assets/ambiente.png" alt="Ambiente">
             </div>
             <div class="right-content">
-                <p class="specs-intro">
+                <p class="specs-intro" data-i18n="productPage.hinges.softClosing.specs" data-i18n-html="true">
                     Fabricadas en acero de <strong>alta calidad</strong> cumpliendo con estrictos estándares de producción, ofrecen una <strong>solución duradera y eficiente</strong> para todo tipo de amoblamientos.
                 </p>
                 <div class="specs-table-image">
@@ -126,7 +133,7 @@
 
     <!-- Sección 5: Productos Similares (Carousel) -->
     <section class="productos-similares">
-        <h2 class="similares-titulo">PRODUCTOS SIMILARES</h2>
+        <h2 class="similares-titulo" data-i18n="productPage.similarProducts">PRODUCTOS SIMILARES</h2>
         <div class="catalog-carousel">
             <!-- Navigation Arrows -->
             <button class="carousel-nav prev-btn" id="prevBtn">
@@ -141,37 +148,37 @@
                     <div class="catalog-item">
                         <img src="/assets/BISAGRAANGULOSESPECIALES135.png" alt="Bisagra Ángulos Especiales 135">
                         <div class="catalog-overlay">
-                            <div class="catalog-overlay-text">BISAGRA ANGULOS ESPECIALES 135</div>
+                            <div class="catalog-overlay-text" data-i18n="products.hingeAngles">BISAGRA ANGULOS ESPECIALES 135</div>
                         </div>
                     </div>
                     <div class="catalog-item">
                         <img src="/assets/BISAGRAANGULOSESPECIALES175.png" alt="Bisagra Ángulos Especiales 175">
                         <div class="catalog-overlay">
-                            <div class="catalog-overlay-text">BISAGRAS ANGULOS ESPECIALES 175</div>
+                            <div class="catalog-overlay-text" data-i18n="products.hingeAngles">BISAGRAS ANGULOS ESPECIALES 175</div>
                         </div>
                     </div>
                     <div class="catalog-item">
                         <img src="/assets/BISAGRACAZOLETAESTANDAR.png" alt="Bisagra Cazoleta Estandar">
                         <div class="catalog-overlay">
-                            <div class="catalog-overlay-text">BISAGRA CAZOLETA ESTANDAR</div>
+                            <div class="catalog-overlay-text" data-i18n="products.hingeCup">BISAGRA CAZOLETA ESTANDAR</div>
                         </div>
                     </div>
                     <div class="catalog-item">
                         <img src="/assets/BISAGRACLIP.png" alt="Bisagra Clip">
                         <div class="catalog-overlay">
-                            <div class="catalog-overlay-text">BISAGRA CLIP</div>
+                            <div class="catalog-overlay-text" data-i18n="products.hingeClip3d">BISAGRA CLIP</div>
                         </div>
                     </div>
                     <div class="catalog-item">
                         <img src="/assets/BISAGRAPUSHOPEN.png" alt="Bisagra Push Open">
                         <div class="catalog-overlay">
-                            <div class="catalog-overlay-text">BISAGRA PUSH OPEN</div>
+                            <div class="catalog-overlay-text" data-i18n="products.hingePushOpen">BISAGRA PUSH OPEN</div>
                         </div>
                     </div>
                     <div class="catalog-item">
                         <img src="/assets/BISAGRASOFTCLOSING.png" alt="Bisagra Soft Closing">
                         <div class="catalog-overlay">
-                            <div class="catalog-overlay-text">BISAGRA SOFT CLOSING</div>
+                            <div class="catalog-overlay-text" data-i18n="products.hingeSoftClosing">BISAGRA SOFT CLOSING</div>
                         </div>
                     </div>
                     <div class="catalog-item">
@@ -254,12 +261,13 @@
         
         <!-- Contenido del footer -->
         <div class="footer-content">
-            <p>&copy; 2025 THOWEL. Todos los derechos reservados.</p>
+            <p data-i18n="footer.copyright">&copy; 2025 THOWEL. Todos los derechos reservados.</p>
         </div>
     </div>
     </footer>
 
     <script src="/JS/common.js"></script>
     <script src="/JS/Bisagras.js"></script>
+    <script src="/JS/i18n.js"></script>
 </body>
 </html>

@@ -6,58 +6,66 @@
     <title>Sobre Nosotros - THOWEL</title>
     <link rel="icon" type="image/png" href="/assets/LOGO-11.png">
     <link rel="stylesheet" href="/CSS/sobreNosotros.css">
+    <script src="https://cdn.jsdelivr.net/npm/i18next@23.7.6/i18next.min.js"></script>
 </head>
 <body>
   <!-- Navbar flotante -->
   <nav class="navbar">
     <ul>
-        <li><a href="/index.html">INICIO</a></li>
+        <li><a href="/index.html" data-i18n="nav.home">INICIO</a></li>
         <li>
-            <a href="#productos" class="productos-link">PRODUCTOS</a>
+            <a href="#productos" class="productos-link" data-i18n="nav.products">PRODUCTOS</a>
             <div class="dropdown">
                 <div class="dropdown-item">
-                    <a href="#cajones">CAJONES</a>
+                    <a href="#cajones" data-i18n="nav.drawers">CAJONES</a>
                     <div class="subdropdown">
-                        <a href="/HTML/ThowelBoxCristal.html">THOWEL BOX CRISTAL</a>
-                        <a href="/HTML/thowelBoxPlus.html">THOWEL BOX PLUS</a>
-                        <a href="/HTML/thowelBox.html">THOWEL BOX</a>
+                        <a href="/HTML/ThowelBoxCristal.html" data-i18n="products.thowelBoxCristal">THOWEL BOX CRISTAL</a>
+                        <a href="/HTML/thowelBoxPlus.html" data-i18n="products.thowelBoxPlus">THOWEL BOX PLUS</a>
+                        <a href="/HTML/thowelBox.html" data-i18n="products.thowelBox">THOWEL BOX</a>
                     </div>
                 </div>
                 <div class="dropdown-item">
-                    <a href="#bisagras">BISAGRAS</a>
+                    <a href="#bisagras" data-i18n="nav.hinges">BISAGRAS</a>
                     <div class="subdropdown">
-                        <a href="/HTML/bisagraClip3D.html">BISAGRA CLIP 3D</a>
-                        <a href="/HTML/bisagras.html">BISAGRA SOFT CLOSING</a>
-                        <a href="/HTML/bisagraCazoletaEstandar.html">BISAGRA CAZOLETA</a>
-                        <a href="/HTML/bisagraPushOpen.html">BISAGRA PUSH OPEN</a>
-                        <a href="/HTML/bisagraCazoleta155.html">BISAGRA ANGULOS ESPECIALES</a>
-                        <a href="/HTML/retenExpulsor.html">RETÉN EXPULSOR</a>
-                        <a href="/HTML/PistonAGAS.html">PISTÓN A GAS</a>
+                        <a href="/HTML/bisagraClip3D.html" data-i18n="products.hingeClip3d">BISAGRA CLIP 3D</a>
+                        <a href="/HTML/bisagras.html" data-i18n="products.hingeSoftClosing">BISAGRA SOFT CLOSING</a>
+                        <a href="/HTML/bisagraCazoletaEstandar.html" data-i18n="products.hingeCup">BISAGRA CAZOLETA</a>
+                        <a href="/HTML/bisagraPushOpen.html" data-i18n="products.hingePushOpen">BISAGRA PUSH OPEN</a>
+                        <a href="/HTML/bisagraCazoleta155.html" data-i18n="products.hingeAngles">BISAGRA ANGULOS ESPECIALES</a>
+                        <a href="/HTML/retenExpulsor.html" data-i18n="products.retainerExpeller">RETÉN EXPULSOR</a>
+                        <a href="/HTML/PistonAGAS.html" data-i18n="products.gasPiston">PISTÓN A GAS</a>
                     </div>
                 </div>
                 <div class="dropdown-item">
-                    <a href="#guias">GUÍAS Y CORREDERAS</a>
+                    <a href="#guias" data-i18n="nav.slides">GUÍAS Y CORREDERAS</a>
                     <div class="subdropdown">
-                        <a href="/HTML/guiaOculta3DSoftClosing.html">GUÍA OCULTA 3D SOFT CLOSING</a>
-                        <a href="/HTML/guiaOcultaPushOpen.html">GUÍA OCULTA PUSH OPEN</a>
-                        <a href="/HTML/correderaTelescopicaSoftClosing.html">CORREDERA TELESCÓPICA SOFT CLOSING</a>
-                        <a href="/HTML/correderaTelescopicaPushOpen.html">CORREDERA TELESCÓPICA PUSH OPEN</a>
-                        <a href="/HTML/correderaTelescopicaEstandarH45.html">CORREDERA TELESCÓPICA ESTÁNDAR H45</a>
-                        <a href="/HTML/correderaTelescopicaEstandarH35.html">CORREDERA TELESCÓPICA ESTÁNDAR H35</a>
-                        <a href="/HTML/correderaZ.html">CORREDERA Z</a>
+                        <a href="/HTML/guiaOculta3DSoftClosing.html" data-i18n="products.hiddenSlide3d">GUÍA OCULTA 3D SOFT CLOSING</a>
+                        <a href="/HTML/guiaOcultaPushOpen.html" data-i18n="products.hiddenSlidePush">GUÍA OCULTA PUSH OPEN</a>
+                        <a href="/HTML/correderaTelescopicaSoftClosing.html" data-i18n="products.telescopicSlideSoft">CORREDERA TELESCÓPICA SOFT CLOSING</a>
+                        <a href="/HTML/correderaTelescopicaPushOpen.html" data-i18n="products.telescopicSlidePush">CORREDERA TELESCÓPICA PUSH OPEN</a>
+                        <a href="/HTML/correderaTelescopicaEstandarH45.html" data-i18n="products.telescopicSlideH45">CORREDERA TELESCÓPICA ESTÁNDAR H45</a>
+                        <a href="/HTML/correderaTelescopicaEstandarH35.html" data-i18n="products.telescopicSlideH35">CORREDERA TELESCÓPICA ESTÁNDAR H35</a>
+                        <a href="/HTML/correderaZ.html" data-i18n="products.slideZ">CORREDERA Z</a>
                     </div>
-                </div>                        
+                </div>
                 <div class="dropdown-item">
-                    <a href="#tiradores">TIRADORES, MANIJAS Y SISTEMAS DE APOYO</a>
+                    <a href="#tiradores" data-i18n="nav.handles">TIRADORES, MANIJAS Y SISTEMAS DE APOYO</a>
                     <div class="subdropdown">
-                        <a href="/HTML/manijas.html">MANIJAS</a>
-                        <a href="/HTML/sistemasApoyo.html">SISTEMAS DE APOYO</a>
+                        <a href="/HTML/manijas.html" data-i18n="products.handles">MANIJAS</a>
+                        <a href="/HTML/sistemasApoyo.html" data-i18n="products.supportSystems">SISTEMAS DE APOYO</a>
                     </div>
-                </div>                    
+                </div>
         </li>
         <li><a href="/index.html" class="logo"><img src="/assets/logoHeader.png" alt="THOWEL"></a></li>
-        <li><a href="/HTML/sobreNosotros.html">SOBRE NOSOTROS</a></li>
-        <li><a href="/HTML/contacto.html">CONTACTOS</a></li>
+        <li><a href="/HTML/sobreNosotros.html" data-i18n="nav.about">SOBRE NOSOTROS</a></li>
+        <li><a href="/HTML/contacto.html" data-i18n="nav.contact">CONTACTOS</a></li>
+        <li class="language-selector-nav">
+            <button class="language-btn" data-lang="es">ES</button>
+            <span class="language-separator">|</span>
+            <button class="language-btn" data-lang="en">EN</button>
+            <span class="language-separator">|</span>
+            <button class="language-btn" data-lang="pt">PT</button>
+        </li>
     </ul>
 </nav>
 
@@ -65,7 +73,7 @@
     <section class="header-section">
         <img src="/assets/PORTADA SOBRE NOSOTROS.png" alt="Portada" class="portada-img">
         <div class="header-overlay">
-            <h1 class="header-title">Creamos <span class="highlight">herrajes</span> pensados para <span class="highlight">mejorar</span><br>cada proyecto.</h1>
+            <h1 class="header-title" data-i18n="about.headerTitle" data-i18n-html="true">Creamos <span class="highlight">herrajes</span> pensados para <span class="highlight">mejorar</span><br>cada proyecto.</h1>
         </div>
         <div class="scroll-indicator">
             <img src="/assets/FLECHAINICIO.png" alt="Flecha" class="flecha-img">
@@ -79,15 +87,15 @@
                 <img src="/assets/ambiente.png" alt="Trabajador instalando herraje">
             </div>
             <div class="right-content">
-                <h2 class="section-title">ACERCA DE NOSOTROS</h2>
+                <h2 class="section-title" data-i18n="about.sectionTitle">ACERCA DE NOSOTROS</h2>
                 <div class="section-description">
-                    <p>
+                    <p data-i18n="about.paragraph1">
                         La marca se inicia a partir de un impulso personal en el año 2016, ya que somos la tercera generación en la comercialización de productos para la industria del mueble. A partir de lo cual hay experiencia y también motivación por continuar aprendiendo e innovando.
                     </p>
-                    <p>
+                    <p data-i18n="about.paragraph2">
                         En el comienzo fabricamos artículos básicos. Posteriormente, en el año 2017, llevamos a cabo estudios de mercado y de productos con el fin de inspirarnos en las novedades a nivel mundial, llevando originalidad a cada proyecto. Al mismo tiempo, incursionamos en la creación técnica, donde también la calidad y durabilidad representan nuestro rumbo.
                     </p>
-                    <p>
+                    <p data-i18n="about.paragraph3">
                         El objetivo es y continúa siendo facilitar el acceso a productos modernos que contribuirán a concretar cada idea de manera fácil, eficaz y persistente.
                     </p>
                 </div>
@@ -99,17 +107,17 @@
     <section class="sobre-nosotros-section">
         <div class="dual-content reverse">
             <div class="right-content">
-                <h2 class="section-title">MISIÓN</h2>
-                <p class="section-description">
+                <h2 class="section-title" data-i18n="about.mission.title">MISIÓN</h2>
+                <p class="section-description" data-i18n="about.mission.description">
                     Escuchar y entender a los tradicionales y nuevos clientes que confían en la marca para desplegar productos con la mejor tecnología y estándares de calidad.
                 </p>
 
-                <h2 class="section-title" style="margin-top: 60px;">VISIÓN</h2>
+                <h2 class="section-title" style="margin-top: 60px;" data-i18n="about.vision.title">VISIÓN</h2>
                 <div class="section-description">
-                    <p>
+                    <p data-i18n="about.vision.paragraph1">
                         Crear y desarrollar productos que de fabricación y aplicación de cada amoblamiento, optimizando cada espacio, y soportando exigencias de uso cotidiano a largo plazo.
                     </p>
-                    <p>
+                    <p data-i18n="about.vision.paragraph2">
                         Afianzar la marca en futuros mercados, trascender generaciones, y dejar una huella en cada experiencia de su uso.
                     </p>
                 </div>
@@ -128,11 +136,12 @@
                 <div class="hexagon hex-2"></div>
             </div>
             <div class="footer-content">
-                <p>&copy; 2025 THOWEL. Todos los derechos reservados.</p>
+                <p data-i18n="footer.copyright">&copy; 2025 THOWEL. Todos los derechos reservados.</p>
             </div>
         </div>
     </footer>
 
     <script src="/JS/sobreNosotros.js"></script>
+    <script src="/JS/i18n.js"></script>
 </body>
 </html>

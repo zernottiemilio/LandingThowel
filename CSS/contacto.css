@@ -1,3 +1,6 @@
+@import url('/CSS/language-selector.css');
+@import url('/CSS/responsive.css');
+
 @font-face {
     font-family: 'Montserrat';
     src: url('../fonts/Montserrat-Regular.ttf') format('truetype');

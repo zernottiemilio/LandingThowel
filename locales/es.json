@@ -1,0 +1,125 @@
+{
+  "nav": {
+    "home": "INICIO",
+    "products": "PRODUCTOS",
+    "drawers": "CAJONES",
+    "hinges": "BISAGRAS",
+    "slides": "GUÍAS Y CORREDERAS",
+    "handles": "TIRADORES, MANIJAS Y SISTEMAS DE APOYO",
+    "about": "SOBRE NOSOTROS",
+    "contact": "CONTACTOS"
+  },
+  "products": {
+    "thowelBoxCristal": "THOWEL BOX CRISTAL",
+    "thowelBoxPlus": "THOWEL BOX PLUS",
+    "thowelBox": "THOWEL BOX",
+    "hingeClip3d": "BISAGRA CLIP 3D",
+    "hingeSoftClosing": "BISAGRA SOFT CLOSING",
+    "hingeCup": "BISAGRA CAZOLETA",
+    "hingePushOpen": "BISAGRA PUSH OPEN",
+    "hingeCup155": "BISAGRA CAZOLETA 155° Y 175°",
+    "hingeAngles": "BISAGRA ANGULOS ESPECIALES",
+    "retainerExpeller": "RETÉN EXPULSOR",
+    "gasPiston": "PISTÓN A GAS",
+    "hiddenSlide3d": "GUÍA OCULTA 3D SOFT CLOSING",
+    "hiddenSlidePush": "GUÍA OCULTA PUSH OPEN",
+    "telescopicSlideSoft": "CORREDERA TELESCÓPICA SOFT CLOSING",
+    "telescopicSlidePush": "CORREDERA TELESCÓPICA PUSH OPEN",
+    "telescopicSlideH45": "CORREDERA TELESCÓPICA ESTÁNDAR H45",
+    "telescopicSlideH35": "CORREDERA TELESCÓPICA ESTÁNDAR H35",
+    "slideZ": "CORREDERA Z",
+    "handles": "MANIJAS",
+    "supportSystems": "SISTEMAS DE APOYO",
+    "plasticLeg": "PATA PLÁSTICA",
+    "nylonWheel": "RUEDA NYLON"
+  },
+  "home": {
+    "hero": {
+      "title": "Explorá nuestra línea de productos",
+      "subtitle": "y encontrá la solución perfecta para cada necesidad"
+    },
+    "technology": {
+      "smooth": {
+        "description": "Nuestra tecnología SMOOTH permite cierres amortiguados y silenciosos, lo cual aporta gran confort a los amoblamientos."
+      },
+      "touch": {
+        "description": "La innovadora tecnologia TOUCH, permite aperturas completamente mecanicas, sin esfuerzo y frentes de amoblamientos sin manijas o tiradores."
+      },
+      "standard": {
+        "description": "La tecnología ESTÁNDAR garantiza gran durabilidad y excelentes prestaciones para los productos que desarrollamos, es por eso que la misma es aplicada a muchos de nuestros diseños."
+      }
+    },
+    "catalog": {
+      "title": "CATÁLOGO",
+      "description": "Descubre nuestros herrajes creados para ofrecer funcionalidad, estilo y durabilidad en cada proyecto. Con tecnología de vanguardia y diseños innovadores, cada producto está diseñado para superar las expectativas más exigentes."
+    }
+  },
+  "about": {
+    "headerTitle": "Creamos <span class=\"highlight\">herrajes</span> pensados para <span class=\"highlight\">mejorar</span><br>cada proyecto.",
+    "sectionTitle": "ACERCA DE NOSOTROS",
+    "paragraph1": "La marca se inicia a partir de un impulso personal en el año 2016, ya que somos la tercera generación en la comercialización de productos para la industria del mueble. A partir de lo cual hay experiencia y también motivación por continuar aprendiendo e innovando.",
+    "paragraph2": "En el comienzo fabricamos artículos básicos. Posteriormente, en el año 2017, llevamos a cabo estudios de mercado y de productos con el fin de inspirarnos en las novedades a nivel mundial, llevando originalidad a cada proyecto. Al mismo tiempo, incursionamos en la creación técnica, donde también la calidad y durabilidad representan nuestro rumbo.",
+    "paragraph3": "El objetivo es y continúa siendo facilitar el acceso a productos modernos que contribuirán a concretar cada idea de manera fácil, eficaz y persistente.",
+    "mission": {
+      "title": "MISIÓN",
+      "description": "Escuchar y entender a los tradicionales y nuevos clientes que confían en la marca para desplegar productos con la mejor tecnología y estándares de calidad."
+    },
+    "vision": {
+      "title": "VISIÓN",
+      "paragraph1": "Crear y desarrollar productos que de fabricación y aplicación de cada amoblamiento, optimizando cada espacio, y soportando exigencias de uso cotidiano a largo plazo.",
+      "paragraph2": "Afianzar la marca en futuros mercados, trascender generaciones, y dejar una huella en cada experiencia de su uso."
+    }
+  },
+  "contact": {
+    "title": "CONTACTANOS",
+    "form": {
+      "name": "Nombre:",
+      "phone": "Número:",
+      "email": "Mail:",
+      "message": "Mensaje:",
+      "submit": "ENVIAR"
+    }
+  },
+  "productPage": {
+    "standard": "ESTÁNDAR",
+    "similarProducts": "PRODUCTOS SIMILARES",
+    "handles": {
+      "barral": {
+        "title": "MANIJA<br>BARRAL",
+        "description1": "Desarrollada bajo nuestra tecnología <strong>ESTÁNDAR</strong> asegura un excelente rendimiento y resistencia en el uso diario.",
+        "description2": "Ampliamente utilizada en la industria del mueble, <strong>destacándose por su fiabilidad, ergonomía y facilidad de instalación.</strong>",
+        "specs": "Fabricadas en acero de <strong>alta calidad</strong> con acabados diversos, ofrecen una <strong>solución versátil y duradera</strong> para todo tipo de amoblamientos."
+      },
+      "boton": {
+        "title": "MANIJA<br>BOTÓN",
+        "description1": "Desarrollada bajo nuestra tecnología <strong>ESTÁNDAR</strong> asegura un excelente rendimiento y resistencia en el uso diario.",
+        "description2": "Ampliamente utilizada en la industria del mueble, <strong>destacándose por su diseño compacto, ergonomía y facilidad de instalación.</strong>",
+        "specs": "Fabricadas en acero de <strong>alta calidad</strong> con acabados diversos, ofrecen una <strong>solución versátil y duradera</strong> para todo tipo de amoblamientos."
+      },
+      "oval": {
+        "title": "MANIJA<br>OVAL",
+        "description1": "Desarrollada bajo nuestra tecnología <strong>ESTÁNDAR</strong> asegura un excelente rendimiento y resistencia en el uso diario.",
+        "description2": "Ampliamente utilizada en la industria del mueble, <strong>destacándose por su diseño elegante, ergonomía y facilidad de instalación.</strong>",
+        "specs": "Fabricadas en acero de <strong>alta calidad</strong> con acabados diversos, ofrecen una <strong>solución versátil y duradera</strong> para todo tipo de amoblamientos."
+      }
+    },
+    "hinges": {
+      "cup": {
+        "title": "BISAGRA<br>CAZOLETA",
+        "description1": "Desarrolladas bajo nuestra tecnología <strong>ESTÁNDAR</strong> aseguran un excelente rendimiento y resistencia en el uso diario.",
+        "description2": "Ampliamente utilizadas en la industria del mueble, <strong>destacándose por su fiabilidad y facilidad de instalación.</strong>",
+        "specs": "Fabricadas en acero de <strong>alta calidad</strong> cumpliendo con estrictos estándares de producción, ofrecen una <strong>solución duradera y eficiente</strong> para todo tipo de amoblamientos."
+      },
+      "softClosing": {
+        "title": "BISAGRA<br>SOFT",
+        "tag": "CLOSING",
+        "description1": "Desarrolladas bajo nuestra tecnología <strong>ESTÁNDAR</strong> aseguran un excelente rendimiento y resistencia en el uso diario.",
+        "description2": "Ampliamente utilizadas en la industria del mueble, <strong>destacándose por su fiabilidad y facilidad de instalación.</strong>",
+        "specs": "Fabricadas en acero de <strong>alta calidad</strong> cumpliendo con estrictos estándares de producción, ofrecen una <strong>solución duradera y eficiente</strong> para todo tipo de amoblamientos."
+      }
+    }
+  },
+  "footer": {
+    "copyright": "© 2024 THOWEL. Todos los derechos reservados."
+  }
+}
