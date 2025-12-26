@@ -826,10 +826,19 @@ body {
 
 /* Hexágonos más chicos */
 .hexagon {
-    width: 25px;
-    height: 20px;
-    background: #fff;
+    width: 30px;
+    height: 25px;
     position: relative;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    text-decoration: none;
+    display: block;
+}
+
+.hexagon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     clip-path: polygon(
         25% 0%,
         75% 0%,
@@ -838,18 +847,10 @@ body {
         25% 100%,
         0% 50%
     );
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 14px;  /* para iconos si los pones */
-    color: #e74c3c;
-    cursor: pointer;
-    transition: transform 0.3s ease, background 0.3s ease;
 }
 
 /* Hover */
 .hexagon:hover {
-    background: #f1f1f1;
     transform: scale(1.1);
 }
 
