@@ -1,4 +1,3 @@
-@import url('/CSS/language-selector.css');
 @import url('/CSS/responsive.css');
 
 @font-face {
@@ -225,7 +224,6 @@ body {
 .header-section {
     position: relative;
     width: 100%;
-    height: 100vh;
     overflow: hidden;
     z-index: 100;
 }
@@ -558,7 +556,7 @@ body {
 
 /* CATALOG SLIDE */
 .catalog-slide {
-    width: 85%;
+    width: 100%;
     height: 100%;
     display: flex;
     flex: none;
@@ -569,9 +567,11 @@ body {
     position: relative;
     cursor: pointer;
     transition: all 0.3s ease;
-    flex: 1;
+    flex: 0 0 auto;
+    width: 300px;
+    min-width: 300px;
+    max-width: 300px;
     height: 100%;
-    min-height: 600px;
     overflow: hidden;
     background: #f8f9fa;
 }
