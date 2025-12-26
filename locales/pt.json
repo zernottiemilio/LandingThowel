@@ -117,6 +117,71 @@
         "description2": "Amplamente utilizadas na indústria moveleira, <strong>destacando-se por sua confiabilidade e facilidade de instalação.</strong>",
         "specs": "Fabricadas em aço de <strong>alta qualidade</strong> atendendo a rigorosos padrões de produção, oferecem uma <strong>solução durável e eficiente</strong> para todos os tipos de móveis."
       }
+    },
+    "slides": {
+      "hiddenSlide3d": {
+        "title": "GUIA OCULTA<br>3D SOFT CLOSING",
+        "tag": "SMOOTH",
+        "description1": "Desenvolvida sob nossa tecnologia <strong>SMOOTH</strong> oferece fechamento amortecido e silencioso com ajuste tridimensional.",
+        "description2": "Amplamente utilizada em gavetas de alta qualidade, <strong>destacando-se por sua suavidade, precisão e facilidade de instalação.</strong>",
+        "specs": "Fabricadas em aço de <strong>alta qualidade</strong> com diversos acabamentos, oferecem uma <strong>solução versátil e durável</strong> para todos os tipos de móveis."
+      },
+      "hiddenSlidePush": {
+        "title": "GUIA OCULTA<br>PUSH OPEN",
+        "tag": "TOUCH",
+        "description1": "Desenvolvida sob nossa tecnologia <strong>TOUCH</strong> permite abertura com um simples toque, eliminando a necessidade de alças.",
+        "description2": "Ideal para designs minimalistas, <strong>destacando-se por sua funcionalidade inovadora e estética limpa.</strong>",
+        "specs": "Fabricadas em aço de <strong>alta qualidade</strong> com mecanismos de precisão, oferecem uma <strong>solução inovadora e durável</strong> para móveis modernos."
+      },
+      "telescopicSlideSoft": {
+        "title": "CORREDIÇA<br>TELESCÓPICA",
+        "tag": "SOFT CLOSING",
+        "description1": "Desenvolvida sob nossa tecnologia <strong>SMOOTH</strong> oferece fechamento amortecido e silencioso com extensão total.",
+        "description2": "Amplamente utilizada em gavetas de alta qualidade, <strong>destacando-se por sua suavidade, capacidade de carga e facilidade de instalação.</strong>",
+        "specs": "Fabricadas em aço de <strong>alta qualidade</strong> com rolamentos de precisão, oferecem uma <strong>solução durável e eficiente</strong> para todos os tipos de gavetas."
+      },
+      "telescopicSlidePush": {
+        "title": "CORREDIÇA<br>TELESCÓPICA",
+        "tag": "SOFT CLOSING",
+        "description1": "Desenvolvida sob nossa tecnologia <strong>SMOOTH</strong> oferece fechamento amortecido e silencioso com extensão total.",
+        "description2": "Amplamente utilizada em gavetas de alta qualidade, <strong>destacando-se por sua suavidade, capacidade de carga e facilidade de instalação.</strong>",
+        "specs": "Fabricadas em aço de <strong>alta qualidade</strong> com rolamentos de precisão, oferecem uma <strong>solução durável e eficiente</strong> para todos os tipos de gavetas."
+      },
+      "telescopicSlideH45": {
+        "title": "CORREDIÇA<br>TELESCÓPICA",
+        "tag": "SOFT CLOSING",
+        "description1": "Desenvolvida sob nossa tecnologia <strong>SMOOTH</strong> oferece fechamento amortecido e silencioso com extensão total.",
+        "description2": "Amplamente utilizada em gavetas de alta qualidade, <strong>destacando-se por sua suavidade, capacidade de carga e facilidade de instalação.</strong>",
+        "specs": "Fabricadas em aço de <strong>alta qualidade</strong> com rolamentos de precisão, oferecem uma <strong>solução durável e eficiente</strong> para todos os tipos de gavetas."
+      },
+      "telescopicSlideH35": {
+        "title": "CORREDIÇA<br>TELESCÓPICA",
+        "tag": "PADRÃO H35",
+        "description1": "Desenvolvida sob nossa tecnologia <strong>PADRÃO</strong> garante excelente desempenho e resistência no uso diário.",
+        "description2": "Com <strong>80.000 ciclos de uso</strong> e capacidade de carga de <strong>20 unidades</strong>, amplamente utilizada na indústria moveleira, destacando-se por sua confiabilidade e facilidade de instalação.",
+        "specs": "Fabricadas em <strong>aço de alta qualidade</strong> atendendo a rigorosos padrões de produção, oferecem uma solução durável e eficiente para todos os tipos de gavetas."
+      },
+      "slideZ": {
+        "title": "CORREDIÇA Z",
+        "tag": "PADRÃO",
+        "description1": "Projetada para aplicações específicas, a corrediça Z oferece uma <strong>solução prática e confiável</strong> para diversos tipos de móveis.",
+        "description2": "Com tecnologia <strong>PADRÃO</strong>, garante durabilidade e funcionamento suave no uso diário.",
+        "specs": "Fabricadas em <strong>aço de alta qualidade</strong>, as corrediças Z oferecem resistência e funcionalidade para múltiplas aplicações em móveis e sistemas de armazenamento."
+      }
+    },
+    "supportSystems": {
+      "plasticLeg": {
+        "title": "PÉ<br>PLÁSTICO",
+        "description1": "Desenvolvido sob nossa tecnologia <strong>PADRÃO</strong> garante excelente desempenho e resistência no uso diário.",
+        "description2": "Amplamente utilizado na indústria moveleira, <strong>destacando-se por sua durabilidade e facilidade de instalação.</strong>",
+        "specs": "Fabricados em plástico de <strong>alta qualidade</strong> com diversos acabamentos, oferecem uma <strong>solução versátil e durável</strong> para todos os tipos de móveis."
+      },
+      "nylonWheel": {
+        "title": "RODA DE<br>NAILON",
+        "description1": "Desenvolvida sob nossa tecnologia <strong>PADRÃO</strong> garante excelente desempenho e resistência no uso diário.",
+        "description2": "Amplamente utilizada na indústria moveleira, <strong>destacando-se por sua suavidade de deslocamento e facilidade de instalação.</strong>",
+        "specs": "Fabricadas em nailon de <strong>alta qualidade</strong> com componentes de aço, oferecem uma <strong>solução versátil e durável</strong> para todos os tipos de móveis."
+      }
     }
   },
   "footer": {
