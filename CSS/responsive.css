@@ -600,3 +600,810 @@
         display: none !important;
     }
 }
+
+/* ========================================
+   MENÚ HAMBURGUESA PARA MÓVILES
+   ======================================== */
+
+/* Ocultar elementos móviles en desktop por defecto */
+@media (min-width: 769px) {
+    .hamburger,
+    .logo-mobile {
+        display: none !important;
+    }
+}
+
+/* Mostrar navbar móvil en tablet y móvil */
+@media (max-width: 768px) {
+    /* Navbar contenedor */
+    .navbar {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        padding: 10px 20px !important;
+        gap: 15px !important;
+        flex-wrap: nowrap !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+        right: 0 !important;
+        transform: none !important;
+        border-radius: 0 !important;
+        margin: 0 !important;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1) !important;
+        background: rgba(255, 255, 255, 0.98) !important;
+    }
+
+    /* Asegurar que el navbar no se oculte nunca en móvil */
+    .navbar.hidden {
+        transform: none !important;
+        opacity: 1 !important;
+    }
+
+    /* Hamburguesa izquierda */
+    .hamburger {
+        display: flex !important;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 30px;
+        height: 25px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+        z-index: 10001;
+        flex-shrink: 0;
+        order: 1;
+    }
+
+    .hamburger span {
+        width: 100%;
+        height: 3px;
+        background-color: #333;
+        border-radius: 10px;
+        transition: all 0.3s ease;
+    }
+
+    .hamburger.active span:nth-child(1) {
+        transform: rotate(45deg) translate(7px, 7px);
+    }
+
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -7px);
+    }
+
+    /* Logo izquierda (antes del hamburguesa visualmente, pero order menor) */
+    .logo-mobile {
+        display: block !important;
+        flex-shrink: 0;
+        order: 0;
+    }
+
+    .logo-mobile img {
+        height: 40px;
+        width: auto;
+    }
+
+    /* Menú navegación - FORZAR ocultar por defecto */
+    .navbar .nav-menu,
+    .navbar ul.nav-menu {
+        position: fixed !important;
+        left: -100% !important;
+        top: 60px !important;
+        flex-direction: column !important;
+        background-color: rgba(255, 255, 255, 0.98) !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        text-align: center !important;
+        transition: left 0.3s ease !important;
+        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.1) !important;
+        max-height: calc(100vh - 60px) !important;
+        overflow-y: auto !important;
+        padding: 20px 0 !important;
+        gap: 0 !important;
+        z-index: 9999 !important;
+        display: flex !important;
+        list-style: none !important;
+        margin: 0 !important;
+    }
+
+    /* Mostrar menú cuando está activo */
+    .navbar .nav-menu.active,
+    .navbar ul.nav-menu.active {
+        left: 0 !important;
+    }
+
+    /* Items del menú */
+    .navbar .nav-menu li {
+        width: 100% !important;
+        padding: 0 !important;
+        display: block !important;
+    }
+
+    .navbar .nav-menu li a {
+        display: block !important;
+        width: 100% !important;
+        padding: 15px 20px !important;
+        margin: 0 !important;
+        border-radius: 0 !important;
+    }
+
+    /* Logo central oculto en menú móvil */
+    .navbar .nav-menu .logo {
+        display: none !important;
+    }
+
+    /* Dropdowns en móvil */
+    .navbar .nav-menu .dropdown {
+        position: static !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        transform: none !important;
+        box-shadow: none !important;
+        background: transparent !important;
+        width: 100% !important;
+        padding: 0 !important;
+        max-height: 0 !important;
+        overflow: hidden !important;
+        transition: max-height 0.3s ease !important;
+        display: block !important;
+        border-radius: 0 !important;
+    }
+
+    .navbar .nav-menu .subdropdown {
+        position: static !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        transform: none !important;
+        box-shadow: none !important;
+        background: transparent !important;
+        width: 100% !important;
+        padding: 0 !important;
+        max-height: 0 !important;
+        overflow: hidden !important;
+        transition: max-height 0.3s ease !important;
+        display: block !important;
+        border-radius: 0 !important;
+    }
+
+    /* Mostrar dropdown cuando el padre tiene clase active */
+    .navbar ul.nav-menu li.active > .dropdown {
+        max-height: 3000px !important;
+        overflow-y: auto !important;
+    }
+
+    .navbar ul.nav-menu .dropdown-item.active > .subdropdown {
+        max-height: 2000px !important;
+        overflow-y: auto !important;
+    }
+
+    /* Forzar ocultar cuando NO está active */
+    .navbar ul.nav-menu li:not(.active) > .dropdown {
+        max-height: 0 !important;
+        overflow: hidden !important;
+    }
+
+    .navbar ul.nav-menu .dropdown-item:not(.active) > .subdropdown {
+        max-height: 0 !important;
+        overflow: hidden !important;
+    }
+
+    /* Deshabilitar hover en mobile */
+    .navbar .nav-menu li:hover .dropdown {
+        max-height: 0 !important;
+        overflow: hidden !important;
+    }
+
+    .navbar .nav-menu .dropdown-item:hover .subdropdown {
+        max-height: 0 !important;
+        overflow: hidden !important;
+    }
+
+    /* Categorías del dropdown principal */
+    .navbar .nav-menu .dropdown > a {
+        padding: 12px 30px !important;
+        font-size: 14px !important;
+        font-weight: 600 !important;
+        background: transparent !important;
+        display: block !important;
+        margin: 0 !important;
+        color: #333 !important;
+        transition: background 0.2s ease !important;
+    }
+
+    .navbar .nav-menu .dropdown > a:active,
+    .navbar .nav-menu .dropdown > a:focus {
+        background: rgba(0, 0, 0, 0.05) !important;
+    }
+
+    /* Items de dropdown-item (BISAGRAS, GUÍAS, TIRADORES) */
+    .navbar .nav-menu .dropdown-item > a {
+        padding: 12px 30px !important;
+        font-size: 13px !important;
+        font-weight: 600 !important;
+        background: transparent !important;
+        display: block !important;
+        margin: 0 !important;
+        color: #333 !important;
+        transition: background 0.2s ease !important;
+    }
+
+    .navbar .nav-menu .dropdown-item > a:active,
+    .navbar .nav-menu .dropdown-item > a:focus {
+        background: rgba(0, 0, 0, 0.05) !important;
+    }
+
+    /* Subdropdown - productos individuales */
+    .navbar .nav-menu .subdropdown a {
+        padding: 12px 50px !important;
+        font-size: 12px !important;
+        background: transparent !important;
+        display: block !important;
+        font-weight: 400 !important;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.05) !important;
+        color: #555 !important;
+        transition: background 0.2s ease !important;
+    }
+
+    .navbar .nav-menu .subdropdown a:active,
+    .navbar .nav-menu .subdropdown a:focus {
+        background: rgba(0, 0, 0, 0.05) !important;
+    }
+
+    .navbar .nav-menu .subdropdown a:last-child {
+        border-bottom: none !important;
+    }
+
+    /* ========================================
+       SECCIONES DE PRODUCTOS - INDEX
+       ======================================== */
+
+    /* Sección de productos principal */
+    .unified-product-section {
+        min-height: 100vh !important;
+        padding: 80px 20px 40px !important;
+    }
+
+    .product-content-overlay {
+        padding: 20px !important;
+        bottom: 100px !important;
+    }
+
+    .product-info {
+        text-align: center !important;
+    }
+
+    .product-logo img {
+        max-width: 200px !important;
+        height: auto !important;
+    }
+
+    .product-description {
+        font-size: 14px !important;
+        line-height: 1.6 !important;
+        padding: 0 10px !important;
+    }
+
+    /* Indicador de progreso */
+    .product-progress {
+        bottom: 40px !important;
+    }
+
+    /* Sección de calidad */
+    .calidad-section {
+        padding: 60px 20px !important;
+    }
+
+    .calidad-container {
+        flex-direction: column !important;
+        gap: 30px !important;
+    }
+
+    .calidad-content {
+        flex-direction: column !important;
+    }
+
+    .calidad-text {
+        text-align: center !important;
+        padding: 20px !important;
+    }
+
+    .calidad-title {
+        font-size: 32px !important;
+    }
+
+    .calidad-description {
+        font-size: 14px !important;
+        line-height: 1.6 !important;
+    }
+
+    .calidad-image {
+        width: 100% !important;
+        max-width: 300px !important;
+        margin: 0 auto !important;
+    }
+
+    .calidad-image img {
+        width: 100% !important;
+        height: auto !important;
+    }
+
+    /* ========================================
+       CARRUSEL DE PRODUCTOS
+       ======================================== */
+
+    .catalog-section {
+        padding: 60px 20px 0 20px !important;
+        margin-bottom: 0 !important;
+    }
+
+    .catalog-title {
+        font-size: 28px !important;
+        margin-bottom: 30px !important;
+    }
+
+    .catalog-carousel {
+        padding: 0 !important;
+        margin-bottom: 0 !important;
+    }
+
+    .catalog-track {
+        gap: 15px !important;
+        padding: 0 10px 20px 10px !important;
+    }
+
+    .catalog-item {
+        min-width: 300px !important;
+        max-width: 300px !important;
+        height: 450px !important;
+    }
+
+    .catalog-item img {
+        height: 100% !important;
+        object-fit: contain !important;
+    }
+
+    .catalog-overlay {
+        pointer-events: none !important;
+    }
+
+    .catalog-overlay-text {
+        font-size: 14px !important;
+        padding: 10px !important;
+    }
+
+    /* Botones del carrusel - Visibles en mobile con z-index alto */
+    .carousel-nav {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        width: 45px !important;
+        height: 45px !important;
+        background: rgba(0, 0, 0, 0.6) !important;
+        border: 2px solid rgba(255, 255, 255, 0.8) !important;
+        border-radius: 50% !important;
+        color: white !important;
+        font-size: 20px !important;
+        cursor: pointer !important;
+        z-index: 1000 !important;
+        position: absolute !important;
+        top: 50% !important;
+        transform: translateY(-50%) !important;
+        pointer-events: all !important;
+    }
+
+    .carousel-nav.prev-btn {
+        left: 10px !important;
+    }
+
+    .carousel-nav.next-btn {
+        right: 10px !important;
+    }
+
+    .carousel-nav:active {
+        background: rgba(0, 0, 0, 0.8) !important;
+        transform: translateY(-50%) scale(0.95) !important;
+    }
+
+    /* ELIMINAR ESPACIO - Sección de productos similares */
+    section.productos-similares,
+    .productos-similares {
+        margin: 0 !important;
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+        padding: 15px 0 0 0 !important;
+        background: white !important;
+        min-height: auto !important;
+        display: block !important;
+        height: auto !important;
+    }
+
+    .similares-titulo {
+        margin: 0 0 12px 0 !important;
+        padding: 0 20px !important;
+        font-size: 22px !important;
+    }
+
+    .catalog-carousel {
+        margin: 0 !important;
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+        padding: 0 !important;
+        padding-bottom: 0 !important;
+        min-height: auto !important;
+        flex: none !important;
+        height: auto !important;
+        max-height: 500px !important;
+    }
+
+    .catalog-track {
+        padding: 0 10px !important;
+        padding-bottom: 0 !important;
+        margin: 0 !important;
+        margin-bottom: 0 !important;
+        height: auto !important;
+        min-height: auto !important;
+    }
+
+    .catalog-item {
+        margin: 0 !important;
+        margin-bottom: 0 !important;
+    }
+
+    .catalog-item:last-child {
+        margin-bottom: 0 !important;
+    }
+
+    /* Eliminar min-height de secciones de productos */
+    section.producto-section,
+    .producto-section,
+    section.section-1,
+    section.section-2,
+    section.section-3 {
+        margin: 0 !important;
+        margin-bottom: 0 !important;
+        margin-top: 0 !important;
+        padding-bottom: 15px !important;
+        min-height: auto !important;
+    }
+
+    /* CRÍTICO: Eliminar TODOS los espacios entre carrusel y footer */
+    .productos-similares + .footer-red,
+    .productos-similares + footer,
+    section.productos-similares + footer,
+    section.productos-similares + .footer-red,
+    section + footer,
+    section + .footer-red,
+    .productos-similares ~ footer,
+    .productos-similares ~ .footer-red {
+        margin: 0 !important;
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+        padding-top: 0 !important;
+        border-top: none !important;
+    }
+
+    /* Eliminar espacio de body y html si existe */
+    body {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    /* SOBRESCRIBIR min-height de dual-content en secciones de productos */
+    .producto-section .dual-content,
+    section.section-1 .dual-content,
+    section.section-2 .dual-content,
+    section.section-3 .dual-content {
+        min-height: auto !important;
+    }
+
+    /* Asegurar que NO hay gap extra en contenedores */
+    .productos-similares *,
+    .catalog-carousel *,
+    .catalog-track * {
+        box-sizing: border-box !important;
+    }
+
+    /* SOLUCIÓN DEFINITIVA: Eliminar cualquier espacio después de la última sección antes del footer */
+    body > section:last-of-type,
+    body > .productos-similares:last-of-type {
+        margin-bottom: 0 !important;
+        padding-bottom: 0 !important;
+    }
+
+    /* Pegar el footer inmediatamente después del último elemento */
+    body > footer:last-child,
+    body > .footer-red:last-child {
+        margin-top: 0 !important;
+    }
+
+    /* ========================================
+       FOOTER
+       ======================================== */
+
+    footer.footer-red,
+    .footer-red {
+        padding: 20px 15px 15px 15px !important;
+        min-height: auto !important;
+        margin: 0 !important;
+        position: relative !important;
+    }
+
+    .footer-container {
+        padding: 0 !important;
+        display: block !important;
+        margin: 0 !important;
+        position: static !important;
+    }
+
+    .footer-hexagons {
+        position: static !important;
+        display: inline-flex !important;
+        gap: 6px !important;
+        justify-content: flex-start !important;
+        margin: 0 !important;
+        margin-right: 10px !important;
+        padding: 0 !important;
+        vertical-align: middle !important;
+        bottom: auto !important;
+        left: auto !important;
+    }
+
+    .footer-hexagons a.hexagon,
+    .hexagon {
+        width: 28px !important;
+        height: 28px !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        background: transparent !important;
+        border: none !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        clip-path: none !important;
+        vertical-align: middle !important;
+    }
+
+    .footer-hexagons .hexagon img,
+    .hexagon img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: contain !important;
+        filter: brightness(0) invert(1) !important;
+    }
+
+    .footer-content {
+        display: inline !important;
+        text-align: left !important;
+        margin: 0 !important;
+        vertical-align: middle !important;
+    }
+
+    .footer-content p {
+        display: inline !important;
+        font-size: 9px !important;
+        line-height: 28px !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        color: #fff !important;
+        vertical-align: middle !important;
+    }
+}
+
+/* ========================================
+   RESPONSIVE PARA PÁGINAS DE PRODUCTOS
+   ======================================== */
+
+@media (max-width: 768px) {
+    /* Secciones de productos individuales */
+    .producto-section {
+        padding: 60px 0 20px !important;
+        min-height: auto !important;
+    }
+
+    .dual-content {
+        flex-direction: column !important;
+        gap: 10px !important;
+        padding: 0 !important;
+    }
+
+    .left-content,
+    .right-content {
+        width: 100% !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    .left-content img,
+    .right-content img {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+        min-height: 350px !important;
+        object-fit: cover !important;
+        margin: 0 !important;
+        display: block !important;
+    }
+
+    /* Contenedor del título con badge */
+    .right-content {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+
+    /* Badges - Logos de acero y tecnología */
+    .badge-thowel {
+        width: 50px !important;
+        height: 50px !important;
+        margin: 0 !important;
+        flex-shrink: 0 !important;
+        order: -1 !important;
+        align-self: flex-start !important;
+        position: absolute !important;
+        top: 10px !important;
+        right: 20px !important;
+    }
+
+    .badge-thowel img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: contain !important;
+    }
+
+    /* Títulos y textos */
+    .producto-titulo {
+        font-size: 32px !important;
+        line-height: 1.3 !important;
+        text-align: center !important;
+        padding: 15px 70px 15px 20px !important;
+        margin: 0 !important;
+        width: 100% !important;
+        position: relative !important;
+        display: block !important;
+    }
+
+    .producto-titulo b {
+        display: block !important;
+        line-height: 1.1 !important;
+    }
+
+    .producto-titulo .estandar {
+        display: block !important;
+        margin-top: 5px !important;
+        font-size: 0.9em !important;
+    }
+
+    .producto-descripcion {
+        font-size: 14px !important;
+        line-height: 1.6 !important;
+        text-align: center !important;
+        padding: 10px 20px !important;
+        margin: 0 !important;
+    }
+
+    /* Diagramas técnicos */
+    .diagrama-tecnico {
+        width: 100% !important;
+        max-width: 300px !important;
+        margin: 20px auto !important;
+        padding: 0 !important;
+    }
+
+    .diagrama-tecnico img {
+        width: 100% !important;
+        height: auto !important;
+        object-fit: contain !important;
+    }
+
+    /* Videos y contenido multimedia */
+    .video-container {
+        width: 100% !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    .video-container iframe,
+    .video-container video {
+        width: 100% !important;
+        height: auto !important;
+        min-height: 250px !important;
+        aspect-ratio: 16/9 !important;
+    }
+
+    /* Características y especificaciones */
+    .caracteristicas-grid {
+        grid-template-columns: 1fr !important;
+        gap: 10px !important;
+        padding: 10px 15px !important;
+    }
+
+    .caracteristica-item {
+        padding: 12px !important;
+        font-size: 14px !important;
+        margin: 0 !important;
+    }
+
+    /* Tablas de especificaciones */
+    .specs-table-image {
+        width: 100% !important;
+        max-width: 350px !important;
+        margin: 20px auto !important;
+        padding: 0 !important;
+    }
+
+    .specs-table-image img {
+        width: 100% !important;
+        height: auto !important;
+        object-fit: contain !important;
+    }
+
+    .specs-intro {
+        padding: 10px 20px !important;
+        margin: 10px 0 !important;
+        font-size: 14px !important;
+        line-height: 1.6 !important;
+    }
+
+    .tabla-especificaciones {
+        overflow-x: auto !important;
+        font-size: 12px !important;
+        width: 100% !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    .tabla-especificaciones table {
+        min-width: 100% !important;
+    }
+
+    .tabla-especificaciones th,
+    .tabla-especificaciones td {
+        padding: 8px !important;
+        font-size: 12px !important;
+    }
+
+    /* Codazos e imágenes adicionales */
+    .codazos-imagenes {
+        width: 100% !important;
+        max-width: 350px !important;
+        padding: 10px !important;
+        margin: 20px auto !important;
+        display: flex !important;
+        flex-wrap: wrap !important;
+        gap: 15px !important;
+        justify-content: center !important;
+    }
+
+    .codazos-imagenes img {
+        width: 30% !important;
+        max-width: 100px !important;
+        height: auto !important;
+        object-fit: contain !important;
+    }
+
+    /* Section title general */
+    .section-title {
+        font-size: 28px !important;
+        padding: 15px 20px !important;
+        margin: 0 !important;
+        text-align: center !important;
+    }
+
+    .section-description {
+        padding: 10px 20px !important;
+        margin: 0 !important;
+    }
+
+    .section-description p {
+        margin: 10px 0 !important;
+        font-size: 14px !important;
+        line-height: 1.6 !important;
+    }
+}

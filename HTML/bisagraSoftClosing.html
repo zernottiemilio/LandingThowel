@@ -13,7 +13,17 @@
 </head>
 <body>
     <nav class="navbar">
-        <ul>
+        <!-- Logo mobile (solo visible en mobile, arriba a la izquierda) -->
+        <a href="/index.html" class="logo-mobile"><img src="/assets/logoHeader.png" alt="THOWEL"></a>
+
+        <!-- Botón hamburguesa (solo visible en mobile) -->
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <ul class="nav-menu" id="navMenu">
             <li><a href="/index.html" data-i18n="nav.home">INICIO</a></li>
             <li>
                 <a href="#productos" class="productos-link" data-i18n="nav.products">PRODUCTOS</a>
@@ -53,11 +63,8 @@
                     <div class="dropdown-item">
                         <a href="#tiradores" data-i18n="nav.handles">TIRADORES, MANIJAS Y SISTEMAS DE APOYO</a>
                         <div class="subdropdown">
-                            <a href="/HTML/manijasBarral.html" data-i18n="productPage.handles.barral.title" data-i18n-html="true">MANIJA BARRAL</a>
-                            <a href="/HTML/manijasBoton.html" data-i18n="productPage.handles.boton.title" data-i18n-html="true">MANIJA BOTÓN</a>
-                            <a href="/HTML/manijasOval.html" data-i18n="productPage.handles.oval.title" data-i18n-html="true">MANIJA OVAL</a>
-                            <a href="/HTML/manijasPlatica.html" data-i18n="products.plasticLeg">PATA PLÁSTICA</a>
-                            <a href="/HTML/manijasRueda.html" data-i18n="products.nylonWheel">MANIJA RUEDA NYLON</a>
+                            <a href="/HTML/manijas.html" data-i18n="products.handles">MANIJAS</a>
+                            <a href="/HTML/sistemasApoyo.html" data-i18n="products.supportSystems">SISTEMAS DE APOYO</a>
                         </div>
                     </div>
                 </div>
