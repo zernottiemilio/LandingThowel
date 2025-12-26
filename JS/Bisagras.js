@@ -24,93 +24,143 @@ window.addEventListener('scroll', () => {
 });
 
 // ========================================
-// CAROUSEL - PRODUCTOS SIMILARES (ROBUSTO)
+// CAROUSEL - PRODUCTOS SIMILARES
 // ========================================
-document.addEventListener('DOMContentLoaded', () => {
-    // Referencias seguras
-    const track = document.getElementById('catalogTrack');
-    const prevBtn = document.getElementById('prevBtn');
-    const nextBtn = document.getElementById('nextBtn');
-    const slides = document.querySelectorAll('.catalog-slide');
-    const indicators = Array.from(document.querySelectorAll('.indicator'));
-
-    if (!track) {
-        console.warn('Carousel: no se encontró #catalogTrack. Revisa el HTML.');
-        return;
-    }
-    if (slides.length === 0) {
-        console.warn('Carousel: no se encontraron elementos con la clase .catalog-slide.');
-        return;
+class CatalogCarousel {
+    constructor() {
+        this.currentPosition = 0;
+        this.scrollAmount = 300; // Píxeles que se desplaza cada vez
+        this.isTransitioning = false;
+        this.init();
     }
 
-    // Número de "páginas" del track (cada .catalog-slide actúa como una página)
-    const totalSlides = slides.length;
-    let currentSlide = 0;
-
-    // Calcula el porcentaje que debe moverse el track según cantidad de slides
-    function getTranslatePercent(slideIndex) {
-        // Si el track contiene N slides y queremos mover N pasos, cada paso = 100 / N
-        return slideIndex * (100 / totalSlides);
+    init() {
+        this.bindEvents();
     }
 
-    // Aplica la transformación con 'translateX' (formato: -X%)
-    function goToSlide(slideIndex) {
-        if (!track) return;
-        // límite seguro
-        if (slideIndex < 0) slideIndex = 0;
-        if (slideIndex >= totalSlides) slideIndex = totalSlides - 1;
+    bindEvents() {
+        // Navigation arrows
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
 
-        currentSlide = slideIndex;
-        const percent = getTranslatePercent(slideIndex);
-        track.style.transform = `translateX(-${percent}%)`;
-
-        // actualizar indicadores (si existen)
-        if (indicators.length) {
-            indicators.forEach((indicator, i) => {
-                indicator.classList.toggle('active', i === slideIndex);
-            });
+        if (prevBtn) {
+            prevBtn.addEventListener('click', () => this.scrollLeft());
         }
 
-        // debug
-        // console.log(`goToSlide -> index: ${slideIndex}, translate: -${percent}%`);
-    }
+        if (nextBtn) {
+            nextBtn.addEventListener('click', () => this.scrollRight());
+        }
 
-    // Conexión de botones (con guardas)
-    if (prevBtn) {
-        prevBtn.addEventListener('click', () => {
-            const nextIndex = (currentSlide - 1 + totalSlides) % totalSlides;
-            goToSlide(nextIndex);
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (this.isInViewport()) {
+                if (e.key === 'ArrowLeft') {
+                    this.scrollLeft();
+                } else if (e.key === 'ArrowRight') {
+                    this.scrollRight();
+                }
+            }
         });
-    } else {
-        console.warn('Carousel: no se encontró #prevBtn.');
+
+        // Touch/Swipe support
+        this.addTouchSupport();
     }
 
-    if (nextBtn) {
-        nextBtn.addEventListener('click', () => {
-            const nextIndex = (currentSlide + 1) % totalSlides;
-            goToSlide(nextIndex);
-        });
-    } else {
-        console.warn('Carousel: no se encontró #nextBtn.');
+    scrollRight() {
+        if (this.isTransitioning) return;
+
+        this.isTransitioning = true;
+        const track = document.getElementById('catalogTrack');
+
+        if (track) {
+            this.currentPosition -= this.scrollAmount;
+
+            // Limitar el scroll para no pasarse del contenido
+            const maxScroll = -(track.scrollWidth - track.parentElement.offsetWidth);
+            if (this.currentPosition < maxScroll) {
+                this.currentPosition = maxScroll;
+            }
+
+            track.style.transform = `translateX(${this.currentPosition}px)`;
+        }
+
+        setTimeout(() => {
+            this.isTransitioning = false;
+        }, 500);
     }
 
-    // Indicadores clickeables
-    if (indicators.length) {
-        indicators.forEach((indicator, index) => {
-            indicator.addEventListener('click', () => goToSlide(index));
-        });
+    scrollLeft() {
+        if (this.isTransitioning) return;
+
+        this.isTransitioning = true;
+        const track = document.getElementById('catalogTrack');
+
+        if (track) {
+            this.currentPosition += this.scrollAmount;
+
+            // No permitir scroll más allá del inicio
+            if (this.currentPosition > 0) {
+                this.currentPosition = 0;
+            }
+
+            track.style.transform = `translateX(${this.currentPosition}px)`;
+        }
+
+        setTimeout(() => {
+            this.isTransitioning = false;
+        }, 500);
     }
 
-    // Inicia en el slide 0
-    goToSlide(0);
+    isInViewport() {
+        const catalogSection = document.querySelector('.productos-similares');
+        if (!catalogSection) return false;
 
-    // Auto-rotate opcional (descomentar si deseás auto-rotar)
-    /*
-    setInterval(() => {
-        const nextIndex = (currentSlide + 1) % totalSlides;
-        goToSlide(nextIndex);
-    }, 5000);
-    */
+        const rect = catalogSection.getBoundingClientRect();
+        return rect.top < window.innerHeight && rect.bottom > 0;
+    }
+
+    addTouchSupport() {
+        const catalogCarousel = document.querySelector('.catalog-carousel');
+        if (!catalogCarousel) return;
+
+        let startX = 0;
+        let startY = 0;
+        let distX = 0;
+        let distY = 0;
+        let threshold = 50; // Minimum distance for swipe
+        let restraint = 100; // Maximum distance perpendicular to swipe direction
+        let allowedTime = 500; // Maximum time allowed to travel distance
+        let startTime = 0;
+
+        catalogCarousel.addEventListener('touchstart', (e) => {
+            const touchObj = e.changedTouches[0];
+            startX = touchObj.pageX;
+            startY = touchObj.pageY;
+            startTime = new Date().getTime();
+        }, { passive: true });
+
+        catalogCarousel.addEventListener('touchend', (e) => {
+            const touchObj = e.changedTouches[0];
+            distX = touchObj.pageX - startX;
+            distY = touchObj.pageY - startY;
+            const elapsedTime = new Date().getTime() - startTime;
+
+            if (elapsedTime <= allowedTime && Math.abs(distX) >= threshold && Math.abs(distY) <= restraint) {
+                if (distX > 0) {
+                    // Swipe hacia la derecha = scroll hacia la izquierda
+                    this.scrollLeft();
+                } else {
+                    // Swipe hacia la izquierda = scroll hacia la derecha
+                    this.scrollRight();
+                }
+            }
+        }, { passive: true });
+    }
+}
+
+// Initialize carousel when DOM is loaded
+document.addEventListener('DOMContentLoaded', () => {
+    new CatalogCarousel();
 });
 
 // ========================================
@@ -133,5 +183,4 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
-});
 });
