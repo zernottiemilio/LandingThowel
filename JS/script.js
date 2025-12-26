@@ -352,19 +352,163 @@ let lastScrollTop = 0;
 let productShowcaseInstance;
 let catalogCarouselInstance;
 
+// ============================================
+// MENÚ HAMBURGUESA - MOBILE
+// ============================================
+
+class MobileMenu {
+  constructor() {
+    this.hamburger = null;
+    this.navMenu = null;
+    this.dropdownItems = [];
+    this.init();
+  }
+
+  init() {
+    // Crear el botón hamburguesa si no existe
+    this.createHamburgerButton();
+
+    // Obtener elementos
+    this.hamburger = document.querySelector('.hamburger');
+    this.navMenu = document.querySelector('.navbar ul');
+    this.dropdownItems = document.querySelectorAll('.dropdown-item');
+
+    if (!this.hamburger || !this.navMenu) return;
+
+    // Event listeners
+    this.hamburger.addEventListener('click', () => this.toggleMenu());
+
+    // Cerrar menú al hacer click en un enlace (excepto los que tienen dropdown)
+    const navLinks = document.querySelectorAll('.navbar a');
+    navLinks.forEach(link => {
+      // Solo cerrar si no es un dropdown parent
+      if (!link.parentElement.classList.contains('dropdown-item') ||
+          !link.parentElement.querySelector('.dropdown, .subdropdown')) {
+        link.addEventListener('click', () => {
+          if (window.innerWidth <= 768) {
+            this.closeMenu();
+          }
+        });
+      }
+    });
+
+    // Toggle dropdowns en mobile
+    this.dropdownItems.forEach(item => {
+      const link = item.querySelector('a');
+      if (link && item.querySelector('.dropdown, .subdropdown')) {
+        link.addEventListener('click', (e) => {
+          if (window.innerWidth <= 768) {
+            e.preventDefault();
+            this.toggleDropdown(item);
+          }
+        });
+      }
+    });
+
+    // Cerrar menú al hacer click fuera
+    document.addEventListener('click', (e) => {
+      if (window.innerWidth <= 768 &&
+          this.navMenu.classList.contains('active') &&
+          !e.target.closest('.navbar')) {
+        this.closeMenu();
+      }
+    });
+
+    // Cerrar menú al cambiar de tamaño
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 768 && this.navMenu.classList.contains('active')) {
+        this.closeMenu();
+      }
+    });
+  }
+
+  createHamburgerButton() {
+    // Verificar si ya existe
+    if (document.querySelector('.hamburger')) return;
+
+    const navbar = document.querySelector('.navbar');
+    if (!navbar) return;
+
+    const hamburger = document.createElement('div');
+    hamburger.className = 'hamburger';
+    hamburger.innerHTML = `
+      <span></span>
+      <span></span>
+      <span></span>
+    `;
+
+    // Insertar el botón hamburguesa al final del navbar
+    navbar.appendChild(hamburger);
+  }
+
+  toggleMenu() {
+    this.hamburger.classList.toggle('active');
+    this.navMenu.classList.toggle('active');
+
+    // Prevenir scroll del body cuando el menú está abierto
+    if (this.navMenu.classList.contains('active')) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+      // Cerrar todos los dropdowns al cerrar el menú
+      this.dropdownItems.forEach(item => {
+        item.classList.remove('active');
+      });
+    }
+  }
+
+  closeMenu() {
+    this.hamburger.classList.remove('active');
+    this.navMenu.classList.remove('active');
+    document.body.style.overflow = '';
+
+    // Cerrar todos los dropdowns
+    this.dropdownItems.forEach(item => {
+      item.classList.remove('active');
+    });
+  }
+
+  toggleDropdown(item) {
+    const wasActive = item.classList.contains('active');
+
+    // Cerrar todos los dropdowns del mismo nivel
+    const siblings = Array.from(item.parentElement.children).filter(
+      child => child.classList.contains('dropdown-item')
+    );
+    siblings.forEach(sibling => {
+      if (sibling !== item) {
+        sibling.classList.remove('active');
+      }
+    });
+
+    // Toggle el dropdown actual
+    if (wasActive) {
+      item.classList.remove('active');
+    } else {
+      item.classList.add('active');
+    }
+  }
+}
+
 // Parallax effect for main text and navbar hide functionality
 window.addEventListener('scroll', () => {
     const scrolled = window.pageYOffset;
     const parallax = document.querySelector('.main-text');
     const navbar = document.querySelector('.navbar');
-    
+
     // Parallax effect
     if (parallax) {
         parallax.style.transform = `translateY(${scrolled * 0.2}px)`;
     }
-    
+
     // Navbar hide/show functionality
     if (navbar) {
+        // No esconder el navbar si el menú móvil está abierto
+        const navMenu = document.querySelector('.navbar ul');
+        if (navMenu && navMenu.classList.contains('active')) {
+            return;
+        }
+
         if (scrolled > lastScrollTop && scrolled > 100) {
             // Scrolling down and past header
             navbar.classList.add('hidden');
@@ -400,6 +544,9 @@ function startAutoAdvance() {
 
 // Initialize everything when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
+    // Initialize mobile menu
+    new MobileMenu();
+
     // Initialize product showcase
     productShowcaseInstance = new ProductShowcase();
 

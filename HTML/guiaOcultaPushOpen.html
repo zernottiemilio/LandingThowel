@@ -7,6 +7,8 @@
     <link rel="icon" type="image/png" href="/assets/LOGO-11.png">
     <link rel="stylesheet" href="/CSS/guiasCorrederas.css">
     <script src="https://cdn.jsdelivr.net/npm/i18next@23.7.6/i18next.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <link rel="stylesheet" href="/CSS/responsive.css">
 </head>
 <body>
     <!-- Navbar flotante -->
@@ -82,15 +84,14 @@
                 <div class="badge-thowel">
                     <img src="/assets/Guia oculta push Open/acero.png" alt="Touch Badge">
                 </div>
-                <h1 class="producto-titulo"><b>
-                    GUÍA OCULTA<br>
-                    PUSH OPEN<br></b>
-                    <span class="touch">TOUCH</span>
+                <h1 class="producto-titulo">
+                    <b data-i18n="productPage.slides.hiddenSlidePush.title" data-i18n-html="true">GUÍA OCULTA<br>PUSH OPEN</b>
+                    <span class="touch" data-i18n="productPage.slides.hiddenSlidePush.tag">TOUCH</span>
                 </h1>
-                <p class="producto-descripcion">
+                <p class="producto-descripcion" data-i18n="productPage.slides.hiddenSlidePush.description1" data-i18n-html="true">
                     Desarrollada bajo nuestra tecnología <strong>TOUCH</strong> permite apertura con un simple toque, eliminando la necesidad de manijas.
                 </p>
-                <p class="producto-descripcion">
+                <p class="producto-descripcion" data-i18n="productPage.slides.hiddenSlidePush.description2" data-i18n-html="true">
                     Ideal para diseños minimalistas, <strong>destacándose por su funcionalidad innovadora y estética limpia.</strong>
                 </p>
                 <div class="diagrama-tecnico">
@@ -104,7 +105,7 @@
     <section class="producto-section section-2">
         <div class="dual-content">
             <div class="left-content">
-                <img src="/assets/GUIA OCULTA (2).JPG" alt="Ambiente Guía Push">
+                <img src="/assets/Guia oculta push Open/GUIA OCULTA (2).JPG" alt="Ambiente Guía Push">
             </div>
             <div class="right-content">
                 <div class="specs-all-logos">
@@ -113,7 +114,7 @@
                     <img src="/assets/Guia oculta push Open/10 unidades.png" alt="10 unidades">
                     <img src="/assets/Guia oculta push Open/80 miul cilcos de uso .png" alt="80mil ciclos de uso">
                 </div>
-                <p class="specs-intro">
+                <p class="specs-intro" data-i18n="productPage.slides.hiddenSlidePush.specs" data-i18n-html="true">
                     Fabricadas en acero de <strong>alta calidad</strong> con mecanismos de precisión, ofrecen una <strong>solución innovadora y duradera</strong> para amoblamientos modernos.
                 </p>
             </div>
@@ -126,7 +127,7 @@
 
     <!-- Sección 5: Productos Similares (Carousel) -->
     <section class="productos-similares">
-        <h2 class="similares-titulo">PRODUCTOS SIMILARES</h2>
+        <h2 class="similares-titulo" data-i18n="productPage.similarProducts">PRODUCTOS SIMILARES</h2>
         <div class="catalog-carousel">
             <button class="carousel-nav prev-btn" id="prevBtn"><i class="fas fa-chevron-left"></i></button>
             <button class="carousel-nav next-btn" id="nextBtn"><i class="fas fa-chevron-right"></i></button>
@@ -135,11 +136,11 @@
                 <div class="catalog-slide">
                     <!-- CAJONES -->
                     <a href="/HTML/ThowelBoxCristal.html" class="catalog-item">
-                        <img src="/assets/THOWELBOXCRISTAL.png" alt="Thowel Box Cristal">
+                        <img src="/assets/thowel box cristal/THOWELBOXCRISTAL.png" alt="Thowel Box Cristal">
                         <div class="catalog-overlay"><div class="catalog-overlay-text">THOWEL BOX CRISTAL</div></div>
                     </a>
                     <a href="/HTML/thowelBoxPlus.html" class="catalog-item">
-                        <img src="/assets/THOWELBOXPLUS.png" alt="Thowel Box Plus">
+                        <img src="/assets/thowel box plus/THOWELBOXPLUS.png" alt="Thowel Box Plus">
                         <div class="catalog-overlay"><div class="catalog-overlay-text">THOWEL BOX PLUS</div></div>
                     </a>
 
@@ -153,15 +154,15 @@
                         <div class="catalog-overlay"><div class="catalog-overlay-text">BISAGRA SOFT CLOSING</div></div>
                     </a>
                     <a href="/HTML/bisagraCazoletaEstandar.html" class="catalog-item">
-                        <img src="/assets/BISAGRACAZOLETAESTANDAR.png" alt="Bisagra Cazoleta">
+                        <img src="/assets/bisagra cazoleta estandar/BISAGRACAZOLETAESTANDAR.png" alt="Bisagra Cazoleta">
                         <div class="catalog-overlay"><div class="catalog-overlay-text">BISAGRA CAZOLETA</div></div>
                     </a>
                     <a href="/HTML/bisagraPushOpen.html" class="catalog-item">
-                        <img src="/assets/BISAGRAPUSHOPEN.png" alt="Bisagra Push Open">
+                        <img src="/assets/bisagra push open/BISAGRAPUSHOPEN.png" alt="Bisagra Push Open">
                         <div class="catalog-overlay"><div class="catalog-overlay-text">BISAGRA PUSH OPEN</div></div>
                     </a>
                     <a href="/HTML/PistonAGAS.html" class="catalog-item">
-                        <img src="/assets/PISTONAGAS.png" alt="Pistón a Gas">
+                        <img src="/assets/piston a gas/PISTONAGAS.png" alt="Pistón a Gas">
                         <div class="catalog-overlay"><div class="catalog-overlay-text">PISTÓN A GAS</div></div>
                     </a>
                 </div>
@@ -213,7 +214,7 @@
                 <div class="hexagon hex-2"></div>
             </div>
             <div class="footer-content">
-                <p>&copy; 2025 THOWEL. Todos los derechos reservados.</p>
+                <p data-i18n="footer.copyright">&copy; 2025 THOWEL. Todos los derechos reservados.</p>
             </div>
         </div>
     </footer>

@@ -117,6 +117,71 @@
         "description2": "Widely used in the furniture industry, <strong>standing out for its reliability and ease of installation.</strong>",
         "specs": "Made of <strong>high-quality</strong> steel meeting strict production standards, they offer a <strong>durable and efficient solution</strong> for all types of furniture."
       }
+    },
+    "slides": {
+      "hiddenSlide3d": {
+        "title": "3D HIDDEN<br>SLIDE SOFT CLOSING",
+        "tag": "SMOOTH",
+        "description1": "Developed under our <strong>SMOOTH</strong> technology offers a cushioned and silent closing with three-dimensional adjustment.",
+        "description2": "Widely used in high-end drawers, <strong>standing out for its smoothness, precision and ease of installation.</strong>",
+        "specs": "Made of <strong>high quality</strong> steel with various finishes, they offer a <strong>versatile and durable solution</strong> for all types of furniture."
+      },
+      "hiddenSlidePush": {
+        "title": "HIDDEN SLIDE<br>PUSH OPEN",
+        "tag": "TOUCH",
+        "description1": "Developed under our <strong>TOUCH</strong> technology allows opening with a simple touch, eliminating the need for handles.",
+        "description2": "Ideal for minimalist designs, <strong>standing out for its innovative functionality and clean aesthetics.</strong>",
+        "specs": "Made of <strong>high quality</strong> steel with precision mechanisms, they offer an <strong>innovative and durable solution</strong> for modern furniture."
+      },
+      "telescopicSlideSoft": {
+        "title": "TELESCOPIC<br>RUNNER",
+        "tag": "SOFT CLOSING",
+        "description1": "Developed under our <strong>SMOOTH</strong> technology offers a cushioned and silent closing with full extension.",
+        "description2": "Widely used in high-end drawers, <strong>standing out for its smoothness, load capacity and ease of installation.</strong>",
+        "specs": "Made of <strong>high quality</strong> steel with precision bearings, they offer a <strong>durable and efficient solution</strong> for all types of drawers."
+      },
+      "telescopicSlidePush": {
+        "title": "TELESCOPIC<br>RUNNER",
+        "tag": "SOFT CLOSING",
+        "description1": "Developed under our <strong>SMOOTH</strong> technology offers a cushioned and silent closing with full extension.",
+        "description2": "Widely used in high-end drawers, <strong>standing out for its smoothness, load capacity and ease of installation.</strong>",
+        "specs": "Made of <strong>high quality</strong> steel with precision bearings, they offer a <strong>durable and efficient solution</strong> for all types of drawers."
+      },
+      "telescopicSlideH45": {
+        "title": "TELESCOPIC<br>RUNNER",
+        "tag": "SOFT CLOSING",
+        "description1": "Developed under our <strong>SMOOTH</strong> technology offers a cushioned and silent closing with full extension.",
+        "description2": "Widely used in high-end drawers, <strong>standing out for its smoothness, load capacity and ease of installation.</strong>",
+        "specs": "Made of <strong>high quality</strong> steel with precision bearings, they offer a <strong>durable and efficient solution</strong> for all types of drawers."
+      },
+      "telescopicSlideH35": {
+        "title": "TELESCOPIC<br>RUNNER",
+        "tag": "STANDARD H35",
+        "description1": "Developed under our <strong>STANDARD</strong> technology ensures excellent performance and resistance in daily use.",
+        "description2": "With <strong>80,000 cycles of use</strong> and load capacity of <strong>20 units</strong>, widely used in the furniture industry, standing out for its reliability and ease of installation.",
+        "specs": "Made of <strong>high quality steel</strong> meeting strict production standards, they offer a durable and efficient solution for all types of drawers."
+      },
+      "slideZ": {
+        "title": "Z RUNNER",
+        "tag": "STANDARD",
+        "description1": "Designed for specific applications, the Z runner offers a <strong>practical and reliable solution</strong> for various types of furniture.",
+        "description2": "With <strong>STANDARD</strong> technology, it guarantees durability and smooth operation in daily use.",
+        "specs": "Made of <strong>high quality steel</strong>, Z runners offer strength and functionality for multiple applications in furniture and storage systems."
+      }
+    },
+    "supportSystems": {
+      "plasticLeg": {
+        "title": "PLASTIC<br>LEG",
+        "description1": "Developed under our <strong>STANDARD</strong> technology ensures excellent performance and resistance in daily use.",
+        "description2": "Widely used in the furniture industry, <strong>standing out for its durability and ease of installation.</strong>",
+        "specs": "Made of <strong>high quality</strong> plastic with various finishes, they offer a <strong>versatile and durable solution</strong> for all types of furniture."
+      },
+      "nylonWheel": {
+        "title": "NYLON<br>WHEEL",
+        "description1": "Developed under our <strong>STANDARD</strong> technology ensures excellent performance and resistance in daily use.",
+        "description2": "Widely used in the furniture industry, <strong>standing out for its smooth movement and ease of installation.</strong>",
+        "specs": "Made of <strong>high quality</strong> nylon with steel components, they offer a <strong>versatile and durable solution</strong> for all types of furniture."
+      }
     }
   },
   "footer": {
