@@ -1,3 +1,5 @@
+@import url('/CSS/responsive.css');
+
 @font-face {
     font-family: 'Montserrat';
     src: url('../fonts/Montserrat-Regular.ttf') format('truetype');
@@ -248,10 +250,20 @@ body {
     text-align: center;
     color: white;
     z-index: 10;
+    width: 90%;
+    max-width: 1200px;
+}
+
+.main-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .main-text p {
     font-size: 1.2rem;
+    margin: 0 auto;
 }
 
 .main-text h1 {
@@ -261,6 +273,15 @@ body {
     text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
     text-transform: uppercase;
     color: white;
+    margin: 0 auto 10px auto;
+    white-space: normal;
+    word-wrap: break-word;
+    transition: opacity 0.2s ease;
+}
+
+/* Asegurar que elementos traducibles no causen saltos */
+[data-i18n] {
+    transition: opacity 0.15s ease;
 }
 
 .main-content p {
@@ -930,4 +951,44 @@ body {
         font-size: 0.8rem;
         padding: 10px;
     }
+}
+
+/* Language Selector in Navbar */
+.language-selector-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+}
+
+.language-selector-nav .language-btn {
+    background: transparent;
+    border: 1px solid #003399;
+    color: #003399;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 0.7rem;
+    padding: 4px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 30px;
+    line-height: 1.2;
+}
+
+.language-selector-nav .language-btn:hover {
+    background: #003399;
+    color: #fff;
+}
+
+.language-selector-nav .language-btn.active {
+    background: #003399;
+    color: #fff;
+}
+
+.language-selector-nav .language-separator {
+    color: #003399;
+    font-size: 0.7rem;
+    font-weight: 300;
+    margin: 0 2px;
 }

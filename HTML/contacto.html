@@ -6,58 +6,66 @@
     <title>Contactos - THOWEL</title>
     <link rel="icon" type="image/png" href="/assets/LOGO-11.png">
     <link rel="stylesheet" href="/CSS/contacto.css">
+    <script src="https://cdn.jsdelivr.net/npm/i18next@23.7.6/i18next.min.js"></script>
 </head>
 <body>
     <!-- Navbar flotante -->
     <nav class="navbar">
         <ul>
-            <li><a href="/index.html">INICIO</a></li>
+            <li><a href="/index.html" data-i18n="nav.home">INICIO</a></li>
             <li>
-                <a href="#productos" class="productos-link">PRODUCTOS</a>
+                <a href="#productos" class="productos-link" data-i18n="nav.products">PRODUCTOS</a>
                 <div class="dropdown">
                     <div class="dropdown-item">
-                        <a href="#cajones">CAJONES</a>
+                        <a href="#cajones" data-i18n="nav.drawers">CAJONES</a>
                         <div class="subdropdown">
-                            <a href="/HTML/ThowelBoxCristal.html">THOWEL BOX CRISTAL</a>
-                            <a href="/HTML/thowelBoxPlus.html">THOWEL BOX PLUS</a>
-                            <a href="/HTML/thowelBox.html">THOWEL BOX</a>
+                            <a href="/HTML/ThowelBoxCristal.html" data-i18n="products.thowelBoxCristal">THOWEL BOX CRISTAL</a>
+                            <a href="/HTML/thowelBoxPlus.html" data-i18n="products.thowelBoxPlus">THOWEL BOX PLUS</a>
+                            <a href="/HTML/thowelBox.html" data-i18n="products.thowelBox">THOWEL BOX</a>
                         </div>
                     </div>
                     <div class="dropdown-item">
-                        <a href="#bisagras">BISAGRAS</a>
+                        <a href="#bisagras" data-i18n="nav.hinges">BISAGRAS</a>
                         <div class="subdropdown">
-                            <a href="/HTML/bisagraClip3D.html">BISAGRA CLIP 3D</a>
-                            <a href="/HTML/bisagras.html">BISAGRA SOFT CLOSING</a>
-                            <a href="/HTML/bisagraCazoletaEstandar.html">BISAGRA CAZOLETA</a>
-                            <a href="/HTML/bisagraPushOpen.html">BISAGRA PUSH OPEN</a>
-                            <a href="/HTML/bisagraCazoleta155.html">BISAGRA ANGULOS ESPECIALES</a>
-                            <a href="/HTML/bisagraCazoleta155.html">RETÉN EXPULSOR</a>
-                            <a href="/HTML/PistonAGAS.html">PISTÓN A GAS</a>
+                            <a href="/HTML/bisagraClip3D.html" data-i18n="products.hingeClip3d">BISAGRA CLIP 3D</a>
+                            <a href="/HTML/bisagras.html" data-i18n="products.hingeSoftClosing">BISAGRA SOFT CLOSING</a>
+                            <a href="/HTML/bisagraCazoletaEstandar.html" data-i18n="products.hingeCup">BISAGRA CAZOLETA</a>
+                            <a href="/HTML/bisagraPushOpen.html" data-i18n="products.hingePushOpen">BISAGRA PUSH OPEN</a>
+                            <a href="/HTML/bisagraCazoleta155.html" data-i18n="products.hingeAngles">BISAGRA ANGULOS ESPECIALES</a>
+                            <a href="/HTML/bisagraCazoleta155.html" data-i18n="products.retainerExpeller">RETÉN EXPULSOR</a>
+                            <a href="/HTML/PistonAGAS.html" data-i18n="products.gasPiston">PISTÓN A GAS</a>
                         </div>
                     </div>
                     <div class="dropdown-item">
-                        <a href="#guias">GUÍAS Y CORREDERAS</a>
+                        <a href="#guias" data-i18n="nav.slides">GUÍAS Y CORREDERAS</a>
                         <div class="subdropdown">
-                            <a href="/HTML/guiaOculta3DSoftClosing.html">GUÍA OCULTA 3D SOFT CLOSING</a>
-                            <a href="/HTML/guiaOcultaPushOpen.html">GUÍA OCULTA PUSH OPEN</a>
-                            <a href="/HTML/correderaTelescopicaSoftClosing.html">CORREDERA TELESCÓPICA SOFT CLOSING</a>
-                            <a href="/HTML/correderaTelescopicaPushOpen.html">CORREDERA TELESCÓPICA PUSH OPEN</a>
-                            <a href="/HTML/correderaTelescopicaEstandarH45.html">CORREDERA TELESCÓPICA ESTÁNDAR H45</a>
-                            <a href="/HTML/correderaTelescopicaEstandarH35.html">CORREDERA TELESCÓPICA ESTÁNDAR H35</a>
-                            <a href="/HTML/correderaZ.html">CORREDERA Z</a>
+                            <a href="/HTML/guiaOculta3DSoftClosing.html" data-i18n="products.hiddenSlide3d">GUÍA OCULTA 3D SOFT CLOSING</a>
+                            <a href="/HTML/guiaOcultaPushOpen.html" data-i18n="products.hiddenSlidePush">GUÍA OCULTA PUSH OPEN</a>
+                            <a href="/HTML/correderaTelescopicaSoftClosing.html" data-i18n="products.telescopicSlideSoft">CORREDERA TELESCÓPICA SOFT CLOSING</a>
+                            <a href="/HTML/correderaTelescopicaPushOpen.html" data-i18n="products.telescopicSlidePush">CORREDERA TELESCÓPICA PUSH OPEN</a>
+                            <a href="/HTML/correderaTelescopicaEstandarH45.html" data-i18n="products.telescopicSlideH45">CORREDERA TELESCÓPICA ESTÁNDAR H45</a>
+                            <a href="/HTML/correderaTelescopicaEstandarH35.html" data-i18n="products.telescopicSlideH35">CORREDERA TELESCÓPICA ESTÁNDAR H35</a>
+                            <a href="/HTML/correderaZ.html" data-i18n="products.slideZ">CORREDERA Z</a>
                         </div>
-                    </div>                        
+                    </div>
                     <div class="dropdown-item">
-                        <a href="#tiradores">TIRADORES, MANIJAS Y SISTEMAS DE APOYO</a>
+                        <a href="#tiradores" data-i18n="nav.handles">TIRADORES, MANIJAS Y SISTEMAS DE APOYO</a>
                         <div class="subdropdown">
-                            <a href="/HTML/manijas.html">MANIJAS</a>
-                            <a href="/HTML/sistemasApoyo.html">SISTEMAS DE APOYO</a>
+                            <a href="/HTML/manijas.html" data-i18n="products.handles">MANIJAS</a>
+                            <a href="/HTML/sistemasApoyo.html" data-i18n="products.supportSystems">SISTEMAS DE APOYO</a>
                         </div>
-                    </div>                    
+                    </div>
             </li>
             <li><a href="/index.html" class="logo"><img src="/assets/logoHeader.png" alt="THOWEL"></a></li>
-            <li><a href="/HTML/sobreNosotros.html">SOBRE NOSOTROS</a></li>
-            <li><a href="/HTML/contacto.html">CONTACTOS</a></li>
+            <li><a href="/HTML/sobreNosotros.html" data-i18n="nav.about">SOBRE NOSOTROS</a></li>
+            <li><a href="/HTML/contacto.html" data-i18n="nav.contact">CONTACTOS</a></li>
+            <li class="language-selector-nav">
+                <button class="language-btn" data-lang="es">ES</button>
+                <span class="language-separator">|</span>
+                <button class="language-btn" data-lang="en">EN</button>
+                <span class="language-separator">|</span>
+                <button class="language-btn" data-lang="pt">PT</button>
+            </li>
         </ul>
     </nav>
 
@@ -66,7 +74,7 @@
     <section class="header-section">
         <img src="/assets/PORTADA CONTACTOS.png" alt="Portada" class="portada-img">
         <div class="header-overlay">
-            <h1 class="header-title">
+            <h1 class="header-title" data-i18n="contact.title">
                 CONTACTANOS
             </h1>
         </div>
@@ -78,50 +86,54 @@
     <!-- Sección Formulario de Contacto -->
     <section class="contacto-section">
         <div class="contacto-container">
-            <h2 class="contacto-titulo">CONTACTANOS</h2>
-            
+            <h2 class="contacto-titulo" data-i18n="contact.title">CONTACTANOS</h2>
+
             <form class="contacto-form" id="contactoForm">
                 <div class="form-group">
-                    <input 
-                        type="text" 
-                        name="nombre" 
-                        placeholder="Nombre:" 
+                    <input
+                        type="text"
+                        name="nombre"
+                        placeholder="Nombre:"
+                        data-i18n="contact.form.name"
                         required
                         class="form-input"
                     >
                 </div>
-                
+
                 <div class="form-group">
-                    <input 
-                        type="tel" 
-                        name="numero" 
-                        placeholder="Número:" 
+                    <input
+                        type="tel"
+                        name="numero"
+                        placeholder="Número:"
+                        data-i18n="contact.form.phone"
                         required
                         class="form-input"
                     >
                 </div>
-                
+
                 <div class="form-group">
-                    <input 
-                        type="email" 
-                        name="mail" 
-                        placeholder="Mail:" 
+                    <input
+                        type="email"
+                        name="mail"
+                        placeholder="Mail:"
+                        data-i18n="contact.form.email"
                         required
                         class="form-input"
                     >
                 </div>
-                
+
                 <div class="form-group">
-                    <textarea 
-                        name="mensaje" 
-                        placeholder="Mensaje:" 
+                    <textarea
+                        name="mensaje"
+                        placeholder="Mensaje:"
+                        data-i18n="contact.form.message"
                         rows="5"
                         required
                         class="form-input form-textarea"
                     ></textarea>
                 </div>
-                
-                <button type="submit" class="form-submit">ENVIAR</button>
+
+                <button type="submit" class="form-submit" data-i18n="contact.form.submit">ENVIAR</button>
             </form>
         </div>
     </section>
@@ -134,11 +146,12 @@
                 <div class="hexagon hex-2"></div>
             </div>
             <div class="footer-content">
-                <p>&copy; 2025 THOWEL. Todos los derechos reservados.</p>
+                <p data-i18n="footer.copyright">&copy; 2025 THOWEL. Todos los derechos reservados.</p>
             </div>
         </div>
     </footer>
 
     <script src="/JS/contacto.js"></script>
+    <script src="/JS/i18n.js"></script>
 </body>
 </html>

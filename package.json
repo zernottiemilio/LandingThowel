@@ -1,5 +1,6 @@
 {
   "dependencies": {
-    "animejs": "^4.2.1"
+    "animejs": "^4.2.1",
+    "i18next": "^25.7.3"
   }
 }

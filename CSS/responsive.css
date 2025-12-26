@@ -1,0 +1,138 @@
+/* Ajustes responsive globales */
+
+@media (max-width: 1024px) {
+    body {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 900px) {
+    /* Navbar scrollable y sin menús ocultos por hover */
+    .navbar ul {
+        flex-wrap: wrap;
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .navbar li {
+        position: static;
+    }
+
+    .navbar .logo img {
+        max-height: 45px;
+    }
+
+    .dropdown,
+    .subdropdown {
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        box-shadow: none;
+        background: transparent;
+        display: block;
+        padding: 0;
+    }
+
+    .dropdown a,
+    .subdropdown a {
+        display: inline-block;
+        padding: 6px 10px;
+    }
+
+    .language-selector-nav {
+        width: 100%;
+        justify-content: center;
+    }
+
+    /* Secciones con columnas dobles -> columnas apiladas */
+    .dual-content {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+
+    .dual-content .left-content,
+    .dual-content .right-content {
+        width: 100%;
+    }
+
+    .dual-content img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
+    .producto-titulo {
+        font-size: clamp(1.6rem, 5vw, 2.4rem);
+        line-height: 1.1;
+    }
+
+    .producto-descripcion,
+    .specs-intro {
+        font-size: 0.95rem;
+        line-height: 1.4;
+    }
+
+    .specs-table-image img,
+    .diagrama-tecnico img {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Carruseles: espacio y textos más pequeños */
+    .catalog-carousel,
+    .catalog-track {
+        gap: 10px;
+    }
+
+    .catalog-overlay-text,
+    .similares-titulo {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .navbar ul {
+        justify-content: flex-start;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    .navbar li {
+        margin: 0;
+    }
+
+    .language-selector-nav {
+        justify-content: flex-start;
+        overflow-x: auto;
+    }
+
+    .header-section .main-text h1,
+    .header-title {
+        font-size: clamp(1.4rem, 6vw, 1.8rem);
+    }
+
+    .header-section .main-text p {
+        font-size: 1rem;
+    }
+
+    .product-description,
+    .producto-descripcion,
+    .specs-intro {
+        font-size: 0.9rem;
+    }
+
+    .product-content-overlay {
+        padding: 20px;
+    }
+
+    .catalog-title {
+        font-size: 1.6rem;
+    }
+
+    .catalog-description {
+        font-size: 0.95rem;
+    }
+}
+
