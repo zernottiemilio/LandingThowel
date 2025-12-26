@@ -992,3 +992,114 @@ body {
     font-weight: 300;
     margin: 0 2px;
 }
+
+/* ============================================
+   CALIDAD SECTION
+   ============================================ */
+
+.calidad-section {
+    position: relative;
+    background: linear-gradient(135deg, #3a3169 0%, #4a4179 100%);
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    padding: 80px 40px;
+}
+
+.calidad-container {
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.calidad-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 80px;
+}
+
+.calidad-text {
+    flex: 1;
+    max-width: 700px;
+    z-index: 2;
+}
+
+.calidad-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 4rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #ffffff;
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+}
+
+.calidad-description {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.3rem;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 300;
+}
+
+.calidad-icon {
+    flex: 0 0 auto;
+    max-width: 450px;
+    opacity: 0.3;
+    z-index: 1;
+}
+
+.calidad-icon img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+}
+
+/* Responsive */
+@media(max-width: 1200px) {
+    .calidad-content {
+        gap: 50px;
+    }
+
+    .calidad-title {
+        font-size: 3rem;
+    }
+
+    .calidad-description {
+        font-size: 1.1rem;
+    }
+
+    .calidad-icon {
+        max-width: 350px;
+    }
+}
+
+@media(max-width: 768px) {
+    .calidad-section {
+        padding: 60px 20px;
+    }
+
+    .calidad-content {
+        flex-direction: column;
+        gap: 40px;
+        text-align: center;
+    }
+
+    .calidad-title {
+        font-size: 2.5rem;
+    }
+
+    .calidad-description {
+        font-size: 1rem;
+    }
+
+    .calidad-icon {
+        max-width: 250px;
+        opacity: 0.2;
+    }
+}
