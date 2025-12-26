@@ -1,130 +1,399 @@
-/* Ajustes responsive globales */
+/* ========================================
+   RESPONSIVE GLOBAL - THOWEL
+   CSS responsive SOLO para tablets y móviles
+   NO afecta estilos desktop (> 1200px)
+   ======================================== */
 
-@media (max-width: 1024px) {
-    body {
-        font-size: 15px;
-    }
-}
+/* ========================================
+   PROTECCIÓN DE ESTILOS DESKTOP
+   Asegura que los tamaños originales se mantengan
+   ======================================== */
 
-@media (max-width: 900px) {
-    /* Navbar scrollable y sin menús ocultos por hover */
-    .navbar ul {
-        flex-wrap: wrap;
-        gap: 10px;
-        padding: 10px;
-    }
-
-    .navbar li {
-        position: static;
+@media (min-width: 1201px) {
+    /* Proteger tamaños originales de logos en desktop */
+    .product-logo img {
+        width: 250px !important;
+        height: 250px !important;
     }
 
     .navbar .logo img {
-        max-height: 45px;
+        height: 60px !important;
     }
 
-    .dropdown,
-    .subdropdown {
-        position: static;
-        opacity: 1;
-        visibility: visible;
-        transform: none;
-        box-shadow: none;
-        background: transparent;
-        display: block;
-        padding: 0;
+    /* Proteger otros elementos críticos */
+    .product-description {
+        font-size: 1.2rem !important;
+    }
+}
+
+/* ========================================
+   LAPTOP Y TABLET (1024px - 1200px)
+   ======================================== */
+
+@media (max-width: 1200px) and (min-width: 1025px) {
+    .navbar {
+        padding: 5px 50px;
     }
 
-    .dropdown a,
-    .subdropdown a {
-        display: inline-block;
-        padding: 6px 10px;
+    .navbar ul {
+        gap: 40px;
     }
 
-    .language-selector-nav {
-        width: 100%;
-        justify-content: center;
+    .navbar a {
+        font-size: 13px;
+        padding: 8px 15px;
+        margin: 10px;
     }
 
+    /* Productos */
+    .producto-descripcion {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    /* Index - Product Showcase */
+    .product-description {
+        font-size: 16px;
+        padding: 0 40px;
+    }
+}
+
+/* ========================================
+   TABLET HORIZONTAL (900px - 1024px)
+   ======================================== */
+
+@media (max-width: 1024px) and (min-width: 901px) {
+    .navbar {
+        padding: 5px 30px;
+    }
+
+    .navbar ul {
+        gap: 25px;
+    }
+
+    .navbar a {
+        font-size: 12px;
+        padding: 6px 12px;
+        margin: 8px;
+    }
+
+    .navbar .logo img {
+        height: 50px;
+    }
+
+    /* Productos */
+    .dual-content {
+        gap: 30px;
+        padding: 30px 15px;
+    }
+
+    .producto-descripcion,
+    .specs-intro {
+        font-size: 15px;
+        line-height: 1.5;
+    }
+
+    .diagrama-tecnico img,
+    .specs-table-image img {
+        max-width: 100%;
+    }
+
+    /* Catálogo */
+    .catalog-track {
+        gap: 15px;
+    }
+
+    .catalog-item {
+        min-width: 200px;
+    }
+
+    /* Footer */
+    .footer-red {
+        padding: 40px 20px;
+    }
+}
+
+/* ========================================
+   TABLET VERTICAL (769px - 900px)
+   ======================================== */
+
+@media (max-width: 900px) and (min-width: 769px) {
     /* Secciones con columnas dobles -> columnas apiladas */
     .dual-content {
-        flex-direction: column;
-        gap: 20px;
+        flex-direction: column !important;
+        gap: 25px;
         align-items: center;
+        padding: 30px 20px;
     }
 
     .dual-content .left-content,
     .dual-content .right-content {
-        width: 100%;
+        width: 100% !important;
+        max-width: 600px;
     }
 
     .dual-content img {
         width: 100%;
         height: auto;
-        object-fit: cover;
+        object-fit: contain;
     }
 
+    /* Títulos y textos */
     .producto-titulo {
-        font-size: clamp(1.6rem, 5vw, 2.4rem);
-        line-height: 1.1;
+        text-align: center;
     }
 
     .producto-descripcion,
     .specs-intro {
         font-size: 0.95rem;
         line-height: 1.4;
+        text-align: justify;
     }
 
     .specs-table-image img,
     .diagrama-tecnico img {
         width: 100%;
-        height: auto;
+        max-width: 500px;
+        margin: 0 auto;
+        display: block;
     }
 
-    /* Carruseles: espacio y textos más pequeños */
+    /* Badge */
+    .badge-thowel {
+        max-width: 180px;
+        margin: 0 auto 20px;
+    }
+
+    /* Carruseles */
     .catalog-carousel,
     .catalog-track {
         gap: 10px;
     }
 
-    .catalog-overlay-text,
-    .similares-titulo {
+    .catalog-item {
+        min-width: 180px;
+    }
+
+    .catalog-overlay-text {
         font-size: 0.95rem;
+    }
+
+    /* Index - Product sections */
+    .unified-product-section {
+        min-height: auto;
+        padding: 60px 20px;
+    }
+
+    .product-info {
+        padding: 30px 20px;
+    }
+
+    .product-description {
+        font-size: 15px;
+        padding: 0 20px;
+    }
+
+    /* Contacto y Sobre Nosotros */
+    .contacto-container,
+    .sobre-nosotros-container {
+        padding: 40px 20px;
+    }
+
+    .contacto-form {
+        max-width: 100%;
+    }
+
+    .form-input,
+    .form-textarea {
+        font-size: 15px;
     }
 }
 
-@media (max-width: 600px) {
-    .navbar ul {
-        justify-content: flex-start;
-        overflow-x: auto;
-        white-space: nowrap;
+/* ========================================
+   MOBILE (TODOS LOS TAMAÑOS <= 768px)
+   ======================================== */
+
+@media (max-width: 768px) {
+    /* Header sections */
+    .header-section {
+        min-height: 60vh;
     }
 
-    .navbar li {
-        margin: 0;
+    .scroll-indicator {
+        bottom: 20px;
     }
 
-    .language-selector-nav {
-        justify-content: flex-start;
-        overflow-x: auto;
+    .flecha-img {
+        width: 40px;
+        height: auto;
     }
 
-    .header-section .main-text h1,
-    .header-title {
-        font-size: clamp(1.4rem, 6vw, 1.8rem);
+    /* Secciones de productos */
+    .producto-section {
+        padding: 40px 15px;
     }
 
-    .header-section .main-text p {
-        font-size: 1rem;
+    .dual-content {
+        flex-direction: column !important;
+        padding: 25px 15px;
+        gap: 20px;
+        align-items: center;
     }
 
-    .product-description,
+    .dual-content .left-content,
+    .dual-content .right-content {
+        width: 100% !important;
+        max-width: 100%;
+    }
+
+    .dual-content img {
+        width: 100%;
+        height: auto;
+    }
+
+    .producto-titulo {
+        font-size: clamp(1.5rem, 5vw, 2rem);
+        margin-bottom: 15px;
+        text-align: center;
+    }
+
     .producto-descripcion,
     .specs-intro {
-        font-size: 0.9rem;
+        font-size: 14px;
+        margin-bottom: 15px;
     }
 
-    .product-content-overlay {
-        padding: 20px;
+    /* Tablas y diagramas */
+    .specs-table-image,
+    .diagrama-tecnico {
+        margin: 20px 0;
+    }
+
+    .specs-table-image img,
+    .diagrama-tecnico img {
+        max-width: 100%;
+    }
+
+    .badge-thowel {
+        max-width: 160px;
+        margin: 0 auto 15px;
+    }
+
+    /* Catálogo */
+    .catalog-section {
+        padding: 40px 15px;
+    }
+
+    .catalog-title {
+        font-size: 2rem;
+    }
+
+    .catalog-description {
+        font-size: 14px;
+    }
+
+    .catalog-item {
+        min-width: 160px;
+    }
+
+    .carousel-nav {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+    }
+
+    /* Footer */
+    .footer-red {
+        padding: 30px 15px;
+    }
+
+    .footer-content p {
+        font-size: 13px;
+    }
+
+    /* Index - Product showcase */
+    .unified-product-section {
+        padding: 40px 15px;
+    }
+
+    .product-logo img {
+        width: 180px !important;
+        height: 180px !important;
+    }
+
+    .product-description {
+        font-size: 14px;
+    }
+
+    .product-progress {
+        bottom: 30px;
+    }
+
+    /* Contacto */
+    .contacto-section {
+        padding: 30px 15px;
+    }
+
+    .contacto-container {
+        padding: 30px 15px;
+    }
+}
+
+/* ========================================
+   MOBILE VERTICAL (480px - 600px)
+   ======================================== */
+
+@media (max-width: 600px) and (min-width: 481px) {
+    .header-section {
+        min-height: 50vh;
+    }
+
+    .portada-img {
+        object-fit: cover;
+    }
+
+    /* Productos */
+    .producto-section {
+        padding: 30px 10px;
+    }
+
+    .dual-content {
+        padding: 20px 10px;
+        gap: 20px;
+    }
+
+    .producto-titulo {
+        font-size: clamp(1.3rem, 5vw, 1.7rem);
+        margin-bottom: 12px;
+    }
+
+    .producto-descripcion,
+    .specs-intro {
+        font-size: 13px;
+        line-height: 1.4;
+        margin-bottom: 12px;
+    }
+
+    .badge-thowel {
+        max-width: 150px;
+        margin-bottom: 15px;
+    }
+
+    /* Tablas y diagramas */
+    .specs-table-image img,
+    .diagrama-tecnico img {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    /* Catálogo */
+    .catalog-section {
+        padding: 30px 10px;
+    }
+
+    .catalog-header {
+        flex-direction: column;
+        gap: 20px;
     }
 
     .catalog-title {
@@ -132,7 +401,202 @@
     }
 
     .catalog-description {
-        font-size: 0.95rem;
+        font-size: 13px;
+        text-align: center;
+    }
+
+    .catalog-item {
+        min-width: 140px;
+    }
+
+    .catalog-overlay-text {
+        font-size: 11px;
+        padding: 8px;
+    }
+
+    .carousel-nav {
+        width: 35px;
+        height: 35px;
+        font-size: 14px;
+    }
+
+    /* Contacto */
+    .contacto-titulo {
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+    }
+
+    .form-input,
+    .form-textarea {
+        padding: 12px 15px;
+        font-size: 14px;
+    }
+
+    .form-submit {
+        padding: 12px 30px;
+        font-size: 14px;
+    }
+
+    /* Footer */
+    .footer-red {
+        padding: 25px 10px;
+    }
+
+    .footer-content p {
+        font-size: 12px;
+    }
+
+    .hexagon {
+        width: 60px;
+        height: 35px;
+    }
+
+    /* Index - Product sections */
+    .unified-product-section {
+        padding: 30px 10px;
+        min-height: auto;
+    }
+
+    .product-info {
+        padding: 20px 15px;
+    }
+
+    .product-logo img {
+        width: 150px !important;
+        height: 150px !important;
+    }
+
+    .product-description {
+        font-size: 13px;
+        padding: 0 10px;
+        line-height: 1.4;
+    }
+
+    .product-progress {
+        bottom: 20px;
+    }
+
+    .dot {
+        width: 10px;
+        height: 10px;
     }
 }
 
+/* ========================================
+   MOBILE PEQUEÑO (<= 480px)
+   ======================================== */
+
+@media (max-width: 480px) {
+    /* Headers */
+    .header-section {
+        min-height: 40vh;
+    }
+
+    /* Productos */
+    .producto-section {
+        padding: 25px 8px;
+    }
+
+    .dual-content {
+        padding: 15px 8px;
+        gap: 15px;
+    }
+
+    .producto-titulo {
+        font-size: clamp(1.2rem, 5vw, 1.5rem);
+        margin-bottom: 10px;
+    }
+
+    .producto-descripcion,
+    .specs-intro {
+        font-size: 12px;
+        line-height: 1.3;
+        margin-bottom: 10px;
+    }
+
+    .badge-thowel {
+        max-width: 120px;
+        margin-bottom: 12px;
+    }
+
+    /* Catálogo */
+    .catalog-section {
+        padding: 25px 8px;
+    }
+
+    .catalog-title {
+        font-size: 1.4rem;
+    }
+
+    .catalog-description {
+        font-size: 12px;
+    }
+
+    .catalog-item {
+        min-width: 120px;
+    }
+
+    .catalog-overlay-text {
+        font-size: 10px;
+        padding: 6px;
+    }
+
+    .carousel-nav {
+        width: 30px;
+        height: 30px;
+        font-size: 12px;
+    }
+
+    /* Contacto */
+    .contacto-titulo {
+        font-size: 1.5rem;
+    }
+
+    .form-input,
+    .form-textarea {
+        padding: 10px 12px;
+        font-size: 13px;
+    }
+
+    .form-submit {
+        padding: 10px 25px;
+        font-size: 13px;
+    }
+
+    /* Footer */
+    .footer-red {
+        padding: 20px 8px;
+    }
+
+    .footer-content p {
+        font-size: 11px;
+    }
+
+    /* Index - logos muy pequeños en mobile */
+    .product-logo img {
+        width: 120px !important;
+        height: 120px !important;
+    }
+
+    .product-description {
+        font-size: 12px !important;
+    }
+}
+
+/* ========================================
+   UTILIDADES RESPONSIVE
+   ======================================== */
+
+/* Ocultar en mobile */
+@media (max-width: 768px) {
+    .hide-mobile {
+        display: none !important;
+    }
+}
+
+/* Ocultar en desktop */
+@media (min-width: 769px) {
+    .hide-desktop {
+        display: none !important;
+    }
+}

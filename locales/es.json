@@ -117,6 +117,71 @@
         "description2": "Ampliamente utilizadas en la industria del mueble, <strong>destacándose por su fiabilidad y facilidad de instalación.</strong>",
         "specs": "Fabricadas en acero de <strong>alta calidad</strong> cumpliendo con estrictos estándares de producción, ofrecen una <strong>solución duradera y eficiente</strong> para todo tipo de amoblamientos."
       }
+    },
+    "slides": {
+      "hiddenSlide3d": {
+        "title": "GUÍA OCULTA<br>3D SOFT CLOSING",
+        "tag": "SMOOTH",
+        "description1": "Desarrollada bajo nuestra tecnología <strong>SMOOTH</strong> ofrece un cierre amortiguado y silencioso con ajuste tridimensional.",
+        "description2": "Ampliamente utilizada en cajones de alta gama, <strong>destacándose por su suavidad, precisión y facilidad de instalación.</strong>",
+        "specs": "Fabricadas en acero de <strong>alta calidad</strong> con acabados diversos, ofrecen una <strong>solución versátil y duradera</strong> para todo tipo de amoblamientos."
+      },
+      "hiddenSlidePush": {
+        "title": "GUÍA OCULTA<br>PUSH OPEN",
+        "tag": "TOUCH",
+        "description1": "Desarrollada bajo nuestra tecnología <strong>TOUCH</strong> permite apertura con un simple toque, eliminando la necesidad de manijas.",
+        "description2": "Ideal para diseños minimalistas, <strong>destacándose por su funcionalidad innovadora y estética limpia.</strong>",
+        "specs": "Fabricadas en acero de <strong>alta calidad</strong> con mecanismos de precisión, ofrecen una <strong>solución innovadora y duradera</strong> para amoblamientos modernos."
+      },
+      "telescopicSlideSoft": {
+        "title": "CORREDERA<br>TELESCÓPICA",
+        "tag": "SOFT CLOSING",
+        "description1": "Desarrollada bajo nuestra tecnología <strong>SMOOTH</strong> ofrece un cierre amortiguado y silencioso con extensión total.",
+        "description2": "Ampliamente utilizada en cajones de alta gama, <strong>destacándose por su suavidad, capacidad de carga y facilidad de instalación.</strong>",
+        "specs": "Fabricadas en acero de <strong>alta calidad</strong> con rodamientos de precisión, ofrecen una <strong>solución duradera y eficiente</strong> para todo tipo de cajones."
+      },
+      "telescopicSlidePush": {
+        "title": "CORREDERA<br>TELESCÓPICA",
+        "tag": "SOFT CLOSING",
+        "description1": "Desarrollada bajo nuestra tecnología <strong>SMOOTH</strong> ofrece un cierre amortiguado y silencioso con extensión total.",
+        "description2": "Ampliamente utilizada en cajones de alta gama, <strong>destacándose por su suavidad, capacidad de carga y facilidad de instalación.</strong>",
+        "specs": "Fabricadas en acero de <strong>alta calidad</strong> con rodamientos de precisión, ofrecen una <strong>solución duradera y eficiente</strong> para todo tipo de cajones."
+      },
+      "telescopicSlideH45": {
+        "title": "CORREDERA<br>TELESCÓPICA",
+        "tag": "SOFT CLOSING",
+        "description1": "Desarrollada bajo nuestra tecnología <strong>SMOOTH</strong> ofrece un cierre amortiguado y silencioso con extensión total.",
+        "description2": "Ampliamente utilizada en cajones de alta gama, <strong>destacándose por su suavidad, capacidad de carga y facilidad de instalación.</strong>",
+        "specs": "Fabricadas en acero de <strong>alta calidad</strong> con rodamientos de precisión, ofrecen una <strong>solución duradera y eficiente</strong> para todo tipo de cajones."
+      },
+      "telescopicSlideH35": {
+        "title": "CORREDERA<br>TELESCÓPICA",
+        "tag": "ESTÁNDAR H35",
+        "description1": "Desarrollada bajo nuestra tecnología <strong>ESTÁNDAR</strong> asegura un excelente rendimiento y resistencia en el uso diario.",
+        "description2": "Con <strong>80,000 ciclos de uso</strong> y capacidad de carga de <strong>20 unidades</strong>, ampliamente utilizada en la industria del mueble, destacándose por su fiabilidad y facilidad de instalación.",
+        "specs": "Fabricadas en <strong>acero de alta calidad</strong> cumpliendo con estrictos estándares de producción, ofrecen una solución duradera y eficiente para todo tipo de cajones."
+      },
+      "slideZ": {
+        "title": "CORREDERA Z",
+        "tag": "ESTÁNDAR",
+        "description1": "Diseñada para aplicaciones específicas, la corredera Z ofrece una <strong>solución práctica y confiable</strong> para diversos tipos de mobiliario.",
+        "description2": "Con tecnología <strong>ESTÁNDAR</strong>, garantiza durabilidad y funcionamiento suave en el uso diario.",
+        "specs": "Fabricadas en <strong>acero de alta calidad</strong>, las correderas Z ofrecen resistencia y funcionalidad para múltiples aplicaciones en muebles y sistemas de almacenamiento."
+      }
+    },
+    "supportSystems": {
+      "plasticLeg": {
+        "title": "PATA<br>PLÁSTICA",
+        "description1": "Desarrollada bajo nuestra tecnología <strong>ESTÁNDAR</strong> asegura un excelente rendimiento y resistencia en el uso diario.",
+        "description2": "Ampliamente utilizada en la industria del mueble, <strong>destacándose por su durabilidad y facilidad de instalación.</strong>",
+        "specs": "Fabricadas en plástico de <strong>alta calidad</strong> con acabados diversos, ofrecen una <strong>solución versátil y duradera</strong> para todo tipo de amoblamientos."
+      },
+      "nylonWheel": {
+        "title": "RUEDA<br>NYLON",
+        "description1": "Desarrollada bajo nuestra tecnología <strong>ESTÁNDAR</strong> asegura un excelente rendimiento y resistencia en el uso diario.",
+        "description2": "Ampliamente utilizada en la industria del mueble, <strong>destacándose por su suavidad de desplazamiento y facilidad de instalación.</strong>",
+        "specs": "Fabricadas en nylon de <strong>alta calidad</strong> con componentes de acero, ofrecen una <strong>solución versátil y duradera</strong> para todo tipo de amoblamientos."
+      }
     }
   },
   "footer": {

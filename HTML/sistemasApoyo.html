@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="/CSS/manijas.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/npm/i18next@23.7.6/i18next.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <link rel="stylesheet" href="/CSS/responsive.css">
 </head>
 <body>
     <!-- Navbar flotante -->
@@ -76,15 +78,14 @@
                 <div class="badge-thowel">
                     <img src="/assets/pata plastica/plastico.png" alt="Plástico">
                 </div>
-                <h1 class="producto-titulo"><b>
-                    PATA<br>
-                    PLÁSTICA<br></b>
-                    <span class="estandar">ESTÁNDAR</span>
+                <h1 class="producto-titulo">
+                    <b data-i18n="productPage.supportSystems.plasticLeg.title" data-i18n-html="true">PATA<br>PLÁSTICA</b>
+                    <span class="estandar" data-i18n="productPage.standard">ESTÁNDAR</span>
                 </h1>
-                <p class="producto-descripcion">
+                <p class="producto-descripcion" data-i18n="productPage.supportSystems.plasticLeg.description1" data-i18n-html="true">
                     Desarrollada bajo nuestra tecnología <strong>ESTÁNDAR</strong> asegura un excelente rendimiento y resistencia en el uso diario.
                 </p>
-                <p class="producto-descripcion">
+                <p class="producto-descripcion" data-i18n="productPage.supportSystems.plasticLeg.description2" data-i18n-html="true">
                     Ampliamente utilizada en la industria del mueble, <strong>destacándose por su durabilidad y facilidad de instalación.</strong>
                 </p>
                 <div class="diagrama-tecnico">
@@ -101,7 +102,7 @@
                 <img src="/assets/pata plastica/imagenes componentes.png" alt="Componentes Pata Plástica">
             </div>
             <div class="right-content">
-                <p class="specs-intro">
+                <p class="specs-intro" data-i18n="productPage.supportSystems.plasticLeg.specs" data-i18n-html="true">
                     Fabricadas en plástico de <strong>alta calidad</strong> con acabados diversos, ofrecen una <strong>solución versátil y duradera</strong> para todo tipo de amoblamientos.
                 </p>
                 <div class="specs-table-image">
@@ -137,15 +138,14 @@
                 <div class="badge-thowel">
                     <img src="/assets/rueda nylon/acero.png" alt="Acero">
                 </div>
-                <h1 class="producto-titulo"><b>
-                    RUEDA<br>
-                    NYLON<br></b>
-                    <span class="estandar">ESTÁNDAR</span>
+                <h1 class="producto-titulo">
+                    <b data-i18n="productPage.supportSystems.nylonWheel.title" data-i18n-html="true">RUEDA<br>NYLON</b>
+                    <span class="estandar" data-i18n="productPage.standard">ESTÁNDAR</span>
                 </h1>
-                <p class="producto-descripcion">
+                <p class="producto-descripcion" data-i18n="productPage.supportSystems.nylonWheel.description1" data-i18n-html="true">
                     Desarrollada bajo nuestra tecnología <strong>ESTÁNDAR</strong> asegura un excelente rendimiento y resistencia en el uso diario.
                 </p>
-                <p class="producto-descripcion">
+                <p class="producto-descripcion" data-i18n="productPage.supportSystems.nylonWheel.description2" data-i18n-html="true">
                     Ampliamente utilizada en la industria del mueble, <strong>destacándose por su suavidad de desplazamiento y facilidad de instalación.</strong>
                 </p>
                 <div class="diagrama-tecnico">
@@ -162,7 +162,7 @@
                 <img src="/assets/rueda nylon/dibujo de planos .png" alt="Planos Rueda Nylon">
             </div>
             <div class="right-content">
-                <p class="specs-intro">
+                <p class="specs-intro" data-i18n="productPage.supportSystems.nylonWheel.specs" data-i18n-html="true">
                     Fabricadas en nylon de <strong>alta calidad</strong> con componentes de acero, ofrecen una <strong>solución versátil y duradera</strong> para todo tipo de amoblamientos.
                 </p>
                 <div class="specs-table-image">
@@ -190,7 +190,7 @@
          PRODUCTOS SIMILARES - CAROUSEL
          ============================================ -->
     <section class="productos-similares">
-        <h2 class="similares-titulo">PRODUCTOS SIMILARES</h2>
+        <h2 class="similares-titulo" data-i18n="productPage.similarProducts">PRODUCTOS SIMILARES</h2>
         <div class="catalog-carousel">
             <!-- Navigation Arrows -->
             <button class="carousel-nav prev-btn" id="prevBtn">
@@ -206,7 +206,7 @@
                 <div class="catalog-slide">
                     <div class="catalog-item">
                         <a href="/HTML/manijas.html#manija-barral">
-                            <img src="/assets/MANIJA BARRAL.JPG" alt="Manija Barral">
+                            <img src="/assets/manija barral/MANIJA BARRAL.JPG" alt="Manija Barral">
                             <div class="catalog-overlay">
                                 <div class="catalog-overlay-text">MANIJA BARRAL</div>
                             </div>
@@ -214,7 +214,7 @@
                     </div>
                     <div class="catalog-item">
                         <a href="/HTML/manijas.html#manija-boton">
-                            <img src="/assets/MANIJA BOTON.JPG" alt="Manija Botón">
+                            <img src="/assets/manija boton/MANIJA BOTON.JPG" alt="Manija Botón">
                             <div class="catalog-overlay">
                                 <div class="catalog-overlay-text">MANIJA BOTÓN</div>
                             </div>
@@ -222,7 +222,7 @@
                     </div>
                     <div class="catalog-item">
                         <a href="#pata-plastica">
-                            <img src="/assets/PATA PLASTICA.JPG" alt="Pata Plástica">
+                            <img src="/assets/pata plastica/PATA PLASTICA.JPG" alt="Pata Plástica">
                             <div class="catalog-overlay">
                                 <div class="catalog-overlay-text">PATA PLÁSTICA</div>
                             </div>
@@ -230,7 +230,7 @@
                     </div>
                     <div class="catalog-item">
                         <a href="#rueda-nylon">
-                            <img src="/assets/RUEDA NYLON.JPG" alt="Rueda Nylon">
+                            <img src="/assets/rueda nylon/RUEDA NYLON.JPG" alt="Rueda Nylon">
                             <div class="catalog-overlay">
                                 <div class="catalog-overlay-text">RUEDA NYLON</div>
                             </div>
@@ -238,7 +238,7 @@
                     </div>
                     <div class="catalog-item">
                         <a href="/HTML/bisagraSoftClosing.html">
-                            <img src="/assets/BSC.png" alt="Bisagra Soft Closing">
+                            <img src="/assets/bisagra soft closing/BSC.png" alt="Bisagra Soft Closing">
                             <div class="catalog-overlay">
                                 <div class="catalog-overlay-text">BISAGRA SOFT CLOSING</div>
                             </div>
@@ -254,7 +254,7 @@
                     </div>
                     <div class="catalog-item">
                         <a href="/HTML/retenExpulsor.html">
-                            <img src="/assets/Reten.png" alt="Retén Expulsor">
+                            <img src="/assets/reten expulsor/Reten.png" alt="Retén Expulsor">
                             <div class="catalog-overlay">
                                 <div class="catalog-overlay-text">RETÉN EXPULSOR</div>
                             </div>
@@ -266,7 +266,7 @@
                 <div class="catalog-slide">
                     <div class="catalog-item">
                         <a href="/HTML/PistonAGAS.html">
-                            <img src="/assets/PISTONAGAS.png" alt="Pistón a Gas">
+                            <img src="/assets/piston a gas/PISTONAGAS.png" alt="Pistón a Gas">
                             <div class="catalog-overlay">
                                 <div class="catalog-overlay-text">PISTÓN A GAS</div>
                             </div>
@@ -274,7 +274,7 @@
                     </div>
                     <div class="catalog-item">
                         <a href="/HTML/bisagraPushOpen.html">
-                            <img src="/assets/BISAGRAPUSHOPEN.png" alt="Bisagra Push Open">
+                            <img src="/assets/bisagra push open/BISAGRAPUSHOPEN.png" alt="Bisagra Push Open">
                             <div class="catalog-overlay">
                                 <div class="catalog-overlay-text">BISAGRA PUSH OPEN</div>
                             </div>
@@ -282,7 +282,7 @@
                     </div>
                     <div class="catalog-item">
                         <a href="/HTML/bisagraCazoletaEstandar.html">
-                            <img src="/assets/BCE.png" alt="Bisagra Cazoleta">
+                            <img src="/assets/bisagra cazoleta estandar/BCE.png" alt="Bisagra Cazoleta">
                             <div class="catalog-overlay">
                                 <div class="catalog-overlay-text">BISAGRA CAZOLETA</div>
                             </div>
@@ -306,7 +306,7 @@
                     </div>
                     <div class="catalog-item">
                         <a href="/HTML/ThowelBoxCristal.html">
-                            <img src="/assets/THOWELBOXCRISTAL.png" alt="Thowel Box Cristal">
+                            <img src="/assets/thowel box cristal/THOWELBOXCRISTAL.png" alt="Thowel Box Cristal">
                             <div class="catalog-overlay">
                                 <div class="catalog-overlay-text">THOWEL BOX CRISTAL</div>
                             </div>
@@ -314,7 +314,7 @@
                     </div>
                     <div class="catalog-item">
                         <a href="/HTML/bisagraCazoleta155.html">
-                            <img src="/assets/BisagraCazoleta155Cerca.png" alt="Bisagra Cazoleta 155°">
+                            <img src="/assets/bisagra angulos especiales/BisagraCazoleta155Cerca.png" alt="Bisagra Cazoleta 155°">
                             <div class="catalog-overlay">
                                 <div class="catalog-overlay-text">BISAGRA CAZOLETA 155°</div>
                             </div>
@@ -339,7 +339,7 @@
                 <div class="hexagon hex-2"></div>
             </div>
             <div class="footer-content">
-                <p>&copy; 2024 THOWEL. Todos los derechos reservados.</p>
+                <p data-i18n="footer.copyright">&copy; 2024 THOWEL. Todos los derechos reservados.</p>
             </div>
         </div>
     </footer>
