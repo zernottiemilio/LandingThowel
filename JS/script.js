@@ -213,45 +213,36 @@ class ProductShowcase {
 // Catalog Carousel Controller
 class CatalogCarousel {
     constructor() {
-        this.currentSlide = 0;
-        this.totalSlides = 2; // Ajusta según el número de slides que tengas
+        this.currentPosition = 0;
+        this.scrollAmount = 300; // Píxeles que se desplaza cada vez
         this.isTransitioning = false;
         this.init();
     }
 
     init() {
         this.bindEvents();
-        this.updateIndicators();
     }
 
     bindEvents() {
         // Navigation arrows
         const prevBtn = document.getElementById('prevBtn');
         const nextBtn = document.getElementById('nextBtn');
-        
+
         if (prevBtn) {
-            prevBtn.addEventListener('click', () => this.prevSlide());
-        }
-        
-        if (nextBtn) {
-            nextBtn.addEventListener('click', () => this.nextSlide());
+            prevBtn.addEventListener('click', () => this.scrollLeft());
         }
 
-        // Indicators
-        const indicators = document.querySelectorAll('.indicator');
-        indicators.forEach((indicator, index) => {
-            indicator.addEventListener('click', () => {
-                this.goToSlide(index);
-            });
-        });
+        if (nextBtn) {
+            nextBtn.addEventListener('click', () => this.scrollRight());
+        }
 
         // Keyboard navigation
         document.addEventListener('keydown', (e) => {
             if (this.isInViewport()) {
                 if (e.key === 'ArrowLeft') {
-                    this.prevSlide();
+                    this.scrollLeft();
                 } else if (e.key === 'ArrowRight') {
-                    this.nextSlide();
+                    this.scrollRight();
                 }
             }
         });
@@ -260,46 +251,49 @@ class CatalogCarousel {
         this.addTouchSupport();
     }
 
-    nextSlide() {
+    scrollRight() {
         if (this.isTransitioning) return;
-        
-        const nextIndex = (this.currentSlide + 1) % this.totalSlides;
-        this.goToSlide(nextIndex);
-    }
 
-    prevSlide() {
-        if (this.isTransitioning) return;
-        
-        const prevIndex = this.currentSlide === 0 ? this.totalSlides - 1 : this.currentSlide - 1;
-        this.goToSlide(prevIndex);
-    }
-
-    goToSlide(index) {
-        if (index === this.currentSlide || this.isTransitioning) return;
-        
         this.isTransitioning = true;
-        this.currentSlide = index;
-        
         const track = document.getElementById('catalogTrack');
+
         if (track) {
-            // Cada slide ocupa 50% del ancho (para 2 slides)
-            const translateX = -index * 50;
-            track.style.transform = `translateX(${translateX}%)`;
+            this.currentPosition -= this.scrollAmount;
+
+            // Limitar el scroll para no pasarse del contenido
+            const maxScroll = -(track.scrollWidth - track.parentElement.offsetWidth);
+            if (this.currentPosition < maxScroll) {
+                this.currentPosition = maxScroll;
+            }
+
+            track.style.transform = `translateX(${this.currentPosition}px)`;
         }
-        
-        this.updateIndicators();
-        
-        // Reset transition flag
+
         setTimeout(() => {
             this.isTransitioning = false;
         }, 500);
     }
 
-    updateIndicators() {
-        const indicators = document.querySelectorAll('.indicator');
-        indicators.forEach((indicator, index) => {
-            indicator.classList.toggle('active', index === this.currentSlide);
-        });
+    scrollLeft() {
+        if (this.isTransitioning) return;
+
+        this.isTransitioning = true;
+        const track = document.getElementById('catalogTrack');
+
+        if (track) {
+            this.currentPosition += this.scrollAmount;
+
+            // No permitir scroll más allá del inicio
+            if (this.currentPosition > 0) {
+                this.currentPosition = 0;
+            }
+
+            track.style.transform = `translateX(${this.currentPosition}px)`;
+        }
+
+        setTimeout(() => {
+            this.isTransitioning = false;
+        }, 500);
     }
 
     isInViewport() {
@@ -318,7 +312,7 @@ class CatalogCarousel {
         let startY = 0;
         let distX = 0;
         let distY = 0;
-        let threshold = 100; // Minimum distance for swipe
+        let threshold = 50; // Minimum distance for swipe
         let restraint = 100; // Maximum distance perpendicular to swipe direction
         let allowedTime = 500; // Maximum time allowed to travel distance
         let startTime = 0;
@@ -338,9 +332,11 @@ class CatalogCarousel {
 
             if (elapsedTime <= allowedTime && Math.abs(distX) >= threshold && Math.abs(distY) <= restraint) {
                 if (distX > 0) {
-                    this.prevSlide();
+                    // Swipe hacia la derecha = scroll hacia la izquierda
+                    this.scrollLeft();
                 } else {
-                    this.nextSlide();
+                    // Swipe hacia la izquierda = scroll hacia la derecha
+                    this.scrollRight();
                 }
             }
         }, { passive: true });
@@ -537,9 +533,9 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 function startAutoAdvance() {
     return setInterval(() => {
         if (catalogCarouselInstance && catalogCarouselInstance.isInViewport() && !catalogCarouselInstance.isTransitioning) {
-            catalogCarouselInstance.nextSlide();
+            catalogCarouselInstance.scrollRight();
         }
-    }, 5000); // Cambia cada 5 segundos
+    }, 5000); // Desplaza hacia la derecha cada 5 segundos
 }
 
 // Initialize everything when DOM is loaded
