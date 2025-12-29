@@ -24,115 +24,79 @@ window.addEventListener('scroll', () => {
 });
 
 // ========================================
-// CAROUSEL - PRODUCTOS SIMILARES (ROBUSTO)
+// CAROUSEL - PRODUCTOS SIMILARES (HORIZONTAL SCROLL)
 // ========================================
 document.addEventListener('DOMContentLoaded', () => {
-    // Referencias seguras
     const track = document.getElementById('catalogTrack');
     const prevBtn = document.getElementById('prevBtn');
     const nextBtn = document.getElementById('nextBtn');
-    const slides = document.querySelectorAll('.catalog-slide');
-    const indicators = Array.from(document.querySelectorAll('.indicator'));
+    const catalogItems = document.querySelectorAll('.catalog-item');
 
     if (!track) {
         console.warn('Carousel: no se encontró #catalogTrack. Revisa el HTML.');
         return;
     }
-    if (slides.length === 0) {
-        console.warn('Carousel: no se encontraron elementos con la clase .catalog-slide.');
+    if (catalogItems.length === 0) {
+        console.warn('Carousel: no se encontraron elementos con la clase .catalog-item.');
         return;
     }
 
-    // Número de "páginas" del track
-    const totalSlides = slides.length;
-    let currentSlide = 0;
+    let currentIndex = 0;
+    const itemWidth = 300; // Ancho de cada item en px
+    const visibleItems = window.innerWidth < 768 ? 1 : (window.innerWidth < 1024 ? 2 : 3);
+    const maxScroll = Math.max(0, catalogItems.length - visibleItems);
 
-    // Calcula el porcentaje que debe moverse el track
-    function getTranslatePercent(slideIndex) {
-        return slideIndex * (100 / totalSlides);
+    function updateCarousel() {
+        const translateX = -(currentIndex * itemWidth);
+        track.style.transform = `translateX(${translateX}px)`;
     }
 
-    // Aplica la transformación con 'translateX'
-    function goToSlide(slideIndex) {
-        if (!track) return;
-        
-        if (slideIndex < 0) slideIndex = 0;
-        if (slideIndex >= totalSlides) slideIndex = totalSlides - 1;
-
-        currentSlide = slideIndex;
-        const percent = getTranslatePercent(slideIndex);
-        track.style.transform = `translateX(-${percent}%)`;
-
-        // Actualizar indicadores
-        if (indicators.length) {
-            indicators.forEach((indicator, i) => {
-                indicator.classList.toggle('active', i === slideIndex);
-            });
-        }
-    }
-
-    // Conexión de botones
+    // Botón anterior
     if (prevBtn) {
         prevBtn.addEventListener('click', () => {
-            const nextIndex = (currentSlide - 1 + totalSlides) % totalSlides;
-            goToSlide(nextIndex);
+            if (currentIndex > 0) {
+                currentIndex--;
+                updateCarousel();
+            }
         });
-    } else {
-        console.warn('Carousel: no se encontró #prevBtn.');
     }
 
+    // Botón siguiente
     if (nextBtn) {
         nextBtn.addEventListener('click', () => {
-            const nextIndex = (currentSlide + 1) % totalSlides;
-            goToSlide(nextIndex);
-        });
-    } else {
-        console.warn('Carousel: no se encontró #nextBtn.');
-    }
-
-    // Indicadores clickeables
-    if (indicators.length) {
-        indicators.forEach((indicator, index) => {
-            indicator.addEventListener('click', () => goToSlide(index));
+            if (currentIndex < maxScroll) {
+                currentIndex++;
+                updateCarousel();
+            }
         });
     }
 
     // Soporte táctil/swipe para móviles
     let touchStartX = 0;
     let touchEndX = 0;
-    let touchStartY = 0;
-    let touchEndY = 0;
 
-    const catalogCarousel = document.querySelector('.catalog-carousel');
-    
-    if (catalogCarousel) {
-        catalogCarousel.addEventListener('touchstart', (e) => {
-            touchStartX = e.changedTouches[0].screenX;
-            touchStartY = e.changedTouches[0].screenY;
-        }, { passive: true });
+    track.addEventListener('touchstart', (e) => {
+        touchStartX = e.changedTouches[0].screenX;
+    }, { passive: true });
 
-        catalogCarousel.addEventListener('touchend', (e) => {
-            touchEndX = e.changedTouches[0].screenX;
-            touchEndY = e.changedTouches[0].screenY;
-            handleSwipe();
-        }, { passive: true });
+    track.addEventListener('touchend', (e) => {
+        touchEndX = e.changedTouches[0].screenX;
+        handleSwipe();
+    }, { passive: true });
 
-        function handleSwipe() {
-            const swipeThreshold = 50;
-            const horizontalSwipe = Math.abs(touchEndX - touchStartX);
-            const verticalSwipe = Math.abs(touchEndY - touchStartY);
-            
-            // Solo procesar si el swipe es más horizontal que vertical
-            if (horizontalSwipe > verticalSwipe && horizontalSwipe > swipeThreshold) {
-                if (touchEndX < touchStartX) {
-                    // Swipe hacia la izquierda
-                    const nextIndex = (currentSlide + 1) % totalSlides;
-                    goToSlide(nextIndex);
-                } else if (touchEndX > touchStartX) {
-                    // Swipe hacia la derecha
-                    const nextIndex = (currentSlide - 1 + totalSlides) % totalSlides;
-                    goToSlide(nextIndex);
-                }
+    function handleSwipe() {
+        const swipeThreshold = 50;
+        const diff = touchStartX - touchEndX;
+
+        if (Math.abs(diff) > swipeThreshold) {
+            if (diff > 0 && currentIndex < maxScroll) {
+                // Swipe left - next
+                currentIndex++;
+                updateCarousel();
+            } else if (diff < 0 && currentIndex > 0) {
+                // Swipe right - prev
+                currentIndex--;
+                updateCarousel();
             }
         }
     }
@@ -141,23 +105,29 @@ document.addEventListener('DOMContentLoaded', () => {
     document.addEventListener('keydown', (e) => {
         const carouselSection = document.querySelector('.productos-similares');
         if (!carouselSection) return;
-        
+
         const rect = carouselSection.getBoundingClientRect();
         const isVisible = rect.top < window.innerHeight && rect.bottom > 0;
-        
+
         if (isVisible) {
-            if (e.key === 'ArrowLeft') {
-                const nextIndex = (currentSlide - 1 + totalSlides) % totalSlides;
-                goToSlide(nextIndex);
-            } else if (e.key === 'ArrowRight') {
-                const nextIndex = (currentSlide + 1) % totalSlides;
-                goToSlide(nextIndex);
+            if (e.key === 'ArrowLeft' && currentIndex > 0) {
+                currentIndex--;
+                updateCarousel();
+            } else if (e.key === 'ArrowRight' && currentIndex < maxScroll) {
+                currentIndex++;
+                updateCarousel();
             }
         }
     });
 
-    // Inicia en el slide 0
-    goToSlide(0);
+    // Ajustar en resize
+    window.addEventListener('resize', () => {
+        currentIndex = 0;
+        updateCarousel();
+    });
+
+    // Inicializar
+    updateCarousel();
 });
 
 // ========================================
@@ -183,27 +153,33 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // ========================================
-// ANIMACIÓN DE FADE IN AL HACER SCROLL
+// SCROLL REVEAL - ANIMACIÓN AL HACER SCROLL
 // ========================================
 document.addEventListener('DOMContentLoaded', () => {
     const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
+        threshold: 0.15,
+        rootMargin: '0px 0px -100px 0px'
     };
 
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
+                entry.target.classList.add('reveal');
             }
         });
     }, observerOptions);
 
-    // Observar secciones para animaciones
+    // Observar todas las secciones de producto
     const sections = document.querySelectorAll('.producto-section');
     sections.forEach(section => {
         observer.observe(section);
     });
+
+    // Observar sección de productos similares
+    const productosSimilares = document.querySelector('.productos-similares');
+    if (productosSimilares) {
+        observer.observe(productosSimilares);
+    }
 });
 
 // ========================================

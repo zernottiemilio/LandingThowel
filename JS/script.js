@@ -352,138 +352,147 @@ let catalogCarouselInstance;
 // MENÚ HAMBURGUESA - MOBILE
 // ============================================
 
-class MobileMenu {
-  constructor() {
-    this.hamburger = null;
-    this.navMenu = null;
-    this.dropdownItems = [];
-    this.init();
-  }
+function initMobileMenu() {
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('navMenu');
 
-  init() {
-    // Crear el botón hamburguesa si no existe
-    this.createHamburgerButton();
+    console.log('Inicializando menú mobile...', {hamburger, navMenu});
 
-    // Obtener elementos
-    this.hamburger = document.querySelector('.hamburger');
-    this.navMenu = document.querySelector('.navbar ul');
-    this.dropdownItems = document.querySelectorAll('.dropdown-item');
+    if (!hamburger || !navMenu) {
+        console.error('No se encontraron elementos del menú');
+        return;
+    }
 
-    if (!this.hamburger || !this.navMenu) return;
+    // Click en el botón hamburguesa
+    hamburger.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
 
-    // Event listeners
-    this.hamburger.addEventListener('click', () => this.toggleMenu());
+        console.log('Click en hamburguesa');
 
-    // Cerrar menú al hacer click en un enlace (excepto los que tienen dropdown)
-    const navLinks = document.querySelectorAll('.navbar a');
-    navLinks.forEach(link => {
-      // Solo cerrar si no es un dropdown parent
-      if (!link.parentElement.classList.contains('dropdown-item') ||
-          !link.parentElement.querySelector('.dropdown, .subdropdown')) {
-        link.addEventListener('click', () => {
-          if (window.innerWidth <= 768) {
-            this.closeMenu();
-          }
-        });
-      }
+        hamburger.classList.toggle('active');
+        navMenu.classList.toggle('active');
+
+        console.log('Menú activo:', navMenu.classList.contains('active'));
+
+        // Prevenir scroll cuando el menú está abierto
+        if (navMenu.classList.contains('active')) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = '';
+        }
     });
 
-    // Toggle dropdowns en mobile
-    this.dropdownItems.forEach(item => {
-      const link = item.querySelector('a');
-      if (link && item.querySelector('.dropdown, .subdropdown')) {
-        link.addEventListener('click', (e) => {
-          if (window.innerWidth <= 768) {
-            e.preventDefault();
-            this.toggleDropdown(item);
-          }
+    // Cerrar menú al hacer click en enlaces (excepto PRODUCTOS y dropdown-items)
+    const navLinks = navMenu.querySelectorAll('a:not(.productos-link)');
+    navLinks.forEach(link => {
+        // Solo cerrar si el link no está dentro de un dropdown-item
+        if (!link.closest('.dropdown-item')) {
+            link.addEventListener('click', function() {
+                if (window.innerWidth <= 768) {
+                    hamburger.classList.remove('active');
+                    navMenu.classList.remove('active');
+                    document.body.style.overflow = '';
+                }
+            });
+        }
+    });
+
+    // Toggle dropdown de productos en mobile
+    const productosLink = navMenu.querySelector('.productos-link');
+    if (productosLink) {
+        console.log('ProductosLink encontrado:', productosLink);
+
+        productosLink.addEventListener('click', function(e) {
+            console.log('Click en productos, window width:', window.innerWidth);
+
+            if (window.innerWidth <= 768) {
+                e.preventDefault();
+                e.stopPropagation();
+
+                const parentLi = this.closest('li');
+                console.log('Parent LI:', parentLi);
+
+                if (parentLi) {
+                    const wasActive = parentLi.classList.contains('active');
+                    console.log('Was active antes:', wasActive);
+
+                    // Cerrar todos los subdropdowns dentro
+                    parentLi.querySelectorAll('.dropdown-item').forEach(item => {
+                        item.classList.remove('active');
+                    });
+
+                    // Toggle el dropdown principal
+                    if (wasActive) {
+                        parentLi.classList.remove('active');
+                        console.log('Cerrando dropdown de productos');
+                    } else {
+                        parentLi.classList.add('active');
+                        console.log('Abriendo dropdown de productos');
+                    }
+
+                    console.log('Active después:', parentLi.classList.contains('active'));
+                    console.log('Classes del li:', parentLi.className);
+                }
+            }
         });
-      }
+    } else {
+        console.error('No se encontró el link de productos');
+    }
+
+    // Toggle subdropdowns (categorías)
+    const dropdownItems = document.querySelectorAll('.dropdown-item');
+    dropdownItems.forEach(item => {
+        const link = item.querySelector(':scope > a');
+        if (link) {
+            link.addEventListener('click', function(e) {
+                if (window.innerWidth <= 768) {
+                    e.preventDefault();
+                    e.stopPropagation();
+
+                    // Cerrar otros subdropdowns del mismo nivel
+                    const siblings = Array.from(item.parentElement.children).filter(
+                        child => child.classList.contains('dropdown-item') && child !== item
+                    );
+                    siblings.forEach(sibling => {
+                        sibling.classList.remove('active');
+                    });
+
+                    // Toggle el actual
+                    item.classList.toggle('active');
+                }
+            });
+        }
     });
 
     // Cerrar menú al hacer click fuera
-    document.addEventListener('click', (e) => {
-      if (window.innerWidth <= 768 &&
-          this.navMenu.classList.contains('active') &&
-          !e.target.closest('.navbar')) {
-        this.closeMenu();
-      }
+    document.addEventListener('click', function(e) {
+        if (window.innerWidth <= 768) {
+            if (!e.target.closest('.navbar') && navMenu.classList.contains('active')) {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        }
     });
 
-    // Cerrar menú al cambiar de tamaño
-    window.addEventListener('resize', () => {
-      if (window.innerWidth > 768 && this.navMenu.classList.contains('active')) {
-        this.closeMenu();
-      }
-    });
-  }
-
-  createHamburgerButton() {
-    // Verificar si ya existe
-    if (document.querySelector('.hamburger')) return;
-
-    const navbar = document.querySelector('.navbar');
-    if (!navbar) return;
-
-    const hamburger = document.createElement('div');
-    hamburger.className = 'hamburger';
-    hamburger.innerHTML = `
-      <span></span>
-      <span></span>
-      <span></span>
-    `;
-
-    // Insertar el botón hamburguesa al final del navbar
-    navbar.appendChild(hamburger);
-  }
-
-  toggleMenu() {
-    this.hamburger.classList.toggle('active');
-    this.navMenu.classList.toggle('active');
-
-    // Prevenir scroll del body cuando el menú está abierto
-    if (this.navMenu.classList.contains('active')) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = '';
-      // Cerrar todos los dropdowns al cerrar el menú
-      this.dropdownItems.forEach(item => {
-        item.classList.remove('active');
-      });
-    }
-  }
-
-  closeMenu() {
-    this.hamburger.classList.remove('active');
-    this.navMenu.classList.remove('active');
-    document.body.style.overflow = '';
-
-    // Cerrar todos los dropdowns
-    this.dropdownItems.forEach(item => {
-      item.classList.remove('active');
-    });
-  }
-
-  toggleDropdown(item) {
-    const wasActive = item.classList.contains('active');
-
-    // Cerrar todos los dropdowns del mismo nivel
-    const siblings = Array.from(item.parentElement.children).filter(
-      child => child.classList.contains('dropdown-item')
-    );
-    siblings.forEach(sibling => {
-      if (sibling !== item) {
-        sibling.classList.remove('active');
-      }
+    // Cerrar menú al cambiar tamaño de ventana
+    window.addEventListener('resize', function() {
+        if (window.innerWidth > 768) {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+            document.body.style.overflow = '';
+        }
     });
 
-    // Toggle el dropdown actual
-    if (wasActive) {
-      item.classList.remove('active');
-    } else {
-      item.classList.add('active');
-    }
-  }
+    console.log('Menú mobile inicializado correctamente');
+}
+
+// Inicializar cuando el DOM esté listo
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initMobileMenu);
+} else {
+    initMobileMenu();
 }
 
 // Parallax effect for main text and navbar hide functionality
@@ -540,8 +549,7 @@ function startAutoAdvance() {
 
 // Initialize everything when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
-    // Initialize mobile menu
-    new MobileMenu();
+    // El menú mobile ya se inicializa arriba
 
     // Initialize product showcase
     productShowcaseInstance = new ProductShowcase();

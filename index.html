@@ -16,7 +16,17 @@
         <img src="assets/portada.png" alt="Portada" class="portada-img">
 
         <nav class="navbar">
-            <ul>
+            <!-- Logo mobile (solo visible en mobile, arriba a la izquierda) -->
+            <a href="/index.html" class="logo-mobile"><img src="/assets/logoHeader.png" alt="THOWEL"></a>
+
+            <!-- Botón hamburguesa (solo visible en mobile) -->
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul class="nav-menu" id="navMenu">
                 <li><a href="#inicio" data-i18n="nav.home">INICIO</a></li>
                 <li>
                     <a href="#productos" class="productos-link" data-i18n="nav.products">PRODUCTOS</a>
@@ -60,7 +70,8 @@
                                 <a href="/HTML/manijas.html" data-i18n="products.handles">MANIJAS</a>
                                 <a href="/HTML/sistemasApoyo.html" data-i18n="products.supportSystems">SISTEMAS DE APOYO</a>
                             </div>
-                        </div>                    
+                        </div>
+                    </div>
                 </li>
                 <li><a href="/index.html" class="logo"><img src="/assets/logoHeader.png" alt="THOWEL"></a></li>
                 <li><a href="/HTML/sobreNosotros.html" data-i18n="nav.about">SOBRE NOSOTROS</a></li>
