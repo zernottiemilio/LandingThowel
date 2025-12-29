@@ -960,6 +960,23 @@ body {
         padding: 40px 30px;
     }
 
+    /* Bajar la imagen del producto en la sección 2 para evitar superposición */
+    .section-2 .left-content {
+        margin-top: 80px !important;
+        order: 3 !important;
+    }
+
+    .section-2 .left-content img {
+        margin-top: 0 !important;
+        max-height: 400px !important;
+        object-fit: contain !important;
+    }
+
+    /* Asegurar orden correcto en sección 2 */
+    .section-2 .right-content {
+        order: 1 !important;
+    }
+
     .producto-titulo {
         font-size: 32px;
     }
@@ -1010,6 +1027,150 @@ body {
         max-width: 80px;
     }
 
+    /* SPECS-ALL-LOGOS - Grid 2x2 en móvil */
+    .section-2 .specs-all-logos,
+    .specs-all-logos {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        row-gap: -20px !important;
+        column-gap: 10px !important;
+        justify-items: center !important;
+        align-items: center !important;
+        margin-top: 15px !important;
+        margin-bottom: 0px !important;
+        max-width: 280px !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    .section-2 .specs-all-logos img:nth-child(3),
+    .section-2 .specs-all-logos img:nth-child(4),
+    .specs-all-logos img:nth-child(3),
+    .specs-all-logos img:nth-child(4) {
+        margin-top: -150px !important;
+        transform: translateY(-80px) !important;
+    }
+
+    .section-2 .specs-all-logos img,
+    .specs-all-logos img {
+        max-width: 130px !important;
+        min-width: 120px !important;
+        width: 130px !important;
+        height: auto !important;
+        object-fit: contain !important;
+    }
+
+    /* Imágenes de peso un poco más grandes */
+    .section-2 .specs-all-logos img[src*="peso"],
+    .specs-all-logos img[src*="peso"] {
+        max-width: 150px !important;
+        width: 150px !important;
+    }
+
+    /* Ciclos y unidades tamaño medio */
+    .section-2 .specs-all-logos img[src*="ciclos"],
+    .section-2 .specs-all-logos img[src*="unidades"],
+    .section-2 .specs-all-logos img[src*="mil"],
+    .specs-all-logos img[src*="ciclos"],
+    .specs-all-logos img[src*="unidades"],
+    .specs-all-logos img[src*="mil"] {
+        max-width: 140px !important;
+        width: 140px !important;
+    }
+
+    /* Acero y badges más pequeños */
+    .section-2 .specs-all-logos img[src*="acero"],
+    .specs-all-logos img[src*="acero"] {
+        max-width: 120px !important;
+        width: 120px !important;
+    }
+
+    /* Ajustar badge de acero al lado de SMOOTH en móvil */
+    .section-1 .badge-thowel {
+        position: relative !important;
+        top: auto !important;
+        right: auto !important;
+        display: inline-block !important;
+        margin-left: 140px !important;
+        vertical-align: middle !important;
+    }
+
+    .section-1 .badge-thowel img {
+        width: 60px !important;
+        height: auto !important;
+    }
+
+    .section-1 .producto-titulo {
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        flex-wrap: wrap !important;
+        gap: 10px !important;
+    }
+
+    /* Reducir espacios arriba y abajo de la sección 2 */
+    .section-2 .right-content {
+        padding: 20px 20px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: flex-start !important;
+        align-items: center !important;
+        position: relative !important;
+    }
+
+    .section-2 .specs-intro {
+        margin-top: -190px !important;
+        margin-bottom: 15px !important;
+        padding: 0 20px !important;
+        padding-top: 0px !important;
+        font-size: 15px !important;
+        line-height: 1.6 !important;
+        text-align: center !important;
+        order: 1 !important;
+        width: 100% !important;
+        position: relative !important;
+        z-index: 10 !important;
+    }
+
+    .section-2 .right-content {
+        padding: 0px 20px 20px 20px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: flex-start !important;
+        align-items: center !important;
+        position: relative !important;
+    }
+
+    .section-2 .specs-all-logos {
+        order: 2 !important;
+        position: relative !important;
+        z-index: 10 !important;
+        margin-top: 15px !important;
+        margin-bottom: -80px !important;
+    }
+
+    /* Asegurar que la sección 2 no tenga height fijo */
+    .section-2 {
+        min-height: auto !important;
+        height: auto !important;
+        margin-bottom: 0px !important;
+        padding-bottom: 0px !important;
+    }
+
+    .section-2 .dual-content {
+        flex-direction: column !important;
+        min-height: auto !important;
+        height: auto !important;
+        margin-bottom: 0px !important;
+        padding-bottom: 0px !important;
+    }
+
+    /* Reducir espacio antes de productos similares */
+    .productos-similares {
+        margin-top: 0px !important;
+        padding-top: 20px !important;
+    }
+
     .specs-table-image img[src*="tabla"],
     .specs-table-image img[src*="dibujo"],
     .specs-table-image img[src*="plano"],
@@ -1023,6 +1184,52 @@ body {
         max-width: 280px;
     }
 }
+/* ========================================
+   SCROLL REVEAL ANIMATIONS
+   ======================================== */
+
+/* Ocultar elementos antes de que aparezcan */
+.producto-section {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* Clase que se agrega cuando el elemento es visible */
+.producto-section.reveal {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Variaciones de animación para diferentes secciones */
+.section-1 {
+    transition-delay: 0.1s;
+}
+
+.section-2 {
+    transition-delay: 0.2s;
+}
+
+.section-3 {
+    transition-delay: 0.3s;
+}
+
+.section-4 {
+    transition-delay: 0.4s;
+}
+
+.productos-similares {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    transition-delay: 0.5s;
+}
+
+.productos-similares.reveal {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 /* ========================================
    SISTEMA DE TAMAÑOS ESTANDARIZADO
    ======================================== */

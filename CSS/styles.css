@@ -804,17 +804,43 @@ body {
 }
 
 /* Footer */
-.footer-red { 
-    background: #e74c3c; 
-    color: #fff; 
-    text-align: center; 
-    padding: 15px 0; 
-    font-weight: 500; 
-    font-size: 0.9rem; 
-    position: relative; 
+.footer-red {
+    background: #e74c3c;
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+    font-weight: 500;
+    font-size: 0.9rem;
+    position: relative;
     z-index: 101;
     margin: 0;
+    margin-top: 0 !important;
     flex-shrink: 0;
+}
+
+/* Eliminar padding/margin en desktop para secciones antes del footer */
+@media (min-width: 1201px) {
+    .catalog-section {
+        margin-bottom: 0 !important;
+        padding-bottom: 0 !important;
+    }
+
+    .calidad-section {
+        margin-bottom: 0 !important;
+        padding-bottom: 40px !important;
+    }
+
+    /* Asegurar que no haya espacio después de la última sección */
+    body > section:last-of-type {
+        margin-bottom: 0 !important;
+        padding-bottom: 0 !important;
+    }
+
+    /* Footer pegado */
+    .footer-red {
+        margin-top: 0 !important;
+        padding-top: 15px !important;
+    }
 }
 
 /* Contenedor de hexágonos */
