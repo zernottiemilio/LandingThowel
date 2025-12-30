@@ -1,0 +1,485 @@
+/* ================================
+   SECCIÓN CATÁLOGO - CAROUSEL
+================================ */
+.catalog-section {
+    position: relative;
+    background-color: #f5f5f5;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    z-index: 10;
+    padding: 0;
+    margin: 0;
+}
+
+.catalog-container {
+    max-width: 100%;
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.catalog-header {
+    padding: 80px 0 30px 0;
+    width: 100%;
+    position: relative;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: auto;
+}
+
+.catalog-title-section {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    flex: 0 0 auto;
+    height: 100px;
+}
+
+.catalog-arrow {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 2;
+    margin-top: -80px;
+    width: -10px;
+    height: 100%;
+}
+
+.catalog-arrow img {
+    width: 100%;
+    height: 230px;
+    object-fit: contain;
+    display: block;
+}
+
+.catalog-title {
+    font-size: 3rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #333;
+    text-shadow: none;
+    margin-top: -30px;
+    margin-left: 100px;
+    z-index: 1;
+
+}
+
+.catalog-description-section {
+    max-width: 500px;
+    text-align: right;
+    padding-right: 40px;
+    margin-top: 0;
+    align-self: center;
+}
+
+.catalog-description {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #666;
+    text-shadow: none;
+    margin: 0;
+}
+
+.catalog-download-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: #fff;
+    background: #003399;
+    padding: 12px 24px;
+    border-radius: 25px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.catalog-download-btn:hover {
+    background: #002080;
+    transform: translateY(-2px);
+}
+
+/* CAROUSEL CONTAINER */
+.catalog-carousel {
+    position: relative;
+    width: 100%;
+    flex: 1;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    min-height: 100vh;
+    height: 100vh;
+}
+
+/* NAVIGATION ARROWS */
+.carousel-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 51, 153, 0.8);
+    color: white;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 100;
+    font-size: 18px;
+}
+
+.carousel-nav:hover {
+    background: #003399;
+    transform: translateY(-50%) scale(1.1);
+}
+
+.prev-btn {
+    left: 20px;
+}
+
+.next-btn {
+    right: 20px;
+}
+
+/* CAROUSEL TRACK */
+.catalog-track {
+    display: flex;
+    width: 200%; /* Para 2 slides */
+    height: 100vh;
+    min-height: 100vh;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* CATALOG SLIDE */
+.catalog-slide {
+    width: 85%; /* Cada slide ocupa 50% del track */
+    height: 100vh;
+    min-height: 100vh;
+    display: flex;
+    flex: none;
+}
+
+/* CATALOG ITEMS */
+.catalog-item {
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    flex: 0 0 auto;
+    width: 370px;
+    min-width: 370px;
+    max-width: 370px;
+    height: 100vh;
+    min-height: 100vh;
+    overflow: hidden;
+    background: #f8f9fa;
+}
+
+.catalog-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+/* OVERLAY - OCULTO POR DEFECTO */
+.catalog-overlay {
+    position: absolute;
+    bottom: -100%; /* oculto */
+    left: 0;
+    width: 100%;
+    background: rgba(0, 51, 153, 0.9);
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+    font-weight: 600;
+    font-size: 1rem;
+    text-transform: uppercase;
+    transition: bottom 0.3s ease;
+}
+
+.catalog-overlay-text {
+    font-weight: 700;
+    text-align: center;
+    font-size: 1rem;
+    text-transform: uppercase;
+    line-height: 1.2;
+    padding: 20px;
+}
+
+/* EFECTO HOVER */
+.catalog-item:hover {
+    border: 15px solid #003399; /* añade borde */
+    border-color: #003399; /* borde azul */
+    transform: scale(1); /* agranda el contenedor */
+    z-index: 30;            /* lo pone por encima de los demás */
+}
+
+.catalog-item:hover img {
+    transform: translateY(-20px); /* levanta la imagen */
+    height: 110%; /* agranda la imagen */
+}
+
+.catalog-item:hover .catalog-overlay {
+    bottom: 0; /* aparece desde abajo */
+}
+
+.catalogo-item::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 10px solid #003399;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none; /* no bloquea el hover */
+}
+
+/* INDICATORS */
+.carousel-indicators {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 100;
+}
+
+.indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.indicator.active {
+    background: #003399;
+    transform: scale(1.2);
+}
+
+.indicator:hover {
+    background: rgba(0, 51, 153, 0.8);
+}
+
+/* ====== Responsive Carousel ====== */
+@media(max-width: 1200px) {
+    .catalog-item {
+        min-height: 200px;
+    }
+
+    .catalog-overlay-text {
+        font-size: 0.9rem;
+        padding: 15px;
+    }
+}
+
+@media(max-width: 1024px) {
+    .catalog-title {
+        font-size: 2.2rem;
+    }
+
+    .catalog-header {
+        padding: 40px 0 30px 0;
+    }
+
+    .carousel-nav {
+        width: 45px;
+        height: 45px;
+        font-size: 16px;
+    }
+}
+
+@media(max-width: 768px) {
+    .catalog-section {
+        min-height: auto;
+    }
+
+    .catalog-container {
+        height: auto;
+    }
+
+    .catalog-header {
+        padding: 40px 15px 30px 15px;
+    }
+
+    .catalog-title {
+        font-size: 2rem;
+    }
+
+    .catalog-description {
+        font-size: 1rem;
+    }
+
+    .catalog-slide {
+        flex-wrap: wrap;
+        align-content: flex-start;
+    }
+
+    .catalog-item {
+        flex: 0 0 50%;
+        height: 150px;
+    }
+
+    .carousel-nav {
+        width: 40px;
+        height: 40px;
+        font-size: 14px;
+    }
+
+    .prev-btn {
+        left: 10px;
+    }
+
+    .next-btn {
+        right: 10px;
+    }
+}
+
+@media(max-width: 480px) {
+    .catalog-item {
+        flex: 0 0 100%;
+        height: 120px;
+    }
+
+    .catalog-download-btn {
+        padding: 10px 18px;
+        font-size: 0.9rem;
+    }
+
+    .catalog-title {
+        font-size: 1.7rem;
+    }
+
+    .catalog-title-section {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .catalog-overlay-text {
+        font-size: 0.8rem;
+        padding: 10px;
+    }
+}
+
+/* ================================
+   FOOTER
+================================ */
+.footer-red {
+    background: #e74c3c;
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+    font-weight: 500;
+    font-size: 0.9rem;
+    position: relative;
+    z-index: 101;
+    margin: 0;
+    margin-top: 0 !important;
+    flex-shrink: 0;
+}
+
+/* Eliminar padding/margin en desktop para secciones antes del footer */
+@media (min-width: 1201px) {
+    .catalog-section {
+        margin-bottom: 0 !important;
+        padding-bottom: 0 !important;
+    }
+
+    .calidad-section {
+        margin-bottom: 0 !important;
+        padding-bottom: 40px !important;
+    }
+
+    /* Asegurar que no haya espacio después de la última sección */
+    body > section:last-of-type {
+        margin-bottom: 0 !important;
+        padding-bottom: 0 !important;
+    }
+
+    /* Footer pegado */
+    .footer-red {
+        margin-top: 0 !important;
+        padding-top: 15px !important;
+    }
+}
+
+/* Contenedor de footer */
+.footer-container {
+    position: relative;
+    max-width: 100%;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    height: 100%;
+}
+
+/* Contenedor de hexágonos */
+.footer-hexagons {
+    position: absolute;
+    bottom: 0;
+    left: 40px;
+    display: flex;
+    gap: 8px; /* separación entre hexágonos */
+    z-index: 3;
+    align-items: center;
+    height: 100%;
+}
+
+/* Hexágonos más chicos */
+.hexagon {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hexagon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    clip-path: polygon(
+        25% 0%,
+        75% 0%,
+        100% 50%,
+        75% 100%,
+        25% 100%,
+        0% 50%
+    );
+}
+
+/* Hover */
+.hexagon:hover {
+    transform: scale(1.1);
+}
+
+/* Contenido del footer */
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.footer-content p {
+    margin: 0;
+}

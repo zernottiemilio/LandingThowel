@@ -94,7 +94,13 @@
         <div class="contacto-container">
             <h2 class="contacto-titulo" data-i18n="contact.title">CONTACTANOS</h2>
 
-            <form class="contacto-form" id="contactoForm">
+            <form class="contacto-form" id="contactoForm" action="https://formsubmit.co/info@thowel.com" method="POST">
+                <!-- Configuración de FormSubmit -->
+                <input type="hidden" name="_subject" value="Nuevo contacto desde THOWEL">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_template" value="table">
+                <input type="text" name="_honey" style="display:none">
+
                 <div class="form-group">
                     <input
                         type="text"

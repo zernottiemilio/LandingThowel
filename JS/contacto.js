@@ -159,15 +159,13 @@ if (scrollIndicator) {
 }
 
 // ========================================
-// VALIDACIÓN Y ENVÍO DEL FORMULARIO
+// VALIDACIÓN Y ENVÍO DEL FORMULARIO CON FORMSUBMIT
 // ========================================
 
 const contactoForm = document.getElementById('contactoForm');
 
 if (contactoForm) {
     contactoForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-        
         // Obtener valores del formulario
         const formData = {
             nombre: this.nombre.value.trim(),
@@ -175,28 +173,35 @@ if (contactoForm) {
             mail: this.mail.value.trim(),
             mensaje: this.mensaje.value.trim()
         };
-        
+
         // Validación básica
         if (!formData.nombre || !formData.numero || !formData.mail || !formData.mensaje) {
+            e.preventDefault();
             mostrarMensaje('Por favor, completa todos los campos.', 'error');
-            return;
+            return false;
         }
-        
+
         // Validar email
         if (!validarEmail(formData.mail)) {
+            e.preventDefault();
             mostrarMensaje('Por favor, ingresa un email válido.', 'error');
-            return;
+            return false;
         }
-        
+
         // Validar teléfono (solo números y espacios)
         if (!validarTelefono(formData.numero)) {
+            e.preventDefault();
             mostrarMensaje('Por favor, ingresa un número de teléfono válido.', 'error');
-            return;
+            return false;
         }
-        
-        // Aquí puedes agregar la lógica para enviar el formulario
-        // Por ejemplo, usando fetch() para enviar a un servidor
-        enviarFormulario(formData);
+
+        // Si todo está bien, mostrar mensaje de envío y permitir el submit
+        const submitBtn = document.querySelector('.form-submit');
+        submitBtn.textContent = 'ENVIANDO...';
+        submitBtn.disabled = true;
+
+        // FormSubmit manejará el envío y redirigirá automáticamente
+        return true;
     });
 }
 
@@ -212,47 +217,6 @@ function validarTelefono(telefono) {
     return regex.test(telefono) && telefono.replace(/\D/g, '').length >= 8;
 }
 
-// Función para enviar el formulario
-function enviarFormulario(data) {
-    // Mostrar mensaje de envío
-    const submitBtn = document.querySelector('.form-submit');
-    const originalText = submitBtn.textContent;
-    submitBtn.textContent = 'ENVIANDO...';
-    submitBtn.disabled = true;
-    
-    // Simular envío (aquí deberías implementar tu lógica real de envío)
-    setTimeout(() => {
-        // Aquí va tu código para enviar los datos al servidor
-        console.log('Datos del formulario:', data);
-        
-        // Ejemplo con fetch (descomentar y ajustar según tu backend):
-        /*
-        fetch('/api/contacto', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(data)
-        })
-        .then(response => response.json())
-        .then(result => {
-            mostrarMensaje('¡Mensaje enviado con éxito! Te contactaremos pronto.', 'success');
-            contactoForm.reset();
-        })
-        .catch(error => {
-            mostrarMensaje('Error al enviar el mensaje. Por favor, intenta nuevamente.', 'error');
-        });
-        */
-        
-        // Simulación de éxito
-        mostrarMensaje('¡Mensaje enviado con éxito! Te contactaremos pronto.', 'success');
-        contactoForm.reset();
-        
-        submitBtn.textContent = originalText;
-        submitBtn.disabled = false;
-    }, 1500);
-}
-
 // Función para mostrar mensajes
 function mostrarMensaje(texto, tipo) {
     // Eliminar mensaje anterior si existe
@@ -260,12 +224,12 @@ function mostrarMensaje(texto, tipo) {
     if (mensajeAnterior) {
         mensajeAnterior.remove();
     }
-    
+
     // Crear nuevo mensaje
     const mensaje = document.createElement('div');
     mensaje.className = `form-mensaje ${tipo}`;
     mensaje.textContent = texto;
-    
+
     // Estilos del mensaje
     mensaje.style.cssText = `
         padding: 15px 25px;
@@ -274,14 +238,14 @@ function mostrarMensaje(texto, tipo) {
         text-align: center;
         font-weight: 500;
         animation: slideIn 0.3s ease;
-        ${tipo === 'success' 
-            ? 'background: #4CAF50; color: white;' 
+        ${tipo === 'success'
+            ? 'background: #4CAF50; color: white;'
             : 'background: #f44336; color: white;'}
     `;
-    
+
     // Insertar mensaje
     contactoForm.appendChild(mensaje);
-    
+
     // Remover mensaje después de 5 segundos
     setTimeout(() => {
         mensaje.style.animation = 'slideOut 0.3s ease';
@@ -302,7 +266,7 @@ style.textContent = `
             transform: translateY(0);
         }
     }
-    
+
     @keyframes slideOut {
         from {
             opacity: 1;
