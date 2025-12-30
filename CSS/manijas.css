@@ -620,13 +620,14 @@ body {
 @media (max-width: 1024px) {
     .dual-content {
         flex-direction: column;
-    height: 100vh;
+        height: auto;
+        min-height: auto;
     }
-    
+
     .left-content,
     .right-content {
         width: 100%;
-        min-height: 50vh;
+        min-height: auto;
     }
     
     .navbar {
@@ -669,7 +670,20 @@ body {
 
     .left-content,
     .right-content {
-        padding: 40px 30px;
+        padding: 10px 15px !important;
+    }
+
+    .section-1 .left-content,
+    .section-1 .right-content,
+    .section-2 .left-content,
+    .section-2 .right-content {
+        padding: 10px 15px !important;
+    }
+
+    /* Eliminar espacios de títulos y descripciones */
+    .producto-titulo {
+        margin: 5px 0 !important;
+        padding: 5px 15px !important;
     }
 
     .producto-titulo {
@@ -713,13 +727,50 @@ body {
     /* Ajustes para imágenes pequeñas en móviles */
     .specs-table-image,
     .variantes-imagenes {
-        gap: 20px 30px;
+        gap: 5px !important;
         justify-content: center;
+        margin: 0 !important;
+        padding: 0 !important;
     }
 
     .specs-table-image img,
     .variantes-imagenes img {
         max-width: 80px;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    /* Reducir espacio entre especificaciones y tablas */
+    .specs-intro {
+        margin: 0 !important;
+        padding: 5px 15px !important;
+    }
+
+    .diagrama-tecnico {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .specs-table-image img[src*="tabla"],
+    .specs-table-image img[src*="Tabla"] {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    /* Eliminar espacios de los contenedores de producto */
+    .producto-descripcion {
+        margin: 0 !important;
+        padding: 5px 15px !important;
+    }
+
+    /* Reducir espacios de secciones de producto */
+    .producto-section {
+        padding: 10px 0 !important;
+    }
+
+    .dual-content {
+        gap: 5px !important;
+        padding: 0 !important;
     }
 
     .specs-table-image img[src*="tabla"],
