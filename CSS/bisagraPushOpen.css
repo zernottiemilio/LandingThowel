@@ -531,202 +531,236 @@ body {
    RESPONSIVE
    ======================================== */
 
+/* Tablet Grande */
+@media (max-width: 1200px) {
+    .section-1 .right-content {
+        padding: 100px 40px 40px;
+    }
+
+    .badge-thowel {
+        top: 110px;
+        right: 60px;
+    }
+
+    .badge-thowel img {
+        width: 100px;
+    }
+
+    .producto-titulo {
+        font-size: 56px;
+    }
+
+    .diagrama-tecnico {
+        margin-left: 80px;
+    }
+
+    .diagrama-tecnico img {
+        max-width: 300px;
+    }
+}
+
+/* Tablet */
 @media (max-width: 1024px) {
     .dual-content {
         flex-direction: column;
-    height: 100vh;
+        min-height: auto;
     }
-    
+
     .left-content,
     .right-content {
         width: 100%;
         min-height: 50vh;
     }
-    
-    .navbar {
-        padding: 5px 30px;
+
+    .section-1 .left-content img,
+    .section-2 .left-content img,
+    .section-3 .left-content img {
+        width: 100%;
+        height: 50vh;
+        object-fit: cover;
     }
-    
-    .navbar ul {
-        gap: 30px;
-    }
-    
-    .producto-titulo {
-        font-size: 36px;
-    }
-    
-    .catalog-slide {
-        gap: 15px;
-        padding: 15px;
-    }
-    
-    .catalog-overlay-text {
-        font-size: 12px;
-        padding: 15px;
-    }
-    
+
     .section-1 .right-content {
-        padding: 100px 40px 40px 40px;
+        padding: 80px 50px 50px;
+        min-height: 50vh;
+        justify-content: flex-start;
     }
-    
+
+    .section-2 .right-content,
+    .section-3 .right-content {
+        padding: 50px;
+        min-height: 50vh;
+    }
+
     .badge-thowel {
-        top: 20px;
+        top: 90px;
         right: 40px;
     }
-    
+
     .badge-thowel img {
         width: 80px;
     }
-}
-
-@media (max-width: 768px) {
-    .navbar {
-        padding: 5px 20px;
-    }
-    
-    .navbar ul {
-        gap: 20px;
-    }
-    
-    .navbar a {
-        font-size: 12px;
-        padding: 8px 15px;
-        margin: 10px;
-    }
-    
-    .left-content,
-    .right-content {
-        padding: 40px 30px;
-    }
-    
-    .producto-titulo {
-        font-size: 32px;
-    }
-    
-    .similares-titulo {
-        font-size: 28px;
-    }
-    
-    .catalog-slide {
-        flex-wrap: wrap;
-        gap: 15px;
-        justify-content: center;
-    }
-
-    .catalog-item {
-        flex: 0 0 45%;
-        min-height: 300px;
-    }
-
-    .catalog-item img {
-        height: auto;
-    }
-
-    .catalog-overlay-text {
-        font-size: 12px;
-    }
-
-    .footer-red {
-        font-size: 0.8rem;
-        padding: 10px 0;
-    }
-
-    .footer-hexagons {
-        left: 20px;
-        bottom: 10px;
-    }
-
-    .hexagon {
-        width: 18px;
-        height: 14px;
-        font-size: 10px;
-    }
-    
-    .section-1 .right-content {
-        padding: 80px 30px 30px 30px;
-    }
-    
-    .badge-thowel {
-        top: 15px;
-        right: 30px;
-    }
-    
-    .badge-thowel img {
-        width: 70px;
-    }
-}
-
-@media (max-width: 480px) {
-    .navbar {
-        padding: 5px 10px;
-        margin: 10px auto;
-    }
-
-    .navbar ul {
-        gap: 10px;
-    }
-
-    .navbar a {
-        font-size: 10px;
-        padding: 6px 10px;
-    }
 
     .producto-titulo {
-        font-size: 26px;
+        font-size: 48px;
+        margin-bottom: 20px;
     }
 
     .estandar {
-        font-size: 20px;
+        font-size: 40px;
+    }
+
+    .producto-descripcion {
+        font-size: 16px;
+        margin-bottom: 15px;
+    }
+
+    .diagrama-tecnico {
+        margin-top: 20px;
+        margin-left: 0;
+    }
+
+    .diagrama-tecnico img {
+        max-width: 280px;
+    }
+
+    .specs-intro {
+        font-size: 16px;
+        margin-bottom: 25px;
+    }
+
+    .codazos-imagenes {
+        gap: 20px;
+        height: auto;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .left-content,
+    .right-content {
+        min-height: auto;
+    }
+
+    .section-1 .left-content img,
+    .section-2 .left-content img,
+    .section-3 .left-content img {
+        height: 40vh;
+        min-height: 300px;
+    }
+
+    .section-1 .right-content {
+        padding: 60px 30px 40px;
+        min-height: auto;
+    }
+
+    .section-2 .right-content,
+    .section-3 .right-content {
+        padding: 40px 30px;
+        min-height: auto;
+    }
+
+    .badge-thowel {
+        top: 70px;
+        right: 25px;
+    }
+
+    .badge-thowel img {
+        width: 60px;
+    }
+
+    .producto-titulo {
+        font-size: 36px;
+        margin-bottom: 15px;
+    }
+
+    .estandar {
+        font-size: 32px;
+    }
+
+    .producto-descripcion {
+        font-size: 15px;
+        margin-bottom: 12px;
+    }
+
+    .diagrama-tecnico {
+        margin-top: 15px;
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .diagrama-tecnico img {
+        max-width: 100%;
+        width: 250px;
+    }
+
+    .specs-intro {
+        font-size: 15px;
+        margin-bottom: 20px;
+    }
+
+    .specs-table-image {
+        max-width: 100%;
+    }
+
+    .codazos-imagenes {
+        gap: 15px;
+    }
+
+    .similares-titulo {
+        font-size: 28px;
+        padding: 0 30px;
+    }
+}
+
+/* Mobile Pequeño */
+@media (max-width: 480px) {
+    .section-1 .right-content {
+        padding: 50px 20px 30px;
+    }
+
+    .section-2 .right-content,
+    .section-3 .right-content {
+        padding: 30px 20px;
+    }
+
+    .badge-thowel {
+        top: 60px;
+        right: 15px;
+    }
+
+    .badge-thowel img {
+        width: 50px;
+    }
+
+    .producto-titulo {
+        font-size: 28px;
+        margin-bottom: 12px;
+    }
+
+    .estandar {
+        font-size: 26px;
     }
 
     .producto-descripcion {
         font-size: 14px;
+        margin-bottom: 10px;
+    }
+
+    .diagrama-tecnico {
+        margin-left: 0;
+    }
+
+    .diagrama-tecnico img {
+        width: 200px;
+    }
+
+    .specs-intro {
+        font-size: 14px;
     }
 
     .similares-titulo {
-        font-size: 22px;
-    }
-
-    .catalog-item {
-        flex: 0 0 90%;
-        min-height: 250px;
-    }
-
-    .carousel-nav {
-        width: 40px;
-        height: 40px;
-        font-size: 16px;
-    }
-
-    .catalog-overlay-text {
-        font-size: 11px;
-    }
-
-    .footer-hexagons {
-        left: 10px;
-        bottom: 8px;
-    }
-
-    .hexagon {
-        width: 15px;
-        height: 12px;
-        font-size: 8px;
-    }
-    
-    .section-1 .right-content {
-        padding: 70px 20px 20px 20px;
-    }
-    
-    .badge-thowel {
-        top: 10px;
-        right: 20px;
-    }
-    
-    .badge-thowel img {
-        width: 60px;
-    }
-    
-    .diagrama-tecnico {
-        margin-left: 0;
+        font-size: 24px;
+        padding: 0 20px;
     }
 }
