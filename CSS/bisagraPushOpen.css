@@ -510,21 +510,19 @@ body {
     flex: 1;
     height: auto;
     min-height: auto;
+    overflow: visible;
 }
 
 .productos-similares .catalog-track {
     height: 100%;
     min-height: 100%;
-}
-
-.productos-similares .catalog-slide {
-    height: 100%;
-    min-height: 100%;
+    width: auto;
 }
 
 .productos-similares .catalog-item {
     height: 100%;
     min-height: 100%;
+    flex-shrink: 0;
 }
 
 /* Los estilos del carousel y footer se importan desde carouselYFooter.css */

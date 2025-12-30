@@ -48,13 +48,19 @@
     box-sizing: border-box;
 }
 
-html,
+html {
+    margin: 0;
+    padding: 0;
+}
+
 body {
     font-family: 'Montserrat', sans-serif;
     overflow-x: hidden;
     margin: 0;
     padding: 0;
-    height: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 /* ========================================
@@ -233,6 +239,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-shrink: 0;
 }
 
 .portada-img {
@@ -378,99 +385,90 @@ body {
     background: #e74c3c;
     color: #fff;
     text-align: center;
-    padding: 15px 0;
+    padding: 8px 0 0 0;
     font-weight: 500;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     position: relative;
     z-index: 101;
     margin: 0;
-    margin-top: 0 !important;
+    flex-shrink: 0;
 }
 
 /* Eliminar padding/margin en desktop para sobre-nosotros */
 @media (min-width: 1201px) {
-    html {
-        margin: 0 !important;
-        padding: 0 !important;
-    }
-
-    body {
-        margin: 0 !important;
-        padding: 0 !important;
-    }
-
-    /* Eliminar espacio del header */
     .header-section {
-        margin: 0 !important;
-        padding: 0 !important;
+        margin: 0;
+        padding: 0;
     }
 
-    /* Eliminar espacio de las secciones */
     .sobre-nosotros-section {
-        margin: 0 !important;
-        padding: 0 !important;
-    }
-
-    .sobre-nosotros-section:last-of-type {
-        margin: 0 !important;
-        padding: 0 !important;
+        margin: 0;
+        padding: 0;
     }
 
     .dual-content {
-        margin: 0 !important;
-        padding: 0 !important;
-    }
-
-    .left-content,
-    .right-content {
-        margin: 0 !important;
+        margin: 0;
+        padding: 0;
     }
 
     .right-content {
-        padding: 80px 100px !important;
+        padding: 80px 100px;
     }
 
-    /* Footer SIN espacios */
-    footer,
     .footer-red {
-        margin: 0 !important;
-        padding: 15px 0 !important;
+        margin: 0;
+        padding: 8px 0 0 0;
     }
+}
 
-    /* Cortar el viewport justo después del footer */
-    footer.footer-red,
-    .footer-red {
-        position: relative !important;
-    }
+.footer-container {
+    position: relative;
+    max-width: 100%;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    min-height: 35px;
+}
 
-    footer.footer-red::after,
-    .footer-red::after {
-        content: '' !important;
-        display: block !important;
-        position: fixed !important;
-        top: 100% !important;
-        left: 0 !important;
-        right: 0 !important;
-        bottom: -9999px !important;
-        background: white !important;
-        z-index: 99999 !important;
-    }
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 0 8px 0;
+    min-height: 35px;
+}
+
+.footer-content p {
+    margin: 0;
 }
 
 .footer-hexagons {
     position: absolute;
-    bottom: 15px;
+    bottom: 0;
     left: 40px;
     display: flex;
     gap: 8px;
     z-index: 3;
+    align-items: center;
+    height: 100%;
 }
 
 .hexagon {
     width: 25px;
-    height: 20px;
-    background: #fff;
+    height: 25px;
     position: relative;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hexagon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
     clip-path: polygon(
         25% 0%,
         75% 0%,
@@ -479,17 +477,9 @@ body {
         25% 100%,
         0% 50%
     );
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 14px;
-    color: #e74c3c;
-    cursor: pointer;
-    transition: transform 0.3s ease, background 0.3s ease;
 }
 
 .hexagon:hover {
-    background: #f1f1f1;
     transform: scale(1.1);
 }
 
