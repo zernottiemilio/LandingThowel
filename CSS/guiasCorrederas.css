@@ -729,14 +729,14 @@ body {
     
     .dual-content {
         flex-direction: column;
-    height: 100vh;
-    height: 100vh;
+        height: auto;
+        min-height: auto;
     }
-    
+
     .left-content,
     .right-content {
         width: 100%;
-        min-height: 50vh;
+        min-height: auto;
     }
     
     .producto-titulo {
@@ -787,24 +787,48 @@ body {
 
     .left-content,
     .right-content {
-        padding: 40px 30px;
+        padding: 10px 15px !important;
     }
 
     /* Bajar la imagen del producto en la sección 2 para evitar superposición */
     .section-2 .left-content {
-        margin-top: 80px !important;
+        margin-top: 10px !important;
         order: 3 !important;
+        padding: 5px 15px !important;
     }
 
     .section-2 .left-content img {
-        margin-top: 0 !important;
-        max-height: 400px !important;
+        margin: 0 !important;
+        max-height: 350px !important;
         object-fit: contain !important;
+    }
+
+    /* Imagen específica de guía oculta push open - más alta y ancho completo */
+    .section-2 .left-content img[src*="GUIA OCULTA (2)"] {
+        width: 100vw !important;
+        max-width: 100vw !important;
+        max-height: 500px !important;
+        min-height: 450px !important;
+        object-fit: cover !important;
+        margin-left: -15px !important;
+        margin-right: -15px !important;
     }
 
     /* Asegurar orden correcto en sección 2 */
     .section-2 .right-content {
         order: 1 !important;
+        padding: 10px 15px !important;
+    }
+
+    .section-1 .left-content,
+    .section-1 .right-content {
+        padding: 10px 15px !important;
+    }
+
+    /* Eliminar espacios de títulos y descripciones */
+    .producto-titulo {
+        margin: 5px 0 !important;
+        padding: 5px 15px !important;
     }
 
     .producto-titulo {
@@ -848,13 +872,50 @@ body {
     /* Ajustes para imágenes pequeñas en móviles */
     .specs-table-image,
     .variantes-imagenes {
-        gap: 20px 30px;
+        gap: 5px !important;
         justify-content: center;
+        margin: 0 !important;
+        padding: 0 !important;
     }
 
     .specs-table-image img,
     .variantes-imagenes img {
         max-width: 80px;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    /* Reducir espacio entre especificaciones y tablas */
+    .specs-intro {
+        margin: 0 !important;
+        padding: 5px 15px !important;
+    }
+
+    .diagrama-tecnico {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .specs-table-image img[src*="tabla"],
+    .specs-table-image img[src*="Tabla"] {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    /* Eliminar espacios de los contenedores de producto */
+    .producto-descripcion {
+        margin: 0 !important;
+        padding: 5px 15px !important;
+    }
+
+    /* Reducir espacios de secciones de producto */
+    .producto-section {
+        padding: 10px 0 !important;
+    }
+
+    .dual-content {
+        gap: 5px !important;
+        padding: 0 !important;
     }
 
     /* SPECS-ALL-LOGOS - Grid 2x2 en móvil */
