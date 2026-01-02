@@ -640,13 +640,15 @@ body {
     flex: 1;
     height: auto;
     min-height: auto;
-    overflow: visible;
+    overflow: hidden;
 }
 
 .productos-similares .catalog-track {
     height: 100%;
     min-height: 100%;
     width: auto;
+    display: flex;
+    flex-wrap: nowrap;
 }
 
 .productos-similares .catalog-item {
@@ -837,15 +839,48 @@ body {
         font-size: 28px;
     }
 
-    .catalog-slide {
-        flex-wrap: wrap;
-        gap: 10px;
-        padding: 10px;
+    /* Carousel en mobile */
+    .catalog-carousel,
+    .productos-similares .catalog-carousel {
+        overflow-x: auto;
+        overflow-y: visible;
+        -webkit-overflow-scrolling: touch;
     }
 
-    .catalog-item {
-        flex: 1 1 calc(50% - 10px);
-        min-width: 150px;
+    .catalog-track,
+    .productos-similares .catalog-track {
+        width: auto;
+        flex-wrap: nowrap;
+        gap: 12px;
+        transition: none;
+    }
+
+    .catalog-slide {
+        flex-wrap: nowrap;
+        gap: 12px;
+        padding: 0;
+        flex-shrink: 0;
+        width: auto;
+    }
+
+    .catalog-item,
+    .productos-similares .catalog-item {
+        flex: 0 0 auto;
+        min-width: 180px;
+        max-width: 180px;
+        width: 180px;
+        height: 240px;
+    }
+
+    /* Items directos en track (sin slides) */
+    .catalog-track > .catalog-item,
+    .productos-similares .catalog-track > .catalog-item {
+        margin-right: 12px;
+    }
+
+    .catalog-track > .catalog-item:last-child,
+    .productos-similares .catalog-track > .catalog-item:last-child {
+        margin-right: 0;
     }
 
     .carousel-nav {
