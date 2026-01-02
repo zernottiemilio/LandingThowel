@@ -519,21 +519,19 @@ body {
     flex: 1;
     height: auto;
     min-height: auto;
+    overflow: visible;
 }
 
 .productos-similares .catalog-track {
     height: 100%;
     min-height: 100%;
-}
-
-.productos-similares .catalog-slide {
-    height: 100%;
-    min-height: 100%;
+    width: auto;
 }
 
 .productos-similares .catalog-item {
     height: 100%;
     min-height: 100%;
+    flex-shrink: 0;
 }
 
 /* Los estilos del carousel y footer se importan desde carouselYFooter.css */
@@ -542,244 +540,232 @@ body {
    RESPONSIVE
    ======================================== */
 
+/* Tablet Grande */
+@media (max-width: 1200px) {
+    .section-1 .right-content {
+        padding: 100px 40px 40px;
+    }
+
+    .badge-thowel {
+        top: 110px;
+        right: 60px;
+    }
+
+    .badge-thowel img {
+        width: 100px;
+    }
+
+    .producto-titulo {
+        font-size: 56px;
+    }
+
+    .diagrama-tecnico {
+        margin-left: 80px;
+    }
+
+    .diagrama-tecnico img {
+        max-width: 300px;
+    }
+}
+
+/* Tablet */
 @media (max-width: 1024px) {
     .dual-content {
         flex-direction: column;
-    height: 100vh;
+        min-height: auto;
     }
-    
+
     .left-content,
     .right-content {
         width: 100%;
         min-height: 50vh;
     }
-    
-    .navbar {
-        padding: 5px 30px}
-    
-    .navbar ul {
-        gap: 30px;
+
+    .section-1 .left-content img,
+    .section-2 .left-content img,
+    .section-3 .left-content img {
+        width: 100%;
+        height: 50vh;
+        object-fit: cover;
     }
-    
+
+    .section-1 .right-content {
+        padding: 80px 50px 50px;
+        min-height: 50vh;
+        justify-content: flex-start;
+    }
+
+    .section-2 .right-content,
+    .section-3 .right-content {
+        padding: 50px;
+        min-height: 50vh;
+    }
+
+    .badge-thowel {
+        top: 90px;
+        right: 40px;
+    }
+
+    .badge-thowel img {
+        width: 80px;
+    }
+
     .producto-titulo {
-        font-size: 36px;
+        font-size: 48px;
+        margin-bottom: 20px;
     }
-    
-    .catalog-slide {
-        gap: 15px;
-        padding: 15px;
+
+    .estandar {
+        font-size: 40px;
     }
-    
-    .catalog-overlay-text {
-        font-size: 12px;
-        padding: 15px;
+
+    .producto-descripcion {
+        font-size: 16px;
+        margin-bottom: 15px;
+    }
+
+    .diagrama-tecnico {
+        margin-top: 20px;
+        margin-left: 0;
+    }
+
+    .diagrama-tecnico img {
+        max-width: 280px;
+    }
+
+    .specs-intro {
+        font-size: 16px;
+        margin-bottom: 25px;
+    }
+
+    .codazos-imagenes {
+        gap: 20px;
+        height: auto;
     }
 }
 
+/* Mobile */
 @media (max-width: 768px) {
-    .navbar {
-        padding: 5px 20px;
-    }
-    
-    .navbar ul {
-        gap: 20px;
-    }
-    
-    .navbar a {
-        font-size: 12px;
-        padding: 8px 15px;
-        margin: 10px;
-    }
-    
     .left-content,
     .right-content {
-        padding: 40px 30px;
+        min-height: auto;
     }
-    
+
+    .section-1 .left-content img,
+    .section-2 .left-content img,
+    .section-3 .left-content img {
+        height: 40vh;
+        min-height: 300px;
+    }
+
+    .section-1 .right-content {
+        padding: 60px 30px 40px;
+        min-height: auto;
+    }
+
+    .section-2 .right-content,
+    .section-3 .right-content {
+        padding: 40px 30px;
+        min-height: auto;
+    }
+
+    .badge-thowel {
+        top: 70px;
+        right: 25px;
+    }
+
+    .badge-thowel img {
+        width: 60px;
+    }
+
     .producto-titulo {
+        font-size: 36px;
+        margin-bottom: 15px;
+    }
+
+    .estandar {
         font-size: 32px;
     }
-    
+
+    .producto-descripcion {
+        font-size: 15px;
+        margin-bottom: 12px;
+    }
+
+    .diagrama-tecnico {
+        margin-top: 15px;
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .diagrama-tecnico img {
+        max-width: 100%;
+        width: 250px;
+    }
+
+    .specs-intro {
+        font-size: 15px;
+        margin-bottom: 20px;
+    }
+
+    .specs-table-image {
+        max-width: 100%;
+    }
+
+    .codazos-imagenes {
+        gap: 15px;
+    }
+
     .similares-titulo {
         font-size: 28px;
+        padding: 0 30px;
     }
-    
-    .catalog-slide {
-        flex-wrap: wrap;
-        gap: 10px;
-        padding: 10px;
+}
+
+/* Mobile Pequeño */
+@media (max-width: 480px) {
+    .section-1 .right-content {
+        padding: 50px 20px 30px;
     }
-    
-    .catalog-item {
-        flex: 1 1 calc(50% - 10px);
-        min-width: 150px;
+
+    .section-2 .right-content,
+    .section-3 .right-content {
+        padding: 30px 20px;
     }
-    
-    .carousel-nav {
-        width: 40px;
-        height: 40px;
+
+    .badge-thowel {
+        top: 60px;
+        right: 15px;
+    }
+
+    .badge-thowel img {
+        width: 50px;
+    }
+
+    .producto-titulo {
+        font-size: 28px;
+        margin-bottom: 12px;
+    }
+
+    .estandar {
+        font-size: 26px;
+    }
+
+    .producto-descripcion {
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+
+    .diagrama-tecnico img {
+        width: 200px;
+    }
+
+    .specs-intro {
         font-size: 14px;
     }
-    
-    .prev-btn {
-        left: 10px;
-    }
-    
-    .next-btn {
-        right: 10px;
-    }
-    
-    .indicator {
-        width: 30px;
-        height: 30px;
-    }
-    
-    @media (max-width: 1024px) {
-        .dual-content {
-            flex-direction: column;
-    height: 100vh;
-        }
-        .left-content, .right-content {
-            width: 100%;
-            min-height: auto;
-            padding: 20px;
-        }
-        .producto-titulo {
-            font-size: 36px;
-        }
-        .estandar {
-            font-size: 28px;
-        }
-    }
-    /* ============================================
-   PREMIUM PARALLAX & FADE-IN EFFECTS
-   ============================================ */
 
-/* Configuración base para elementos con parallax */
-[data-parallax-speed] {
-    will-change: transform;
-    backface-visibility: hidden;
-    -webkit-font-smoothing: antialiased;
-  }
-  
-  /* Contenedores con overflow hidden para efecto de profundidad */
-  .parallax-container {
-    overflow: hidden;
-    position: relative;
-  }
-  
-  /* Items con parallax y fade-in */
-  .parallax-item {
-    opacity: 0;
-    transform: translate3d(0, 40px, 0);
-    transition: opacity 0.8s cubic-bezier(0.34, 1.56, 0.64, 1), transform 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
-    will-change: opacity, transform;
-  }
-  
-  .parallax-item.parallax-visible {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
-  }
-  
-  /* Imagenes con parallax suave */
-  .parallax-item img {
-    display: block;
-    width: 100%;
-    height: auto;
-    filter: brightness(0.98);
-    transition: filter 0.3s ease;
-  }
-  
-  .parallax-item:hover img {
-    filter: brightness(1.05);
-  }
-  
-  /* Efecto parallax diferenciado por velocidad */
-  .parallax-slow {
-    --parallax-speed: 0.3;
-  }
-  
-  .parallax-medium {
-    --parallax-speed: 0.5;
-  }
-  
-  .parallax-fast {
-    --parallax-speed: 0.7;
-  }
-  
-  /* Contenedores duales mejorados */
-  .dual-content-parallax {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-    align-items: center;
-    margin: 0;
-  }
-  
-  .left-content-parallax {
-    overflow: hidden;
-    border-radius: 12px;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
-  }
-  
-  .right-content-parallax {
-    padding: 2rem;
-  }
-  
-  /* Efecto de profundidad en secciones */
-  .section-parallax {
-    position: relative;
-    overflow: hidden;
-  }
-  
-  .section-parallax::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.01), rgba(0, 0, 0, 0.02));
-    pointer-events: none;
-    z-index: 1;
-  }
-  
-  /* Stagger animation para múltiples elementos */
-  .parallax-item:nth-child(1) {
-    transition-delay: 0.1s;
-  }
-  
-  .parallax-item:nth-child(2) {
-    transition-delay: 0.2s;
-  }
-  
-  .parallax-item:nth-child(3) {
-    transition-delay: 0.3s;
-  }
-  
-  /* Responsive */
-  @media (max-width: 768px) {
-    .dual-content-parallax {
-      grid-template-columns: 1fr;
-      gap: 2rem;
+    .similares-titulo {
+        font-size: 24px;
+        padding: 0 20px;
     }
-  
-    .parallax-item {
-      transform: translate3d(0, 20px, 0);
-    }
-  
-    [data-parallax-speed] {
-      /* Reducir parallax en móvil para mejor rendimiento */
-      animation: none !important;
-    }
-  }
-  
-  /* Optimización de rendimiento */
-  @media (prefers-reduced-motion: reduce) {
-    [data-parallax-speed],
-    .parallax-item {
-      animation: none !important;
-      transition: none !important;
-    }
-  }
 }  

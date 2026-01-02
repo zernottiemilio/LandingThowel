@@ -157,10 +157,15 @@
 /* CAROUSEL TRACK */
 .catalog-track {
     display: flex;
-    width: 200%; /* Para 2 slides */
+    width: auto; /* Auto para permitir que los items definan el ancho */
     height: 100vh;
     min-height: 100vh;
     transition: transform 0.5s ease-in-out;
+}
+
+/* Cuando el track contiene slides (como en index) */
+.catalog-track:has(.catalog-slide) {
+    width: 200%; /* Para 2 slides */
 }
 
 /* CATALOG SLIDE */

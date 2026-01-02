@@ -677,7 +677,7 @@
     .navbar {
         display: flex !important;
         align-items: center !important;
-        justify-content: space-between !important;
+        justify-content: flex-start !important;
         padding: 10px 20px !important;
         gap: 15px !important;
         flex-wrap: nowrap !important;
@@ -731,6 +731,7 @@
         border: none;
         cursor: pointer;
         padding: 0;
+        margin-left: 15px;
         z-index: 10001;
         flex-shrink: 0;
         order: 1;
@@ -1441,14 +1442,16 @@
         order: -1 !important;
         align-self: flex-start !important;
         position: absolute !important;
-        top: 10px !important;
-        right: 20px !important;
+        top: 15px !important;
+        right: 15px !important;
+        z-index: 10 !important;
     }
 
     .badge-thowel img {
         width: 100% !important;
         height: 100% !important;
         object-fit: contain !important;
+        filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2)) !important;
     }
 
     /* Títulos y textos */
@@ -1566,20 +1569,22 @@
     /* Codazos e imágenes adicionales */
     .codazos-imagenes {
         width: 100% !important;
-        max-width: 350px !important;
-        padding: 10px !important;
-        margin: 20px auto !important;
+        max-width: 100% !important;
+        padding: 20px !important;
+        margin: 0 auto !important;
         display: flex !important;
-        flex-wrap: wrap !important;
-        gap: 15px !important;
+        flex-direction: column !important;
+        gap: 20px !important;
         justify-content: center !important;
+        align-items: center !important;
     }
 
     .codazos-imagenes img {
-        width: 30% !important;
-        max-width: 100px !important;
+        width: 100% !important;
+        max-width: 400px !important;
         height: auto !important;
         object-fit: contain !important;
+        display: block !important;
     }
 
     /* Section title general */
