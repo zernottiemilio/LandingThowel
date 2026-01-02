@@ -1424,19 +1424,21 @@
         display: flex !important;
         flex-direction: column !important;
         align-items: center !important;
+        position: relative !important;
+        padding-top: 60px !important;
     }
 
     /* Badges - Logos de acero y tecnología */
     .badge-thowel {
-        width: 50px !important;
-        height: 50px !important;
+        width: 45px !important;
+        height: 45px !important;
         margin: 0 !important;
         flex-shrink: 0 !important;
         order: -1 !important;
         align-self: flex-start !important;
         position: absolute !important;
-        top: 15px !important;
-        right: 15px !important;
+        top: 10px !important;
+        left: 10px !important;
         z-index: 10 !important;
     }
 
@@ -1452,7 +1454,7 @@
         font-size: 32px !important;
         line-height: 1.3 !important;
         text-align: center !important;
-        padding: 15px 70px 15px 20px !important;
+        padding: 15px 20px !important;
         margin: 0 !important;
         width: 100% !important;
         position: relative !important;
