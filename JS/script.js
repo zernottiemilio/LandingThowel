@@ -71,13 +71,17 @@ class ProductShowcase {
         const showcaseHeight = showcaseRect.height;
 
         // Calculate progress through the showcase (0 to 1)
+        // En móvil, permitir control manual completo con el scroll
+        const isMobile = window.innerWidth <= 768;
         const progress = Math.max(0, Math.min(1,
             (scrollY - showcaseTop + windowHeight * 0.3) /
             (showcaseHeight - windowHeight * 0.6)
         ));
 
-        // Determine target product
-        const targetProduct = Math.min(2, Math.floor(progress * 3));
+        // Determine target product - más sensible al scroll en móvil
+        const targetProduct = isMobile
+            ? Math.min(2, Math.floor(progress * 3.5)) // Más rango para móvil
+            : Math.min(2, Math.floor(progress * 3));
 
         if (targetProduct !== this.currentProduct && !this.isTransitioning) {
             this.transitionToProduct(targetProduct);
