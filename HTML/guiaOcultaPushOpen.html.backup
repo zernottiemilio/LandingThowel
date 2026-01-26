@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía Oculta Push Open - THOWEL</title>
+    <link rel="icon" type="image/png" href="/assets/LOGO-11.png">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/CSS/guiasCorrederas.css">
+    <script src="https://cdn.jsdelivr.net/npm/i18next@23.7.6/i18next.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <link rel="stylesheet" href="/CSS/responsive.css">
+</head>
+<body>
+    <!-- Navbar flotante -->
+    <nav class="navbar">
+        <!-- Logo mobile (solo visible en mobile, arriba a la izquierda) -->
+        <a href="/index.html" class="logo-mobile"><img src="/assets/logoHeader.png" alt="THOWEL"></a>
+
+        <!-- Botón hamburguesa (solo visible en mobile) -->
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <ul class="nav-menu" id="navMenu">
+            <li><a href="#inicio">INICIO</a></li>
+            <li>
+                <a href="#productos" class="productos-link">PRODUCTOS</a>
+                <div class="dropdown">
+                    <div class="dropdown-item">
+                        <a href="#cajones">CAJONES</a>
+                        <div class="subdropdown">
+                            <a href="/HTML/ThowelBoxCristal.html">THOWEL BOX CRISTAL</a>
+                            <a href="/HTML/thowelBoxPlus.html">THOWEL BOX PLUS</a>
+                            <a href="/HTML/thowelBox.html">THOWEL BOX</a>
+                        </div>
+                    </div>
+                    <div class="dropdown-item">
+                        <a href="#bisagras">BISAGRAS</a>
+                        <div class="subdropdown">
+                            <a href="/HTML/bisagraClip3D.html">BISAGRA CLIP 3D</a>
+                            <a href="/HTML/bisagras.html">BISAGRA SOFT CLOSING</a>
+                            <a href="/HTML/bisagraCazoletaEstandar.html">BISAGRA CAZOLETA</a>
+                            <a href="/HTML/bisagraPushOpen.html">BISAGRA PUSH OPEN</a>
+                            <a href="/HTML/bisagraCazoleta155.html">BISAGRA ANGULOS ESPECIALES</a>
+                            <a href="/HTML/retenExpulsor.html">RETÉN EXPULSOR</a>
+                            <a href="/HTML/PistonAGAS.html">PISTÓN A GAS</a>
+                        </div>
+                    </div>
+                    <div class="dropdown-item">
+                        <a href="#guias">GUÍAS Y CORREDERAS</a>
+                        <div class="subdropdown">
+                            <a href="/HTML/guiaOculta3DSoftClosing.html">GUÍA OCULTA 3D SOFT CLOSING</a>
+                            <a href="/HTML/guiaOcultaPushOpen.html">GUÍA OCULTA PUSH OPEN</a>
+                            <a href="/HTML/correderaTelescopicaSoftClosing.html">CORREDERA TELESCÓPICA SOFT CLOSING</a>
+                            <a href="/HTML/correderaTelescopicaPushOpen.html">CORREDERA TELESCÓPICA PUSH OPEN</a>
+                            <a href="/HTML/correderaTelescopicaEstandarH45.html">CORREDERA TELESCÓPICA ESTÁNDAR H45</a>
+                            <a href="/HTML/correderaTelescopicaEstandarH35.html">CORREDERA TELESCÓPICA ESTÁNDAR H35</a>
+                            <a href="/HTML/correderaZ.html">CORREDERA Z</a>
+                        </div>
+                    </div>                        
+                    <div class="dropdown-item">
+                        <a href="#tiradores">TIRADORES, MANIJAS Y SISTEMAS DE APOYO</a>
+                        <div class="subdropdown">
+                            <a href="/HTML/manijas.html">MANIJAS</a>
+                            <a href="/HTML/sistemasApoyo.html">SISTEMAS DE APOYO</a>
+                        </div>
+                    </div>                    </div>
+            </li>
+            <li><a href="/index.html" class="logo"><img src="/assets/logoHeader.png" alt="THOWEL"></a></li>
+            <li><a href="/HTML/sobreNosotros.html">SOBRE NOSOTROS</a></li>
+            <li><a href="/HTML/contacto.html">CONTACTOS</a></li>        </ul>
+    </nav>
+
+    <!-- Sección 1: Guía Oculta Push Open -->
+    <section class="producto-section section-1">
+        <div class="dual-content">
+            <div class="left-content">
+                <img src="/assets/Guia oculta push Open/dibujo de plano.png" alt="Guía Oculta Push Open">
+            </div>
+            <div class="right-content">
+                <div class="badge-thowel">
+                    <img src="/assets/Guia oculta push Open/acero.png" alt="Touch Badge">
+                </div>
+                <h1 class="producto-titulo">
+                    <b data-i18n="productPage.slides.hiddenSlidePush.title" data-i18n-html="true">GUÍA OCULTA<br>PUSH OPEN</b>
+                    <span class="touch" data-i18n="productPage.slides.hiddenSlidePush.tag">TOUCH</span>
+                </h1>
+                <p class="producto-descripcion" data-i18n="productPage.slides.hiddenSlidePush.description1" data-i18n-html="true">
+                    Desarrollada bajo nuestra tecnología <strong>TOUCH</strong> permite apertura con un simple toque, eliminando la necesidad de manijas.
+                </p>
+                <p class="producto-descripcion" data-i18n="productPage.slides.hiddenSlidePush.description2" data-i18n-html="true">
+                    Ideal para diseños minimalistas, <strong>destacándose por su funcionalidad innovadora y estética limpia.</strong>
+                </p>
+                <div class="diagrama-tecnico">
+                    <img src="/assets/Guia oculta push Open/tabla.png" alt="Diagrama técnico">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección 2: Especificaciones -->
+    <section class="producto-section section-2">
+        <div class="dual-content">
+            <div class="left-content">
+                <img src="/assets/Guia oculta push Open/GUIA OCULTA (2).JPG" alt="Ambiente Guía Push">
+            </div>
+            <div class="right-content">
+                <div class="specs-all-logos">
+                    <img src="/assets/Guia oculta push Open/acero.png" alt="Material Acero">
+                    <img src="/assets/Guia oculta push Open/peso.png" alt="Especificaciones de peso">
+                    <img src="/assets/Guia oculta push Open/10 unidades.png" alt="10 unidades">
+                    <img src="/assets/Guia oculta push Open/80 miul cilcos de uso .png" alt="80mil ciclos de uso">
+                </div>
+                <p class="specs-intro" data-i18n="productPage.slides.hiddenSlidePush.specs" data-i18n-html="true">
+                    Fabricadas en acero de <strong>alta calidad</strong> con mecanismos de precisión, ofrecen una <strong>solución innovadora y duradera</strong> para amoblamientos modernos.
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Sección 4: Video Elaborado -->
+   
+
+    <!-- Sección 5: Productos Similares (Carousel) -->
+    <section class="productos-similares">
+        <h2 class="similares-titulo" data-i18n="productPage.similarProducts">PRODUCTOS SIMILARES</h2>
+        <div class="catalog-carousel">
+            <button class="carousel-nav prev-btn" id="prevBtn"><i class="fas fa-chevron-left"></i></button>
+            <button class="carousel-nav next-btn" id="nextBtn"><i class="fas fa-chevron-right"></i></button>
+            <div class="catalog-track" id="catalogTrack">
+                <!-- CAJONES -->
+                <a href="/HTML/ThowelBoxCristal.html" class="catalog-item">
+                    <img src="/assets/thowel box cristal/THOWELBOXCRISTAL.png" alt="Thowel Box Cristal">
+                    <div class="catalog-overlay"><div class="catalog-overlay-text">THOWEL BOX CRISTAL</div></div>
+                </a>
+                <a href="/HTML/thowelBoxPlus.html" class="catalog-item">
+                    <img src="/assets/thowel box plus/THOWELBOXPLUS.png" alt="Thowel Box Plus">
+                    <div class="catalog-overlay"><div class="catalog-overlay-text">THOWEL BOX PLUS</div></div>
+                </a>
+
+                <!-- BISAGRAS -->
+                <a href="/HTML/bisagraClip3D.html" class="catalog-item">
+                    <img src="/assets/bisagra clip 3D/BISAGRACLIP.png" alt="Bisagra Clip 3D">
+                    <div class="catalog-overlay"><div class="catalog-overlay-text">BISAGRA CLIP 3D</div></div>
+                </a>
+                <a href="/HTML/bisagraSoftClosing.html" class="catalog-item">
+                    <img src="/assets/bisagra soft closing/BSC.png" alt="Bisagra Soft Closing">
+                    <div class="catalog-overlay"><div class="catalog-overlay-text">BISAGRA SOFT CLOSING</div></div>
+                </a>
+                <a href="/HTML/bisagraCazoletaEstandar.html" class="catalog-item">
+                    <img src="/assets/bisagra cazoleta estandar/BISAGRACAZOLETAESTANDAR.png" alt="Bisagra Cazoleta">
+                    <div class="catalog-overlay"><div class="catalog-overlay-text">BISAGRA CAZOLETA</div></div>
+                </a>
+                <a href="/HTML/bisagraPushOpen.html" class="catalog-item">
+                    <img src="/assets/bisagra push open/BISAGRAPUSHOPEN.png" alt="Bisagra Push Open">
+                    <div class="catalog-overlay"><div class="catalog-overlay-text">BISAGRA PUSH OPEN</div></div>
+                </a>
+                <a href="/HTML/PistonAGAS.html" class="catalog-item">
+                    <img src="/assets/piston a gas/PISTONAGAS.png" alt="Pistón a Gas">
+                    <div class="catalog-overlay"><div class="catalog-overlay-text">PISTÓN A GAS</div></div>
+                </a>
+                <a href="/HTML/guiaOculta3DSoftClosing.html" class="catalog-item">
+                    <img src="/assets/Guia oculta push Open/GUIA OCULTA.JPG" alt="Guía Oculta 3D">
+                    <div class="catalog-overlay"><div class="catalog-overlay-text">GUÍA OCULTA 3D SOFT CLOSING</div></div>
+                </a>
+                <a href="/HTML/guiaOcultaPushOpen.html" class="catalog-item">
+                    <img src="/assets/Guia oculta push Open/GUIA OCULTA.JPG" alt="Guía Oculta Push">
+                    <div class="catalog-overlay"><div class="catalog-overlay-text">GUÍA OCULTA PUSH OPEN</div></div>
+                </a>
+                <a href="/HTML/correderaTelescopicaSoftClosing.html" class="catalog-item">
+                    <img src="/assets/corredera telescópica estándar H35/CORREDERA TELESCOPICA ESTANDAR H35 (2).JPG" alt="Corredera Telescópica Soft">
+                    <div class="catalog-overlay"><div class="catalog-overlay-text">CORREDERA TELESCÓPICA SOFT CLOSING</div></div>
+                </a>
+                <a href="/HTML/correderaTelescopicaPushOpen.html" class="catalog-item">
+                    <img src="/assets/corredera telescópica estándar H45/CORREDERA TELESCOPICA ESTANDAR H45 (2).JPG" alt="Corredera Telescópica Push">
+                    <div class="catalog-overlay"><div class="catalog-overlay-text">CORREDERA TELESCÓPICA PUSH OPEN</div></div>
+                </a>
+                <a href="/HTML/correderaTelescopicaEstandarH45.html" class="catalog-item">
+                    <img src="/assets/corredera telescópica estándar H45/CORREDERA TELESCOPICA ESTANDAR H45 (2).JPG" alt="Corredera H45">
+                    <div class="catalog-overlay"><div class="catalog-overlay-text">CORREDERA TELESCÓPICA H45</div></div>
+                </a>
+                <a href="/HTML/correderaTelescopicaEstandarH35.html" class="catalog-item">
+                    <img src="/assets/corredera telescópica estándar H35/CORREDERA TELESCOPICA ESTANDAR H35 (2).JPG" alt="Corredera H35">
+                    <div class="catalog-overlay"><div class="catalog-overlay-text">CORREDERA TELESCÓPICA H35</div></div>
+                </a>
+                <a href="/HTML/correderaZ.html" class="catalog-item">
+                    <img src="/assets/corredera Z/CORREDERA Z (2).JPG" alt="Corredera Z">
+                    <div class="catalog-overlay"><div class="catalog-overlay-text">CORREDERA Z</div></div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-red">
+        <div class="footer-container">
+            <div class="footer-hexagons">
+                <a href="mailto:info@thowel.com" class="hexagon hex-mail" title="Email"><img src="/assets/MAIL.png" alt="Email"></a>
+                <a href="#" class="hexagon hex-instagram" title="Instagram" target="_blank"><img src="/assets/INSTAGRAM.png" alt="Instagram"></a>
+            </div>
+            <div class="footer-content">
+                <p data-i18n="footer.copyright">&copy; 2025 THOWEL. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/JS/common.js"></script>
+    <script src="/JS/guiasCorrederas.js"></script>
+    <script src="/JS/i18n.js"></script>
+</body>
+</html>

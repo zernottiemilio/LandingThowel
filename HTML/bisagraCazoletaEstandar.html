@@ -74,66 +74,63 @@
         <li><a href="/HTML/contacto.html" data-i18n="nav.contact">CONTACTOS</a></li>    </ul>
 </nav>
 
-    <section class="producto-section section-1">
+    <!-- Sección Unificada con Efecto Scroll -->
+    <section class="producto-section producto-section-unified three-sections">
         <div class="dual-content">
+            <!-- Contenedor de imágenes sticky -->
             <div class="left-content">
-                <img src="/assets/bisagra cazoleta estandar/BISAGRACAZOLETAESTANDAR.png" alt="Bisagra Cazoleta Estándar">
-            </div>
-            <div class="right-content">
-                <div class="badge-thowel">
-                    <img src="/assets/estandar.png" alt="Thowel Badge">
+                <div class="image-sticky-container">
+                    <img src="/assets/bisagra cazoleta estandar/BISAGRACAZOLETAESTANDAR.png" alt="Bisagra Cazoleta Estándar" class="active" data-section="descripcion">
+                    <img src="/assets/ambiente.png" alt="Ambiente" data-section="especificaciones">
+                    <img src="/assets/bisagra cazoleta estandar/BCE.png" alt="Bisagra instalada" data-section="codazos">
                 </div>
-                <h1 class="producto-titulo">
-                    <b data-i18n="productPage.hinges.cup.title" data-i18n-html="true">BISAGRA<br>CAZOLETA</b>
-                    <span class="estandar" data-i18n="productPage.standard">ESTÁNDAR</span>
-                </h1>
-                <p class="producto-descripcion" data-i18n="productPage.hinges.cup.description1" data-i18n-html="true">
-                    Desarrolladas bajo nuestra tecnología <strong>ESTÁNDAR</strong> aseguran un excelente rendimiento y resistencia en el uso diario.
-                </p>
-                <p class="producto-descripcion" data-i18n="productPage.hinges.cup.description2" data-i18n-html="true">
-                    Ampliamente utilizadas en la industria del mueble, <strong>destacándose por su fiabilidad y facilidad de instalación.</strong>
-                </p>
-                <div class="diagrama-tecnico">
-                    <img src="/assets/bisagra cazoleta estandar/AnguloAperturaBCE.png" alt="Diagrama técnico">
+            </div>
+
+            <!-- Contenedor de textos -->
+            <div class="right-content">
+                <!-- Sección 1: Descripción -->
+                <div class="text-section" data-section="descripcion">
+                    <div class="badge-thowel">
+                        <img src="/assets/estandar.png" alt="Thowel Badge">
+                    </div>
+                    <h1 class="producto-titulo">
+                        <b data-i18n="productPage.hinges.cup.title" data-i18n-html="true">BISAGRA<br>CAZOLETA</b>
+                        <span class="estandar" data-i18n="productPage.standard">ESTÁNDAR</span>
+                    </h1>
+                    <p class="producto-descripcion" data-i18n="productPage.hinges.cup.description1" data-i18n-html="true">
+                        Desarrolladas bajo nuestra tecnología <strong>ESTÁNDAR</strong> aseguran un excelente rendimiento y resistencia en el uso diario.
+                    </p>
+                    <p class="producto-descripcion" data-i18n="productPage.hinges.cup.description2" data-i18n-html="true">
+                        Ampliamente utilizadas en la industria del mueble, <strong>destacándose por su fiabilidad y facilidad de instalación.</strong>
+                    </p>
+                    <div class="diagrama-tecnico">
+                        <img src="/assets/bisagra cazoleta estandar/AnguloAperturaBCE.png" alt="Diagrama técnico">
+                    </div>
+                </div>
+
+                <!-- Sección 2: Especificaciones -->
+                <div class="text-section" data-section="especificaciones">
+                    <p class="specs-intro" data-i18n="productPage.hinges.cup.specs" data-i18n-html="true">
+                        Fabricadas en acero de <strong>alta calidad</strong> cumpliendo con estrictos estándares de producción, ofrecen una <strong>solución duradera y eficiente</strong> para todo tipo de amoblamientos.
+                    </p>
+                    <div class="specs-table-image">
+                        <img src="/assets/bisagra cazoleta estandar/tabla.png" alt="Especificaciones técnicas">
+                    </div>
+                </div>
+
+                <!-- Sección 3: Codazos -->
+                <div class="text-section" data-section="codazos">
+                    <div class="codazos-imagenes">
+                        <img src="/assets/bisagra cazoleta estandar/codo0.png" alt="Codazo 0">
+                        <img src="/assets/bisagra cazoleta estandar/codo9.png" alt="Codazo 9">
+                        <img src="/assets/bisagra cazoleta estandar/codo15.png" alt="Codazo 15">
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Sección 2: Video del Herraje Solo -->
-    <section class="producto-section section-2">
-        <div class="dual-content">
-            <div class="left-content">
-                <img src="/assets/ambiente.png" alt="Ambiente">
-            </div>
-            <div class="right-content">
-                <p class="specs-intro" data-i18n="productPage.hinges.cup.specs" data-i18n-html="true">
-                    Fabricadas en acero de <strong>alta calidad</strong> cumpliendo con estrictos estándares de producción, ofrecen una <strong>solución duradera y eficiente</strong> para todo tipo de amoblamientos.
-                </p>
-                <div class="specs-table-image">
-                    <img src="/assets/bisagra cazoleta estandar/tabla.png" alt="Especificaciones técnicas">
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Sección 3: Codazos -->
-    <section class="producto-section section-3">
-        <div class="dual-content">
-            <div class="left-content">
-                <img src="/assets/bisagra cazoleta estandar/BCE.png" alt="Bisagra instalada">
-            </div>
-            <div class="right-content">
-                <div class="codazos-imagenes">
-                    <img src="/assets/bisagra cazoleta estandar/codo0.png" alt="Codazo 0">
-                    <img src="/assets/bisagra cazoleta estandar/codo9.png" alt="Codazo 9">
-                    <img src="/assets/bisagra cazoleta estandar/codo15.png" alt="Codazo 15">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    
     <!-- Sección 5: Productos Similares (Carousel) -->
     <section class="productos-similares">
         <h2 class="similares-titulo" data-i18n="productPage.similarProducts">PRODUCTOS SIMILARES</h2>
@@ -258,6 +255,7 @@
     </div>
     </footer>
     <script src="/JS/common.js"></script>
+    <script src="/JS/Bisagras.js"></script>
     <script src="/JS/i18n.js"></script>
 </body>
 </html>

@@ -58,62 +58,58 @@
             <li><a href="/HTML/contacto.html">CONTACTOS</a></li>        </ul>
     </nav>
 
-    <!-- Sección 1: Retén Expulsor -->
-    <section class="producto-section section-1">
+    <!-- Sección Unificada con Efecto Scroll -->
+    <section class="producto-section producto-section-unified">
         <div class="dual-content">
+            <!-- Contenedor de imágenes sticky -->
             <div class="left-content">
-                <img src="/assets/reten expulsor/Reten.png" alt="Retén Expulsor">
-            </div>
-            <div class="right-content">
-                <div class="badge-thowel">
-                    <img src="/assets/tecnologiaTouch.png" alt="Thowel Badge">
-                </div>
-                <h1 class="producto-titulo"><b>
-                    RETÉN<br>
-                    EXPULSOR<br></b>
-                    <span class="estandar">TOUCH</span>
-                </h1>
-                <p class="producto-descripcion">
-                    Desarrolladas bajo nuestra tecnología <strong>TOUCH</strong> aseguran un excelente rendimiento y resistencia en el uso diario.
-                </p>
-                <p class="producto-descripcion">
-                    Ampliamente utilizadas en la industria del mueble, <strong>destacándose por su fiabilidad y facilidad de instalación.</strong>
-                </p>
-                <div class="diagrama-tecnico">
-                    <img src="/assets/reten expulsor/DiagramaTecnicoRetenExpulsor.png" alt="Diagrama técnico">
+                <div class="image-sticky-container">
+                    <img src="/assets/reten expulsor/Reten.png" alt="Retén Expulsor" class="active" data-section="descripcion">
+                    <img src="/assets/reten expulsor/RetenesExpulsor.png" alt="Ambiente" data-section="especificaciones">
+                    <img src="/assets/reten expulsor/RetenExp.png" alt="Retén instalado" data-section="codazos">
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- Sección 2: Video del Herraje Solo -->
-    <section class="producto-section section-2">
-        <div class="dual-content">
-            <div class="left-content">
-                <img src="/assets/reten expulsor/RetenesExpulsor.png" alt="Ambiente">
-            </div>
+            <!-- Contenedor de textos -->
             <div class="right-content">
-                <p class="specs-intro">
-                    Fabricadas en acero de <strong>alta calidad</strong> cumpliendo con estrictos estándares de producción, ofrecen una <strong>solución duradera y eficiente</strong> para todo tipo de amoblamientos.
-                </p>
-                <div class="specs-table-image">
-                    <img src="/assets/reten expulsor/RETEN-21.png" alt="Especificaciones técnicas">
-                    <img src="/assets/reten expulsor/RETEN-22.png" alt="Especificaciones técnicas">
+                <!-- Sección 1: Descripción -->
+                <div class="text-section" data-section="descripcion">
+                    <div class="badge-thowel">
+                        <img src="/assets/tecnologiaTouch.png" alt="Thowel Badge">
+                    </div>
+                    <h1 class="producto-titulo"><b>
+                        RETÉN<br>
+                        EXPULSOR<br></b>
+                        <span class="estandar">TOUCH</span>
+                    </h1>
+                    <p class="producto-descripcion">
+                        Desarrolladas bajo nuestra tecnología <strong>TOUCH</strong> aseguran un excelente rendimiento y resistencia en el uso diario.
+                    </p>
+                    <p class="producto-descripcion">
+                        Ampliamente utilizadas en la industria del mueble, <strong>destacándose por su fiabilidad y facilidad de instalación.</strong>
+                    </p>
+                    <div class="diagrama-tecnico">
+                        <img src="/assets/reten expulsor/DiagramaTecnicoRetenExpulsor.png" alt="Diagrama técnico">
+                    </div>
                 </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Sección 3: Codazos -->
-    <section class="producto-section section-3">
-        <div class="dual-content">
-            <div class="left-content">
-                <img src="/assets/reten expulsor/RetenExp.png" alt="Retén instalado">
-            </div>
-            <div class="right-content">
-                <div class="codazos-imagenes">
-                    <img src="/assets/reten expulsor/RetenExpulsor1.png" alt="Reten Expulsor 1">
-                    <img src="/assets/reten expulsor/RetenExpulsor2.png" alt="Reten Expulsor 2">
+                <!-- Sección 2: Especificaciones -->
+                <div class="text-section" data-section="especificaciones">
+                    <p class="specs-intro">
+                        Fabricadas en acero de <strong>alta calidad</strong> cumpliendo con estrictos estándares de producción, ofrecen una <strong>solución duradera y eficiente</strong> para todo tipo de amoblamientos.
+                    </p>
+                    <div class="specs-table-image">
+                        <img src="/assets/reten expulsor/RETEN-21.png" alt="Especificaciones técnicas">
+                        <img src="/assets/reten expulsor/RETEN-22.png" alt="Especificaciones técnicas">
+                    </div>
+                </div>
+
+                <!-- Sección 3: Codazos -->
+                <div class="text-section" data-section="codazos">
+                    <div class="codazos-imagenes">
+                        <img src="/assets/reten expulsor/RetenExpulsor1.png" alt="Reten Expulsor 1">
+                        <img src="/assets/reten expulsor/RetenExpulsor2.png" alt="Reten Expulsor 2">
+                    </div>
                 </div>
             </div>
         </div>

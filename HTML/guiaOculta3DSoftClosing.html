@@ -12,8 +12,7 @@
     <link rel="stylesheet" href="/CSS/responsive.css">
 </head>
 <body>
-  <!-- Navbar flotante -->
-  <nav class="navbar">
+    <nav class="navbar">
         <!-- Logo mobile (solo visible en mobile, arriba a la izquierda) -->
         <a href="/index.html" class="logo-mobile"><img src="/assets/logoHeader.png" alt="THOWEL"></a>
 
@@ -41,7 +40,7 @@
                     <a href="#bisagras">BISAGRAS</a>
                     <div class="subdropdown">
                         <a href="/HTML/bisagraClip3D.html">BISAGRA CLIP 3D</a>
-                        <a href="/HTML/bisagras.html">BISAGRA SOFT CLOSING</a>
+                        <a href="/HTML/bisagraSoftClosing.html">BISAGRA SOFT CLOSING</a>
                         <a href="/HTML/bisagraCazoletaEstandar.html">BISAGRA CAZOLETA</a>
                         <a href="/HTML/bisagraPushOpen.html">BISAGRA PUSH OPEN</a>
                         <a href="/HTML/bisagraCazoleta155.html">BISAGRA ANGULOS ESPECIALES</a>
@@ -60,74 +59,80 @@
                         <a href="/HTML/correderaTelescopicaEstandarH35.html">CORREDERA TELESCÓPICA ESTÁNDAR H35</a>
                         <a href="/HTML/correderaZ.html">CORREDERA Z</a>
                     </div>
-                </div>                        
+                </div>
                 <div class="dropdown-item">
                     <a href="#tiradores">TIRADORES, MANIJAS Y SISTEMAS DE APOYO</a>
                     <div class="subdropdown">
                         <a href="/HTML/manijas.html">MANIJAS</a>
                         <a href="/HTML/sistemasApoyo.html">SISTEMAS DE APOYO</a>
                     </div>
-                </div>                    
+                </div>
         </li>
         <li><a href="/index.html" class="logo"><img src="/assets/logoHeader.png" alt="THOWEL"></a></li>
         <li><a href="/HTML/sobreNosotros.html">SOBRE NOSOTROS</a></li>
         <li><a href="/HTML/contacto.html">CONTACTOS</a></li>    </ul>
 </nav>
 
-
-    <!-- Sección 1: Guía Oculta 3D Soft Closing -->
-    <section class="producto-section section-1">
+    <!-- Sección Unificada con Efecto Scroll -->
+    <section class="producto-section producto-section-unified three-sections">
         <div class="dual-content">
+            <!-- Contenedor de imágenes sticky -->
             <div class="left-content">
-                <img src="/assets/Guia oculta 3D soft closing/dibujo del plano.png" alt="Guía Oculta 3D Soft Closing">
-            </div>
-            <div class="right-content">
-                <div class="badge-thowel">
-                    <img src="/assets/Guia oculta 3D soft closing/acero.png" alt="Smooth Badge">
+                <div class="image-sticky-container">
+                    <img src="/assets/Guia oculta 3D soft closing/dibujo del plano.png" alt="Guía Oculta 3D Soft Closing" class="active" data-section="descripcion">
+                    <img src="/assets/Guia oculta 3D soft closing/iamgen real produ.png" alt="Ambiente Guía Oculta" data-section="especificaciones">
+                    <img src="/assets/Guia oculta 3D soft closing/dibujo del plano.png" alt="Guía instalada" data-section="detalles">
                 </div>
-                <h1 class="producto-titulo">
-                    <b data-i18n="productPage.slides.hiddenSlide3d.title" data-i18n-html="true">GUÍA OCULTA<br>3D SOFT CLOSING</b>
-                    <span class="smooth" data-i18n="productPage.slides.hiddenSlide3d.tag">SMOOTH</span>
-                </h1>
-                <p class="producto-descripcion" data-i18n="productPage.slides.hiddenSlide3d.description1" data-i18n-html="true">
-                    Desarrollada bajo nuestra tecnología <strong>SMOOTH</strong> ofrece un cierre amortiguado y silencioso con ajuste tridimensional.
-                </p>
-                <p class="producto-descripcion" data-i18n="productPage.slides.hiddenSlide3d.description2" data-i18n-html="true">
-                    Ampliamente utilizada en cajones de alta gama, <strong>destacándose por su suavidad, precisión y facilidad de instalación.</strong>
-                </p>
-                <div class="diagrama-tecnico">
-                    <img src="/assets/Guia oculta 3D soft closing/tabla.png" alt="Diagrama técnico">
+            </div>
+
+            <!-- Contenedor de textos -->
+            <div class="right-content">
+                <!-- Sección 1: Descripción -->
+                <div class="text-section" data-section="descripcion">
+                    <div class="badge-thowel">
+                        <img src="/assets/Guia oculta 3D soft closing/acero.png" alt="Smooth Badge">
+                    </div>
+                    <h1 class="producto-titulo">
+                        <b>GUÍA OCULTA<br>3D SOFT CLOSING</b>
+                        <span class="smooth">SMOOTH</span>
+                    </h1>
+                    <p class="producto-descripcion">
+                        Desarrollada bajo nuestra tecnología <strong>SMOOTH</strong> ofrece un cierre amortiguado y silencioso con ajuste tridimensional.
+                    </p>
+                    <p class="producto-descripcion">
+                        Ampliamente utilizada en cajones de alta gama, <strong>destacándose por su suavidad, precisión y facilidad de instalación.</strong>
+                    </p>
+                    <div class="diagrama-tecnico">
+                        <img src="/assets/Guia oculta 3D soft closing/tabla.png" alt="Diagrama técnico">
+                    </div>
+                </div>
+
+                <!-- Sección 2: Especificaciones -->
+                <div class="text-section" data-section="especificaciones">
+                    <div class="specs-all-logos">
+                        <img src="/assets/Guia oculta 3D soft closing/acero.png" alt="Material Acero">
+                        <img src="/assets/Guia oculta 3D soft closing/peso.png" alt="Especificaciones de peso">
+                        <img src="/assets/Guia oculta 3D soft closing/10 unidades.png" alt="10 unidades">
+                        <img src="/assets/Guia oculta 3D soft closing/80mil ciclos de uso .png" alt="80mil ciclos de uso">
+                    </div>
+                    <p class="specs-intro">
+                        Fabricadas en acero de <strong>alta calidad</strong> con acabados diversos, ofrecen una <strong>solución versátil y duradera</strong> para todo tipo de amoblamientos.
+                    </p>
+                </div>
+
+                <!-- Sección 3: Detalles adicionales -->
+                <div class="text-section" data-section="detalles">
+                    <p class="specs-intro">
+                        Sistema de guía oculta que proporciona un deslizamiento suave y un cierre amortiguado, ideal para cajones modernos.
+                    </p>
                 </div>
             </div>
         </div>
     </section>
-
-    <!-- Sección 2: Especificaciones -->
-    <section class="producto-section section-2">
-        <div class="dual-content">
-            <div class="left-content">
-                <img src="/assets/Guia oculta 3D soft closing/iamgen real produ.png" alt="Ambiente Guía Oculta">
-            </div>
-            <div class="right-content">
-                <div class="specs-all-logos">
-                    <img src="/assets/Guia oculta 3D soft closing/acero.png" alt="Material Acero">
-                    <img src="/assets/Guia oculta 3D soft closing/peso.png" alt="Especificaciones de peso">
-                    <img src="/assets/Guia oculta 3D soft closing/10 unidades.png" alt="10 unidades">
-                    <img src="/assets/Guia oculta 3D soft closing/80mil ciclos de uso .png" alt="80mil ciclos de uso">
-                </div>
-                <p class="specs-intro" data-i18n="productPage.slides.hiddenSlide3d.specs" data-i18n-html="true">
-                    Fabricadas en acero de <strong>alta calidad</strong> con acabados diversos, ofrecen una <strong>solución versátil y duradera</strong> para todo tipo de amoblamientos.
-                </p>
-            </div>
-        </div>
-    </section>
-
-   
-
 
     <!-- Sección 5: Productos Similares (Carousel) -->
     <section class="productos-similares">
-        <h2 class="similares-titulo" data-i18n="productPage.similarProducts">PRODUCTOS SIMILARES</h2>
+        <h2 class="similares-titulo">PRODUCTOS SIMILARES</h2>
         <div class="catalog-carousel">
             <button class="carousel-nav prev-btn" id="prevBtn"><i class="fas fa-chevron-left"></i></button>
             <button class="carousel-nav next-btn" id="nextBtn"><i class="fas fa-chevron-right"></i></button>
@@ -195,7 +200,6 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="footer-red">
         <div class="footer-container">
             <div class="footer-hexagons">
@@ -203,13 +207,12 @@
                 <a href="#" class="hexagon hex-instagram" title="Instagram" target="_blank"><img src="/assets/INSTAGRAM.png" alt="Instagram"></a>
             </div>
             <div class="footer-content">
-                <p data-i18n="footer.copyright">&copy; 2025 THOWEL. Todos los derechos reservados.</p>
+                <p>&copy; 2025 THOWEL. Todos los derechos reservados.</p>
             </div>
         </div>
     </footer>
 
     <script src="/JS/common.js"></script>
-    <script src="/JS/guiasCorrederas.js"></script>
+    <script src="/JS/Bisagras.js"></script>
     <script src="/JS/i18n.js"></script>
 </body>
-</html>

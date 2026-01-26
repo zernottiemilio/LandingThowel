@@ -1,0 +1,36 @@
+=== VERIFICACIÓN DE ARCHIVOS CON EFECTO STICKY ===
+
+1. BISAGRAS (todos deben tener producto-section-unified):
+   - bisagraClip3D.html: unified=1, script=1
+   - bisagraSoftClosing.html: unified=1, script=1
+   - bisagraCazoletaEstandar.html: unified=1, script=1
+   - bisagraPushOpen.html: unified=1, script=1
+   - bisagraCazoleta155.html: unified=1, script=1
+   - retenExpulsor.html: unified=1, script=1
+   - PistonAGAS.html: unified=1, script=1
+
+2. GUÍAS Y CORREDERAS (todos deben tener producto-section-unified):
+   - guiaOculta3DSoftClosing.html: unified=1, script=1
+   - guiaOcultaPushOpen.html: unified=1, script=0
+0
+   - correderaTelescopicaSoftClosing.html: unified=1, script=0
+0
+   - correderaTelescopicaPushOpen.html: unified=1, script=0
+0
+   - correderaTelescopicaEstandarH45.html: unified=1, script=0
+0
+   - correderaTelescopicaEstandarH35.html: unified=1, script=0
+0
+   - correderaZ.html: unified=1, script=0
+0
+
+3. CAJONES (todos deben tener producto-section-unified):
+   - ThowelBoxCristal.html: unified=1, script=1
+   - thowelBoxPlus.html: unified=1, script=1
+   - thowelBox.html: unified=1, script=1
+
+4. MANIJAS Y SISTEMAS (páginas de catálogo - estructura diferente):
+   - manijas.html: unified=0
+0, script=1 (catálogo multi-producto)
+   - sistemasApoyo.html: unified=0
+0, script=1 (catálogo multi-producto)
