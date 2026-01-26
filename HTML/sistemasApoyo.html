@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sistemas de Apoyo - THOWEL</title>
     <link rel="icon" type="image/png" href="/assets/LOGO-11.png">
-    <link rel="stylesheet" href="/CSS/manijas.css">
+    <link rel="stylesheet" href="/CSS/bisagraSoftClosing.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/npm/i18next@23.7.6/i18next.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
@@ -71,40 +71,56 @@
     <!-- ============================================
          PATA PLÁSTICA - SECCIÓN UNIFICADA
          ============================================ -->
-    <section id="pata-plastica" class="producto-section section-1">
+    <section id="pata-plastica" class="producto-section producto-section-unified three-sections">
         <div class="dual-content">
+            <!-- Contenedor de imágenes sticky -->
             <div class="left-content">
-                <img src="/assets/pata plastica/PATA PLASTICA.JPG" alt="Pata Plástica">
-            </div>
-            <div class="right-content">
-                <div class="badge-thowel">
-                    <img src="/assets/pata plastica/plastico.png" alt="Plástico">
-                </div>
-                <h1 class="producto-titulo">
-                    <b data-i18n="productPage.supportSystems.plasticLeg.title" data-i18n-html="true">PATA<br>PLÁSTICA</b>
-                    <span class="estandar" data-i18n="productPage.standard">ESTÁNDAR</span>
-                </h1>
-                <p class="producto-descripcion" data-i18n="productPage.supportSystems.plasticLeg.description1" data-i18n-html="true">
-                    Desarrollada bajo nuestra tecnología <strong>ESTÁNDAR</strong> asegura un excelente rendimiento y resistencia en el uso diario.
-                </p>
-                <p class="producto-descripcion" data-i18n="productPage.supportSystems.plasticLeg.description2" data-i18n-html="true">
-                    Ampliamente utilizada en la industria del mueble, <strong>destacándose por su durabilidad y facilidad de instalación.</strong>
-                </p>
-                <div class="diagrama-tecnico">
-                    <img src="/assets/pata plastica/tabla.png" alt="Diagrama técnico Pata Plástica">
+                <div class="image-sticky-container">
+                    <img src="/assets/pata plastica/PATA PLASTICA.JPG" alt="Pata Plástica" class="active" data-section="descripcion">
+                    <img src="/assets/pata plastica/imagenes componentes.png" alt="Componentes Pata Plástica" data-section="especificaciones">
+                    <img src="/assets/pata plastica/tabla.png" alt="Diagrama técnico" data-section="codazos">
                 </div>
             </div>
+
+            <!-- Contenedor de textos -->
             <div class="right-content">
-                <p class="specs-intro" data-i18n="productPage.supportSystems.plasticLeg.specs" data-i18n-html="true">
-                    Fabricadas en plástico de <strong>alta calidad</strong> con acabados diversos, ofrecen una <strong>solución versátil y duradera</strong> para todo tipo de amoblamientos.
-                </p>
-            </div>
-            <div class="right-content">
-                <div class="specs-table-image">
-                    <img src="/assets/pata plastica/imagenes componentes.png" alt="Componentes Pata Plástica">
-                    <img src="/assets/pata plastica/peso.png" alt="Especificaciones Pata Plástica">
-                    <img src="/assets/pata plastica/4 a 200 unidades.png" alt="Presentación Pata Plástica">
-                    <img src="/assets/pata plastica/negro.png" alt="Pata Plástica Negro">
+                <!-- Sección 1: Descripción -->
+                <div class="text-section" data-section="descripcion">
+                    <div class="badge-thowel">
+                        <img src="/assets/pata plastica/plastico.png" alt="Plástico">
+                    </div>
+                    <h1 class="producto-titulo">
+                        <b>PATA<br>PLÁSTICA</b>
+                        <span class="estandar">ESTÁNDAR</span>
+                    </h1>
+                    <p class="producto-descripcion">
+                        Desarrollada bajo nuestra tecnología <strong>ESTÁNDAR</strong> asegura un excelente rendimiento y resistencia en el uso diario.
+                    </p>
+                    <p class="producto-descripcion">
+                        Ampliamente utilizada en la industria del mueble, <strong>destacándose por su durabilidad y facilidad de instalación.</strong>
+                    </p>
+                </div>
+
+                <!-- Sección 2: Especificaciones -->
+                <div class="text-section" data-section="especificaciones">
+                    <p class="specs-intro">
+                        Fabricadas en plástico de <strong>alta calidad</strong> con acabados diversos, ofrecen una <strong>solución versátil y duradera</strong> para todo tipo de amoblamientos.
+                    </p>
+                    <div class="specs-table-image">
+                        <img src="/assets/pata plastica/peso.png" alt="Especificaciones Pata Plástica">
+                        <img src="/assets/pata plastica/4 a 200 unidades.png" alt="Presentación Pata Plástica">
+                        <img src="/assets/pata plastica/negro.png" alt="Pata Plástica Negro">
+                    </div>
+                </div>
+
+                <!-- Sección 3: Detalles -->
+                <div class="text-section" data-section="codazos">
+                    <p class="specs-intro">
+                        Sistema de apoyo confiable para todo tipo de mobiliario.
+                    </p>
+                    <div class="diagrama-tecnico">
+                        <img src="/assets/pata plastica/tabla.png" alt="Diagrama técnico Pata Plástica">
+                    </div>
                 </div>
             </div>
         </div>
@@ -113,40 +129,56 @@
     <!-- ============================================
          RUEDA NYLON - SECCIÓN UNIFICADA
          ============================================ -->
-    <section id="rueda-nylon" class="producto-section section-1">
+    <section id="rueda-nylon" class="producto-section producto-section-unified three-sections">
         <div class="dual-content">
+            <!-- Contenedor de imágenes sticky -->
             <div class="left-content">
-                <img src="/assets/rueda nylon/RUEDA NYLON.JPG" alt="Rueda Nylon">
-            </div>
-            <div class="right-content">
-                <div class="badge-thowel">
-                    <img src="/assets/rueda nylon/acero.png" alt="Acero">
-                </div>
-                <h1 class="producto-titulo">
-                    <b data-i18n="productPage.supportSystems.nylonWheel.title" data-i18n-html="true">RUEDA<br>NYLON</b>
-                    <span class="estandar" data-i18n="productPage.standard">ESTÁNDAR</span>
-                </h1>
-                <p class="producto-descripcion" data-i18n="productPage.supportSystems.nylonWheel.description1" data-i18n-html="true">
-                    Desarrollada bajo nuestra tecnología <strong>ESTÁNDAR</strong> asegura un excelente rendimiento y resistencia en el uso diario.
-                </p>
-                <p class="producto-descripcion" data-i18n="productPage.supportSystems.nylonWheel.description2" data-i18n-html="true">
-                    Ampliamente utilizada en la industria del mueble, <strong>destacándose por su suavidad de desplazamiento y facilidad de instalación.</strong>
-                </p>
-                <div class="diagrama-tecnico">
-                    <img src="/assets/rueda nylon/tabla.png" alt="Diagrama técnico Rueda Nylon">
+                <div class="image-sticky-container">
+                    <img src="/assets/rueda nylon/RUEDA NYLON.JPG" alt="Rueda Nylon" class="active" data-section="descripcion">
+                    <img src="/assets/rueda nylon/dibujo de planos .png" alt="Planos Rueda Nylon" data-section="especificaciones">
+                    <img src="/assets/rueda nylon/tabla.png" alt="Diagrama técnico" data-section="codazos">
                 </div>
             </div>
+
+            <!-- Contenedor de textos -->
             <div class="right-content">
-                <p class="specs-intro" data-i18n="productPage.supportSystems.nylonWheel.specs" data-i18n-html="true">
-                    Fabricadas en nylon de <strong>alta calidad</strong> con componentes de acero, ofrecen una <strong>solución versátil y duradera</strong> para todo tipo de amoblamientos.
-                </p>
-            </div>
-            <div class="right-content">
-                <div class="specs-table-image">
-                    <img src="/assets/rueda nylon/dibujo de planos .png" alt="Planos Rueda Nylon">
-                    <img src="/assets/rueda nylon/200 unidases .png" alt="Especificaciones Rueda Nylon">
-                    <img src="/assets/rueda nylon/negro.png" alt="Rueda Nylon Negro">
-                    <img src="/assets/rueda nylon/peso.png" alt="Peso Rueda Nylon">
+                <!-- Sección 1: Descripción -->
+                <div class="text-section" data-section="descripcion">
+                    <div class="badge-thowel">
+                        <img src="/assets/rueda nylon/acero.png" alt="Acero">
+                    </div>
+                    <h1 class="producto-titulo">
+                        <b>RUEDA<br>NYLON</b>
+                        <span class="estandar">ESTÁNDAR</span>
+                    </h1>
+                    <p class="producto-descripcion">
+                        Desarrollada bajo nuestra tecnología <strong>ESTÁNDAR</strong> asegura un excelente rendimiento y resistencia en el uso diario.
+                    </p>
+                    <p class="producto-descripcion">
+                        Ampliamente utilizada en la industria del mueble, <strong>destacándose por su suavidad de desplazamiento y facilidad de instalación.</strong>
+                    </p>
+                </div>
+
+                <!-- Sección 2: Especificaciones -->
+                <div class="text-section" data-section="especificaciones">
+                    <p class="specs-intro">
+                        Fabricadas en nylon de <strong>alta calidad</strong> con componentes de acero, ofrecen una <strong>solución versátil y duradera</strong> para todo tipo de amoblamientos.
+                    </p>
+                    <div class="specs-table-image">
+                        <img src="/assets/rueda nylon/200 unidases .png" alt="Especificaciones Rueda Nylon">
+                        <img src="/assets/rueda nylon/negro.png" alt="Rueda Nylon Negro">
+                        <img src="/assets/rueda nylon/peso.png" alt="Peso Rueda Nylon">
+                    </div>
+                </div>
+
+                <!-- Sección 3: Detalles -->
+                <div class="text-section" data-section="codazos">
+                    <p class="specs-intro">
+                        Desplazamiento suave y silencioso para muebles con movilidad.
+                    </p>
+                    <div class="diagrama-tecnico">
+                        <img src="/assets/rueda nylon/tabla.png" alt="Diagrama técnico Rueda Nylon">
+                    </div>
                 </div>
             </div>
         </div>
@@ -156,7 +188,7 @@
          PRODUCTOS SIMILARES - CAROUSEL
          ============================================ -->
     <section class="productos-similares">
-        <h2 class="similares-titulo" data-i18n="productPage.similarProducts">PRODUCTOS SIMILARES</h2>
+        <h2 class="similares-titulo">PRODUCTOS SIMILARES</h2>
         <div class="catalog-carousel">
             <!-- Navigation Arrows -->
             <button class="carousel-nav prev-btn" id="prevBtn">
@@ -292,12 +324,13 @@
                 <a href="#" class="hexagon hex-instagram" title="Instagram" target="_blank"><img src="/assets/INSTAGRAM.png" alt="Instagram"></a>
             </div>
             <div class="footer-content">
-                <p data-i18n="footer.copyright">&copy; 2024 THOWEL. Todos los derechos reservados.</p>
+                <p>&copy; 2024 THOWEL. Todos los derechos reservados.</p>
             </div>
         </div>
     </footer>
 
     <script src="/JS/common.js"></script>
+    <script src="/JS/Bisagras.js"></script>
     <script src="/JS/manijas.js"></script>
     <script src="/JS/i18n.js"></script>
 </body>

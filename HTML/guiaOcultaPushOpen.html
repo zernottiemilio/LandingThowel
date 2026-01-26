@@ -12,7 +12,6 @@
     <link rel="stylesheet" href="/CSS/responsive.css">
 </head>
 <body>
-    <!-- Navbar flotante -->
     <nav class="navbar">
         <!-- Logo mobile (solo visible en mobile, arriba a la izquierda) -->
         <a href="/index.html" class="logo-mobile"><img src="/assets/logoHeader.png" alt="THOWEL"></a>
@@ -74,60 +73,58 @@
             <li><a href="/HTML/contacto.html">CONTACTOS</a></li>        </ul>
     </nav>
 
-    <!-- Sección 1: Guía Oculta Push Open -->
-    <section class="producto-section section-1">
+    <!-- Sección Unificada con Efecto Scroll -->
+    <section class="producto-section producto-section-unified">
         <div class="dual-content">
+            <!-- Contenedor de imágenes sticky -->
             <div class="left-content">
-                <img src="/assets/Guia oculta push Open/dibujo de plano.png" alt="Guía Oculta Push Open">
+                <div class="image-sticky-container">
+                    <img src="/assets/Guia oculta push Open/dibujo de plano.png" alt="Producto" class="active" data-section="descripcion">
+                    <img src="/assets/Guia oculta push Open/GUIA OCULTA (2).JPG" alt="Ambiente" data-section="especificaciones">
+                </div>
             </div>
+
+            <!-- Contenedor de textos -->
             <div class="right-content">
-                <div class="badge-thowel">
+                <!-- Sección 1: Descripción -->
+                <div class="text-section" data-section="descripcion">
+<div class="badge-thowel">
                     <img src="/assets/Guia oculta push Open/acero.png" alt="Touch Badge">
                 </div>
                 <h1 class="producto-titulo">
-                    <b data-i18n="productPage.slides.hiddenSlidePush.title" data-i18n-html="true">GUÍA OCULTA<br>PUSH OPEN</b>
-                    <span class="touch" data-i18n="productPage.slides.hiddenSlidePush.tag">TOUCH</span>
+                    <b>GUÍA OCULTA<br>PUSH OPEN</b>
+                    <span class="touch">TOUCH</span>
                 </h1>
-                <p class="producto-descripcion" data-i18n="productPage.slides.hiddenSlidePush.description1" data-i18n-html="true">
+                <p class="producto-descripcion">
                     Desarrollada bajo nuestra tecnología <strong>TOUCH</strong> permite apertura con un simple toque, eliminando la necesidad de manijas.
                 </p>
-                <p class="producto-descripcion" data-i18n="productPage.slides.hiddenSlidePush.description2" data-i18n-html="true">
+                <p class="producto-descripcion">
                     Ideal para diseños minimalistas, <strong>destacándose por su funcionalidad innovadora y estética limpia.</strong>
                 </p>
                 <div class="diagrama-tecnico">
                     <img src="/assets/Guia oculta push Open/tabla.png" alt="Diagrama técnico">
                 </div>
-            </div>
-        </div>
-    </section>
+                </div>
 
-    <!-- Sección 2: Especificaciones -->
-    <section class="producto-section section-2">
-        <div class="dual-content">
-            <div class="left-content">
-                <img src="/assets/Guia oculta push Open/GUIA OCULTA (2).JPG" alt="Ambiente Guía Push">
-            </div>
-            <div class="right-content">
-                <div class="specs-all-logos">
+                <!-- Sección 2: Especificaciones -->
+                <div class="text-section" data-section="especificaciones">
+<div class="specs-all-logos">
                     <img src="/assets/Guia oculta push Open/acero.png" alt="Material Acero">
                     <img src="/assets/Guia oculta push Open/peso.png" alt="Especificaciones de peso">
                     <img src="/assets/Guia oculta push Open/10 unidades.png" alt="10 unidades">
                     <img src="/assets/Guia oculta push Open/80 miul cilcos de uso .png" alt="80mil ciclos de uso">
                 </div>
-                <p class="specs-intro" data-i18n="productPage.slides.hiddenSlidePush.specs" data-i18n-html="true">
+                <p class="specs-intro">
                     Fabricadas en acero de <strong>alta calidad</strong> con mecanismos de precisión, ofrecen una <strong>solución innovadora y duradera</strong> para amoblamientos modernos.
                 </p>
+                </div>
             </div>
         </div>
     </section>
 
-
-    <!-- Sección 4: Video Elaborado -->
-   
-
     <!-- Sección 5: Productos Similares (Carousel) -->
     <section class="productos-similares">
-        <h2 class="similares-titulo" data-i18n="productPage.similarProducts">PRODUCTOS SIMILARES</h2>
+        <h2 class="similares-titulo">PRODUCTOS SIMILARES</h2>
         <div class="catalog-carousel">
             <button class="carousel-nav prev-btn" id="prevBtn"><i class="fas fa-chevron-left"></i></button>
             <button class="carousel-nav next-btn" id="nextBtn"><i class="fas fa-chevron-right"></i></button>
@@ -195,7 +192,6 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="footer-red">
         <div class="footer-container">
             <div class="footer-hexagons">
@@ -203,13 +199,12 @@
                 <a href="#" class="hexagon hex-instagram" title="Instagram" target="_blank"><img src="/assets/INSTAGRAM.png" alt="Instagram"></a>
             </div>
             <div class="footer-content">
-                <p data-i18n="footer.copyright">&copy; 2025 THOWEL. Todos los derechos reservados.</p>
+                <p>&copy; 2025 THOWEL. Todos los derechos reservados.</p>
             </div>
         </div>
     </footer>
 
     <script src="/JS/common.js"></script>
-    <script src="/JS/guiasCorrederas.js"></script>
+    <script src="/JS/Bisagras.js"></script>
     <script src="/JS/i18n.js"></script>
 </body>
-</html>

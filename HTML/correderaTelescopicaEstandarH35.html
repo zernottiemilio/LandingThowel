@@ -12,7 +12,6 @@
     <link rel="stylesheet" href="/CSS/responsive.css">
 </head>
 <body>
-    <!-- Navbar flotante -->
     <nav class="navbar">
         <!-- Logo mobile (solo visible en mobile, arriba a la izquierda) -->
         <a href="/index.html" class="logo-mobile"><img src="/assets/logoHeader.png" alt="THOWEL"></a>
@@ -74,66 +73,61 @@
             <li><a href="/HTML/sobreNosotros.html">SOBRE NOSOTROS</a></li>
             <li><a href="/HTML/contacto.html">CONTACTOS</a></li>        </ul>
     </nav>
-
-
-    <!-- Sección 1: Corredera Telescópica Estándar H35 -->
-    <section class="producto-section section-1">
+    <!-- Sección Unificada con Efecto Scroll -->
+    <section class="producto-section producto-section-unified">
         <div class="dual-content">
+            <!-- Contenedor de imágenes sticky -->
             <div class="left-content">
-                <img src="/assets/corredera telescópica estándar H35/CORREDERA TELESCOPICA ESTANDAR H35 (2).JPG" alt="Corredera Telescópica Estándar H35">
+                <div class="image-sticky-container">
+                    <img src="/assets/corredera telescópica estándar H35/CORREDERA TELESCOPICA ESTANDAR H35 (2).JPG" alt="Producto" class="active" data-section="descripcion">
+                    <img src="/assets/corredera telescópica estándar H35/CORREDERA TELESCOPICA ESTANDAR H35.JPG" alt="Ambiente" data-section="especificaciones">
+                </div>
             </div>
+
+            <!-- Contenedor de textos -->
             <div class="right-content">
-                <div class="badge-thowel">
+                <!-- Sección 1: Descripción -->
+                <div class="text-section" data-section="descripcion">
+<div class="badge-thowel">
                     <img src="/assets/estandar.png" alt="Estándar Badge">
                 </div>
                 <h1 class="producto-titulo">
-                    <b data-i18n="productPage.slides.telescopicSlideH35.title" data-i18n-html="true">CORREDERA<br>TELESCÓPICA</b>
-                    <span class="estandar" data-i18n="productPage.slides.telescopicSlideH35.tag">ESTÁNDAR H35</span>
+                    <b>CORREDERA<br>TELESCÓPICA</b>
+                    <span class="estandar">ESTÁNDAR H35</span>
                 </h1>
-                <p class="producto-descripcion" data-i18n="productPage.slides.telescopicSlideH35.description1" data-i18n-html="true">
+                <p class="producto-descripcion">
                     Desarrollada bajo nuestra tecnología <strong>ESTÁNDAR</strong> asegura un excelente rendimiento y resistencia en el uso diario.
                 </p>
-                <p class="producto-descripcion" data-i18n="productPage.slides.telescopicSlideH35.description2" data-i18n-html="true">
+                <p class="producto-descripcion">
                     Con <strong>80,000 ciclos de uso</strong> y capacidad de carga de <strong>20 unidades</strong>, ampliamente utilizada en la industria del mueble, destacándose por su fiabilidad y facilidad de instalación.
                 </p>
                 <div class="diagrama-tecnico">
                     <img src="/assets/corredera telescópica estándar H35/tabla.png" alt="Capacidad de carga">
                 </div>
-                <p class="specs-intro" data-i18n="productPage.slides.telescopicSlideH35.specs" data-i18n-html="true">
+                <p class="specs-intro">
                     Fabricadas en <strong>acero de alta calidad</strong> cumpliendo con estrictos estándares de producción, ofrecen una solución duradera y eficiente para todo tipo de cajones.
                 </p>
                 <div class="specs-table-image">
                     <img src="/assets/corredera telescópica estándar H35/tabla 2.png" alt="Especificaciones técnicas">
                 </div>
-            </div>
-        </div>
-    </section>
+                </div>
 
-    <!-- Sección 2: Especificaciones -->
-    <section class="producto-section section-2">
-        <div class="dual-content">
-            <div class="left-content">
-                <img src="/assets/corredera telescópica estándar H35/CORREDERA TELESCOPICA ESTANDAR H35.JPG" alt="Ambiente Corredera H35">
-            </div>
-            <div class="right-content">
-                <div class="specs-all-logos">
+                <!-- Sección 2: Especificaciones -->
+                <div class="text-section" data-section="especificaciones">
+<div class="specs-all-logos">
                     <img src="/assets/corredera telescópica estándar H35/acero.png" alt="Material Acero">
                     <img src="/assets/corredera telescópica estándar H35/peso.png" alt="Peso">
                     <img src="/assets/corredera telescópica estándar H35/20 unnidades.png" alt="20 unidades">
                     <img src="/assets/corredera telescópica estándar H35/80mil ciclos de uso.png" alt="80mil ciclos de uso">
                 </div>
+                </div>
             </div>
         </div>
     </section>
 
-
-
-    <!-- Sección 4: Video Elaborado -->
-    
-
     <!-- Sección 5: Productos Similares (Carousel) -->
     <section class="productos-similares">
-        <h2 class="similares-titulo" data-i18n="productPage.similarProducts">PRODUCTOS SIMILARES</h2>
+        <h2 class="similares-titulo">PRODUCTOS SIMILARES</h2>
         <div class="catalog-carousel">
             <button class="carousel-nav prev-btn" id="prevBtn"><i class="fas fa-chevron-left"></i></button>
             <button class="carousel-nav next-btn" id="nextBtn"><i class="fas fa-chevron-right"></i></button>
@@ -201,7 +195,6 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="footer-red">
         <div class="footer-container">
             <div class="footer-hexagons">
@@ -209,13 +202,12 @@
                 <a href="#" class="hexagon hex-instagram" title="Instagram" target="_blank"><img src="/assets/INSTAGRAM.png" alt="Instagram"></a>
             </div>
             <div class="footer-content">
-                <p data-i18n="footer.copyright">&copy; 2025 THOWEL. Todos los derechos reservados.</p>
+                <p>&copy; 2025 THOWEL. Todos los derechos reservados.</p>
             </div>
         </div>
     </footer>
 
     <script src="/JS/common.js"></script>
-    <script src="/JS/guiasCorrederas.js"></script>
+    <script src="/JS/Bisagras.js"></script>
     <script src="/JS/i18n.js"></script>
 </body>
-</html>

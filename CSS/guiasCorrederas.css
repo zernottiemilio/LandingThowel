@@ -1,11 +1,7 @@
 @import url('/CSS/responsive.css');
 @import url('/CSS/carouselYFooter.css');
 
-/* ========================================
-   GUÍAS Y CORREDERAS CSS - THOWEL (MEJORADO)
-   ======================================== */
-
-   @font-face {
+@font-face {
     font-family: 'Montserrat';
     src: url('../fonts/Montserrat-Regular.ttf') format('truetype');
     font-weight: 400;
@@ -59,7 +55,7 @@ body {
 }
 
 /* ========================================
-   NAVBAR - NAVIGATION (MEJORADO)
+   NAVBAR - NAVIGATION
    ======================================== */
 
 .navbar {
@@ -90,7 +86,7 @@ body {
     gap: 70px;
 }
 
-.navbar > ul > li {
+.navbar li {
     position: relative;
 }
 
@@ -107,7 +103,6 @@ body {
     font-size: 14px;
     background: transparent;
     white-space: nowrap;
-    display: block;
 }
 
 .navbar a:hover {
@@ -140,61 +135,48 @@ body {
     color: inherit;
 }
 
-/* ========================================
-   DROPDOWN PRINCIPAL (MEJORADO)
-   ======================================== */
-
+/* Dropdown Principal */
 .dropdown {
     position: absolute;
-    top: calc(100% + 5px);
-    left: 50%;
-    transform: translateX(-50%);
+    top: 100%;
+    left: 0;
     background: white;
-    min-width: 320px;
-    max-width: 400px;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
-    border-radius: 15px;
-    padding: 20px 0;
+    min-width: 280px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    padding: 15px 0;
     opacity: 0;
     visibility: hidden;
-    transform: translateX(-50%) translateY(-10px);
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
     z-index: 1001;
     text-align: left;
 }
 
-.navbar li:hover > .dropdown {
+.navbar li:hover .dropdown {
     opacity: 1;
     visibility: visible;
-    transform: translateX(-50%) translateY(0);
+    transform: translateY(0);
 }
 
-.dropdown > a {
+.dropdown a {
     display: block;
-    padding: 14px 25px;
-    color: #555;
-    font-size: 13px;
+    padding: 12px 20px;
+    color: #666;
+    font-size: 14px;
     text-transform: uppercase;
     border-radius: 0;
     white-space: nowrap;
     margin: 0;
     position: relative;
-    letter-spacing: 0.5px;
-    transition: all 0.3s ease;
 }
 
-.dropdown > a:hover {
-    background: rgba(231, 76, 60, 0.08);
+.dropdown a:hover {
+    background: rgba(231, 76, 60, 0.1);
     color: #e74c3c;
-    padding-left: 30px;
 }
 
-/* Removido: indicador visual de flechas para mantener consistencia con index */
-
-/* ========================================
-   SUBDROPDOWN (MEJORADO)
-   ======================================== */
-
+/* Dropdown secundario para BISAGRAS */
 .dropdown-item {
     position: relative;
 }
@@ -202,21 +184,20 @@ body {
 .subdropdown {
     position: absolute;
     top: 0;
-    left: calc(100% + 10px);
+    left: 100%;
     background: white;
-    min-width: 320px;
-    max-width: 380px;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.2);
-    border-radius: 15px;
-    padding: 20px 0;
+    min-width: 250px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    padding: 15px 0;
     opacity: 0;
     visibility: hidden;
-    transform: translateX(-15px);
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    transform: translateX(-10px);
+    transition: all 0.3s ease;
     z-index: 1002;
 }
 
-.dropdown-item:hover > .subdropdown {
+.dropdown-item:hover .subdropdown {
     opacity: 1;
     visibility: visible;
     transform: translateX(0);
@@ -224,28 +205,38 @@ body {
 
 .subdropdown a {
     display: block;
-    padding: 12px 25px;
-    color: #555;
-    font-size: 12px;
+    padding: 10px 20px;
+    color: #666;
+    font-size: 13px;
     text-transform: uppercase;
     border-radius: 0;
-    white-space: normal;
-    line-height: 1.4;
-    margin: 0;
-    letter-spacing: 0.3px;
-    transition: all 0.3s ease;
+    white-space: nowrap;
 }
 
 .subdropdown a:hover {
-    background: rgba(231, 76, 60, 0.08);
+    background: rgba(231, 76, 60, 0.1);
     color: #e74c3c;
-    padding-left: 30px;
 }
 
-/* Separadores visuales */
-.dropdown > a:not(:last-child),
-.subdropdown a:not(:last-child) {
-    border-bottom: 1px solid rgba(0,0,0,0.05);
+/* ========================================
+   HEADER SECTION
+   ======================================== */
+
+.header-section {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    z-index: 100;
+}
+
+.portada-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
 }
 
 /* ========================================
@@ -253,75 +244,66 @@ body {
    ======================================== */
 
 .producto-section {
-    width: 100%;
-    min-height: auto;
-    display: flex;
-    align-items: stretch;
-    margin: 0;
-    padding: 0;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: stretch;
+  margin: 0;
 }
 
 .dual-content {
-    display: flex;
-    width: 100%;
-    min-height: auto;
-    margin: 0;
-    padding: 0;
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
 }
 
 .left-content,
 .right-content {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0;
-    height: auto;
-    width: 50%;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  height: auto;
+  width: 50%;
 }
 
+/* izquierda (solo imagen, sin fondo beige) */
 .left-content {
-    background: none !important; 
+  background: none !important; 
 }
 
 .left-content img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
 }
 
+/* derecha (texto) */
 .right-content {
-    flex: 1;
-    flex-direction: column;
-    height: 100vh;
-    justify-content: center;
-    align-items: flex-start;
-    padding: 10px 60px;
-    background: #fff;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 60px;
+  background: #fff;
 }
+
 
 /* ========================================
-   SECCIÓN 1 - PRODUCTO PRINCIPAL
+   SECCIÓN 1 - BISAGRA SOFT CLOSING
    ======================================== */
 
 .section-1 .right-content {
-    background: white;
-    flex-direction: column;
-    height: 100vh;
-    min-height: 100vh;
-    align-items: flex-start;
-    justify-content: flex-start;
-    padding: 120px 60px 5px;
-    position: relative;
-}
-
-/* Para páginas con contenido extra en section-1 (soft closing y push open) */
-.section-1 .right-content:has(.specs-intro) {
-    height: auto;
-    min-height: 100vh;
-    padding-bottom: 60px;
+  background: white;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 120px 60px 40px;
+  position: relative;
 }
 
 .section-1 .left-content img {
@@ -329,85 +311,12 @@ body {
     width: 100vh;
 }
 
-/* GUIA OCULTA en soft closing - formato desktop normal */
-.section-1 .left-content img[src*="GUIA OCULTA"] {
-    width: 100%;
-    height: 100vh;
-    object-fit: cover;
-    object-position: center;
-    margin-top: -700px;
-}
-
-/* Estilos específicos para Soft Closing desktop */
-@media (min-width: 769px) {
-    /* Bajar especificaciones en todas las guías y correderas - desktop */
-    .section-2 .specs-all-logos {
-        margin-top: 150px;
-    }
-
-    /* Reducir espacio entre section-1 y section-2 en guías y correderas */
-    .section-1 {
-        padding-bottom: 20px !important;
-        margin-bottom: 0px;
-    }
-
-    .section-2 {
-        padding-top: 0px !important;
-        margin-top: 0px;
-        min-height: auto !important;
-        height: auto !important;
-    }
-
-    .section-2 .dual-content {
-        min-height: auto !important;
-        height: auto !important;
-    }
-
-    .section-2 .left-content {
-        min-height: auto !important;
-        height: auto !important;
-    }
-
-    .section-2 .right-content {
-        min-height: auto !important;
-        height: auto !important;
-        padding-top: 0px !important;
-        padding-bottom: 0px !important;
-    }
-
-    /* Solo para corredera telescópica soft closing que tiene ambiente.png */
-    body:has(img[src*="ambiente.png"]) .section-2 .specs-all-logos {
-        margin-top: -200px;
-        margin-bottom: 0px;
-        padding-bottom: 0px;
-    }
-
-    body:has(img[src*="ambiente.png"]) .section-2:has(img[alt="Ambiente Corredera Soft Closing"]) {
-        padding-top: 50px;
-        padding-bottom: 50px;
-        margin-bottom: -50px;
-        min-height: auto;
-        height: auto;
-    }
-
-    body:has(img[src*="ambiente.png"]) .section-2 .right-content {
-        padding: 20px !important;
-        min-height: auto !important;
-        height: auto !important;
-    }
-
-    body:has(img[src*="ambiente.png"]) .section-2 .dual-content {
-        min-height: auto !important;
-        height: auto !important;
-    }
-
-    body:has(img[src*="ambiente.png"]) .section-2 .left-content img[alt="Ambiente Corredera Soft Closing"] {
-        width: 100%;
-        height: 100vh;
-        object-fit: cover;
-        object-position: top center;
-        margin-top: -700px;
-    }
+.section-1 .right-content {
+    background: white;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    position: relative;
 }
 
 .badge-thowel {
@@ -429,26 +338,12 @@ body {
     margin-bottom: 30px;
 }
 
-/* Estilos específicos para cada tecnología */
+.estandar,
 .smooth {
-    font-size: clamp(28px, 4vw, 60px);
-    font-weight: 400;
-    color: #4CAF50;
-    margin-bottom: 20px;
-}
-
-.touch {
-    font-size: clamp(28px, 4vw, 60px);
-    font-weight: 400;
-    color: #2196F3;
-    margin-bottom: 20px;
-}
-
-.estandar {
-    font-size: clamp(28px, 4vw, 60px);
-    font-weight: 400;
-    color: #e74c3c;
-    margin-bottom: 20px;
+  font-size: clamp(28px, 4vw, 60px);
+  font-weight: 400;
+  color: #e74c3c;
+  margin-bottom: 20px;
 }
 
 .producto-descripcion {
@@ -460,191 +355,93 @@ body {
 }
 
 .diagrama-tecnico {
-    margin-top: 30px;
-    margin-bottom: -50px;
-    display: flex;
-    justify-content: flex-start;
-    width: 100%;
+    margin-top: 0px;
+    margin-left: 150px;
 }
 
 .diagrama-tecnico img {
-    max-width: 450px;
-    width: 100%;
-    height: auto;
+  max-width: 350px;
+  width: 100%;
+  height: auto;
 }
 
 /* ========================================
-   SECCIÓN 2 - ESPECIFICACIONES
+   SECCIÓN 2 - VIDEO DEL HERRAJE SOLO
    ======================================== */
-
-.section-2 {
-    padding-top: 100px;
-    padding-bottom: 100px;
-    margin-bottom: 0;
-    position: relative;
-    z-index: 10;
-}
 
 .section-2 .left-content {
     background: white;
     padding: 0;
-    margin-top: 0;
-    align-items: flex-start;
 }
 
 .section-2 .left-content img {
-    object-position: top center;
-    width: 50vw;
-    height: 100vh;
+    object-position: center;
+    width: 100vh;
+    height: 100%;
     object-fit: cover;
-    margin-top: 0;
 }
 
 .section-2 .right-content {
     background: white;
     flex-direction: column;
-    min-height: 100vh;
-    height: auto;
     align-items: flex-start;
     justify-content: center;
-    padding-top: 20px;
+}
+
+.video-container {
+    width: 100%;
+}
+
+.video-titulo {
+    font-size: 36px;
+    font-weight: 900;
+    color: #000;
+    margin-bottom: 30px;
+}
+
+.video-container img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
 }
 
 .specs-intro {
-    font-size: 28px;
+    font-size: 18px;
     color: #1e3a8a;
     line-height: 1.8;
-    margin-top: 60px;
     margin-bottom: 30px;
     max-width: 600px;
-    font-weight: 600;
 }
 
-/* specs-intro y specs-table-image en section-1 SOLO para páginas con contenido extra */
-.section-1 .right-content:has(.specs-intro) .specs-intro {
-    margin-top: 40px;
-    margin-bottom: 30px;
-}
-
-.section-1 .right-content:has(.specs-intro) .specs-table-image {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 30px 40px;
-    align-items: center;
-    justify-content: flex-start;
-    margin-bottom: 40px;
-}
-
-.section-1 .right-content:has(.specs-intro) .specs-table-image img {
-    max-width: 500px;
-    width: auto;
-    height: auto;
-    object-fit: contain;
-}
-
-/* Grupo de todos los logos en fila horizontal */
 .specs-all-logos {
-    display: flex;
-    flex-direction: row;
-    gap: 30px;
-    margin-bottom: 20px;
-    margin-top: 40px;
-    align-items: center;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin: 30px 0;
+    width: 100%;
+    max-width: 500px;
 }
 
 .specs-all-logos img {
-    max-width: 180px;
-    width: auto;
+    width: 100%;
     height: auto;
     object-fit: contain;
-}
-
-/* Solo para secciones normales (NO corredera Z) - 2 filas de 2 imágenes */
-.section-2 .specs-all-logos {
-    max-width: 400px;
-}
-
-.section-2 .specs-all-logos img {
-    width: calc(50% - 15px);
-}
-
-/* Columna para logos apilados verticalmente */
-.logo-column {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    gap: 15px;
-    align-items: center;
-}
-
-.logo-column img {
-    max-width: 180px;
-    width: auto;
-    height: auto;
-    object-fit: contain;
+    display: block;
 }
 
 .specs-table-image {
     width: 100%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 30px 40px;
-    align-items: center;
-    justify-content: flex-start;
+    max-width: 600px;
 }
 
 .specs-table-image img {
-    max-width: 120px;
-    width: auto;
+    width: 100%;
     height: auto;
     display: block;
 }
 
-.specs-table-image img[src*="tabla"],
-.specs-table-image img[src*="Tabla"] {
-    max-width: 450px !important;
-    width: 100% !important;
-}
-
-/* Logos pequeños (acero, negro, plastico) */
-.specs-table-image img[src*="acero"],
-.specs-table-image img[src*="negro"],
-.specs-table-image img[src*="plastico"] {
-    max-width: 100px;
-}
-
-/* Imagen de peso - más grande */
-.specs-table-image img[src*="peso"] {
-    max-width: 200px;
-}
-
-/* Iconos de información (unidades, ciclos) */
-.specs-table-image img[src*="unidades"],
-.specs-table-image img[src*="ciclos"] {
-    max-width: 150px;
-}
-
-/* Tablas técnicas grandes */
-.specs-table-image img[src*="tabla"],
-.specs-table-image img[src*="especificaciones"] {
-    max-width: 450px;
-    flex-basis: 100%;
-}
-
-/* Dibujos técnicos y planos */
-.specs-table-image img[src*="dibujo"],
-.specs-table-image img[src*="plano"],
-.specs-table-image img[src*="componentes"] {
-    max-width: 500px;
-    flex-basis: 100%;
-}
-
 /* ========================================
-   SECCIÓN 3 - VARIANTES
+   SECCIÓN 3 - CODAZOS
    ======================================== */
 
 .section-3 .left-content {
@@ -660,53 +457,22 @@ body {
 .section-3 .right-content {
     background: white;
     flex-direction: column;
-    height: 100vh;
     align-items: flex-start;
     justify-content: center;
 }
 
-.variantes-imagenes {
+.codazos-imagenes {
     width: 100%;
     max-width: 600px;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 30px 40px;
-    align-items: center;
+    flex-direction: column;
+    gap: 30px;
 }
 
-.variantes-imagenes img {
-    max-width: 120px;
-    width: auto;
+.codazos-imagenes img {
+    width: 100%;
     height: auto;
     display: block;
-}
-
-/* Logos pequeños */
-.variantes-imagenes img[src*="acero"],
-.variantes-imagenes img[src*="negro"],
-.variantes-imagenes img[src*="plastico"] {
-    max-width: 100px;
-}
-
-/* Imagen de peso - más grande */
-.variantes-imagenes img[src*="peso"] {
-    max-width: 200px;
-}
-
-/* Imágenes medianas (unidades, ciclos) */
-.variantes-imagenes img[src*="unidades"],
-.variantes-imagenes img[src*="ciclos"] {
-    max-width: 150px;
-}
-
-/* Imágenes de variantes grandes (fotos de producto, ambiente) */
-.variantes-imagenes img[src*="DETALLE"],
-.variantes-imagenes img[src*="detalle"],
-.variantes-imagenes img[src*="ambiente"],
-.variantes-imagenes img[src*="real"] {
-    max-width: 400px;
-    flex-basis: 100%;
 }
 
 /* ========================================
@@ -716,7 +482,6 @@ body {
 .section-4 .left-content {
     background: #e8e8e8;
     flex-direction: column;
-    height: 100vh;
     align-items: flex-start;
 }
 
@@ -726,13 +491,6 @@ body {
 
 .video-elaborado-container {
     width: 100%;
-}
-
-.video-titulo {
-    font-size: 36px;
-    font-weight: 900;
-    color: #000;
-    margin-bottom: 30px;
 }
 
 .video-placeholder img {
@@ -753,8 +511,6 @@ body {
     display: flex;
     flex-direction: column;
     height: 100vh;
-    position: relative;
-    z-index: 5;
 }
 
 .similares-titulo {
@@ -773,15 +529,13 @@ body {
     flex: 1;
     height: auto;
     min-height: auto;
-    overflow: hidden;
+    overflow: visible;
 }
 
 .productos-similares .catalog-track {
     height: 100%;
     min-height: 100%;
     width: auto;
-    display: flex;
-    flex-wrap: nowrap;
 }
 
 .productos-similares .catalog-item {
@@ -793,717 +547,459 @@ body {
 /* Los estilos del carousel y footer se importan desde carouselYFooter.css */
 
 /* ========================================
-   ESTILOS ESPECÍFICOS POR PÁGINA
-   ======================================== */
-
-/* Corredera Push Open - Ajustar para que las especificaciones sean visibles */
-.page-corredera-push .section-2 .left-content {
-    margin-top: -50px;
-}
-
-.page-corredera-push .section-2 .left-content img {
-    height: 90vh;
-}
-
-.page-corredera-push .productos-similares {
-    margin-top: 0;
-}
-
-/* Manijas - Imagen de ambiente más alta */
-.section-2 .left-content img[alt="Ambiente Manija Barral"] {
-    height: 90vh;
-    width: 100vh;
-    object-fit: cover;
-}
-
-/* Corredera Z - Todo en una sola sección */
-.page-corredera-z .section-1 {
-    margin-top: 0;
-    padding-top: 0;
-}
-
-.page-corredera-z .section-1 .dual-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto;
-    width: 100%;
-    min-height: auto;
-    margin-top: 0;
-    padding-top: 0;
-}
-
-.page-corredera-z .section-1 .left-content {
-    width: 100%;
-    height: auto;
-}
-
-.page-corredera-z .section-1 .left-content:first-of-type {
-    margin-top: 0;
-    padding-top: 0;
-}
-
-.page-corredera-z .section-1 .left-content img {
-    width: 100%;
-    height: 95vh;
-    object-fit: cover;
-    display: block;
-}
-
-.page-corredera-z .section-1 .left-content img[alt="Corredera Z Detalle"] {
-    height: 70vh;
-}
-
-.page-corredera-z .section-1 .left-content:last-of-type {
-    margin-top: -300px;
-}
-
-.page-corredera-z .section-1 .right-content {
-    width: 100%;
-    height: auto;
-    padding: 120px 60px 40px 60px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-}
-
-.page-corredera-z .section-1 .right-content:first-of-type {
-    padding-top: 120px;
-}
-
-.page-corredera-z .section-1 .right-content:last-of-type {
-    margin-top: -160px;
-    padding-top: 20px;
-}
-
-.page-corredera-z .section-1 .specs-all-logos {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 5px;
-    row-gap: 5px;
-    column-gap: 20px;
-    margin-top: 20px;
-    align-items: start;
-    justify-items: start;
-}
-
-.page-corredera-z .section-1 .right-content:last-of-type .specs-all-logos {
-    margin-top: 0;
-}
-
-.page-corredera-z .section-1 .specs-intro {
-    margin-top: 30px;
-}
-
-.page-corredera-z .productos-similares {
-    margin-top: 0;
-    padding-top: 40px;
-}
-
-/* ========================================
    RESPONSIVE
    ======================================== */
 
+/* Tablet Grande */
+@media (max-width: 1200px) {
+    .section-1 .right-content {
+        padding: 100px 40px 40px;
+    }
+
+    .badge-thowel {
+        top: 110px;
+        right: 60px;
+    }
+
+    .badge-thowel img {
+        width: 100px;
+    }
+
+    .producto-titulo {
+        font-size: 56px;
+    }
+
+    .diagrama-tecnico {
+        margin-left: 80px;
+    }
+
+    .diagrama-tecnico img {
+        max-width: 300px;
+    }
+}
+
+/* Tablet */
 @media (max-width: 1024px) {
-    .navbar {
-        padding: 5px 30px;
-    }
-    
-    .navbar ul {
-        gap: 30px;
-    }
-    
-    .dropdown {
-        min-width: 280px;
-    }
-    
-    .subdropdown {
-        min-width: 260px;
-    }
-    
     .dual-content {
         flex-direction: column;
-        height: auto;
         min-height: auto;
     }
 
     .left-content,
     .right-content {
         width: 100%;
-        min-height: auto;
+        min-height: 50vh;
     }
-    
+
+    .section-1 .left-content img,
+    .section-2 .left-content img,
+    .section-3 .left-content img {
+        width: 100%;
+        height: 50vh;
+        object-fit: cover;
+    }
+
+    .section-1 .right-content {
+        padding: 80px 50px 50px;
+        min-height: 50vh;
+        justify-content: flex-start;
+    }
+
+    .section-2 .right-content,
+    .section-3 .right-content {
+        padding: 50px;
+        min-height: 50vh;
+    }
+
+    .badge-thowel {
+        top: 90px;
+        right: 40px;
+    }
+
+    .badge-thowel img {
+        width: 80px;
+    }
+
     .producto-titulo {
-        font-size: 36px;
+        font-size: 48px;
+        margin-bottom: 20px;
     }
-    
-    .catalog-slide {
-        gap: 15px;
-        padding: 15px;
+
+    .estandar {
+        font-size: 40px;
     }
-    
-    .catalog-overlay-text {
-        font-size: 12px;
-        padding: 15px;
+
+    .producto-descripcion {
+        font-size: 16px;
+        margin-bottom: 15px;
+    }
+
+    .diagrama-tecnico {
+        margin-top: 20px;
+        margin-left: 0;
+    }
+
+    .diagrama-tecnico img {
+        max-width: 280px;
+    }
+
+    .specs-intro {
+        font-size: 16px;
+        margin-bottom: 25px;
+    }
+
+    .codazos-imagenes {
+        gap: 20px;
+        height: auto;
     }
 }
 
+/* Mobile */
 @media (max-width: 768px) {
-    .navbar {
-        padding: 5px 20px;
-        border-radius: 30px;
-    }
-
-    .navbar ul {
-        gap: 15px;
-    }
-
-    .navbar a {
-        font-size: 11px;
-        padding: 8px 12px;
-        margin: 8px;
-    }
-
-    .dropdown {
-        min-width: 250px;
-        left: 0;
-        transform: none;
-    }
-
-    .navbar li:hover > .dropdown {
-        transform: translateY(0);
-    }
-
-    .subdropdown {
-        min-width: 220px;
-        left: 100%;
-    }
-
-    /* Reducir espacios generales en todas las secciones */
-    .producto-section {
-        padding: 5px 0 !important;
-        margin: 0 !important;
-    }
-
-    .dual-content {
-        gap: 0px !important;
-        padding: 0 !important;
-        margin: 0 !important;
-    }
-
     .left-content,
     .right-content {
-        padding: 5px 15px !important;
-        margin: 0 !important;
+        min-height: auto;
     }
 
-    .left-content img {
-        margin: 0 !important;
+    .section-1 .left-content img,
+    .section-2 .left-content img,
+    .section-3 .left-content img {
+        height: 40vh;
+        min-height: 300px;
     }
 
-    /* Bajar la imagen del producto en la sección 2 para evitar superposición */
-    .section-2 .left-content {
-        margin-top: 5px !important;
-        order: 3 !important;
-        padding: 5px 15px !important;
-    }
-
-    .section-2 .left-content img {
-        margin: 0 !important;
-        max-height: 350px !important;
-        object-fit: contain !important;
-    }
-
-    /* Imagen específica de guía oculta push open - más alta y ancho completo */
-    .section-2 .left-content img[src*="GUIA OCULTA (2)"] {
-        width: 100vw !important;
-        max-width: 100vw !important;
-        max-height: 500px !important;
-        min-height: 450px !important;
-        object-fit: cover !important;
-        margin-left: -15px !important;
-        margin-right: -15px !important;
-    }
-
-    /* Asegurar orden correcto en sección 2 */
-    .section-2 .right-content {
-        order: 1 !important;
-        padding: 10px 15px !important;
-    }
-
-    .section-1 .left-content,
     .section-1 .right-content {
-        padding: 5px 15px !important;
+        padding: 60px 30px 40px;
+        min-height: auto;
     }
 
-    /* Eliminar espacios de títulos y descripciones */
-    .producto-titulo {
-        margin: 0px 0 5px 0 !important;
-        padding: 0px 15px !important;
+    .section-2 .right-content,
+    .section-3 .right-content {
+        padding: 40px 30px;
+        min-height: auto;
+    }
+
+    .badge-thowel {
+        top: 70px;
+        right: 25px;
+    }
+
+    .badge-thowel img {
+        width: 60px;
     }
 
     .producto-titulo {
+        font-size: 36px;
+        margin-bottom: 15px;
+    }
+
+    .estandar {
         font-size: 32px;
+    }
+
+    .producto-descripcion {
+        font-size: 15px;
+        margin-bottom: 12px;
+    }
+
+    .diagrama-tecnico {
+        margin-top: 15px;
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .diagrama-tecnico img {
+        max-width: 100%;
+        width: 250px;
+    }
+
+    .specs-intro {
+        font-size: 15px;
+        margin-bottom: 20px;
+    }
+
+    .specs-table-image {
+        max-width: 100%;
+    }
+
+    .codazos-imagenes {
+        gap: 15px;
     }
 
     .similares-titulo {
         font-size: 28px;
+        padding: 0 30px;
+    }
+}
+
+/* Mobile Pequeño */
+@media (max-width: 480px) {
+    .section-1 .right-content {
+        padding: 50px 20px 30px;
     }
 
-    /* Carousel en mobile */
-    .catalog-carousel,
-    .productos-similares .catalog-carousel {
-        overflow-x: auto;
-        overflow-y: visible;
-        -webkit-overflow-scrolling: touch;
+    .section-2 .right-content,
+    .section-3 .right-content {
+        padding: 30px 20px;
     }
 
-    .catalog-track,
-    .productos-similares .catalog-track {
-        width: auto;
-        flex-wrap: nowrap;
-        gap: 12px;
-        transition: none;
+    .badge-thowel {
+        top: 60px;
+        right: 15px;
     }
 
-    .catalog-slide {
-        flex-wrap: nowrap;
-        gap: 12px;
-        padding: 0;
-        flex-shrink: 0;
-        width: auto;
+    .badge-thowel img {
+        width: 50px;
     }
 
-    .catalog-item,
-    .productos-similares .catalog-item {
-        flex: 0 0 auto;
-        min-width: 180px;
-        max-width: 180px;
-        width: 180px;
-        height: 240px;
+    .producto-titulo {
+        font-size: 28px;
+        margin-bottom: 12px;
     }
 
-    /* Items directos en track (sin slides) */
-    .catalog-track > .catalog-item,
-    .productos-similares .catalog-track > .catalog-item {
-        margin-right: 12px;
+    .estandar {
+        font-size: 26px;
     }
 
-    .catalog-track > .catalog-item:last-child,
-    .productos-similares .catalog-track > .catalog-item:last-child {
-        margin-right: 0;
+    .producto-descripcion {
+        font-size: 14px;
+        margin-bottom: 10px;
     }
 
-    .carousel-nav {
-        width: 40px;
-        height: 40px;
+    .diagrama-tecnico img {
+        width: 200px;
+    }
+
+    .specs-intro {
         font-size: 14px;
     }
 
-    .prev-btn {
-        left: 10px;
+    .similares-titulo {
+        font-size: 24px;
+        padding: 0 20px;
+    }
+}
+
+/* ========================================
+   SECCIÓN UNIFICADA CON EFECTO SCROLL
+   ======================================== */
+
+.producto-section-unified {
+    min-height: 200vh;
+    width: 100%;
+    padding-top: 0;
+}
+
+.producto-section-unified.three-sections {
+    min-height: 300vh;
+}
+
+.producto-section-unified .dual-content {
+    min-height: 200vh;
+    display: flex !important;
+    flex-direction: row !important;
+    width: 100% !important;
+    margin: 0 !important;
+}
+
+.producto-section-unified.three-sections .dual-content {
+    min-height: 300vh;
+}
+
+/* Contenedor izquierdo para sticky */
+.producto-section-unified .left-content {
+    position: relative !important;
+    flex: 1 !important;
+    display: flex !important;
+    align-items: stretch !important;
+    justify-content: stretch !important;
+    width: 50% !important;
+    height: auto !important;
+    padding: 0 !important;
+    background: none !important;
+}
+
+/* Contenedor de imágenes sticky */
+.producto-section-unified .image-sticky-container {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    display: block;
+}
+
+.producto-section-unified .image-sticky-container img {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center !important;
+    display: block !important;
+    opacity: 0;
+    transition: opacity 0.6s ease;
+    pointer-events: none;
+}
+
+/* Forzar la primera imagen visible desde el inicio */
+.producto-section-unified .image-sticky-container img:first-child {
+    opacity: 1;
+    z-index: 2;
+}
+
+.producto-section-unified .image-sticky-container img.active {
+    opacity: 1;
+    z-index: 3;
+}
+
+/* Contenedor de textos */
+.producto-section-unified .right-content {
+    display: flex !important;
+    flex-direction: column !important;
+    flex: 1 !important;
+    width: 50% !important;
+    align-items: flex-start !important;
+    justify-content: flex-start !important;
+    padding: 0 !important;
+    background: #f5f5f5 !important;
+}
+
+.producto-section-unified .text-section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 60px;
+    background: #f5f5f5;
+}
+
+.producto-section-unified .text-section:first-child {
+    padding-top: 180px;
+}
+
+/* Desktop - asegurar sticky */
+@media (min-width: 1201px) {
+    .producto-section-unified {
+        min-height: 200vh;
+        padding-top: 0;
     }
 
-    .next-btn {
-        right: 10px;
+    .producto-section-unified.three-sections {
+        min-height: 300vh;
     }
 
-    .indicator {
-        width: 30px;
-        height: 30px;
+    .producto-section-unified.three-sections .dual-content {
+        min-height: 300vh;
     }
 
-    /* Ajustes para imágenes pequeñas en móviles */
-    .specs-table-image,
-    .variantes-imagenes {
-        gap: 5px !important;
-        justify-content: center;
-        margin: 0 !important;
-        padding: 0 !important;
+    .producto-section-unified .image-sticky-container {
+        position: sticky;
+        top: 0;
+        height: 100vh;
     }
 
-    .specs-table-image img,
-    .variantes-imagenes img {
-        max-width: 80px;
-        margin: 0 !important;
-        padding: 0 !important;
+    .producto-section-unified .text-section {
+        padding: 60px;
+        min-height: 100vh;
+    }
+}
+
+/* Tablet */
+@media (max-width: 1200px) {
+    .producto-section-unified {
+        min-height: auto !important;
+        padding-top: 80px !important;
     }
 
-    /* Reducir espacio entre especificaciones y tablas */
-    .specs-intro {
-        margin: 0 !important;
-        padding: 0px 15px !important;
-    }
-
-    .diagrama-tecnico {
-        margin: 0 !important;
-        padding: 0 !important;
-    }
-
-    .specs-table-image img[src*="tabla"],
-    .specs-table-image img[src*="Tabla"] {
-        margin: 0 !important;
-        padding: 0 !important;
-    }
-
-    /* Eliminar espacios de los contenedores de producto */
-    .producto-descripcion {
-        margin: 0px 0 3px 0 !important;
-        padding: 0px 15px !important;
-    }
-
-    /* SPECS-ALL-LOGOS - Grid 2x2 en móvil */
-    .section-2 .specs-all-logos,
-    .specs-all-logos {
-        display: grid !important;
-        grid-template-columns: repeat(2, 1fr) !important;
-        row-gap: 10px !important;
-        column-gap: 10px !important;
-        justify-items: center !important;
-        align-items: center !important;
-        margin-top: 15px !important;
-        margin-bottom: 15px !important;
-        max-width: 280px !important;
-        margin-left: auto !important;
-        margin-right: auto !important;
-    }
-
-    .section-2 .specs-all-logos img,
-    .specs-all-logos img {
-        max-width: 130px !important;
-        min-width: 120px !important;
-        width: 130px !important;
-        height: auto !important;
-        object-fit: contain !important;
-        margin: 0 !important;
-        transform: none !important;
-    }
-
-    /* Imágenes de peso un poco más grandes */
-    .section-2 .specs-all-logos img[src*="peso"],
-    .specs-all-logos img[src*="peso"] {
-        max-width: 150px !important;
-        width: 150px !important;
-    }
-
-    /* Ciclos y unidades tamaño medio */
-    .section-2 .specs-all-logos img[src*="ciclos"],
-    .section-2 .specs-all-logos img[src*="unidades"],
-    .section-2 .specs-all-logos img[src*="mil"],
-    .specs-all-logos img[src*="ciclos"],
-    .specs-all-logos img[src*="unidades"],
-    .specs-all-logos img[src*="mil"] {
-        max-width: 140px !important;
-        width: 140px !important;
-    }
-
-    /* Acero y badges más pequeños */
-    .section-2 .specs-all-logos img[src*="acero"],
-    .specs-all-logos img[src*="acero"] {
-        max-width: 120px !important;
-        width: 120px !important;
-    }
-
-    /* Ajustar badge de acero al lado de SMOOTH en móvil */
-    .section-1 .badge-thowel {
-        position: relative !important;
-        top: auto !important;
-        right: auto !important;
-        display: inline-block !important;
-        margin-left: 140px !important;
-        vertical-align: middle !important;
-    }
-
-    .section-1 .badge-thowel img {
-        width: 60px !important;
-        height: auto !important;
-    }
-
-    .section-1 .producto-titulo {
-        display: flex !important;
-        flex-direction: row !important;
-        align-items: center !important;
-        flex-wrap: wrap !important;
-        gap: 10px !important;
-    }
-
-    /* Reducir espacios arriba y abajo de la sección 2 */
-    .section-2 .right-content {
-        padding: 20px 20px !important;
-        display: flex !important;
+    .producto-section-unified .dual-content {
         flex-direction: column !important;
-        justify-content: flex-start !important;
-        align-items: center !important;
-        position: relative !important;
+        min-height: auto !important;
     }
 
-    .section-2 .specs-intro {
-        margin-top: 0 !important;
-        margin-bottom: 15px !important;
-        padding: 0 20px !important;
-        padding-top: 0px !important;
-        font-size: 15px !important;
-        line-height: 1.6 !important;
-        text-align: center !important;
-        order: 1 !important;
+    .producto-section-unified .left-content {
         width: 100% !important;
+        height: auto !important;
         position: relative !important;
-        z-index: 10 !important;
     }
 
-    .section-2 .specs-all-logos {
-        order: 2 !important;
+    .producto-section-unified .image-sticky-container {
         position: relative !important;
-        z-index: 10 !important;
-        margin-top: -400px !important;
-        margin-bottom: 15px !important;
+        height: 60vh !important;
+        top: 0 !important;
     }
 
-    /* Asegurar que la sección 2 no tenga height fijo */
-    .section-2 {
+    .producto-section-unified .image-sticky-container img {
+        position: relative !important;
+        opacity: 1 !important;
+    }
+
+    .producto-section-unified .right-content {
+        width: 100% !important;
+    }
+
+    .producto-section-unified .text-section {
+        padding: 40px 30px !important;
         min-height: auto !important;
-        height: auto !important;
-        margin-bottom: 0px !important;
-        padding-bottom: 0px !important;
     }
 
-    .section-2 .dual-content {
-        flex-direction: column !important;
-        min-height: auto !important;
-        height: auto !important;
-        margin-bottom: 0px !important;
-        padding-bottom: 0px !important;
+    /* Mostrar todas las imágenes en móvil/tablet */
+    .producto-section-unified .image-sticky-container img:first-child,
+    .producto-section-unified .image-sticky-container img {
+        position: relative !important;
+        opacity: 1 !important;
+        margin-bottom: 20px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .producto-section-unified {
+        padding-top: 80px !important;
     }
 
-    /* Reducir espacio antes de productos similares */
-    .productos-similares {
-        margin-top: 0px !important;
-        padding-top: 20px !important;
-    }
-
-    .specs-table-image img[src*="tabla"],
-    .specs-table-image img[src*="dibujo"],
-    .specs-table-image img[src*="plano"],
-    .specs-table-image img[src*="componentes"] {
-        max-width: 300px;
-    }
-
-    .variantes-imagenes img[src*="DETALLE"],
-    .variantes-imagenes img[src*="ambiente"],
-    .variantes-imagenes img[src*="real"] {
-        max-width: 280px;
-    }
-
-    /* Guía Oculta 3D Soft Closing - Ajustes específicos móvil */
-    .section-1 .left-content img[src*="Guia oculta 3D soft closing/dibujo del plano"] {
-        max-width: 190px !important;
-        width: 190px !important;
-        height: auto !important;
-    }
-
-    /* Corredera Telescópica Push Open - dibujo del plano más grande */
-    .section-1 .left-content img[src*="corredera telescópica push Open/dibujo del plano"] {
-        max-width: 400px !important;
-        width: 400px !important;
-        height: auto !important;
-    }
-
-    .section-2 .left-content img[src*="iamgen real produ"] {
-        max-width: 450px !important;
-        width: 450px !important;
-        height: auto !important;
-        max-height: none !important;
-    }
-
-    /* Corredera Z - Responsive móvil */
-    .page-corredera-z .section-1 .dual-content {
-        display: flex;
-        flex-direction: column;
-        grid-template-columns: none;
-        grid-template-rows: none;
-    }
-
-    .page-corredera-z .section-1 .left-content {
-        width: 100vw !important;
-        margin-left: -15px !important;
-        margin-right: -15px !important;
-        padding: 0 !important;
-        order: 1;
-    }
-
-    .page-corredera-z .section-1 .left-content:first-of-type {
-        order: 0;
-        margin-top: 0;
-    }
-
-    .page-corredera-z .section-1 .left-content:last-of-type {
-        order: 2;
-        margin-top: 0;
-    }
-
-    .page-corredera-z .section-1 .left-content img {
-        width: 100vw !important;
+    .producto-section-unified .image-sticky-container {
         height: 50vh !important;
-        object-fit: cover !important;
     }
 
-    .page-corredera-z .section-1 .left-content img[alt="Corredera Z Detalle"] {
-        height: 40vh !important;
+    .producto-section-unified .text-section {
+        padding: 30px 20px !important;
     }
 
-    .page-corredera-z .section-1 .right-content {
-        width: 100%;
-        padding: 10px 15px !important;
-        order: 1;
+    /* Ajustar tamaños de elementos en mobile */
+    .producto-section-unified .producto-titulo {
+        font-size: 32px !important;
     }
 
-    .page-corredera-z .section-1 .right-content:first-of-type {
-        order: 1;
-        padding-top: 15px !important;
-        padding-bottom: 5px !important;
+    .producto-section-unified .producto-descripcion {
+        font-size: 14px !important;
     }
 
-    .page-corredera-z .section-1 .right-content:last-of-type {
-        order: 3;
-        margin-top: 0 !important;
-        padding-top: 5px !important;
-        padding-bottom: 5px !important;
+    .producto-section-unified .badge-thowel {
+        top: 20px !important;
+        right: 20px !important;
     }
 
-    .page-corredera-z .section-1 .specs-all-logos {
-        display: grid !important;
-        grid-template-columns: repeat(2, 1fr) !important;
-        gap: 10px !important;
-        row-gap: 5px !important;
-        column-gap: 10px !important;
-        margin-top: 5px !important;
-        margin-bottom: 0px !important;
-        justify-items: center !important;
-        align-items: center !important;
-        max-width: 320px !important;
-        margin-left: auto !important;
-        margin-right: auto !important;
+    .producto-section-unified .badge-thowel img {
+        width: 60px !important;
     }
 
-    .page-corredera-z .section-1 .specs-all-logos img {
-        max-width: 130px !important;
-        min-width: 100px !important;
-        width: 130px !important;
-        height: auto !important;
-        object-fit: contain !important;
+    .producto-section-unified .diagrama-tecnico img {
+        max-width: 250px !important;
     }
 
-    .page-corredera-z .section-1 .specs-intro {
-        margin-top: 5px !important;
-        margin-bottom: 0px !important;
-        font-size: 15px !important;
-        text-align: center;
+    .producto-section-unified .specs-table-image img {
+        max-width: 100% !important;
     }
 
-    .page-corredera-z .section-1 .producto-descripcion {
-        margin-top: 5px !important;
-        margin-bottom: 5px !important;
+    .producto-section-unified .codazos-imagenes {
+        flex-direction: column !important;
+        gap: 20px !important;
     }
 
-    .page-corredera-z .section-1 .producto-titulo {
-        margin-top: 5px !important;
-        margin-bottom: 5px !important;
+    .producto-section-unified .codazos-imagenes img {
+        max-width: 80% !important;
     }
-}
-/* ========================================
-   SCROLL REVEAL ANIMATIONS
-   ======================================== */
-
-/* Ocultar elementos antes de que aparezcan */
-.producto-section {
-    opacity: 0;
-    transform: translateY(50px);
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-}
-
-/* Clase que se agrega cuando el elemento es visible */
-.producto-section.reveal {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* Variaciones de animación para diferentes secciones */
-.section-1 {
-    transition-delay: 0.1s;
-}
-
-.section-2 {
-    transition-delay: 0.2s;
-}
-
-.section-3 {
-    transition-delay: 0.3s;
-}
-
-.section-4 {
-    transition-delay: 0.4s;
-}
-
-.productos-similares {
-    opacity: 0;
-    transform: translateY(50px);
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-    transition-delay: 0.5s;
-}
-
-.productos-similares.reveal {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* ========================================
-   SISTEMA DE TAMAÑOS ESTANDARIZADO
-   ======================================== */
-
-/* Badges y logos de tecnología (acero, plastico, etc.) */
-.badge-thowel img,
-.specs-table-image img[src*="acero"],
-.specs-table-image img[src*="negro"],
-.specs-table-image img[src*="plastico"] {
-    max-width: 100px;
-    height: auto;
-    object-fit: contain;
-}
-
-/* Imagen de peso - más grande */
-.specs-table-image img[src*="peso"] {
-    max-width: 200px;
-    height: auto;
-    object-fit: contain;
-}
-
-/* Iconos de información (unidades, ciclos) */
-.specs-table-image img[src*="unidades"],
-.specs-table-image img[src*="ciclos"],
-.specs-table-image img[src*="mil"] {
-    max-width: 140px;
-    height: auto;
-    object-fit: contain;
-}
-
-/* Tablas técnicas y especificaciones */
-.specs-table-image img[src*="tabla"],
-.specs-table-image img[src*="especificaciones"],
-.specs-table-image img[src*="Tabla"] {
-    max-width: 100%;
-    width: 450px;
-    height: auto;
-    flex-basis: 100%;
-    object-fit: contain;
-}
-
-/* Dibujos técnicos, planos y diagramas */
-.specs-table-image img[src*="dibujo"],
-.specs-table-image img[src*="plano"],
-.specs-table-image img[src*="componentes"],
-.specs-table-image img[src*="Diagrama"],
-.diagrama-tecnico img {
-    max-width: 100%;
-    width: 450px;
-    height: auto;
-    object-fit: contain;
 }

@@ -764,3 +764,208 @@ body {
         padding: 0 20px;
     }
 }
+   SECCIÓN UNIFICADA CON EFECTO SCROLL
+   ======================================== */
+
+.producto-section-unified {
+    min-height: 300vh;
+    width: 100%;
+    padding-top: 0;
+}
+
+.producto-section-unified .dual-content {
+    min-height: 300vh;
+    display: flex !important;
+    flex-direction: row !important;
+    width: 100% !important;
+    margin: 0 !important;
+}
+
+/* Contenedor izquierdo para sticky */
+.producto-section-unified .left-content {
+    position: relative !important;
+    flex: 1 !important;
+    display: flex !important;
+    align-items: stretch !important;
+    justify-content: stretch !important;
+    width: 50% !important;
+    height: auto !important;
+    padding: 0 !important;
+    background: none !important;
+}
+
+/* Contenedor de imágenes sticky */
+.producto-section-unified .image-sticky-container {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    display: block;
+}
+
+.producto-section-unified .image-sticky-container img {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center !important;
+    display: block !important;
+    opacity: 0;
+    transition: opacity 0.6s ease;
+    pointer-events: none;
+}
+
+/* Forzar la primera imagen visible desde el inicio */
+.producto-section-unified .image-sticky-container img:first-child {
+    opacity: 1;
+    z-index: 2;
+}
+
+.producto-section-unified .image-sticky-container img.active {
+    opacity: 1;
+    z-index: 3;
+}
+
+/* Contenedor de textos */
+.producto-section-unified .right-content {
+    display: flex !important;
+    flex-direction: column !important;
+    flex: 1 !important;
+    width: 50% !important;
+    align-items: flex-start !important;
+    justify-content: flex-start !important;
+    padding: 0 !important;
+    background: #f5f5f5 !important;
+}
+
+.producto-section-unified .text-section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 60px;
+    background: #f5f5f5;
+}
+
+/* Desktop - asegurar sticky */
+@media (min-width: 1201px) {
+    .producto-section-unified {
+        min-height: 300vh;
+        padding-top: 0;
+    }
+
+    .producto-section-unified .image-sticky-container {
+        position: sticky;
+        top: 0;
+        height: 100vh;
+    }
+
+    .producto-section-unified .text-section {
+        padding: 60px;
+        min-height: 100vh;
+    }
+}
+
+/* Tablet */
+@media (max-width: 1200px) {
+    .producto-section-unified {
+        min-height: auto !important;
+        padding-top: 80px !important;
+    }
+
+    .producto-section-unified .dual-content {
+        flex-direction: column !important;
+        min-height: auto !important;
+    }
+
+    .producto-section-unified .left-content {
+        width: 100% !important;
+        height: auto !important;
+        position: relative !important;
+    }
+
+    .producto-section-unified .image-sticky-container {
+        position: relative !important;
+        height: 60vh !important;
+        top: 0 !important;
+    }
+
+    .producto-section-unified .image-sticky-container img {
+        position: relative !important;
+        opacity: 1 !important;
+    }
+
+    .producto-section-unified .right-content {
+        width: 100% !important;
+    }
+
+    .producto-section-unified .text-section {
+        padding: 40px 30px !important;
+        min-height: auto !important;
+    }
+
+    /* Mostrar todas las imágenes en móvil/tablet */
+    .producto-section-unified .image-sticky-container img:first-child,
+    .producto-section-unified .image-sticky-container img {
+        position: relative !important;
+        opacity: 1 !important;
+        margin-bottom: 20px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .producto-section-unified {
+        padding-top: 80px !important;
+    }
+
+    .producto-section-unified .image-sticky-container {
+        height: 50vh !important;
+    }
+
+    .producto-section-unified .text-section {
+        padding: 30px 20px !important;
+    }
+
+    /* Ajustar tamaños de elementos en mobile */
+    .producto-section-unified .producto-titulo {
+        font-size: 32px !important;
+    }
+
+    .producto-section-unified .producto-descripcion {
+        font-size: 14px !important;
+    }
+
+    .producto-section-unified .badge-thowel {
+        top: 20px !important;
+        right: 20px !important;
+    }
+
+    .producto-section-unified .badge-thowel img {
+        width: 60px !important;
+    }
+
+    .producto-section-unified .diagrama-tecnico img {
+        max-width: 250px !important;
+    }
+
+    .producto-section-unified .specs-table-image img {
+        max-width: 100% !important;
+    }
+
+    .producto-section-unified .codazos-imagenes {
+        flex-direction: column !important;
+        gap: 20px !important;
+    }
+
+    .producto-section-unified .codazos-imagenes img {
+        max-width: 80% !important;
+    }
+}    .producto-section-unified .codazos-imagenes img {
+        max-width: 80% !important;
+    }
+}

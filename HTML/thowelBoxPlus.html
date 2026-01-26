@@ -60,7 +60,7 @@
                             <a href="/HTML/correderaTelescopicaEstandarH35.html">CORREDERA TELESCÓPICA ESTÁNDAR H35</a>
                             <a href="/HTML/correderaZ.html">CORREDERA Z</a>
                         </div>
-                    </div>                        
+                    </div>
                     <div class="dropdown-item">
                         <a href="#tiradores">TIRADORES, MANIJAS Y SISTEMAS DE APOYO</a>
                         <div class="subdropdown">
@@ -72,17 +72,26 @@
             </li>
             <li><a href="/index.html" class="logo"><img src="/assets/logoHeader.png" alt="THOWEL"></a></li>
             <li><a href="/HTML/sobreNosotros.html">SOBRE NOSOTROS</a></li>
-            <li><a href="/HTML/contacto.html">CONTACTOS</a></li>        </ul>
+            <a href="/HTML/contacto.html">CONTACTOS</a></li>        </ul>
     </nav>
 
-    <!-- Sección 1: ThoweBox Plus -->
-    <section class="producto-section section-1">
+    <!-- Sección Unificada con Efecto Scroll -->
+    <section class="producto-section producto-section-unified">
         <div class="dual-content">
+            <!-- Contenedor de imágenes sticky -->
             <div class="left-content">
-                <img src="/assets/thowel box plus/THOWELBOXPLUS.png" alt="ThoweBox Plus">
+                <div class="image-sticky-container">
+                    <img src="/assets/thowel box plus/THOWELBOXPLUS.png" alt="ThowelBox Plus" class="active" data-section="descripcion">
+                    <img src="/assets/thowel box plus/ambientethowelboxplus.JPG" alt="Ambiente ThowelBox Plus" data-section="especificaciones">
+                    <img src="/assets/thowel box/Escena 39.png" alt="Detalles ThowelBox Plus" data-section="detalles">
+                </div>
             </div>
+
+            <!-- Contenedor de textos -->
             <div class="right-content">
-                <div class="badge-thowel">
+                <!-- Sección 1: Descripción -->
+                <div class="text-section" data-section="descripcion">
+<div class="badge-thowel">
                     <img src="/assets/TecnologiaSmooth.png" alt="Thowel Badge">
                 </div>
                 <h1 class="producto-titulo"><b>
@@ -98,37 +107,24 @@
                 <div class="diagrama-tecnico">
                     <img src="/assets/thowel box plus/THOWEL BOX PLUS-18.png" alt="Diagrama técnico">
                 </div>
-            </div>
-        </div>
-    </section>
+                </div>
 
-    <!-- Sección 2: Especificaciones -->
-    <section class="producto-section section-2">
-        <div class="dual-content">
-            <div class="left-content">
-                <img src="/assets/thowel box plus/ambientethowelboxplus.JPG" alt="Ambiente">
-            </div>
-            <div class="right-content">
-                <p class="specs-intro">
+                <!-- Sección 2: Especificaciones -->
+                <div class="text-section" data-section="especificaciones">
+<p class="specs-intro">
                     Fabricado con materiales de <strong>alta resistencia</strong> y herrajes de acero premium, ofreciendo una <strong>solución robusta, versátil y moderna</strong> para todo tipo de proyectos profesionales.
                 </p>
                 <div class="specs-table-image">
                     <img src="/assets/thowel box plus/THOWEL BOX PLUS-23.png" alt="Especificaciones técnicas">
                 </div>
-            </div>
-        </div>
-    </section>
+                </div>
 
-    <!-- Sección 3: Detalles del Sistema -->
-    <section class="producto-section section-3">
-        <div class="dual-content">
-            <div class="left-content">
-                <img src="/assets/thowel box/Escena 39.png" alt="ThoweBox Plus instalado">
-            </div>
-            <div class="right-content">
-                <div class="codazos-imagenes">
+                <!-- Sección 3: Detalles adicionales -->
+                <div class="text-section" data-section="detalles">
+<div class="codazos-imagenes">
                     <img src="/assets/thowel box plus/THOWEL BOX PLUS-19.png" alt="Detalle 1">
                     <img src="/assets/thowel box plus/THOWEL BOX PLUS-24.png" alt="Detalle 2">
+                </div>
                 </div>
             </div>
         </div>
@@ -185,63 +181,22 @@
                     </div>
                 </div>
                 <div class="catalog-item">
-                    <img src="/assets/Guia oculta push Open/GUIA OCULTA.JPG" alt="Guías Premium">
+                    <img src="/assets/thowel box cristal/THOWELBOXCRISTAL.png" alt="Thowel Box Cristal">
                     <div class="catalog-overlay">
-                        <div class="catalog-overlay-text">GUÍAS PREMIUM</div>
+                        <div class="catalog-overlay-text">THOWEL BOX CRISTAL</div>
                     </div>
                 </div>
                 <div class="catalog-item">
-                    <img src="/assets/corredera telescópica estándar H35/CORREDERA TELESCOPICA ESTANDAR H35 (2).JPG" alt="Producto 9">
+                    <img src="/assets/thowel box plus/THOWELBOXPLUS.png" alt="Thowel Box Plus">
                     <div class="catalog-overlay">
-                        <div class="catalog-overlay-text">PRODUCTO 9</div>
-                    </div>
-                </div>
-                <div class="catalog-item">
-                    <img src="/assets/bisagra cazoleta estandar/BISAGRACAZOLETAESTANDAR.png" alt="Producto 10">
-                    <div class="catalog-overlay">
-                        <div class="catalog-overlay-text">PRODUCTO 10</div>
-                    </div>
-                </div>
-                <div class="catalog-item">
-                    <img src="/assets/manija barral/MANIJA BARRAL.JPG" alt="Producto 11">
-                    <div class="catalog-overlay">
-                        <div class="catalog-overlay-text">PRODUCTO 11</div>
-                    </div>
-                </div>
-                <div class="catalog-item">
-                    <img src="/assets/pata plastica/PATA PLASTICA.JPG" alt="Producto 12">
-                    <div class="catalog-overlay">
-                        <div class="catalog-overlay-text">PRODUCTO 12</div>
-                    </div>
-                </div>
-                <div class="catalog-item">
-                    <img src="/assets/bisagra push open/BISAGRAPUSHOPEN.png" alt="Producto 13">
-                    <div class="catalog-overlay">
-                        <div class="catalog-overlay-text">PRODUCTO 13</div>
-                    </div>
-                </div>
-                <div class="catalog-item">
-                    <img src="/assets/reten expulsor/RetenesExpulsor.png" alt="Producto 14">
-                    <div class="catalog-overlay">
-                        <div class="catalog-overlay-text">PRODUCTO 14</div>
-                    </div>
-                </div>
-                <div class="catalog-item">
-                    <img src="/assets/piston a gas/PISTONAGAS.png" alt="Producto 15">
-                    <div class="catalog-overlay">
-                        <div class="catalog-overlay-text">PRODUCTO 15</div>
-                    </div>
-                </div>
-                <div class="catalog-item">
-                    <img src="/assets/Guia oculta push Open/GUIA OCULTA.JPG" alt="Producto 16">
-                    <div class="catalog-overlay">
-                        <div class="catalog-overlay-text">PRODUCTO 16</div>
+                        <div class="catalog-overlay-text">THOWEL BOX PLUS</div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Footer -->
     <footer class="footer-red">
     <div class="footer-container">
         <!-- Hexágonos decorativos -->
@@ -249,7 +204,8 @@
             <a href="mailto:info@thowel.com" class="hexagon hex-mail" title="Email"><img src="/assets/MAIL.png" alt="Email"></a>
             <a href="#" class="hexagon hex-instagram" title="Instagram" target="_blank"><img src="/assets/INSTAGRAM.png" alt="Instagram"></a>
         </div>
-    
+
+        <!-- Contenido del footer -->
         <div class="footer-content">
             <p>&copy; 2025 THOWEL. Todos los derechos reservados.</p>
         </div>

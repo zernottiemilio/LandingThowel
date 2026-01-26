@@ -258,7 +258,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(88, 84, 140, 0.75);
+    background: rgba(0, 0, 0, 0.15);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -266,13 +266,14 @@ body {
 }
 
 .header-title {
-    font-size: 3.5rem;
+    font-size: 2.5rem;
     font-weight: 400;
     color: white;
     text-align: center;
     line-height: 1.4;
     max-width: 1000px;
     padding: 0 40px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
 }
 
 .header-title .highlight {
@@ -313,61 +314,90 @@ body {
 
 .sobre-nosotros-section {
     width: 100%;
-    min-height: 100vh;
+    min-height: 200vh;
     display: flex;
-    align-items: center;
+    align-items: stretch;
     background: white;
+    position: relative;
 }
 
 .dual-content {
     display: flex;
     width: 100%;
-    min-height: 100vh;
+    min-height: 200vh;
+    position: relative;
 }
 
 .dual-content.reverse {
     flex-direction: row-reverse;
 }
 
-.left-content,
-.right-content {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0;
-    min-height: 100vh;
-}
-
+/* Contenedor de imágenes sticky */
 .left-content {
+    flex: 1;
+    position: relative;
     background: none;
 }
 
+.image-sticky-container {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
 .left-content img {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    display: block;
+    opacity: 0;
+    transition: opacity 0.6s ease;
+    pointer-events: none;
 }
 
+/* Forzar la primera imagen visible desde el inicio */
+.image-sticky-container img:first-child {
+    opacity: 1;
+    z-index: 2;
+}
+
+.left-content img.active {
+    opacity: 1;
+    z-index: 3;
+}
+
+/* Contenedor de textos */
 .right-content {
+    flex: 1;
+    display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    padding: 80px 100px;
     background: #f5f5f5;
 }
 
+.text-section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 80px 100px;
+}
+
 .section-title {
-    font-size: 4rem;
+    font-size: 3rem;
     font-weight: 900;
     color: #666;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     text-transform: uppercase;
 }
 
 .section-description {
-    font-size: 1.125rem;
-    color: #999;
+    font-size: 1rem;
+    color: #666;
     line-height: 1.8;
     max-width: 600px;
 }
@@ -407,6 +437,7 @@ body {
     .sobre-nosotros-section {
         margin: 0;
         padding: 0;
+        min-height: 200vh;
     }
 
     .dual-content {
@@ -414,7 +445,13 @@ body {
         padding: 0;
     }
 
-    .right-content {
+    .image-sticky-container {
+        position: sticky;
+        top: 0;
+        height: 100vh;
+    }
+
+    .text-section {
         padding: 80px 100px;
     }
 
@@ -491,66 +528,105 @@ body {
    ======================================== */
 
 @media (max-width: 1024px) {
+    .sobre-nosotros-section {
+        min-height: auto;
+        padding-top: 80px;
+    }
+
     .dual-content {
         flex-direction: column;
+        min-height: auto;
     }
-    
+
     .left-content,
     .right-content {
         width: 100%;
         min-height: 50vh;
     }
-    
+
+    .left-content {
+        position: relative !important;
+        height: auto !important;
+    }
+
+    .image-sticky-container {
+        position: relative !important;
+        height: 60vh !important;
+    }
+
+    .left-content img {
+        position: relative !important;
+        opacity: 1 !important;
+        margin-bottom: 0;
+    }
+
+    .text-section {
+        padding: 40px 30px;
+        min-height: auto;
+    }
+
     .navbar {
         padding: 5px 30px;
     }
-    
+
     .navbar ul {
         gap: 30px;
     }
-    
+
     .header-title {
         font-size: 2.5rem;
     }
-    
+
     .section-title {
-        font-size: 3rem;
-    }
-    
-    .right-content {
-        padding: 60px 40px;
+        font-size: 2.5rem;
     }
 }
 
 @media (max-width: 768px) {
+    .sobre-nosotros-section {
+        padding-top: 80px;
+    }
+
     .navbar {
         padding: 5px 20px;
     }
-    
+
     .navbar ul {
         gap: 20px;
     }
-    
+
     .navbar a {
         font-size: 12px;
         padding: 8px 15px;
         margin: 10px;
     }
-    
+
     .header-title {
         font-size: 2rem;
         padding: 0 20px;
     }
-    
+
     .section-title {
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
-    
+
     .section-description {
-        font-size: 1rem;
+        font-size: 0.95rem;
     }
-    
-    .right-content {
-        padding: 40px 30px;
+
+    .left-content {
+        position: relative !important;
+        height: auto !important;
+        min-height: auto !important;
+    }
+
+    .image-sticky-container {
+        position: relative !important;
+        height: 50vh !important;
+    }
+
+    .text-section {
+        padding: 30px 20px;
+        min-height: auto;
     }
 }

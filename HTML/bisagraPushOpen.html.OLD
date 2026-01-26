@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bisagra Push Open - THOWEL</title>
+    <link rel="icon" type="image/png" href="/assets/LOGO-11.png">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/CSS/bisagraPushOpen.css">
+    <script src="https://cdn.jsdelivr.net/npm/i18next@23.7.6/i18next.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <link rel="stylesheet" href="/CSS/responsive.css">
+</head>
+<body>
+    <nav class="navbar">
+        <!-- Logo mobile (solo visible en mobile, arriba a la izquierda) -->
+        <a href="/index.html" class="logo-mobile"><img src="/assets/logoHeader.png" alt="THOWEL"></a>
+
+        <!-- Botón hamburguesa (solo visible en mobile) -->
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <ul class="nav-menu" id="navMenu">
+            <li><a href="/index.html">INICIO</a></li>
+            <li>
+                <a href="#productos" class="productos-link">PRODUCTOS</a>
+                <div class="dropdown">
+                    <div class="dropdown-item">
+                        <a href="#cajones">CAJONES</a>
+                        <div class="subdropdown">
+                            <a href="/HTML/ThowelBoxCristal.html">THOWEL BOX CRISTAL</a>
+                            <a href="/HTML/thowelBoxPlus.html">THOWEL BOX PLUS</a>
+                            <a href="/HTML/thowelBox.html">THOWEL BOX</a>
+                        </div>
+                    </div>
+                    <div class="dropdown-item">
+                        <a href="#bisagras">BISAGRAS</a>
+                        <div class="subdropdown">
+                            <a href="/HTML/bisagraClip3D.html">BISAGRA CLIP 3D</a>
+                            <a href="/HTML/bisagraSoftClosing.html">BISAGRA SOFT CLOSING</a>
+                            <a href="/HTML/bisagraCazoletaEstandar.html">BISAGRA CAZOLETA</a>
+                            <a href="#BisagraPushOpen">BISAGRA PUSH OPEN</a>
+                            <a href="/HTML/bisagraCazoleta155.html">BISAGRA ANGULOS ESPECIALES</a>
+                            <a href="/HTML/retenExpulsor.html">RETÉN EXPULSOR</a>
+                            <a href="/HTML/PistonAGAS.html">PISTÓN A GAS</a>
+                        </div>
+                    </div>
+                    <div class="dropdown-item">
+                        <a href="#guias">GUÍAS Y CORREDERAS</a>
+                        <div class="subdropdown">
+                            <a href="/HTML/guiaOculta3DSoftClosing.html">GUÍA OCULTA 3D SOFT CLOSING</a>
+                            <a href="/HTML/guiaOcultaPushOpen.html">GUÍA OCULTA PUSH OPEN</a>
+                            <a href="/HTML/correderaTelescopicaSoftClosing.html">CORREDERA TELESCÓPICA SOFT CLOSING</a>
+                            <a href="/HTML/correderaTelescopicaPushOpen.html">CORREDERA TELESCÓPICA PUSH OPEN</a>
+                            <a href="/HTML/correderaTelescopicaEstandarH45.html">CORREDERA TELESCÓPICA ESTÁNDAR H45</a>
+                            <a href="/HTML/correderaTelescopicaEstandarH35.html">CORREDERA TELESCÓPICA ESTÁNDAR H35</a>
+                            <a href="/HTML/correderaZ.html">CORREDERA Z</a>
+                        </div>
+                    </div>
+                    <div class="dropdown-item">
+                        <a href="#tiradores">TIRADORES, MANIJAS Y SISTEMAS DE APOYO</a>
+                        <div class="subdropdown">
+                            <a href="/HTML/manijas.html">MANIJAS</a>
+                            <a href="/HTML/sistemasApoyo.html">SISTEMAS DE APOYO</a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li><a href="/index.html" class="logo"><img src="/assets/logoHeader.png" alt="THOWEL"></a></li>
+            <li><a href="/HTML/sobreNosotros.html">SOBRE NOSOTROS</a></li>
+            <li><a href="/HTML/contacto.html">CONTACTOS</a></li>        </ul>
+    </nav>
+
+    <!-- Sección Unificada con Efecto Scroll -->
+    <section class="producto-section producto-section-unified">
+        <div class="dual-content">
+            <!-- Contenedor de imágenes sticky -->
+            <div class="left-content">
+                <div class="image-sticky-container">
+                    <img src="/assets/bisagra push open/BISAGRAPUSHOPEN.png" alt="Bisagra Push Open" class="active" data-section="descripcion">
+                    <img src="/assets/bisagra push open/ambientePO.JPG" alt="Ambiente Push Open" data-section="especificaciones">
+                    <img src="/assets/bisagra push open/BISAGRAPUSHOPEN2.png" alt="Bisagra instalada" data-section="codazos">
+                </div>
+            </div>
+
+            <!-- Contenedor de textos -->
+            <div class="right-content">
+                <!-- Sección 1: Descripción -->
+                <div class="text-section" data-section="descripcion">
+                    <div class="badge-thowel">
+                        <img src="/assets/tecnologiaTouch.png" alt="Thowel Badge">
+                    </div>
+                    <h1 class="producto-titulo">
+                        <b>BISAGRA<br>PUSH</b>
+                        <span class="estandar">OPEN</span>
+                    </h1>
+                    <p class="producto-descripcion">
+                        Diseñadas para un <strong>cierre sin tiradores</strong>, las bisagras <strong>PUSH OPEN</strong> ofrecen un sistema moderno y práctico para muebles minimalistas.
+                    </p>
+                    <p class="producto-descripcion">
+                        Permiten la <strong>apertura mediante presión</strong>, brindando comodidad, estética y funcionalidad en un solo herraje.
+                    </p>
+                    <div class="diagrama-tecnico">
+                        <img src="/assets/bisagra push open/DiagramaBPO.png" alt="Diagrama técnico">
+                    </div>
+                </div>
+
+                <!-- Sección 2: Especificaciones -->
+                <div class="text-section" data-section="especificaciones">
+                    <p class="specs-intro">
+                        Fabricadas con <strong>acero de alta calidad</strong> y mecanismos de precisión que garantizan un <strong>funcionamiento suave y confiable</strong> durante años.
+                    </p>
+                    <div class="specs-table-image">
+                        <img src="/assets/bisagra push open/TablaBPO.png" alt="Especificaciones técnicas">
+                    </div>
+                </div>
+
+                <!-- Sección 3: Codazos -->
+                <div class="text-section" data-section="codazos">
+                    <div class="codazos-imagenes">
+                        <img src="/assets/bisagra push open/CodoHorizontal0PushOpen.png" alt="Codazo 0">
+                        <img src="/assets/bisagra push open/CodoHorizontal9PushOpen.png" alt="Codazo 9">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección 5: Productos Similares (Carousel) -->
+    <section class="productos-similares">
+        <h2 class="similares-titulo">PRODUCTOS SIMILARES</h2>
+        <div class="catalog-carousel">
+            <!-- Navigation Arrows -->
+            <button class="carousel-nav prev-btn" id="prevBtn">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="carousel-nav next-btn" id="nextBtn">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+
+            <div class="catalog-track" id="catalogTrack">
+                <div class="catalog-item">
+                    <img src="/assets/bisagra soft closing/BSC.png" alt="Bisagra Soft Closing">
+                    <div class="catalog-overlay">
+                        <div class="catalog-overlay-text">BISAGRA SOFT CLOSING</div>
+                    </div>
+                </div>
+                <div class="catalog-item">
+                    <img src="/assets/bisagra clip 3D/BISAGRACLIP.png" alt="Bisagra Clip 3D">
+                    <div class="catalog-overlay">
+                        <div class="catalog-overlay-text">BISAGRA CLIP 3D</div>
+                    </div>
+                </div>
+                <div class="catalog-item">
+                    <img src="/assets/bisagra cazoleta estandar/BISAGRACAZOLETAESTANDAR.png" alt="Bisagra Cazoleta">
+                    <div class="catalog-overlay">
+                        <div class="catalog-overlay-text">BISAGRA CAZOLETA</div>
+                    </div>
+                </div>
+                <div class="catalog-item">
+                    <img src="/assets/bisagra push open/BISAGRAPUSHOPEN.png" alt="Bisagra Push Open">
+                    <div class="catalog-overlay">
+                        <div class="catalog-overlay-text">BISAGRA PUSH OPEN</div>
+                    </div>
+                </div>
+                <div class="catalog-item">
+                    <img src="/assets/bisagra angulos especiales/BISAGRAANGULOSESPECIALES135.png" alt="Bisagra Ángulos Especiales">
+                    <div class="catalog-overlay">
+                        <div class="catalog-overlay-text">BISAGRA ANGULOS ESPECIALES</div>
+                    </div>
+                </div>
+                <div class="catalog-item">
+                    <img src="/assets/reten expulsor/RetenesExpulsor.png" alt="Retén Expulsor">
+                    <div class="catalog-overlay">
+                        <div class="catalog-overlay-text">RETÉN EXPULSOR</div>
+                    </div>
+                </div>
+                <div class="catalog-item">
+                    <img src="/assets/piston a gas/PISTONAGAS.png" alt="Pistón a Gas">
+                    <div class="catalog-overlay">
+                        <div class="catalog-overlay-text">PISTÓN A GAS</div>
+                    </div>
+                </div>
+                <div class="catalog-item">
+                    <img src="/assets/Guia oculta push Open/GUIA OCULTA.JPG" alt="Guía Oculta">
+                    <div class="catalog-overlay">
+                        <div class="catalog-overlay-text">GUÍA OCULTA 3D</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-red">
+    <div class="footer-container">
+        <!-- Hexágonos decorativos -->
+        <div class="footer-hexagons">
+            <a href="mailto:info@thowel.com" class="hexagon hex-mail" title="Email"><img src="/assets/MAIL.png" alt="Email"></a>
+            <a href="#" class="hexagon hex-instagram" title="Instagram" target="_blank"><img src="/assets/INSTAGRAM.png" alt="Instagram"></a>
+        </div>
+
+        <!-- Contenido del footer -->
+        <div class="footer-content">
+            <p>&copy; 2025 THOWEL. Todos los derechos reservados.</p>
+        </div>
+    </div>
+    </footer>
+
+    <script src="/JS/common.js"></script>
+    <script src="/JS/Bisagras.js"></script>
+    <script src="/JS/i18n.js"></script>
+</body>
+</html>

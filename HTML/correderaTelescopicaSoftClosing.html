@@ -12,7 +12,6 @@
     <link rel="stylesheet" href="/CSS/responsive.css">
 </head>
 <body>
-    <!-- Navbar flotante -->
     <nav class="navbar">
         <!-- Logo mobile (solo visible en mobile, arriba a la izquierda) -->
         <a href="/index.html" class="logo-mobile"><img src="/assets/logoHeader.png" alt="THOWEL"></a>
@@ -74,48 +73,48 @@
         <li><a href="/HTML/sobreNosotros.html">SOBRE NOSOTROS</a></li>
         <li><a href="/HTML/contacto.html">CONTACTOS</a></li>    </ul>
 </nav>
-
-    <!-- Sección 1: Corredera Telescópica Soft Closing -->
-    <section class="producto-section section-1">
+    <!-- Sección Unificada con Efecto Scroll -->
+    <section class="producto-section producto-section-unified">
         <div class="dual-content">
+            <!-- Contenedor de imágenes sticky -->
             <div class="left-content">
-                <img src="/assets/Guia oculta push Open/GUIA OCULTA.JPG" alt="Corredera Telescópica Soft Closing">
+                <div class="image-sticky-container">
+                    <img src="/assets/Guia oculta push Open/GUIA OCULTA.JPG" alt="Producto" class="active" data-section="descripcion">
+                    <img src="/assets/ambiente.png" alt="Ambiente" data-section="especificaciones">
+                </div>
             </div>
+
+            <!-- Contenedor de textos -->
             <div class="right-content">
-                <div class="badge-thowel">
+                <!-- Sección 1: Descripción -->
+                <div class="text-section" data-section="descripcion">
+<div class="badge-thowel">
                     <img src="/assets/Corredera telescópica soft closing/acero.png" alt="Smooth Badge">
                 </div>
                 <h1 class="producto-titulo">
-                    <b data-i18n="productPage.slides.telescopicSlideSoft.title" data-i18n-html="true">CORREDERA<br>TELESCÓPICA</b>
-                    <span class="smooth" data-i18n="productPage.slides.telescopicSlideSoft.tag">SOFT CLOSING</span>
+                    <b>CORREDERA<br>TELESCÓPICA</b>
+                    <span class="smooth">SOFT CLOSING</span>
                 </h1>
-                <p class="producto-descripcion" data-i18n="productPage.slides.telescopicSlideSoft.description1" data-i18n-html="true">
+                <p class="producto-descripcion">
                     Desarrollada bajo nuestra tecnología <strong>SMOOTH</strong> ofrece un cierre amortiguado y silencioso con extensión total.
                 </p>
-                <p class="producto-descripcion" data-i18n="productPage.slides.telescopicSlideSoft.description2" data-i18n-html="true">
+                <p class="producto-descripcion">
                     Ampliamente utilizada en cajones de alta gama, <strong>destacándose por su suavidad, capacidad de carga y facilidad de instalación.</strong>
                 </p>
                 <div class="diagrama-tecnico">
                     <img src="/assets/Corredera telescópica soft closing/tabla.png" alt="Diagrama técnico">
                 </div>
-                <p class="specs-intro" data-i18n="productPage.slides.telescopicSlideSoft.specs" data-i18n-html="true">
+                <p class="specs-intro">
                     Fabricadas en acero de <strong>alta calidad</strong> con rodamientos de precisión, ofrecen una <strong>solución duradera y eficiente</strong> para todo tipo de cajones.
                 </p>
                 <div class="specs-table-image">
                     <img src="/assets/Corredera telescópica soft closing/tabla 2.png" alt="Especificaciones técnicas">
                 </div>
-            </div>
-        </div>
-    </section>
+                </div>
 
-    <!-- Sección 2: Especificaciones -->
-    <section class="producto-section section-2">
-        <div class="dual-content">
-            <div class="left-content">
-                <img src="/assets/ambiente.png" alt="Ambiente Corredera Soft Closing">
-            </div>
-            <div class="right-content">
-                <div class="specs-all-logos">
+                <!-- Sección 2: Especificaciones -->
+                <div class="text-section" data-section="especificaciones">
+<div class="specs-all-logos">
                     <img src="/assets/Corredera telescópica soft closing/acero.png" alt="Material Acero">
                     <img src="/assets/Corredera telescópica soft closing/peso.png" alt="Peso">
                     <img src="/assets/Corredera telescópica soft closing/15 unidades.png" alt="15 unidades">
@@ -125,11 +124,9 @@
         </div>
     </section>
 
-   
-
     <!-- Sección 5: Productos Similares (Carousel) -->
     <section class="productos-similares">
-        <h2 class="similares-titulo" data-i18n="productPage.similarProducts">PRODUCTOS SIMILARES</h2>
+        <h2 class="similares-titulo">PRODUCTOS SIMILARES</h2>
         <div class="catalog-carousel">
             <button class="carousel-nav prev-btn" id="prevBtn"><i class="fas fa-chevron-left"></i></button>
             <button class="carousel-nav next-btn" id="nextBtn"><i class="fas fa-chevron-right"></i></button>
@@ -197,7 +194,6 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="footer-red">
         <div class="footer-container">
             <div class="footer-hexagons">
@@ -205,13 +201,12 @@
                 <a href="#" class="hexagon hex-instagram" title="Instagram" target="_blank"><img src="/assets/INSTAGRAM.png" alt="Instagram"></a>
             </div>
             <div class="footer-content">
-                <p data-i18n="footer.copyright">&copy; 2025 THOWEL. Todos los derechos reservados.</p>
+                <p>&copy; 2025 THOWEL. Todos los derechos reservados.</p>
             </div>
         </div>
     </footer>
 
     <script src="/JS/common.js"></script>
-    <script src="/JS/guiasCorrederas.js"></script>
+    <script src="/JS/Bisagras.js"></script>
     <script src="/JS/i18n.js"></script>
 </body>
-</html>

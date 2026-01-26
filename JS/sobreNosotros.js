@@ -189,7 +189,7 @@ const observerOptions = {
     rootMargin: '0px 0px -100px 0px'
 };
 
-const observer = new IntersectionObserver((entries) => {
+const fadeObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             entry.target.style.opacity = '1';
@@ -198,11 +198,63 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, observerOptions);
 
-// Aplicar animación a la sección de contenido
-const contentSection = document.querySelector('.right-content');
-if (contentSection) {
-    contentSection.style.opacity = '0';
-    contentSection.style.transform = 'translateY(30px)';
-    contentSection.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
-    observer.observe(contentSection);
+// Aplicar animación a TODAS las secciones de texto, excepto la primera
+const textSections = document.querySelectorAll('.text-section');
+textSections.forEach((section, index) => {
+    if (index === 0) {
+        // La primera sección se muestra inmediatamente
+        section.style.opacity = '1';
+        section.style.transform = 'translateY(0)';
+        section.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+    } else {
+        // Las demás secciones empiezan ocultas
+        section.style.opacity = '0';
+        section.style.transform = 'translateY(30px)';
+        section.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+    }
+    fadeObserver.observe(section);
+});
+
+// ========================================
+// CAMBIO DE IMÁGENES CON SCROLL
+// ========================================
+
+// Asegurar que la primera imagen esté visible desde el inicio
+const firstImage = document.querySelector('.image-sticky-container img:first-child');
+if (firstImage) {
+    firstImage.style.opacity = '1';
+    firstImage.classList.add('active');
 }
+
+const imageChangeOptions = {
+    threshold: [0, 0.25, 0.5, 0.75, 1],
+    rootMargin: '-20% 0px -20% 0px'
+};
+
+const imageObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        // Solo cambiar cuando la sección esté al menos 50% visible
+        if (entry.isIntersecting && entry.intersectionRatio >= 0.5) {
+            const sectionId = entry.target.getAttribute('data-section');
+
+            // Remover clase active de todas las imágenes
+            const allImages = document.querySelectorAll('.image-sticky-container img');
+            allImages.forEach(img => {
+                img.classList.remove('active');
+                img.style.opacity = '0';
+            });
+
+            // Agregar clase active a la imagen correspondiente
+            const activeImage = document.querySelector(`.image-sticky-container img[data-section="${sectionId}"]`);
+            if (activeImage) {
+                activeImage.classList.add('active');
+                activeImage.style.opacity = '1';
+            }
+        }
+    });
+}, imageChangeOptions);
+
+// Observar todas las secciones de texto para cambiar imágenes
+textSections.forEach(section => {
+    imageObserver.observe(section);
+});

@@ -45,6 +45,12 @@
         margin: 10px;
     }
 
+    /* Flecha inicio */
+    .flecha-img {
+        width: 70px;
+        height: auto;
+    }
+
     /* Productos */
     .producto-descripcion {
         font-size: 16px;
@@ -55,6 +61,34 @@
     .product-description {
         font-size: 16px;
         padding: 0 40px;
+    }
+
+    /* Sección Calidad - Ajustar imagen para laptops */
+    .calidad-section {
+        padding: 60px 30px;
+    }
+
+    .calidad-content {
+        gap: 50px;
+    }
+
+    .calidad-icon {
+        max-width: 300px;
+        flex-shrink: 0;
+    }
+
+    .calidad-icon img {
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+    }
+
+    .calidad-title {
+        font-size: 3rem;
+    }
+
+    .calidad-description {
+        font-size: 1.1rem;
     }
 }
 
@@ -99,6 +133,12 @@
         height: 50px;
     }
 
+    /* Flecha inicio */
+    .flecha-img {
+        width: 60px;
+        height: auto;
+    }
+
     /* Productos - SOLO MANIJAS Y SISTEMAS DE APOYO */
     body:has(#manija-barral) .dual-content,
     body:has(#pata-plastica) .dual-content {
@@ -115,6 +155,35 @@
     .diagrama-tecnico img,
     .specs-table-image img {
         max-width: 100%;
+    }
+
+    /* Sección Calidad - Ajustar imagen para tablets */
+    .calidad-section {
+        padding: 50px 25px;
+    }
+
+    .calidad-content {
+        gap: 40px;
+    }
+
+    .calidad-icon {
+        max-width: 250px;
+        flex-shrink: 0;
+    }
+
+    .calidad-icon img {
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+    }
+
+    .calidad-title {
+        font-size: 2.5rem;
+    }
+
+    .calidad-description {
+        font-size: 1rem;
+        line-height: 1.6;
     }
 
     /* Catálogo */
