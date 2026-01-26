@@ -242,6 +242,19 @@
         min-height: 60vh;
     }
 
+    /* Reducir tamaño de letras de portada en móvil */
+    .main-text h1 {
+        font-size: 1.8rem !important;
+        line-height: 1.2 !important;
+        margin-bottom: 8px !important;
+    }
+
+    .main-text p,
+    .main-content p {
+        font-size: 0.9rem !important;
+        line-height: 1.4 !important;
+    }
+
     .scroll-indicator {
         bottom: 20px;
     }
@@ -362,9 +375,49 @@
         font-size: 13px;
     }
 
-    /* Index - Product showcase */
+    /* Index - Product showcase - CAMBIAR LAYOUT A VERTICAL */
     .unified-product-section {
         padding: 40px 15px;
+        height: auto !important;
+        min-height: auto !important;
+    }
+
+    /* Cambiar layout de las secciones de producto a vertical */
+    .product-section {
+        flex-direction: column !important;
+        height: auto !important;
+        position: relative !important;
+        display: flex !important;
+    }
+
+    .product-section .split-image {
+        width: 100% !important;
+        height: 50vh !important;
+        flex: none !important;
+    }
+
+    /* Orden: primero contenido (texto), después imágenes */
+    .product-content-overlay {
+        position: relative !important;
+        width: 100% !important;
+        height: auto !important;
+        order: 1 !important;
+        padding: 30px 20px !important;
+        background: linear-gradient(135deg, #3a3169 0%, #4a4179 100%) !important;
+    }
+
+    .background-images {
+        position: relative !important;
+        order: 2 !important;
+        height: auto !important;
+    }
+
+    .product-section .split-image.left-image {
+        order: 3 !important;
+    }
+
+    .product-section .split-image.right-image {
+        order: 4 !important;
     }
 
     .product-logo img {
@@ -374,6 +427,7 @@
 
     .product-description {
         font-size: 14px;
+        color: rgba(255, 255, 255, 0.9) !important;
     }
 
     .product-progress {
@@ -685,6 +739,7 @@
         position: relative !important;
         margin: 0 !important;
         padding: 0 !important;
+        font-family: 'Montserrat', sans-serif !important;
     }
 
     /* Navbar contenedor */
@@ -1018,13 +1073,14 @@
         line-height: 1.6 !important;
     }
 
-    .calidad-image {
+    .calidad-icon {
         width: 100% !important;
-        max-width: 300px !important;
+        max-width: 200px !important;
         margin: 0 auto !important;
+        opacity: 0.4 !important;
     }
 
-    .calidad-image img {
+    .calidad-icon img {
         width: 100% !important;
         height: auto !important;
     }
