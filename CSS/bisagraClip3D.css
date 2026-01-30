@@ -452,17 +452,19 @@ body {
 
 .codazos-imagenes {
     width: 100%;
-    max-width: 600px;
+    max-width: 450px;
     display: flex;
     flex-direction: column;
-    height: 100vh;
-    gap: 30px;
+    gap: 20px;
+    padding-bottom: 40px;
 }
 
 .codazos-imagenes img {
     width: 100%;
+    max-height: 280px;
     height: auto;
     display: block;
+    object-fit: contain;
 }
 
 
@@ -860,6 +862,16 @@ body {
     background: #f5f5f5;
 }
 
+.producto-section-unified .text-section:first-child {
+    padding-top: 140px;
+    justify-content: flex-start;
+}
+
+.producto-section-unified .text-section[data-section="codazos"] {
+    min-height: auto;
+    padding-bottom: 80px;
+}
+
 /* Desktop - asegurar sticky */
 @media (min-width: 1201px) {
     .producto-section-unified {
@@ -874,8 +886,90 @@ body {
     }
 
     .producto-section-unified .text-section {
-        padding: 60px;
+        padding: 60px 80px;
         min-height: 100vh;
+    }
+
+    .producto-section-unified .text-section:first-child {
+        padding-top: 140px;
+    }
+
+    .producto-section-unified .text-section[data-section="codazos"] {
+        min-height: auto;
+        padding-bottom: 100px;
+    }
+
+    .codazos-imagenes {
+        max-width: 400px;
+        gap: 15px;
+    }
+
+    .codazos-imagenes img {
+        max-height: 220px;
+    }
+
+    /* Mantener tablas de especificaciones con ancho completo */
+    .producto-section-unified .specs-table-image {
+        max-width: 600px;
+    }
+
+    .producto-section-unified .specs-table-image img {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .producto-section-unified .diagrama-tecnico {
+        max-width: 600px;
+    }
+
+    .producto-section-unified .diagrama-tecnico img {
+        max-width: 100%;
+        width: 100%;
+    }
+}
+
+/* Desktop intermedio (pantallas más pequeñas) */
+@media (min-width: 1025px) and (max-width: 1400px) {
+    .producto-section-unified .text-section {
+        padding: 50px 60px;
+        min-height: 90vh;
+    }
+
+    .producto-section-unified .text-section:first-child {
+        padding-top: 130px;
+    }
+
+    .producto-section-unified .text-section[data-section="codazos"] {
+        min-height: auto;
+        padding-bottom: 80px;
+    }
+
+    .codazos-imagenes {
+        max-width: 350px;
+        gap: 12px;
+    }
+
+    .codazos-imagenes img {
+        max-height: 180px;
+    }
+
+    /* Mantener tablas de especificaciones con ancho completo */
+    .producto-section-unified .specs-table-image {
+        max-width: 550px;
+    }
+
+    .producto-section-unified .specs-table-image img {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .producto-section-unified .diagrama-tecnico {
+        max-width: 550px;
+    }
+
+    .producto-section-unified .diagrama-tecnico img {
+        max-width: 100%;
+        width: 100%;
     }
 }
 
@@ -915,6 +1009,19 @@ body {
     .producto-section-unified .text-section {
         padding: 40px 30px !important;
         min-height: auto !important;
+    }
+
+    .producto-section-unified .text-section:first-child {
+        padding-top: 60px !important;
+    }
+
+    .codazos-imagenes {
+        max-width: 100%;
+        gap: 20px;
+    }
+
+    .codazos-imagenes img {
+        max-height: 300px;
     }
 
     /* Mostrar todas las imágenes en móvil/tablet */
@@ -968,10 +1075,12 @@ body {
 
     .producto-section-unified .codazos-imagenes {
         flex-direction: column !important;
-        gap: 20px !important;
+        gap: 15px !important;
+        max-width: 100%;
     }
 
     .producto-section-unified .codazos-imagenes img {
-        max-width: 80% !important;
+        max-width: 100% !important;
+        max-height: 200px !important;
     }
 }
