@@ -2629,3 +2629,211 @@
         line-height: 1.6 !important;
     }
 }
+
+/* ========================================
+   ESTILOS UNIFICADOS PARA PÁGINAS DE PRODUCTOS
+   Aplicados globalmente para consistencia
+   ======================================== */
+
+/* DESKTOP - Espaciado superior para evitar solapamiento con navbar */
+@media (min-width: 1201px) {
+    .producto-section:first-of-type,
+    .producto-section-unified:first-of-type,
+    .section-1 {
+        padding-top: 120px !important;
+    }
+
+    /* Icono de tecnología - posición consistente arriba a la derecha del título */
+    .badge-thowel {
+        position: absolute !important;
+        top: 140px !important;
+        right: 80px !important;
+    }
+
+    .badge-thowel img {
+        width: 100px !important;
+        height: auto !important;
+    }
+
+    /* Textos unificados */
+    .producto-descripcion {
+        font-size: 16px !important;
+        line-height: 1.5 !important;
+        color: #555 !important;
+        text-align: justify !important;
+        margin-bottom: 15px !important;
+    }
+
+    .specs-intro {
+        font-size: 16px !important;
+        line-height: 1.5 !important;
+        color: #555 !important;
+        text-align: justify !important;
+    }
+
+    /* Título del producto */
+    .producto-titulo {
+        font-size: 54px !important;
+        line-height: 1.1 !important;
+        margin-bottom: 25px !important;
+    }
+
+    .estandar {
+        font-size: 48px !important;
+    }
+}
+
+/* TABLET - Ajustes */
+@media (max-width: 1200px) and (min-width: 769px) {
+    .producto-section:first-of-type,
+    .producto-section-unified:first-of-type,
+    .section-1 {
+        padding-top: 100px !important;
+    }
+
+    .badge-thowel {
+        position: absolute !important;
+        top: 110px !important;
+        right: 40px !important;
+    }
+
+    .badge-thowel img {
+        width: 80px !important;
+    }
+
+    .producto-descripcion,
+    .specs-intro {
+        font-size: 15px !important;
+        line-height: 1.5 !important;
+        color: #555 !important;
+        text-align: justify !important;
+    }
+
+    .producto-titulo {
+        font-size: 42px !important;
+        line-height: 1.1 !important;
+    }
+
+    .estandar {
+        font-size: 36px !important;
+    }
+}
+
+/* MÓVIL - Estética mejorada */
+@media (max-width: 768px) {
+    /* Espaciado superior */
+    .producto-section:first-of-type,
+    .producto-section-unified:first-of-type,
+    .section-1 {
+        padding-top: 80px !important;
+    }
+
+    /* Icono de tecnología en móvil - arriba a la derecha pero más pequeño */
+    .badge-thowel {
+        position: absolute !important;
+        top: 90px !important;
+        right: 20px !important;
+    }
+
+    .badge-thowel img {
+        width: 60px !important;
+    }
+
+    /* Título en una sola línea si es posible - más compacto */
+    .producto-titulo {
+        font-size: 28px !important;
+        line-height: 1.15 !important;
+        margin-bottom: 15px !important;
+        white-space: normal !important;
+    }
+
+    .producto-titulo b {
+        display: inline !important;
+    }
+
+    .producto-titulo br {
+        display: none !important;
+    }
+
+    .estandar {
+        font-size: 24px !important;
+        display: inline !important;
+        margin-left: 10px !important;
+    }
+
+    /* Textos unificados en móvil */
+    .producto-descripcion,
+    .specs-intro {
+        font-size: 14px !important;
+        line-height: 1.5 !important;
+        color: #555 !important;
+        text-align: left !important;
+        margin-bottom: 12px !important;
+    }
+
+    /* Reducir espacios en blanco */
+    .text-section {
+        padding: 20px 15px !important;
+        margin: 0 !important;
+    }
+
+    .right-content {
+        padding: 15px !important;
+    }
+
+    /* Diagrama técnico más compacto */
+    .diagrama-tecnico {
+        margin: 10px 0 !important;
+        margin-left: 0 !important;
+    }
+
+    .diagrama-tecnico img {
+        max-width: 200px !important;
+    }
+
+    /* Especificaciones tabla */
+    .specs-table-image {
+        margin: 15px 0 !important;
+    }
+
+    .specs-table-image img {
+        max-width: 100% !important;
+    }
+}
+
+/* MÓVIL PEQUEÑO - Ajustes extra */
+@media (max-width: 480px) {
+    .producto-section:first-of-type,
+    .producto-section-unified:first-of-type,
+    .section-1 {
+        padding-top: 70px !important;
+    }
+
+    .badge-thowel {
+        top: 75px !important;
+        right: 15px !important;
+    }
+
+    .badge-thowel img {
+        width: 50px !important;
+    }
+
+    .producto-titulo {
+        font-size: 24px !important;
+        line-height: 1.2 !important;
+    }
+
+    .estandar {
+        font-size: 20px !important;
+    }
+
+    .producto-descripcion,
+    .specs-intro {
+        font-size: 13px !important;
+        line-height: 1.4 !important;
+    }
+
+    .text-section {
+        padding: 15px 10px !important;
+    }
+}
