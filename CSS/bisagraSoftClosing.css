@@ -858,7 +858,7 @@ body {
     align-items: flex-start !important;
     justify-content: flex-start !important;
     padding: 0 !important;
-    background: #f5f5f5 !important;
+    background: white !important;
 }
 
 .producto-section-unified .text-section {
@@ -866,9 +866,9 @@ body {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    justify-content: flex-start;
-    padding: 25px 60px;
-    background: #f5f5f5;
+    justify-content: center;
+    padding: 60px;
+    background: white;
 }
 
 .producto-section-unified .text-section:first-child {

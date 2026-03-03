@@ -764,8 +764,6 @@ body {
         padding: 0 20px;
     }
 }
-   SECCIÓN UNIFICADA CON EFECTO SCROLL
-   ======================================== */
 
 .producto-section-unified {
     min-height: 300vh;
@@ -838,7 +836,7 @@ body {
     align-items: flex-start !important;
     justify-content: flex-start !important;
     padding: 0 !important;
-    background: #f5f5f5 !important;
+    background: white !important;
 }
 
 .producto-section-unified .text-section {
@@ -848,7 +846,7 @@ body {
     align-items: flex-start;
     justify-content: center;
     padding: 60px;
-    background: #f5f5f5;
+    background: white;
 }
 
 /* Desktop - asegurar sticky */
@@ -968,4 +966,4 @@ body {
 }    .producto-section-unified .codazos-imagenes img {
         max-width: 80% !important;
     }
-}
+
