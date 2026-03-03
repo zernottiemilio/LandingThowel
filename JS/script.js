@@ -402,77 +402,103 @@ function initMobileMenu() {
         }
     });
 
-    // Toggle dropdown de productos en mobile
+    // Toggle dropdown de productos (funciona en desktop y mobile con click)
     const productosLink = navMenu.querySelector('.productos-link');
     if (productosLink) {
-        console.log('ProductosLink encontrado:', productosLink);
-
         productosLink.addEventListener('click', function(e) {
-            console.log('Click en productos, window width:', window.innerWidth);
+            e.preventDefault();
+            e.stopPropagation();
 
-            if (window.innerWidth <= 768) {
-                e.preventDefault();
-                e.stopPropagation();
+            const parentLi = this.closest('li');
+            if (parentLi) {
+                const wasActive = parentLi.classList.contains('dropdown-active');
 
-                const parentLi = this.closest('li');
-                console.log('Parent LI:', parentLi);
+                // Cerrar todos los dropdowns primero
+                document.querySelectorAll('.navbar li').forEach(li => {
+                    li.classList.remove('dropdown-active');
+                });
 
-                if (parentLi) {
-                    const wasActive = parentLi.classList.contains('active');
-                    console.log('Was active antes:', wasActive);
+                // Cerrar todos los subdropdowns dentro
+                parentLi.querySelectorAll('.dropdown-item').forEach(item => {
+                    item.classList.remove('subdropdown-active');
+                    item.classList.remove('active');
+                });
 
-                    // Cerrar todos los subdropdowns dentro
-                    parentLi.querySelectorAll('.dropdown-item').forEach(item => {
-                        item.classList.remove('active');
-                    });
-
-                    // Toggle el dropdown principal
-                    if (wasActive) {
-                        parentLi.classList.remove('active');
-                        console.log('Cerrando dropdown de productos');
-                    } else {
-                        parentLi.classList.add('active');
-                        console.log('Abriendo dropdown de productos');
-                    }
-
-                    console.log('Active después:', parentLi.classList.contains('active'));
-                    console.log('Classes del li:', parentLi.className);
+                // Toggle el dropdown principal
+                if (!wasActive) {
+                    parentLi.classList.add('dropdown-active');
                 }
             }
         });
-    } else {
-        console.error('No se encontró el link de productos');
     }
 
-    // Toggle subdropdowns (categorías)
+    // Toggle subdropdowns (categorías) - funciona con click
     const dropdownItems = document.querySelectorAll('.dropdown-item');
     dropdownItems.forEach(item => {
         const link = item.querySelector(':scope > a');
         if (link) {
             link.addEventListener('click', function(e) {
-                if (window.innerWidth <= 768) {
-                    e.preventDefault();
-                    e.stopPropagation();
+                e.preventDefault();
+                e.stopPropagation();
 
-                    // Cerrar otros subdropdowns del mismo nivel
-                    const siblings = Array.from(item.parentElement.children).filter(
-                        child => child.classList.contains('dropdown-item') && child !== item
-                    );
-                    siblings.forEach(sibling => {
-                        sibling.classList.remove('active');
-                    });
+                const wasActive = item.classList.contains('subdropdown-active');
 
-                    // Toggle el actual
-                    item.classList.toggle('active');
+                // Cerrar otros subdropdowns del mismo nivel
+                const siblings = Array.from(item.parentElement.children).filter(
+                    child => child.classList.contains('dropdown-item') && child !== item
+                );
+                siblings.forEach(sibling => {
+                    sibling.classList.remove('subdropdown-active');
+                    sibling.classList.remove('active');
+                });
+
+                // Toggle el actual
+                if (wasActive) {
+                    item.classList.remove('subdropdown-active');
+                    item.classList.remove('active');
+                } else {
+                    item.classList.add('subdropdown-active');
+                    item.classList.add('active');
                 }
             });
         }
     });
 
-    // Cerrar menú al hacer click fuera
+    // Cerrar menú al hacer click en enlaces de productos finales
+    const productLinks = navMenu.querySelectorAll('.subdropdown a');
+    productLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            // Cerrar todo
+            document.querySelectorAll('.navbar li').forEach(li => {
+                li.classList.remove('dropdown-active');
+            });
+            document.querySelectorAll('.dropdown-item').forEach(item => {
+                item.classList.remove('subdropdown-active');
+                item.classList.remove('active');
+            });
+
+            if (window.innerWidth <= 768) {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        });
+    });
+
+    // Cerrar dropdowns al hacer click fuera
     document.addEventListener('click', function(e) {
-        if (window.innerWidth <= 768) {
-            if (!e.target.closest('.navbar') && navMenu.classList.contains('active')) {
+        if (!e.target.closest('.navbar')) {
+            // Cerrar dropdowns
+            document.querySelectorAll('.navbar li').forEach(li => {
+                li.classList.remove('dropdown-active');
+            });
+            document.querySelectorAll('.dropdown-item').forEach(item => {
+                item.classList.remove('subdropdown-active');
+                item.classList.remove('active');
+            });
+
+            // Cerrar menú mobile si está abierto
+            if (window.innerWidth <= 768 && navMenu.classList.contains('active')) {
                 hamburger.classList.remove('active');
                 navMenu.classList.remove('active');
                 document.body.style.overflow = '';

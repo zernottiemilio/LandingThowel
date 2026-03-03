@@ -3,42 +3,42 @@
 
 @font-face {
     font-family: 'Montserrat';
-    src: url('../fonts/Montserrat-Regular.ttf') format('truetype');
+    src: url('/fonts/Montserrat-Regular.ttf') format('truetype');
     font-weight: 400;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Montserrat';
-    src: url('../fonts/Montserrat-Bold.ttf') format('truetype');
+    src: url('/fonts/Montserrat-Bold.ttf') format('truetype');
     font-weight: 700;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Montserrat';
-    src: url('../fonts/Montserrat-Light.ttf') format('truetype');
+    src: url('/fonts/Montserrat-Light.ttf') format('truetype');
     font-weight: 300;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Montserrat';
-    src: url('../fonts/Montserrat-Medium.ttf') format('truetype');
+    src: url('/fonts/Montserrat-Medium.ttf') format('truetype');
     font-weight: 500;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Montserrat';
-    src: url('../fonts/Montserrat-ExtraLight.ttf') format('truetype');
+    src: url('/fonts/Montserrat-ExtraLight.ttf') format('truetype');
     font-weight: 200;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Montserrat';
-    src: url('../fonts/Montserrat-Black.ttf') format('truetype');
+    src: url('/fonts/Montserrat-Black.ttf') format('truetype');
     font-weight: 900;
     font-style: normal;
 }
@@ -334,27 +334,27 @@ body {
     font-size: 64px;
     font-weight: 900;
     color: #1e3a8a;
-    line-height: 1.1;
-    margin-bottom: 30px;
+    line-height: 0.95;
+    margin-bottom: 3px;
 }
 
 .estandar {
   font-size: clamp(28px, 4vw, 60px);
   font-weight: 400;
   color: #e74c3c;
-  margin-bottom: 20px;
+  margin-bottom: 3px;
 }
 
 .producto-descripcion {
     font-size: 18px;
     color: #333;
-    line-height: 1.8;
-    margin-bottom: 20px;
+    line-height: 1.4;
+    margin-bottom: 3px;
     max-width: 600px;
 }
 
 .diagrama-tecnico {
-    margin-top: 0px;
+    margin-top: 3px;
     margin-left: 150px;
 }
 
@@ -407,14 +407,15 @@ body {
 .specs-intro {
     font-size: 18px;
     color: #1e3a8a;
-    line-height: 1.8;
-    margin-bottom: 30px;
+    line-height: 1.4;
+    margin-bottom: 3px;
     max-width: 600px;
 }
 
 .specs-table-image {
     width: 100%;
     max-width: 600px;
+    margin-top: 3px;
 }
 
 .specs-table-image img {
@@ -449,7 +450,8 @@ body {
     max-width: 600px;
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 5px;
+    margin-top: 3px;
 }
 
 .codazos-imagenes img {
@@ -459,7 +461,7 @@ body {
 }
 
 .producto-section-unified .codazos-imagenes {
-    gap: 20px;
+    gap: 5px;
     max-width: 500px;
 }
 
@@ -784,11 +786,11 @@ body {
 }
 
 .producto-section-unified.three-sections {
-    min-height: 300vh;
+    min-height: 100vh;
 }
 
 .producto-section-unified .dual-content {
-    min-height: 200vh;
+    min-height: 100vh;
     display: flex !important;
     flex-direction: row !important;
     width: 100% !important;
@@ -796,7 +798,7 @@ body {
 }
 
 .producto-section-unified.three-sections .dual-content {
-    min-height: 300vh;
+    min-height: 100vh;
 }
 
 /* Contenedor izquierdo para sticky */
@@ -860,7 +862,7 @@ body {
 }
 
 .producto-section-unified .text-section {
-    min-height: 100vh;
+    min-height: auto;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -870,7 +872,15 @@ body {
 }
 
 .producto-section-unified .text-section:first-child {
+    min-height: 100vh;
+    justify-content: center;
     padding-top: 180px;
+    padding-bottom: 25px;
+}
+
+.producto-section-unified .text-section:not(:first-child) {
+    min-height: auto;
+    padding: 15px 60px;
 }
 
 .producto-section-unified .text-section:first-child .badge-thowel {
@@ -971,11 +981,11 @@ body:has(#pata-plastica) {
     }
 
     .producto-section-unified.three-sections {
-        min-height: 300vh;
+        min-height: auto;
     }
 
     .producto-section-unified.three-sections .dual-content {
-        min-height: 300vh;
+        min-height: 100vh;
     }
 
     .producto-section-unified .image-sticky-container {
@@ -985,8 +995,18 @@ body:has(#pata-plastica) {
     }
 
     .producto-section-unified .text-section {
-        padding: 60px;
+        padding: 25px 60px;
+        min-height: auto;
+    }
+
+    .producto-section-unified .text-section:first-child {
         min-height: 100vh;
+        padding-top: 180px;
+        padding-bottom: 25px;
+    }
+
+    .producto-section-unified .text-section:not(:first-child) {
+        padding: 15px 60px;
     }
 }
 
