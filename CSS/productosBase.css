@@ -1,0 +1,709 @@
+/* ========================================
+   PRODUCTOS BASE - THOWEL
+   Estilos unificados para todas las páginas de productos
+   ======================================== */
+
+@import url('/CSS/responsive.css');
+@import url('/CSS/carouselYFooter.css');
+
+/* ========================================
+   VARIABLES DE COLORES (consistencia)
+   ======================================== */
+:root {
+    --color-azul-logo: #2E3192;
+    --color-rojo: #e74c3c;
+    --color-gris-texto: #666;
+    --color-gris-oscuro: #333;
+    --color-blanco: #fff;
+    --color-fondo-claro: #f5f5f5;
+}
+
+/* ========================================
+   FUENTES
+   ======================================== */
+@font-face {
+    font-family: 'Montserrat';
+    src: url('/fonts/Montserrat-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('/fonts/Montserrat-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('/fonts/Montserrat-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('/fonts/Montserrat-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('/fonts/Montserrat-ExtraLight.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('/fonts/Montserrat-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+}
+
+/* ========================================
+   NAVBAR - NAVIGATION
+   ======================================== */
+
+.navbar {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 5px 100px;
+    border-radius: 50px;
+    margin: 20px auto;
+    width: fit-content;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.navbar.hidden {
+    transform: translateX(-50%) translateY(-100px);
+    opacity: 0;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    gap: 70px;
+}
+
+.navbar li {
+    position: relative;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: var(--color-gris-oscuro);
+    margin: 15px;
+    text-align: center;
+    font-weight: 500;
+    padding: 10px 20px;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    font-size: 14px;
+    background: transparent;
+    white-space: nowrap;
+}
+
+.navbar a:hover {
+    background: rgba(231, 76, 60, 0.1);
+    color: var(--color-rojo);
+}
+
+.navbar a:not(:hover) {
+    background: transparent;
+    color: var(--color-gris-oscuro);
+}
+
+.navbar .logo {
+    padding: 0;
+    margin: 0;
+    background: none !important;
+    border-radius: 0;
+    display: flex;
+    align-items: center;
+}
+
+.navbar .logo img {
+    height: 60px;
+    width: auto;
+    display: block;
+}
+
+.navbar .logo:hover {
+    background: none !important;
+    color: inherit;
+}
+
+/* Dropdown Principal */
+.dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    min-width: 280px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    padding: 15px 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    z-index: 1001;
+    text-align: left;
+}
+
+.navbar li.dropdown-open > .dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown a {
+    display: block;
+    padding: 12px 20px;
+    color: var(--color-gris-texto);
+    font-size: 14px;
+    text-transform: uppercase;
+    border-radius: 0;
+    white-space: nowrap;
+    margin: 0;
+    position: relative;
+}
+
+.dropdown a:hover {
+    background: rgba(231, 76, 60, 0.1);
+    color: var(--color-rojo);
+}
+
+/* Dropdown secundario */
+.dropdown-item {
+    position: relative;
+}
+
+.subdropdown {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    background: white;
+    min-width: 250px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    padding: 15px 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(-10px);
+    transition: all 0.3s ease;
+    z-index: 1002;
+}
+
+.dropdown-item.subdropdown-open > .subdropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+}
+
+.subdropdown a {
+    display: block;
+    padding: 10px 20px;
+    color: var(--color-gris-texto);
+    font-size: 13px;
+    text-transform: uppercase;
+    border-radius: 0;
+    white-space: nowrap;
+}
+
+.subdropdown a:hover {
+    background: rgba(231, 76, 60, 0.1);
+    color: var(--color-rojo);
+}
+
+/* ========================================
+   SECCIONES DE PRODUCTO - LAYOUT UNIFICADO
+   ======================================== */
+
+.producto-section {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: stretch;
+    margin: 0;
+}
+
+.producto-section-unified {
+    min-height: 200vh;
+}
+
+.producto-section-unified.three-sections {
+    min-height: 300vh;
+}
+
+.dual-content {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.left-content,
+.right-content {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    height: auto;
+    width: 50%;
+}
+
+/* Izquierda - Contenedor de imagen sticky */
+.left-content {
+    background: none !important;
+    position: relative;
+}
+
+.image-sticky-container {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+.left-content img,
+.image-sticky-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    opacity: 0;
+    transition: opacity 0.6s ease;
+}
+
+.left-content img.active,
+.image-sticky-container img.active {
+    opacity: 1;
+    z-index: 2;
+}
+
+/* Derecha - Contenido de texto */
+.right-content {
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 40px 60px;
+    background: var(--color-blanco);
+}
+
+/* Secciones de texto dentro del contenido derecho */
+.text-section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 120px 60px 60px;
+    position: relative;
+}
+
+/* ========================================
+   BADGE TECNOLOGÍA - POSICIÓN CONSISTENTE
+   ======================================== */
+
+.badge-thowel {
+    position: absolute;
+    top: 120px;
+    right: 60px;
+    z-index: 10;
+}
+
+.badge-thowel img {
+    width: 100px;
+    height: auto;
+}
+
+/* ========================================
+   TÍTULOS DE PRODUCTO - ESTILO UNIFICADO
+   ======================================== */
+
+.producto-titulo {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 52px;
+    font-weight: 900;
+    color: var(--color-azul-logo);
+    line-height: 1.1;
+    margin-bottom: 25px;
+    margin-top: 0;
+}
+
+.producto-titulo .estandar,
+.estandar {
+    font-size: clamp(24px, 3.5vw, 48px);
+    font-weight: 400;
+    color: var(--color-rojo);
+    display: block;
+    margin-top: 5px;
+}
+
+/* ========================================
+   DESCRIPCIONES - ESTILO UNIFICADO
+   ======================================== */
+
+.producto-descripcion {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    color: var(--color-gris-texto);
+    line-height: 1.5;
+    margin-bottom: 18px;
+    max-width: 550px;
+    text-align: left;
+}
+
+.specs-intro {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    color: var(--color-gris-texto);
+    line-height: 1.5;
+    margin-bottom: 25px;
+    max-width: 550px;
+    text-align: left;
+}
+
+/* ========================================
+   DIAGRAMAS Y TABLAS
+   ======================================== */
+
+.diagrama-tecnico {
+    margin-top: 20px;
+    margin-left: 0;
+}
+
+.diagrama-tecnico img {
+    max-width: 320px;
+    width: 100%;
+    height: auto;
+}
+
+.specs-table-image {
+    width: 100%;
+    max-width: 550px;
+}
+
+.specs-table-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ========================================
+   CODAZOS / IMÁGENES MÚLTIPLES
+   ======================================== */
+
+.codazos-imagenes {
+    width: 100%;
+    max-width: 450px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-bottom: 40px;
+}
+
+.codazos-imagenes img {
+    width: 100%;
+    max-height: 250px;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
+
+/* ========================================
+   PRODUCTOS SIMILARES
+   ======================================== */
+
+.productos-similares {
+    width: 100%;
+    padding: 60px 0 0 0;
+    margin: 0;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    min-height: 60vh;
+}
+
+.similares-titulo {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 32px;
+    font-weight: 900;
+    color: var(--color-azul-logo);
+    text-align: center;
+    margin: 0 0 20px 0;
+    padding: 0 60px;
+    flex-shrink: 0;
+}
+
+.productos-similares .catalog-carousel {
+    margin-top: 0;
+    padding-top: 0;
+    flex: 1;
+    height: auto;
+    min-height: auto;
+    overflow: visible;
+}
+
+.productos-similares .catalog-track {
+    height: 100%;
+    min-height: 100%;
+    width: auto;
+}
+
+.productos-similares .catalog-item {
+    height: 100%;
+    min-height: 100%;
+    flex-shrink: 0;
+}
+
+/* ========================================
+   RESPONSIVE - TABLET GRANDE
+   ======================================== */
+
+@media (max-width: 1200px) {
+    .text-section {
+        padding: 100px 50px 50px;
+    }
+
+    .badge-thowel {
+        top: 100px;
+        right: 50px;
+    }
+
+    .badge-thowel img {
+        width: 90px;
+    }
+
+    .producto-titulo {
+        font-size: 46px;
+    }
+
+    .diagrama-tecnico img {
+        max-width: 280px;
+    }
+}
+
+/* ========================================
+   RESPONSIVE - TABLET
+   ======================================== */
+
+@media (max-width: 1024px) {
+    .dual-content {
+        flex-direction: column;
+        min-height: auto;
+    }
+
+    .left-content,
+    .right-content {
+        width: 100%;
+        min-height: 50vh;
+    }
+
+    .image-sticky-container {
+        position: relative;
+        height: 50vh;
+    }
+
+    .left-content img,
+    .image-sticky-container img {
+        height: 50vh;
+        object-fit: cover;
+    }
+
+    .text-section {
+        padding: 80px 40px 50px;
+        min-height: auto;
+    }
+
+    .badge-thowel {
+        top: 90px;
+        right: 40px;
+    }
+
+    .badge-thowel img {
+        width: 80px;
+    }
+
+    .producto-titulo {
+        font-size: 40px;
+        margin-bottom: 20px;
+    }
+
+    .estandar {
+        font-size: 32px;
+    }
+
+    .producto-descripcion {
+        font-size: 15px;
+        margin-bottom: 15px;
+    }
+
+    .diagrama-tecnico {
+        margin-top: 15px;
+    }
+
+    .diagrama-tecnico img {
+        max-width: 250px;
+    }
+
+    .specs-intro {
+        font-size: 15px;
+        margin-bottom: 20px;
+    }
+
+    .codazos-imagenes {
+        gap: 15px;
+    }
+}
+
+/* ========================================
+   RESPONSIVE - MOBILE
+   ======================================== */
+
+@media (max-width: 768px) {
+    .left-content,
+    .right-content {
+        min-height: auto;
+    }
+
+    .image-sticky-container {
+        height: 40vh;
+        min-height: 280px;
+    }
+
+    .left-content img,
+    .image-sticky-container img {
+        height: 40vh;
+        min-height: 280px;
+    }
+
+    .text-section {
+        padding: 70px 25px 40px;
+        min-height: auto;
+    }
+
+    .badge-thowel {
+        top: 80px;
+        right: 20px;
+    }
+
+    .badge-thowel img {
+        width: 65px;
+    }
+
+    .producto-titulo {
+        font-family: 'Montserrat', sans-serif !important;
+        font-size: 32px;
+        margin-bottom: 15px;
+    }
+
+    .estandar {
+        font-size: 26px;
+    }
+
+    .producto-descripcion {
+        font-family: 'Montserrat', sans-serif !important;
+        font-size: 14px;
+        margin-bottom: 12px;
+        line-height: 1.5;
+    }
+
+    .specs-intro {
+        font-family: 'Montserrat', sans-serif !important;
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    .diagrama-tecnico {
+        margin-top: 15px;
+    }
+
+    .diagrama-tecnico img {
+        max-width: 200px;
+    }
+
+    .codazos-imagenes {
+        max-width: 100%;
+        gap: 12px;
+    }
+
+    .codazos-imagenes img {
+        max-height: 200px;
+    }
+
+    .similares-titulo {
+        font-size: 26px;
+        padding: 0 20px;
+    }
+}
+
+/* ========================================
+   RESPONSIVE - MOBILE PEQUEÑO
+   ======================================== */
+
+@media (max-width: 480px) {
+    .text-section {
+        padding: 60px 20px 35px;
+    }
+
+    .badge-thowel {
+        top: 70px;
+        right: 15px;
+    }
+
+    .badge-thowel img {
+        width: 55px;
+    }
+
+    .producto-titulo {
+        font-size: 28px;
+    }
+
+    .estandar {
+        font-size: 22px;
+    }
+
+    .producto-descripcion,
+    .specs-intro {
+        font-size: 13px;
+    }
+
+    .diagrama-tecnico img {
+        max-width: 180px;
+    }
+
+    .similares-titulo {
+        font-size: 22px;
+    }
+}

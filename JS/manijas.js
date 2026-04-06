@@ -6,12 +6,12 @@ const navbar = document.querySelector('.navbar');
 
 window.addEventListener('scroll', () => {
     const currentScroll = window.pageYOffset;
-
+    
     if (currentScroll <= 0) {
         navbar && navbar.classList.remove('hidden');
         return;
     }
-
+    
     if (currentScroll > lastScroll && currentScroll > 100) {
         // Scroll hacia abajo - esconder navbar
         navbar && navbar.classList.add('hidden');
@@ -19,10 +19,9 @@ window.addEventListener('scroll', () => {
         // Scroll hacia arriba - mostrar navbar
         navbar && navbar.classList.remove('hidden');
     }
-
+    
     lastScroll = currentScroll;
 });
-
 
 // ========================================
 // CAROUSEL - PRODUCTOS SIMILARES (ROBUSTO)
@@ -32,59 +31,74 @@ document.addEventListener('DOMContentLoaded', () => {
     const track = document.getElementById('catalogTrack');
     const prevBtn = document.getElementById('prevBtn');
     const nextBtn = document.getElementById('nextBtn');
-    const items = document.querySelectorAll('.catalog-item');
+    const slides = document.querySelectorAll('.catalog-slide');
+    const indicators = Array.from(document.querySelectorAll('.indicator'));
 
     if (!track) {
         console.warn('Carousel: no se encontró #catalogTrack. Revisa el HTML.');
         return;
     }
-    if (items.length === 0) {
-        console.warn('Carousel: no se encontraron elementos con la clase .catalog-item.');
+    if (slides.length === 0) {
+        console.warn('Carousel: no se encontraron elementos con la clase .catalog-slide.');
         return;
     }
 
-    let currentIndex = 0;
-    const itemWidth = items[0].offsetWidth;
-    const itemsPerView = 4; // Mostrar 4 items a la vez
-    const maxIndex = Math.max(0, items.length - itemsPerView);
+    // Número de "páginas" del track
+    const totalSlides = slides.length;
+    let currentSlide = 0;
 
-    // Función para mover el carousel
-    function updateCarousel() {
-        const offset = currentIndex * itemWidth;
-        track.style.transform = `translateX(-${offset}px)`;
+    // Calcula el porcentaje que debe moverse el track
+    function getTranslatePercent(slideIndex) {
+        return slideIndex * (100 / totalSlides);
     }
 
-    // Botón anterior
+    // Aplica la transformación con 'translateX'
+    function goToSlide(slideIndex) {
+        if (!track) return;
+        
+        if (slideIndex < 0) slideIndex = 0;
+        if (slideIndex >= totalSlides) slideIndex = totalSlides - 1;
+
+        currentSlide = slideIndex;
+        const percent = getTranslatePercent(slideIndex);
+        track.style.transform = `translateX(-${percent}%)`;
+
+        // Actualizar indicadores
+        if (indicators.length) {
+            indicators.forEach((indicator, i) => {
+                indicator.classList.toggle('active', i === slideIndex);
+            });
+        }
+    }
+
+    // Conexión de botones
     if (prevBtn) {
         prevBtn.addEventListener('click', () => {
-            if (currentIndex > 0) {
-                currentIndex--;
-                updateCarousel();
-            }
+            const nextIndex = (currentSlide - 1 + totalSlides) % totalSlides;
+            goToSlide(nextIndex);
         });
     } else {
         console.warn('Carousel: no se encontró #prevBtn.');
     }
 
-    // Botón siguiente
     if (nextBtn) {
         nextBtn.addEventListener('click', () => {
-            if (currentIndex < maxIndex) {
-                currentIndex++;
-                updateCarousel();
-            }
+            const nextIndex = (currentSlide + 1) % totalSlides;
+            goToSlide(nextIndex);
         });
     } else {
         console.warn('Carousel: no se encontró #nextBtn.');
     }
 
-    // Actualizar en resize
-    window.addEventListener('resize', () => {
-        updateCarousel();
-    });
+    // Indicadores clickeables
+    if (indicators.length) {
+        indicators.forEach((indicator, index) => {
+            indicator.addEventListener('click', () => goToSlide(index));
+        });
+    }
 
-    // Inicializar
-    updateCarousel();
+    // Inicia en el slide 0
+    goToSlide(0);
 });
 
 // ========================================
