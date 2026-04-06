@@ -470,6 +470,14 @@ body {
     object-fit: contain;
 }
 
+/* Para secciones con solo 3 logos (Pata Plástica, Rueda Nylon) */
+#pata-plastica .specs-all-logos,
+#rueda-nylon .specs-all-logos {
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 300px;
+    justify-items: center;
+}
+
 /* ========================================
    SECCIÓN 3 - CODAZOS
    ======================================== */
@@ -774,6 +782,25 @@ body {
     .similares-titulo {
         font-size: 28px;
         padding: 0 30px;
+    }
+
+    /* Pata Plástica y Rueda Nylon - 3 logos en fila horizontal en mobile */
+    #pata-plastica .specs-all-logos,
+    #rueda-nylon .specs-all-logos {
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: center !important;
+        align-items: center !important;
+        gap: 20px !important;
+        max-width: 100% !important;
+        margin: 20px auto !important;
+    }
+
+    #pata-plastica .specs-all-logos img,
+    #rueda-nylon .specs-all-logos img {
+        max-width: 80px !important;
+        width: auto !important;
+        height: auto !important;
     }
 }
 

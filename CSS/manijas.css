@@ -943,6 +943,8 @@ section#rueda-nylon.producto-section {
     .left-content,
     .right-content {
         padding: 10px 15px !important;
+        align-items: center !important;
+        text-align: center !important;
     }
 
     .section-1 .left-content,
@@ -950,6 +952,56 @@ section#rueda-nylon.producto-section {
     .section-2 .left-content,
     .section-2 .right-content {
         padding: 10px 15px !important;
+        align-items: center !important;
+        text-align: center !important;
+    }
+
+    /* Título con badge en línea para mobile - igual que guías/correderas */
+    .titulo-con-badge {
+        flex-direction: row !important;
+        justify-content: flex-start !important;
+        align-items: flex-start !important;
+        gap: 20px !important;
+        width: 100% !important;
+        position: relative !important;
+    }
+
+    .titulo-con-badge .producto-titulo {
+        text-align: left !important;
+        padding-right: 0 !important;
+        margin-bottom: 15px !important;
+    }
+
+    .titulo-con-badge .badge-thowel {
+        position: absolute !important;
+        top: 0 !important;
+        right: 0 !important;
+        margin-top: 0 !important;
+    }
+
+    .titulo-con-badge .badge-thowel img {
+        width: 60px !important;
+        height: auto !important;
+    }
+
+    /* Centrar contenido de right-content pero mantener título alineado a izquierda */
+    .right-content {
+        align-items: flex-start !important;
+    }
+
+    .right-content .producto-descripcion,
+    .right-content .diagrama-tecnico {
+        text-align: center !important;
+        width: 100% !important;
+    }
+
+    .right-content .diagrama-tecnico {
+        display: flex !important;
+        justify-content: center !important;
+    }
+
+    .right-content .diagrama-tecnico img {
+        max-width: 320px !important;
     }
 
     /* Imágenes de manijas a ancho completo en móvil */
@@ -1011,15 +1063,15 @@ section#rueda-nylon.producto-section {
         display: none !important;
     }
 
-    /* Badge de acero posicionado correctamente en móvil */
+    /* Badge de acero posicionado correctamente en móvil - solo para badges NO dentro de titulo-con-badge */
     .section-1 .right-content,
     .section-2 .right-content {
         position: relative !important;
     }
 
-    #manija-barral .badge-thowel,
-    #manija-boton .badge-thowel,
-    #manija-oval .badge-thowel {
+    #manija-barral .right-content > .badge-thowel,
+    #manija-boton .right-content > .badge-thowel,
+    #manija-oval .right-content > .badge-thowel {
         position: absolute !important;
         top: 10px !important;
         right: 15px !important;
@@ -1027,17 +1079,21 @@ section#rueda-nylon.producto-section {
         z-index: 10 !important;
     }
 
-    #manija-barral .badge-thowel img,
-    #manija-boton .badge-thowel img,
-    #manija-oval .badge-thowel img {
+    #manija-barral .right-content > .badge-thowel img,
+    #manija-boton .right-content > .badge-thowel img,
+    #manija-oval .right-content > .badge-thowel img {
         width: 50px !important;
         height: auto !important;
     }
 
-    /* Ajustar padding del título para dar espacio al badge */
-    .producto-titulo {
+    /* Ajustar padding del título para dar espacio al badge - solo si NO está en titulo-con-badge */
+    .right-content > .producto-titulo {
         padding-right: 70px !important;
         position: relative !important;
+    }
+
+    .titulo-con-badge .producto-titulo {
+        padding-right: 0 !important;
     }
 
     /* Resetear grid de pata plástica en móvil */
