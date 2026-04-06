@@ -56,70 +56,102 @@ function initMobileMenu() {
         }
     });
 
-    // Toggle dropdown de productos en mobile
+    // Toggle dropdown de PRODUCTOS (funciona en mobile y desktop)
     const productosLink = navMenu.querySelector('.productos-link');
     if (productosLink) {
         productosLink.addEventListener('click', function(e) {
-            if (window.innerWidth <= 768) {
-                e.preventDefault();
-                e.stopPropagation();
-                const parentLi = this.closest('li');
-                if (parentLi) {
-                    const wasActive = parentLi.classList.contains('active');
-                    // Cerrar todos los subdropdowns dentro
-                    parentLi.querySelectorAll('.dropdown-item').forEach(item => {
-                        item.classList.remove('active');
-                    });
-                    // Toggle el dropdown principal
-                    if (wasActive) {
-                        parentLi.classList.remove('active');
-                    } else {
-                        parentLi.classList.add('active');
-                    }
+            e.preventDefault();
+            e.stopPropagation();
+
+            const parentLi = this.closest('li');
+            if (parentLi) {
+                const wasOpen = parentLi.classList.contains('dropdown-open');
+
+                // Cerrar todos los subdropdowns dentro
+                parentLi.querySelectorAll('.dropdown-item').forEach(item => {
+                    item.classList.remove('active');
+                    item.classList.remove('subdropdown-open');
+                });
+
+                // Toggle el dropdown principal
+                if (wasOpen) {
+                    parentLi.classList.remove('dropdown-open');
+                    parentLi.classList.remove('active');
+                } else {
+                    parentLi.classList.add('dropdown-open');
+                    parentLi.classList.add('active');
                 }
             }
         });
     }
 
-    // Toggle dropdown-items (CAJONES, BISAGRAS, etc.)
+    // Toggle subdropdowns (categorías) - funciona en mobile y desktop
     const dropdownItems = navMenu.querySelectorAll('.dropdown-item > a');
     dropdownItems.forEach(link => {
         link.addEventListener('click', function(e) {
-            if (window.innerWidth <= 768) {
-                const parentItem = this.parentElement;
-                if (parentItem && parentItem.querySelector('.subdropdown')) {
-                    e.preventDefault();
-                    e.stopPropagation();
+            e.preventDefault();
+            e.stopPropagation();
 
-                    const wasActive = parentItem.classList.contains('active');
-
-                    // Cerrar siblings
-                    const siblings = parentItem.parentElement.querySelectorAll('.dropdown-item');
-                    siblings.forEach(sibling => {
-                        if (sibling !== parentItem) {
-                            sibling.classList.remove('active');
-                        }
-                    });
-
-                    // Toggle este item
-                    if (wasActive) {
-                        parentItem.classList.remove('active');
-                    } else {
-                        parentItem.classList.add('active');
+            const parentItem = this.parentElement;
+            if (parentItem) {
+                // Cerrar siblings
+                const siblings = parentItem.parentElement.querySelectorAll('.dropdown-item');
+                siblings.forEach(sibling => {
+                    if (sibling !== parentItem) {
+                        sibling.classList.remove('active');
+                        sibling.classList.remove('subdropdown-open');
                     }
-                }
+                });
+
+                // Toggle este item
+                parentItem.classList.toggle('active');
+                parentItem.classList.toggle('subdropdown-open');
+            }
+        });
+    });
+
+    // Cerrar menú al hacer click en enlaces de productos finales
+    const finalLinks = navMenu.querySelectorAll('.subdropdown a');
+    finalLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            const parentLi = navMenu.querySelector('li.dropdown-open');
+            if (parentLi) {
+                parentLi.classList.remove('dropdown-open');
+                parentLi.classList.remove('active');
+                parentLi.querySelectorAll('.dropdown-item').forEach(item => {
+                    item.classList.remove('active');
+                    item.classList.remove('subdropdown-open');
+                });
+            }
+
+            if (window.innerWidth <= 768) {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+                document.body.style.overflow = '';
             }
         });
     });
 
     // Cerrar menú al hacer clic fuera
     document.addEventListener('click', function(e) {
-        if (window.innerWidth <= 768 &&
-            navMenu.classList.contains('active') &&
-            !e.target.closest('.navbar')) {
-            hamburger.classList.remove('active');
-            navMenu.classList.remove('active');
-            document.body.style.overflow = '';
+        if (!e.target.closest('.navbar')) {
+            // Cerrar dropdown en desktop
+            const openDropdown = navMenu.querySelector('li.dropdown-open');
+            if (openDropdown) {
+                openDropdown.classList.remove('dropdown-open');
+                openDropdown.classList.remove('active');
+                openDropdown.querySelectorAll('.dropdown-item').forEach(item => {
+                    item.classList.remove('active');
+                    item.classList.remove('subdropdown-open');
+                });
+            }
+
+            // Cerrar menú en mobile
+            if (window.innerWidth <= 768 && navMenu.classList.contains('active')) {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+                document.body.style.overflow = '';
+            }
         }
     });
 

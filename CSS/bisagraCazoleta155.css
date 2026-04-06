@@ -325,16 +325,16 @@ body {
 .badge-thowel {
     position: absolute;
     top: 130px;
-    right: 100px;
+    right: 60px;
 }
 
 .badge-thowel img {
-    width: 120px;
+    width: 100px;
     height: auto;
 }
 
 .producto-titulo {
-    font-size: 64px;
+    font-size: 48px;
     font-weight: 900;
     color: #1e3a8a;
     line-height: 1.1;
@@ -454,12 +454,13 @@ body {
     max-width: 600px;
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    height: auto;
     gap: 30px;
 }
 
 .codazos-imagenes img {
     width: 100%;
+    max-width: 450px;
     height: auto;
     display: block;
 }

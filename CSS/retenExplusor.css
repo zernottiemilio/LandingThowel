@@ -328,16 +328,16 @@ body {
 .badge-thowel {
     position: absolute;
     top: 130px;
-    right: 100px;
+    right: 60px;
 }
 
 .badge-thowel img {
-    width: 120px;
+    width: 100px;
     height: auto;
 }
 
 .producto-titulo {
-    font-size: 64px;
+    font-size: 48px;
     font-weight: 900;
     color: #1e3a8a;
     line-height: 1.1;
@@ -427,24 +427,20 @@ body {
 }
 
 .specs-table-image {
-    width: 100%;
-    max-width: 600px;
-}
-
-.specs-table-image img {
-    width: 100%;
     display: flex;
-    flex-direction: column;
-    height: 100vh;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
-    gap: 30px;
+    gap: 20px;
+    max-width: 600px;
+    width: 100%;
 }
 
 .specs-table-image img {
-    width: 80%;
-    max-width: 300px;
+    width: auto;
+    max-width: 120px;
     height: auto;
-    display: block;
+    display: inline-block;
 }
 
 /* ========================================
@@ -474,12 +470,13 @@ body {
     max-width: 600px;
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    height: auto;
     gap: 30px;
 }
 
 .codazos-imagenes img {
     width: 100%;
+    max-width: 450px;
     height: auto;
     display: block;
 }
@@ -803,6 +800,24 @@ body {
     justify-content: center;
     padding: 60px;
     background: white;
+}
+
+/* Primera sección de texto - padding para el navbar */
+.producto-section-unified .text-section:first-child {
+    padding-top: 140px;
+    justify-content: flex-start;
+    position: relative;
+}
+
+/* Badge dentro de la primera sección */
+.producto-section-unified .text-section:first-child .badge-thowel {
+    position: absolute;
+    top: 150px;
+    right: 60px;
+}
+
+.producto-section-unified .text-section:first-child .badge-thowel img {
+    width: 100px;
 }
 
 /* Desktop - asegurar sticky */

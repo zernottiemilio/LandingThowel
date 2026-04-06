@@ -2652,7 +2652,7 @@
 
     .titulo-con-badge .producto-titulo b {
         font-size: 28px !important;
-        white-space: normal !important;
+        white-space: nowrap !important;
     }
 
     .titulo-con-badge .badge-thowel {

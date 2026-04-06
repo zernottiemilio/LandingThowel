@@ -350,7 +350,7 @@ body {
 
 .badge-thowel {
     position: absolute;
-    top: 140px;
+    top: 130px;
     right: 60px;
 }
 
@@ -360,7 +360,7 @@ body {
 }
 
 .producto-titulo {
-    font-size: 64px;
+    font-size: 48px;
     font-weight: 900;
     color: #1e3a8a;
     line-height: 1.1;

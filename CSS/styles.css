@@ -579,11 +579,10 @@ body {
 .catalog-arrow {
     position: absolute;
     left: -15px;
-    top: 50%;
-    transform: translateY(-50%);
+    top: -60px;
     z-index: 2;
-    width: 60px;
-    height: 60px;
+    width: 180px;
+    height: 180px;
 }
 
 .catalog-arrow img {
@@ -994,12 +993,12 @@ body {
     position: relative;
     background: linear-gradient(135deg, #003399 0%, #0044bb 100%);
     width: 100%;
-    min-height: 100vh;
+    min-height: 50vh;
     display: flex;
     align-items: center;
     justify-content: center;
     z-index: 10;
-    padding: 80px 40px;
+    padding: 60px 40px;
     overflow: hidden;
 }
 
@@ -1045,7 +1044,7 @@ body {
 
 .calidad-icon {
     flex: 0 0 auto;
-    max-width: 450px;
+    max-width: 300px;
     opacity: 0.3;
     z-index: 1;
     flex-shrink: 0;

@@ -86,28 +86,30 @@ function initNavMenu() {
     }
 
     // Toggle subdropdowns (categorías) - funciona en mobile y desktop
-    const dropdownItems = document.querySelectorAll('.dropdown-item');
-    dropdownItems.forEach(item => {
-        const link = item.querySelector(':scope > a');
-        if (link) {
-            link.addEventListener('click', function(e) {
-                e.preventDefault();
-                e.stopPropagation();
+    const dropdownItemLinks = document.querySelectorAll('.dropdown-item > a');
+    console.log('Dropdown item links encontrados:', dropdownItemLinks.length);
+    dropdownItemLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            console.log('Click en categoría:', this.textContent);
+            e.preventDefault();
+            e.stopPropagation();
 
-                // Cerrar otros subdropdowns del mismo nivel
-                const siblings = Array.from(item.parentElement.children).filter(
-                    child => child.classList.contains('dropdown-item') && child !== item
-                );
-                siblings.forEach(sibling => {
-                    sibling.classList.remove('active');
-                    sibling.classList.remove('subdropdown-open');
-                });
+            const item = this.parentElement;
+            console.log('Item:', item, 'tiene subdropdown:', item.querySelector('.subdropdown'));
 
-                // Toggle el actual
-                item.classList.toggle('active');
-                item.classList.toggle('subdropdown-open');
+            // Cerrar otros subdropdowns del mismo nivel
+            const siblings = Array.from(item.parentElement.children).filter(
+                child => child.classList.contains('dropdown-item') && child !== item
+            );
+            siblings.forEach(sibling => {
+                sibling.classList.remove('active');
+                sibling.classList.remove('subdropdown-open');
             });
-        }
+
+            // Toggle el actual
+            item.classList.toggle('active');
+            item.classList.toggle('subdropdown-open');
+        });
     });
 
     // Cerrar menú al hacer click en enlaces de productos finales

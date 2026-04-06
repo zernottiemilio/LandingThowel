@@ -402,77 +402,98 @@ function initMobileMenu() {
         }
     });
 
-    // Toggle dropdown de productos en mobile
+    // Toggle dropdown de PRODUCTOS (funciona en mobile y desktop)
     const productosLink = navMenu.querySelector('.productos-link');
     if (productosLink) {
-        console.log('ProductosLink encontrado:', productosLink);
-
         productosLink.addEventListener('click', function(e) {
-            console.log('Click en productos, window width:', window.innerWidth);
+            e.preventDefault();
+            e.stopPropagation();
 
-            if (window.innerWidth <= 768) {
-                e.preventDefault();
-                e.stopPropagation();
+            const parentLi = this.closest('li');
+            if (parentLi) {
+                const wasOpen = parentLi.classList.contains('dropdown-open');
 
-                const parentLi = this.closest('li');
-                console.log('Parent LI:', parentLi);
+                // Cerrar todos los subdropdowns dentro
+                parentLi.querySelectorAll('.dropdown-item').forEach(item => {
+                    item.classList.remove('active');
+                    item.classList.remove('subdropdown-open');
+                });
 
-                if (parentLi) {
-                    const wasActive = parentLi.classList.contains('active');
-                    console.log('Was active antes:', wasActive);
-
-                    // Cerrar todos los subdropdowns dentro
-                    parentLi.querySelectorAll('.dropdown-item').forEach(item => {
-                        item.classList.remove('active');
-                    });
-
-                    // Toggle el dropdown principal
-                    if (wasActive) {
-                        parentLi.classList.remove('active');
-                        console.log('Cerrando dropdown de productos');
-                    } else {
-                        parentLi.classList.add('active');
-                        console.log('Abriendo dropdown de productos');
-                    }
-
-                    console.log('Active después:', parentLi.classList.contains('active'));
-                    console.log('Classes del li:', parentLi.className);
+                // Toggle el dropdown principal
+                if (wasOpen) {
+                    parentLi.classList.remove('dropdown-open');
+                    parentLi.classList.remove('active');
+                } else {
+                    parentLi.classList.add('dropdown-open');
+                    parentLi.classList.add('active');
                 }
             }
         });
-    } else {
-        console.error('No se encontró el link de productos');
     }
 
-    // Toggle subdropdowns (categorías)
+    // Toggle subdropdowns (categorías) - funciona en mobile y desktop
     const dropdownItems = document.querySelectorAll('.dropdown-item');
     dropdownItems.forEach(item => {
         const link = item.querySelector(':scope > a');
         if (link) {
             link.addEventListener('click', function(e) {
-                if (window.innerWidth <= 768) {
-                    e.preventDefault();
-                    e.stopPropagation();
+                e.preventDefault();
+                e.stopPropagation();
 
-                    // Cerrar otros subdropdowns del mismo nivel
-                    const siblings = Array.from(item.parentElement.children).filter(
-                        child => child.classList.contains('dropdown-item') && child !== item
-                    );
-                    siblings.forEach(sibling => {
-                        sibling.classList.remove('active');
-                    });
+                // Cerrar otros subdropdowns del mismo nivel
+                const siblings = Array.from(item.parentElement.children).filter(
+                    child => child.classList.contains('dropdown-item') && child !== item
+                );
+                siblings.forEach(sibling => {
+                    sibling.classList.remove('active');
+                    sibling.classList.remove('subdropdown-open');
+                });
 
-                    // Toggle el actual
-                    item.classList.toggle('active');
-                }
+                // Toggle el actual
+                item.classList.toggle('active');
+                item.classList.toggle('subdropdown-open');
             });
         }
     });
 
+    // Cerrar menú al hacer click en enlaces de productos finales
+    const finalLinks = navMenu.querySelectorAll('.subdropdown a');
+    finalLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            const parentLi = navMenu.querySelector('li.dropdown-open');
+            if (parentLi) {
+                parentLi.classList.remove('dropdown-open');
+                parentLi.classList.remove('active');
+                parentLi.querySelectorAll('.dropdown-item').forEach(item => {
+                    item.classList.remove('active');
+                    item.classList.remove('subdropdown-open');
+                });
+            }
+
+            if (window.innerWidth <= 768) {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        });
+    });
+
     // Cerrar menú al hacer click fuera
     document.addEventListener('click', function(e) {
-        if (window.innerWidth <= 768) {
-            if (!e.target.closest('.navbar') && navMenu.classList.contains('active')) {
+        if (!e.target.closest('.navbar')) {
+            // Cerrar dropdown en desktop
+            const openDropdown = navMenu.querySelector('li.dropdown-open');
+            if (openDropdown) {
+                openDropdown.classList.remove('dropdown-open');
+                openDropdown.classList.remove('active');
+                openDropdown.querySelectorAll('.dropdown-item').forEach(item => {
+                    item.classList.remove('active');
+                    item.classList.remove('subdropdown-open');
+                });
+            }
+
+            // Cerrar menú en mobile
+            if (window.innerWidth <= 768 && navMenu.classList.contains('active')) {
                 hamburger.classList.remove('active');
                 navMenu.classList.remove('active');
                 document.body.style.overflow = '';
