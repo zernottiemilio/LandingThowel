@@ -163,7 +163,7 @@ body {
     text-align: left;
 }
 
-.navbar li:hover .dropdown {
+.navbar li.dropdown-open > .dropdown {
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
@@ -207,7 +207,7 @@ body {
     z-index: 1002;
 }
 
-.dropdown-item:hover .subdropdown {
+.dropdown-item.subdropdown-open > .subdropdown {
     opacity: 1;
     visibility: visible;
     transform: translateX(0);

@@ -110,7 +110,8 @@
     text-align: left;
 }
 
-.navbar li:hover .dropdown {
+/* Click para abrir dropdown en lugar de hover */
+.navbar li.dropdown-open > .dropdown {
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
@@ -154,7 +155,8 @@
     z-index: 1002;
 }
 
-.dropdown-item:hover .subdropdown {
+/* Click para abrir subdropdown en lugar de hover */
+.dropdown-item.subdropdown-open > .subdropdown {
     opacity: 1;
     visibility: visible;
     transform: translateX(0);
