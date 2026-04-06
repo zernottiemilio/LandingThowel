@@ -882,7 +882,8 @@ body {
     }
 
     .producto-section-unified .dual-content {
-        flex-direction: column !important;
+        display: grid !important;
+        grid-template-columns: 1fr !important;
         min-height: auto !important;
     }
 
@@ -890,21 +891,27 @@ body {
         width: 100% !important;
         height: auto !important;
         position: relative !important;
+        display: contents !important;
     }
 
     .producto-section-unified .image-sticky-container {
-        position: relative !important;
-        height: 60vh !important;
-        top: 0 !important;
+        display: contents !important;
     }
 
     .producto-section-unified .image-sticky-container img {
         position: relative !important;
         opacity: 1 !important;
+        width: 100% !important;
+        height: auto !important;
+        min-height: 300px !important;
+        max-height: 400px !important;
+        object-fit: cover !important;
+        margin: 0 !important;
     }
 
     .producto-section-unified .right-content {
         width: 100% !important;
+        display: contents !important;
     }
 
     .producto-section-unified .text-section {
@@ -912,12 +919,37 @@ body {
         min-height: auto !important;
     }
 
-    /* Mostrar todas las imágenes en móvil/tablet */
-    .producto-section-unified .image-sticky-container img:first-child,
-    .producto-section-unified .image-sticky-container img {
-        position: relative !important;
-        opacity: 1 !important;
-        margin-bottom: 20px;
+    /* Intercalar imágenes y textos usando grid-row */
+    .producto-section-unified .image-sticky-container img:nth-child(1) {
+        grid-row: 1;
+    }
+
+    .producto-section-unified .text-section:nth-child(1) {
+        grid-row: 2;
+    }
+
+    .producto-section-unified .image-sticky-container img:nth-child(2) {
+        grid-row: 3;
+    }
+
+    .producto-section-unified .text-section:nth-child(2) {
+        grid-row: 4;
+    }
+
+    .producto-section-unified .image-sticky-container img:nth-child(3) {
+        grid-row: 5;
+    }
+
+    .producto-section-unified .text-section:nth-child(3) {
+        grid-row: 6;
+    }
+
+    .producto-section-unified .image-sticky-container img:nth-child(4) {
+        grid-row: 7;
+    }
+
+    .producto-section-unified .text-section:nth-child(4) {
+        grid-row: 8;
     }
 }
 
@@ -928,7 +960,14 @@ body {
     }
 
     .producto-section-unified .image-sticky-container {
-        height: 50vh !important;
+        height: auto !important;
+        min-height: 300px !important;
+    }
+
+    .producto-section-unified .image-sticky-container img {
+        height: auto !important;
+        min-height: 300px !important;
+        max-height: 400px !important;
     }
 
     .producto-section-unified .text-section {
@@ -937,36 +976,118 @@ body {
 
     /* Ajustar tamaños de elementos en mobile */
     .producto-section-unified .producto-titulo {
-        font-size: 32px !important;
+        font-size: 28px !important;
+        line-height: 1.2 !important;
+        margin-bottom: 15px !important;
+    }
+
+    .producto-section-unified .producto-titulo b {
+        font-size: 28px !important;
+    }
+
+    .producto-section-unified .estandar,
+    .producto-section-unified .soft,
+    .producto-section-unified .closing {
+        font-size: 24px !important;
     }
 
     .producto-section-unified .producto-descripcion {
         font-size: 14px !important;
+        line-height: 1.6 !important;
+        margin-bottom: 12px !important;
     }
 
     .producto-section-unified .badge-thowel {
-        top: 20px !important;
-        right: 20px !important;
+        position: relative !important;
+        top: 0 !important;
+        right: 0 !important;
+        margin-bottom: 15px !important;
+        text-align: left !important;
     }
 
     .producto-section-unified .badge-thowel img {
-        width: 60px !important;
+        width: 50px !important;
+        height: auto !important;
+    }
+
+    .producto-section-unified .diagrama-tecnico {
+        margin-left: 0 !important;
+        margin-top: 20px !important;
+        text-align: center !important;
+        width: 100% !important;
     }
 
     .producto-section-unified .diagrama-tecnico img {
-        max-width: 250px !important;
+        max-width: 200px !important;
+        width: 100% !important;
+        height: auto !important;
+    }
+
+    .producto-section-unified .specs-intro {
+        font-size: 14px !important;
+        line-height: 1.6 !important;
+        margin-bottom: 20px !important;
+    }
+
+    .producto-section-unified .specs-table-image {
+        width: 100% !important;
+        max-width: 100% !important;
     }
 
     .producto-section-unified .specs-table-image img {
         max-width: 100% !important;
+        width: 100% !important;
+        height: auto !important;
     }
 
     .producto-section-unified .codazos-imagenes {
         flex-direction: column !important;
-        gap: 20px !important;
+        gap: 15px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
     }
 
     .producto-section-unified .codazos-imagenes img {
-        max-width: 80% !important;
+        max-width: 100% !important;
+        width: 100% !important;
+        height: auto !important;
+    }
+}
+
+/* Mobile Pequeño */
+@media (max-width: 480px) {
+    .producto-section-unified .producto-titulo {
+        font-size: 24px !important;
+    }
+
+    .producto-section-unified .producto-titulo b {
+        font-size: 24px !important;
+    }
+
+    .producto-section-unified .estandar,
+    .producto-section-unified .soft,
+    .producto-section-unified .closing {
+        font-size: 20px !important;
+    }
+
+    .producto-section-unified .producto-descripcion {
+        font-size: 13px !important;
+    }
+
+    .producto-section-unified .specs-intro {
+        font-size: 13px !important;
+    }
+
+    .producto-section-unified .badge-thowel img {
+        width: 45px !important;
+    }
+
+    .producto-section-unified .diagrama-tecnico img {
+        max-width: 180px !important;
+    }
+
+    .producto-section-unified .text-section {
+        padding: 25px 15px !important;
     }
 }
