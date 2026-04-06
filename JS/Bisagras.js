@@ -198,7 +198,6 @@ document.addEventListener('DOMContentLoaded', () => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
             }
         });
     }, observerOptions);
@@ -209,13 +208,11 @@ document.addEventListener('DOMContentLoaded', () => {
         if (index === 0) {
             // La primera sección se muestra inmediatamente
             section.style.opacity = '1';
-            section.style.transform = 'translateY(0)';
-            section.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+            section.style.transition = 'opacity 0.8s ease';
         } else {
             // Las demás secciones empiezan ocultas
             section.style.opacity = '0';
-            section.style.transform = 'translateY(30px)';
-            section.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+            section.style.transition = 'opacity 0.8s ease';
         }
         fadeObserver.observe(section);
     });

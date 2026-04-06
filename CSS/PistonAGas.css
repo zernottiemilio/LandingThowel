@@ -334,8 +334,6 @@ body {
     width: 100%;
     margin-top: 25px;
     margin-bottom: -10px;
-    display: flex;
-    justify-content: center;
 }
 
 .diagrama-tecnico img {
@@ -625,13 +623,13 @@ body {
    ======================================== */
 
 .producto-section-unified {
-    min-height: 300vh;
+    min-height: 240vh;
     width: 100%;
     padding-top: 0;
 }
 
 .producto-section-unified .dual-content {
-    min-height: 300vh;
+    min-height: 240vh;
     display: flex !important;
     flex-direction: row !important;
     width: 100% !important;
@@ -699,19 +697,31 @@ body {
 }
 
 .producto-section-unified .text-section {
-    min-height: 100vh;
+    min-height: 80vh;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    padding: 60px;
+    padding: 120px 60px 60px 60px;
     background: white;
+}
+
+/* Primera sección - alineada arriba */
+.producto-section-unified .text-section:first-of-type {
+    justify-content: flex-start;
+    padding-top: 150px;
+}
+
+/* Tercera sección - codazos centrados */
+.producto-section-unified .text-section[data-section="codazos"] {
+    align-items: center;
+    padding: 120px 100px 60px 100px;
 }
 
 /* Desktop - asegurar sticky */
 @media (min-width: 1201px) {
     .producto-section-unified {
-        min-height: 300vh;
+        min-height: 240vh;
         padding-top: 0;
     }
 
@@ -722,8 +732,8 @@ body {
     }
 
     .producto-section-unified .text-section {
-        padding: 60px;
-        min-height: 100vh;
+        padding: 120px 60px 60px 60px;
+        min-height: 80vh;
     }
 }
 
@@ -768,7 +778,6 @@ body {
     /* Mostrar todas las imágenes en móvil/tablet */
     .producto-section-unified .image-sticky-container img:first-child,
     .producto-section-unified .image-sticky-container img {
-        position: relative !important;
         opacity: 1 !important;
         margin-bottom: 20px;
     }

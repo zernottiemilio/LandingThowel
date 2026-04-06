@@ -355,11 +355,11 @@ body {
 
 .diagrama-tecnico {
     margin-top: 0px;
-    margin-left: 150px;
+    margin-left: 80px;
 }
 
 .diagrama-tecnico img {
-  max-width: 350px;
+  max-width: 250px;
   width: 100%;
   height: auto;
 }
@@ -446,16 +446,18 @@ body {
 
 .codazos-imagenes {
     width: 100%;
-    max-width: 600px;
+    max-width: 400px;
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 15px;
 }
 
 .codazos-imagenes img {
     width: 100%;
     height: auto;
     display: block;
+    max-height: 150px;
+    object-fit: contain;
 }
 
 .producto-section-unified .codazos-imagenes {
@@ -567,7 +569,7 @@ body {
     }
 
     .diagrama-tecnico img {
-        max-width: 300px;
+        max-width: 250px;
     }
 }
 
@@ -628,12 +630,12 @@ body {
     }
 
     .diagrama-tecnico {
-        margin-top: 20px;
-        margin-left: 0;
+        margin-top: 0px;
+        margin-left: 80px;
     }
 
     .diagrama-tecnico img {
-        max-width: 280px;
+        max-width: 250px;
     }
 
     .specs-intro {
@@ -697,7 +699,7 @@ body {
 
     .diagrama-tecnico {
         margin-top: 15px;
-        margin-left: 0;
+        margin-left: 80px;
         text-align: center;
     }
 
@@ -778,7 +780,7 @@ body {
    ======================================== */
 
 .producto-section-unified {
-    min-height: 200vh;
+    min-height: 160vh;
     width: 100%;
     padding-top: 0;
 }
@@ -788,7 +790,7 @@ body {
 }
 
 .producto-section-unified .dual-content {
-    min-height: 200vh;
+    min-height: 160vh;
     display: flex !important;
     flex-direction: row !important;
     width: 100% !important;
@@ -860,13 +862,25 @@ body {
 }
 
 .producto-section-unified .text-section {
-    min-height: 100vh;
+    min-height: 80vh;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    padding: 60px;
+    padding: 120px 60px 60px 60px;
     background: white;
+}
+
+/* Primera sección - alineada arriba */
+.producto-section-unified .text-section:first-of-type {
+    justify-content: flex-start;
+    padding-top: 150px;
+}
+
+/* Tercera sección - codazos centrados */
+.producto-section-unified .text-section[data-section="codazos"] {
+    align-items: center;
+    padding: 120px 100px 60px 100px;
 }
 
 .producto-section-unified .text-section:first-child {
@@ -966,7 +980,7 @@ body:has(#pata-plastica) {
 /* Desktop - asegurar sticky */
 @media (min-width: 1201px) {
     .producto-section-unified {
-        min-height: 200vh;
+        min-height: 160vh;
         padding-top: 0;
     }
 
@@ -985,8 +999,8 @@ body:has(#pata-plastica) {
     }
 
     .producto-section-unified .text-section {
-        padding: 60px;
-        min-height: 100vh;
+        padding: 120px 60px 60px 60px;
+        min-height: 80vh;
     }
 }
 
@@ -1031,7 +1045,6 @@ body:has(#pata-plastica) {
     /* Mostrar todas las imágenes en móvil/tablet */
     .producto-section-unified .image-sticky-container img:first-child,
     .producto-section-unified .image-sticky-container img {
-        position: relative !important;
         opacity: 1 !important;
         margin-bottom: 20px;
     }

@@ -45,11 +45,10 @@ class ProductPageAnimations {
             });
         }
 
-        // Animar contenido derecho
+        // Mostrar contenido derecho sin animación de movimiento
         if (rightContent) {
             anime({
                 targets: rightContent,
-                translateX: ['100px', '0px'],
                 opacity: [0, 1],
                 duration: 1200,
                 easing: 'easeOutExpo',
@@ -91,7 +90,6 @@ class ProductPageAnimations {
             anime({
                 targets: leftContent,
                 translateX: [isEven ? '-80px' : '80px', '0px'],
-                translateY: ['-30px', '0px'],
                 opacity: [0, 1],
                 duration: 1000,
                 easing: 'easeOutExpo',
@@ -99,12 +97,10 @@ class ProductPageAnimations {
             });
         }
 
-        // Animar contenido derecho
+        // Mostrar contenido derecho sin animación de movimiento
         if (rightContent) {
             anime({
                 targets: rightContent,
-                translateX: [isEven ? '80px' : '-80px', '0px'],
-                translateY: ['-30px', '0px'],
                 opacity: [0, 1],
                 duration: 1000,
                 easing: 'easeOutExpo',
@@ -112,12 +108,11 @@ class ProductPageAnimations {
             });
         }
 
-        // Animar elementos hijos individuales con stagger
+        // Mostrar elementos hijos sin animación de movimiento
         const childElements = section.querySelectorAll('.producto-titulo, .producto-descripcion, .specs-intro, .diagrama-tecnico, .specs-table-image, .badge-thowel');
         if (childElements.length > 0) {
             anime({
                 targets: childElements,
-                translateY: ['20px', '0px'],
                 opacity: [0, 1],
                 duration: 800,
                 easing: 'easeOutExpo',
@@ -156,15 +151,11 @@ class ProductPageAnimations {
             const scrollProgress = (window.innerHeight - rect.top) / (window.innerHeight + rect.height);
             const offset = (scrollProgress - 0.5) * 50; // Efecto sutil
 
+            // Solo aplicar parallax a las imágenes del lado izquierdo
             const leftImages = section.querySelectorAll('.left-content img');
-            const rightImages = section.querySelectorAll('.right-content img');
 
             leftImages.forEach(img => {
                 img.style.transform = `translateY(${offset}px)`;
-            });
-
-            rightImages.forEach(img => {
-                img.style.transform = `translateY(${-offset}px)`;
             });
         });
     }

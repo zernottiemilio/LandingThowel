@@ -994,12 +994,12 @@ body {
     position: relative;
     background: linear-gradient(135deg, #003399 0%, #0044bb 100%);
     width: 100%;
-    min-height: 100vh;
+    min-height: 50vh;
     display: flex;
     align-items: center;
     justify-content: center;
     z-index: 10;
-    padding: 80px 40px;
+    padding: 60px 40px;
     overflow: hidden;
 }
 
