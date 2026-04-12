@@ -322,14 +322,21 @@ body {
     position: relative;
 }
 
+.titulo-con-badge {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
 .badge-thowel {
-    position: absolute;
-    top: 130px;
-    right: 100px;
+    position: relative;
+    top: auto;
+    right: auto;
 }
 
 .badge-thowel img {
-    width: 120px;
+    width: 100px;
     height: auto;
 }
 
@@ -338,7 +345,7 @@ body {
     font-weight: 900;
     color: #1e3a8a;
     line-height: 1.1;
-    margin-bottom: 30px;
+    margin-bottom: 0;
 }
 
 .plus {
@@ -350,15 +357,19 @@ body {
 
 .producto-descripcion {
     font-size: 18px;
-    color: #333;
+    color: #1e3a8a;
     line-height: 1.8;
     margin-bottom: 20px;
     max-width: 600px;
+    text-align: left;
 }
 
 .diagrama-tecnico {
-    margin-top: 0px;
-    margin-left: 150px;
+    margin-top: 20px;
+    margin-left: 0;
+    text-align: center;
+    width: 100%;
+    max-width: 600px;
 }
 
 .diagrama-tecnico img {
@@ -410,21 +421,37 @@ body {
 
 .specs-intro {
     font-size: 18px;
-    color: #1e3a8a;
+    color: #1e3a8a !important;
     line-height: 1.8;
     margin-bottom: 30px;
     max-width: 600px;
+    text-align: left;
 }
 
 .specs-table-image {
     width: 100%;
     max-width: 600px;
+    text-align: center;
 }
 
 .specs-table-image img {
     width: 100%;
     height: auto;
     display: block;
+}
+
+.specs-icons {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 40px;
+    width: 100%;
+    max-width: 600px;
+}
+
+.specs-icons img {
+    width: 140px;
+    height: auto;
 }
 
 /* ========================================
@@ -454,7 +481,7 @@ body {
     max-width: 600px;
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    height: auto;
     gap: 30px;
 }
 
@@ -501,6 +528,7 @@ body {
     display: flex;
     flex-direction: column;
     height: 100vh;
+    overflow: visible;
 }
 
 .similares-titulo {
@@ -509,8 +537,12 @@ body {
     color: #1e3a8a;
     text-align: center;
     margin: 0 0 20px 0;
-    padding: 0 60px;
+    padding: 0 20px;
     flex-shrink: 0;
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 10;
 }
 
 .productos-similares .catalog-carousel {
@@ -777,13 +809,13 @@ body {
    ======================================== */
 
 .producto-section-unified {
-    min-height: 300vh;
+    min-height: 210vh;
     width: 100%;
     padding-top: 0;
 }
 
 .producto-section-unified .dual-content {
-    min-height: 300vh;
+    min-height: 210vh;
     display: flex !important;
     flex-direction: row !important;
     width: 100% !important;
@@ -847,11 +879,12 @@ body {
     align-items: flex-start !important;
     justify-content: flex-start !important;
     padding: 0 !important;
+    padding-top: 130px !important;
     background: white !important;
 }
 
 .producto-section-unified .text-section {
-    min-height: 100vh;
+    min-height: 70vh;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -860,10 +893,11 @@ body {
     background: white;
 }
 
+
 /* Desktop - asegurar sticky */
 @media (min-width: 1201px) {
     .producto-section-unified {
-        min-height: 300vh;
+        min-height: 210vh;
         padding-top: 0;
     }
 
@@ -875,7 +909,7 @@ body {
 
     .producto-section-unified .text-section {
         padding: 60px;
-        min-height: 100vh;
+        min-height: 70vh;
     }
 }
 
@@ -1045,6 +1079,20 @@ body {
         height: auto !important;
     }
 
+    .producto-section-unified .specs-icons {
+        gap: 20px !important;
+        margin-top: 25px !important;
+    }
+
+    .producto-section-unified .specs-icons img {
+        width: 100px !important;
+    }
+
+    .producto-section-unified .titulo-con-badge {
+        flex-direction: column !important;
+        gap: 15px !important;
+    }
+
     .producto-section-unified .codazos-imagenes {
         flex-direction: column !important;
         gap: 15px !important;
@@ -1094,5 +1142,14 @@ body {
 
     .producto-section-unified .text-section {
         padding: 25px 15px !important;
+    }
+
+    .producto-section-unified .specs-icons {
+        gap: 15px !important;
+        margin-top: 20px !important;
+    }
+
+    .producto-section-unified .specs-icons img {
+        width: 80px !important;
     }
 }

@@ -350,15 +350,18 @@ body {
 
 .producto-descripcion {
     font-size: 18px;
-    color: #333;
+    color: #1e3a8a;
     line-height: 1.8;
     margin-bottom: 20px;
     max-width: 600px;
 }
 
 .diagrama-tecnico {
-    margin-top: 0px;
-    margin-left: 150px;
+    margin-top: 20px;
+    margin-left: 0;
+    text-align: center;
+    width: 100%;
+    max-width: 600px;
 }
 
 .diagrama-tecnico img {
@@ -419,12 +422,27 @@ body {
 .specs-table-image {
     width: 100%;
     max-width: 600px;
+    text-align: center;
 }
 
 .specs-table-image img {
     width: 100%;
     height: auto;
     display: block;
+}
+
+.specs-icons {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 40px;
+    width: 100%;
+    max-width: 600px;
+}
+
+.specs-icons img {
+    width: 140px;
+    height: auto;
 }
 
 /* ========================================
@@ -777,13 +795,13 @@ body {
    ======================================== */
 
 .producto-section-unified {
-    min-height: 300vh;
+    min-height: 250vh;
     width: 100%;
     padding-top: 0;
 }
 
 .producto-section-unified .dual-content {
-    min-height: 300vh;
+    min-height: 250vh;
     display: flex !important;
     flex-direction: row !important;
     width: 100% !important;
@@ -847,11 +865,12 @@ body {
     align-items: flex-start !important;
     justify-content: flex-start !important;
     padding: 0 !important;
+    padding-top: 100px !important;
     background: white !important;
 }
 
 .producto-section-unified .text-section {
-    min-height: 100vh;
+    min-height: 85vh;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -863,7 +882,7 @@ body {
 /* Desktop - asegurar sticky */
 @media (min-width: 1201px) {
     .producto-section-unified {
-        min-height: 300vh;
+        min-height: 250vh;
         padding-top: 0;
     }
 
@@ -875,7 +894,7 @@ body {
 
     .producto-section-unified .text-section {
         padding: 60px;
-        min-height: 100vh;
+        min-height: 85vh;
     }
 }
 
