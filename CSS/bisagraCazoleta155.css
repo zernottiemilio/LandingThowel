@@ -334,15 +334,15 @@ body {
 }
 
 .producto-titulo {
-    font-size: 48px;
+    font-size: 42px;
     font-weight: 900;
     color: #1e3a8a;
     line-height: 1.1;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 .estandar {
-  font-size: clamp(28px, 4vw, 60px);
+  font-size: clamp(24px, 3vw, 38px);
   font-weight: 400;
   color: #e74c3c;
   margin-bottom: 20px;
