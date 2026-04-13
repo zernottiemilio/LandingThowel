@@ -257,20 +257,12 @@ body {
     align-items: center;
     justify-content: center;
     padding: 0;
-    height: auto;
     width: 50%;
-}
-
-.right-content {
-    height: auto;
-    min-height: auto;
-    align-items: flex-start;
-    padding-top: 100px;
-    padding-bottom: 40px;
+    min-height: 500px;
 }
 
 .left-content {
-    background: none !important; 
+    background: none !important;
 }
 
 .left-content img {
@@ -285,10 +277,168 @@ body {
     flex: 1;
     flex-direction: column;
     height: auto;
-    justify-content: flex-start;
-    align-items: flex-start;
-    padding: 40px 60px;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 50px;
     background: #fff;
+    text-align: center;
+}
+
+/* Solo la primera sección necesita padding-top extra por el navbar */
+#tirador-boton .right-content,
+#rueda-nylon .right-content {
+    padding-top: 120px;
+    padding-bottom: 40px;
+    justify-content: flex-start;
+}
+
+/* Sistemas de Apoyo - layout simple */
+#rueda-nylon-simple .dual-content,
+#pata-plastica-simple .dual-content {
+    display: flex;
+    align-items: stretch;
+}
+
+#rueda-nylon-simple .right-content {
+    padding-top: 120px;
+    padding-bottom: 60px;
+    justify-content: flex-start;
+    min-height: auto;
+    height: auto;
+}
+
+#rueda-nylon-simple .left-content,
+#pata-plastica-simple .left-content {
+    min-height: auto;
+    height: auto;
+    flex: 1;
+}
+
+#rueda-nylon-simple .left-content img,
+#pata-plastica-simple .left-content img {
+    height: 100%;
+    min-height: 100%;
+    object-fit: cover;
+}
+
+#pata-plastica-simple .right-content {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    justify-content: flex-start;
+    min-height: auto;
+    height: auto;
+}
+
+/* Diagrama técnico responsive */
+#rueda-nylon-simple .diagrama-tecnico,
+#pata-plastica-simple .diagrama-tecnico {
+    width: 100%;
+    max-width: 400px;
+    margin: 20px auto;
+}
+
+#rueda-nylon-simple .diagrama-tecnico img,
+#pata-plastica-simple .diagrama-tecnico img {
+    width: 100%;
+    height: auto;
+}
+
+/* Logos en fila para sistemas de apoyo */
+#rueda-nylon-simple .specs-all-logos,
+#pata-plastica-simple .specs-all-logos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin: 25px auto;
+}
+
+#rueda-nylon-simple .specs-all-logos img,
+#pata-plastica-simple .specs-all-logos img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+
+/* Tabla de especificaciones */
+#rueda-nylon-simple .specs-table-image,
+#pata-plastica-simple .specs-table-image {
+    width: 100%;
+    max-width: 350px;
+    margin: 20px auto;
+}
+
+#rueda-nylon-simple .specs-table-image img,
+#pata-plastica-simple .specs-table-image img {
+    width: 100%;
+    height: auto;
+}
+
+/* Asegurar que las secciones siguientes también estén bien alineadas */
+#manija-barral .right-content,
+#manija-oval .right-content,
+#pata-plastica .right-content,
+#pata-plastica-simple .right-content {
+    justify-content: flex-start;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+/* Subtítulo del producto */
+.producto-subtitulo {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 15px;
+    font-style: italic;
+}
+
+/* Diagrama técnico centrado */
+.diagrama-tecnico {
+    width: 100%;
+    max-width: 280px;
+    margin: 15px auto;
+    display: flex;
+    justify-content: center;
+}
+
+.diagrama-tecnico img {
+    width: 100%;
+    height: auto;
+}
+
+/* Iconos en fila horizontal */
+.specs-all-logos {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    margin: 20px auto;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.specs-all-logos img {
+    width: auto;
+    max-width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+
+/* Título principal de sección */
+.producto-titulo-principal {
+    font-size: 28px;
+    font-weight: 900;
+    color: #1e3a8a;
+    margin-bottom: 15px;
+}
+
+.producto-descripcion {
+    font-size: 14px;
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 60px;
+    max-width: 450px;
 }
 
 /* ========================================
@@ -598,11 +748,11 @@ section#rueda-nylon.producto-section {
 }
 
 .producto-titulo {
-    font-size: 64px;
+    font-size: 24px;
     font-weight: 900;
     color: #1e3a8a;
     line-height: 1.1;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
 }
 
 .estandar {
@@ -700,16 +850,18 @@ section#rueda-nylon.producto-section {
 
 .specs-table-image {
     width: 100%;
-    max-width: 600px;
+    max-width: 350px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 30px 40px;
+    gap: 15px;
     align-items: center;
+    justify-content: center;
+    margin-top: 10px;
 }
 
 .specs-table-image img {
-    max-width: 120px;
+    max-width: 100%;
     width: auto;
     height: auto;
     display: block;
@@ -720,28 +872,35 @@ section#rueda-nylon.producto-section {
 .specs-table-image img[src*="peso"],
 .specs-table-image img[src*="negro"],
 .specs-table-image img[src*="plastico"] {
-    max-width: 100px;
+    max-width: 60px;
 }
 
 /* Iconos de información (unidades, ciclos) */
 .specs-table-image img[src*="unidades"],
-.specs-table-image img[src*="ciclos"] {
-    max-width: 150px;
+.specs-table-image img[src*="ciclos"],
+.specs-table-image img[src*="5o unidades"] {
+    max-width: 60px;
 }
 
 /* Tablas técnicas grandes */
 .specs-table-image img[src*="tabla"],
+.specs-table-image img[src*="Tabla"],
 .specs-table-image img[src*="especificaciones"] {
-    max-width: 450px;
-    flex-basis: 100%;
+    max-width: 100%;
+    width: 280px;
 }
 
 /* Dibujos técnicos y planos */
 .specs-table-image img[src*="dibujo"],
-.specs-table-image img[src*="plano"],
+.specs-table-image img[src*="plano"] {
+    max-width: 100%;
+    width: 250px;
+}
+
+/* Imagen de componentes más grande */
 .specs-table-image img[src*="componentes"] {
-    max-width: 500px;
-    flex-basis: 100%;
+    max-width: 100%;
+    width: 320px;
 }
 
 /* ========================================
@@ -899,26 +1058,37 @@ section#rueda-nylon.producto-section {
     .left-content,
     .right-content {
         width: 100%;
+        min-height: 50vh;
+    }
+
+    .left-content img {
+        width: 100%;
+        height: 50vh;
+        object-fit: cover;
+    }
+
+    .right-content {
+        padding: 50px;
         min-height: auto;
     }
-    
+
     .navbar {
         padding: 5px 30px;
     }
-    
+
     .navbar ul {
         gap: 30px;
     }
-    
+
     .producto-titulo {
         font-size: 36px;
     }
-    
+
     .catalog-slide {
         gap: 15px;
         padding: 15px;
     }
-    
+
     .catalog-overlay-text {
         font-size: 12px;
         padding: 15px;
@@ -1397,13 +1567,167 @@ section#rueda-nylon.producto-section {
    SECCIONES DE MANIJAS - LAYOUT SIMPLE
    ======================================== */
 
-#manija-barral,
-#manija-boton,
-#manija-oval {
-    padding-top: 0;
+
+/* ========================================
+   SISTEMAS DE APOYO - RESPONSIVE
+   ======================================== */
+
+/* Pantallas grandes (1400px+) */
+@media (min-width: 1400px) {
+    #rueda-nylon-simple .diagrama-tecnico,
+    #pata-plastica-simple .diagrama-tecnico {
+        max-width: 450px;
+    }
+
+    #rueda-nylon-simple .specs-table-image,
+    #pata-plastica-simple .specs-table-image {
+        max-width: 400px;
+    }
+
+    #rueda-nylon-simple .specs-all-logos img,
+    #pata-plastica-simple .specs-all-logos img {
+        width: 70px;
+        height: 70px;
+    }
 }
 
-#manija-barral {
-    padding-top: 100px;
+/* Pantallas medianas-grandes (1200px - 1399px) */
+@media (min-width: 1200px) and (max-width: 1399px) {
+    #rueda-nylon-simple .diagrama-tecnico,
+    #pata-plastica-simple .diagrama-tecnico {
+        max-width: 380px;
+    }
+
+    #rueda-nylon-simple .specs-table-image,
+    #pata-plastica-simple .specs-table-image {
+        max-width: 350px;
+    }
+}
+
+/* Pantallas medianas (1024px - 1199px) */
+@media (min-width: 1024px) and (max-width: 1199px) {
+    #rueda-nylon-simple .right-content,
+    #pata-plastica-simple .right-content {
+        padding: 100px 40px 50px;
+    }
+
+    #rueda-nylon-simple .diagrama-tecnico,
+    #pata-plastica-simple .diagrama-tecnico {
+        max-width: 320px;
+    }
+
+    #rueda-nylon-simple .specs-table-image,
+    #pata-plastica-simple .specs-table-image {
+        max-width: 300px;
+    }
+
+    #rueda-nylon-simple .specs-all-logos img,
+    #pata-plastica-simple .specs-all-logos img {
+        width: 50px;
+        height: 50px;
+    }
+
+    #rueda-nylon-simple .specs-all-logos,
+    #pata-plastica-simple .specs-all-logos {
+        gap: 15px;
+    }
+}
+
+/* Tablets (768px - 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+    #rueda-nylon-simple .dual-content,
+    #pata-plastica-simple .dual-content {
+        flex-direction: column;
+    }
+
+    #rueda-nylon-simple .left-content,
+    #pata-plastica-simple .left-content,
+    #rueda-nylon-simple .right-content,
+    #pata-plastica-simple .right-content {
+        width: 100%;
+    }
+
+    #rueda-nylon-simple .left-content img,
+    #pata-plastica-simple .left-content img {
+        min-height: 400px;
+        max-height: 500px;
+    }
+
+    #rueda-nylon-simple .right-content {
+        padding: 40px 50px;
+    }
+
+    #pata-plastica-simple .right-content {
+        padding: 40px 50px;
+    }
+
+    #rueda-nylon-simple .diagrama-tecnico,
+    #pata-plastica-simple .diagrama-tecnico {
+        max-width: 350px;
+    }
+
+    #rueda-nylon-simple .specs-table-image,
+    #pata-plastica-simple .specs-table-image {
+        max-width: 320px;
+    }
+}
+
+/* Móviles (menos de 768px) */
+@media (max-width: 767px) {
+    #rueda-nylon-simple .dual-content,
+    #pata-plastica-simple .dual-content {
+        flex-direction: column;
+    }
+
+    #rueda-nylon-simple .left-content,
+    #pata-plastica-simple .left-content,
+    #rueda-nylon-simple .right-content,
+    #pata-plastica-simple .right-content {
+        width: 100%;
+    }
+
+    #rueda-nylon-simple .left-content img,
+    #pata-plastica-simple .left-content img {
+        min-height: 300px;
+        max-height: 400px;
+    }
+
+    #rueda-nylon-simple .right-content {
+        padding: 30px 20px;
+    }
+
+    #pata-plastica-simple .right-content {
+        padding: 30px 20px;
+    }
+
+    #rueda-nylon-simple .producto-titulo-principal,
+    #pata-plastica-simple .producto-titulo {
+        font-size: 22px;
+    }
+
+    #rueda-nylon-simple .producto-descripcion {
+        font-size: 14px;
+    }
+
+    #rueda-nylon-simple .diagrama-tecnico,
+    #pata-plastica-simple .diagrama-tecnico {
+        max-width: 280px;
+    }
+
+    #rueda-nylon-simple .specs-table-image,
+    #pata-plastica-simple .specs-table-image {
+        max-width: 280px;
+    }
+
+    #rueda-nylon-simple .specs-all-logos,
+    #pata-plastica-simple .specs-all-logos {
+        gap: 12px;
+    }
+
+    #rueda-nylon-simple .specs-all-logos img,
+    #pata-plastica-simple .specs-all-logos img {
+        width: 45px;
+        height: 45px;
+    }
 }
 
