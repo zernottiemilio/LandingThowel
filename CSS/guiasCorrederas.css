@@ -965,14 +965,17 @@ body {
 
     .specs-all-logos {
         max-width: 100%;
-        flex-wrap: wrap;
-        gap: 15px;
-        justify-content: center;
+        flex-wrap: nowrap !important;
+        flex-direction: row !important;
+        gap: 10px !important;
+        justify-content: center !important;
     }
 
     .specs-all-logos img {
-        max-width: 55px;
-        height: 55px;
+        max-width: 70px !important;
+        width: 70px !important;
+        height: 70px !important;
+        object-fit: contain !important;
     }
 
     .codazos-imagenes {
@@ -982,6 +985,26 @@ body {
     .similares-titulo {
         font-size: 28px;
         padding: 0 30px;
+    }
+
+    /* Imágenes de catálogo en móvil - apilar verticalmente */
+    .imagenes-producto-catalogo {
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 30px !important;
+    }
+
+    .imagenes-producto-catalogo .diagrama-tecnico,
+    .fotos-producto {
+        max-width: 280px !important;
+        width: 280px !important;
+    }
+
+    .imagenes-producto-catalogo .diagrama-tecnico img,
+    .fotos-producto img {
+        width: 280px !important;
+        max-width: 280px !important;
+        height: auto !important;
     }
 }
 
@@ -1236,10 +1259,19 @@ body {
     }
 
     .producto-section-unified .specs-all-logos {
-        margin: 40px auto !important;
+        margin: 30px auto !important;
         max-width: 100% !important;
-        flex-wrap: wrap !important;
+        flex-wrap: nowrap !important;
+        flex-direction: row !important;
+        gap: 10px !important;
         justify-content: center !important;
+    }
+
+    .producto-section-unified .specs-all-logos img {
+        max-width: 70px !important;
+        width: 70px !important;
+        height: 70px !important;
+        object-fit: contain !important;
     }
 
     /* Mostrar todas las imágenes en móvil/tablet */
@@ -1283,10 +1315,19 @@ body {
     }
 
     .producto-section-unified .specs-all-logos {
-        margin: 30px auto !important;
+        margin: 20px auto !important;
         max-width: 100% !important;
-        flex-wrap: wrap !important;
+        flex-wrap: nowrap !important;
+        flex-direction: row !important;
+        gap: 8px !important;
         justify-content: center !important;
+    }
+
+    .producto-section-unified .specs-all-logos img {
+        max-width: 70px !important;
+        width: 70px !important;
+        height: 70px !important;
+        object-fit: contain !important;
     }
 
     /* Ajustar tamaños de elementos en mobile */

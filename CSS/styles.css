@@ -533,34 +533,21 @@ body {
 /* ================================
    SECCIÓN CATÁLOGO - COMPLETAMENTE CORREGIDA
 ================================ */
-.catalog-section {
+.catalog-header-section {
     position: relative;
     background-color: #f5f5f5;
     width: 100%;
-    height: 100vh;
     display: flex;
     flex-direction: column;
-    z-index: 10;
-    padding: 0;
+    z-index: 100;
+    padding: 60px 0 40px 0;
     margin: 0;
-}
-
-.catalog-container {
-    max-width: 100%;
-    width: 100%;
-    height: 100vh;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    position: relative;
 }
 
 .catalog-header {
-    padding: 80px 0 30px 0;
+    padding: 0;
     width: 100%;
     position: relative;
-    flex-shrink: 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -578,11 +565,11 @@ body {
 
 .catalog-arrow {
     position: absolute;
-    left: -15px;
-    top: -60px;
+    left: -78px;
+    top: -70px;
     z-index: 2;
     width: 180px;
-    height: 180px;
+    height: 220px;
 }
 
 .catalog-arrow img {
@@ -592,16 +579,60 @@ body {
     display: block;
 }
 
-.catalog-title { 
-    font-size: 3rem; 
-    font-weight: 700; 
-    text-transform: uppercase; 
+.catalog-title-link {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    margin-left: 100px;
+    margin-top: -30px;
+}
+
+.catalog-title-link:hover .catalog-title {
+    color: #1e3a8a;
+}
+
+.catalog-tooltip {
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #1e3a8a;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+    margin-bottom: 10px;
+}
+
+.catalog-tooltip::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 8px solid transparent;
+    border-top-color: #1e3a8a;
+}
+
+.catalog-title-link:hover .catalog-tooltip {
+    opacity: 1;
+    visibility: visible;
+}
+
+.catalog-title {
+    font-size: 3rem;
+    font-weight: 700;
+    text-transform: uppercase;
     color: #333;
     text-shadow: none;
-    margin-top: -30px;
-    margin-left: 100px;
+    margin: 0;
     z-index: 1;
-    
+    transition: color 0.3s;
 }
 
 .catalog-description-section { 
@@ -647,6 +678,8 @@ body {
     display: flex;
     flex-direction: column;
     margin-top: 20px;
+    min-height: 100vh;
+    height: 100vh;
 }
 
 /* NAVIGATION ARROWS */
@@ -685,17 +718,10 @@ body {
 /* CAROUSEL TRACK */
 .catalog-track {
     display: flex;
-    width: 200%; /* Para 2 slides */
-    height: 100%;
+    width: auto;
+    height: 100vh;
+    min-height: 100vh;
     transition: transform 0.5s ease-in-out;
-}
-
-/* CATALOG SLIDE */
-.catalog-slide {
-    width: 85%; /* Cada slide ocupa 50% del track */
-    height: 100%;
-    display: flex;
-    flex: none;
 }
 
 /* CATALOG ITEMS */
@@ -704,10 +730,11 @@ body {
     cursor: pointer;
     transition: all 0.3s ease;
     flex: 0 0 auto;
-    width: 350px;
-    min-width: 350px;
-    max-width: 350px;
-    height: 100%;
+    width: 370px;
+    min-width: 370px;
+    max-width: 370px;
+    height: 100vh;
+    min-height: 100vh;
     overflow: hidden;
     background: #f8f9fa;
     text-decoration: none;
@@ -750,20 +777,18 @@ body {
 
 /* EFECTO HOVER */
 .catalog-item:hover {
-    border: 15px solid #003399; /* añade borde */
-    border-color: #003399; /* borde azul */
-    transform: scale(1.05); /* agranda ligeramente el contenedor */
-    z-index: 30; /* lo pone por encima de los demás */
-    overflow: visible; /* permite que la imagen se vea completa */
+    border: 15px solid #003399;
+    transform: scale(1);
+    z-index: 30;
 }
 
 .catalog-item:hover img {
-    transform: translateY(-10px) scale(1.05); /* levanta y agranda sutilmente */
-    height: 100%; /* mantiene el tamaño proporcional */
+    transform: translateY(-20px);
+    height: 110%;
 }
 
 .catalog-item:hover .catalog-overlay {
-    bottom: 0; /* aparece desde abajo */
+    bottom: 0;
 }
 
 .catalogo-item::after {
@@ -803,6 +828,76 @@ body {
 
 .indicator:hover {
     background: rgba(0, 51, 153, 0.8);
+}
+
+/* ========================================
+   PRODUCTOS SIMILARES (Carrusel del Index)
+   ======================================== */
+.productos-similares {
+    width: 100%;
+    padding: 60px 0 0 0;
+    margin: 0;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    position: relative;
+    z-index: 100;
+}
+
+.productos-similares.productos-index {
+    padding: 0;
+    height: 75vh;
+}
+
+.similares-titulo {
+    font-size: 36px;
+    font-weight: 900;
+    color: #1e3a8a;
+    text-align: center;
+    margin: 0 0 20px 0;
+    padding: 0 60px;
+    flex-shrink: 0;
+}
+
+.productos-similares .catalog-carousel {
+    margin-top: 0;
+    padding-top: 0;
+    flex: 1;
+    height: auto;
+    min-height: auto;
+    overflow: visible;
+    position: relative;
+    z-index: 101;
+}
+
+.productos-similares .catalog-track {
+    height: 100%;
+    min-height: 100%;
+    width: auto;
+    display: flex;
+}
+
+.productos-similares .catalog-item {
+    height: 100%;
+    min-height: 100%;
+    flex-shrink: 0;
+    width: 370px;
+    min-width: 370px;
+    max-width: 370px;
+    overflow: hidden;
+    background: #f8f9fa;
+}
+
+.productos-similares .catalog-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.productos-similares .carousel-nav {
+    z-index: 200;
 }
 
 /* Footer */
@@ -997,7 +1092,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 10;
+    z-index: 50;
     padding: 60px 40px;
     overflow: hidden;
 }

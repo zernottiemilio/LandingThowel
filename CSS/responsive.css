@@ -1706,23 +1706,24 @@
         height: auto !important;
     }
 
-    /* Especificaciones - mostrar en 2x2 SIN ESPACIO */
+    /* Especificaciones - mostrar en fila horizontal */
     body:has(img[src*="Guia oculta 3D soft closing/dibujo del plano"]) .section-2 .specs-all-logos {
         width: 100% !important;
-        padding: 0 15px !important;
+        padding: 0 10px !important;
         margin: 0px !important;
         box-sizing: border-box !important;
-        display: grid !important;
-        grid-template-columns: 1fr 1fr !important;
-        grid-template-rows: auto auto !important;
-        gap: 15px !important;
-        justify-items: center !important;
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+        gap: 8px !important;
+        justify-content: center !important;
+        align-items: center !important;
     }
 
     body:has(img[src*="Guia oculta 3D soft closing/dibujo del plano"]) .section-2 .specs-all-logos img {
-        width: 100% !important;
-        max-width: 150px !important;
-        height: auto !important;
+        width: 70px !important;
+        max-width: 70px !important;
+        height: 70px !important;
         object-fit: contain !important;
         margin: 0 !important;
     }
@@ -1845,23 +1846,24 @@
         height: auto !important;
     }
 
-    /* Especificaciones - mostrar en 2x2 SIN ESPACIO */
+    /* Especificaciones - mostrar en fila horizontal */
     body:has(img[src*="Guia oculta push Open/dibujo de plano"]) .section-2 .specs-all-logos {
         width: 100% !important;
-        padding: 0 15px !important;
+        padding: 0 10px !important;
         margin: 0px !important;
         box-sizing: border-box !important;
-        display: grid !important;
-        grid-template-columns: 1fr 1fr !important;
-        grid-template-rows: auto auto !important;
-        gap: 15px !important;
-        justify-items: center !important;
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+        gap: 8px !important;
+        justify-content: center !important;
+        align-items: center !important;
     }
 
     body:has(img[src*="Guia oculta push Open/dibujo de plano"]) .section-2 .specs-all-logos img {
-        width: 100% !important;
-        max-width: 150px !important;
-        height: auto !important;
+        width: 70px !important;
+        max-width: 70px !important;
+        height: 70px !important;
         object-fit: contain !important;
         margin: 0 !important;
     }
@@ -1979,24 +1981,25 @@
         height: auto !important;
     }
 
-    /* Especificaciones - mostrar en 2x2 compacto */
+    /* Especificaciones - mostrar en fila horizontal */
     body:has(img[alt="Corredera Telescópica Soft Closing"][src*="GUIA OCULTA.JPG"]) .section-2 .specs-all-logos {
         width: 100% !important;
         padding: 0 10px !important;
         margin: 0px !important;
         margin-top: 5px !important;
         box-sizing: border-box !important;
-        display: grid !important;
-        grid-template-columns: 1fr 1fr !important;
-        grid-template-rows: auto auto !important;
-        gap: 10px !important;
-        justify-items: center !important;
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+        gap: 8px !important;
+        justify-content: center !important;
+        align-items: center !important;
     }
 
     body:has(img[alt="Corredera Telescópica Soft Closing"][src*="GUIA OCULTA.JPG"]) .section-2 .specs-all-logos img {
-        width: 100% !important;
-        max-width: 130px !important;
-        height: auto !important;
+        width: 70px !important;
+        max-width: 70px !important;
+        height: 70px !important;
         object-fit: contain !important;
         margin: 0 !important;
     }
@@ -2096,24 +2099,25 @@
         height: auto !important;
     }
 
-    /* Especificaciones - mostrar en 2x2 compacto */
+    /* Especificaciones - mostrar en fila horizontal */
     body:has(img[src*="corredera telescópica push Open/dibujo del plano"]) .section-2 .specs-all-logos {
         width: 100% !important;
         padding: 0 10px !important;
         margin: 0px !important;
         margin-top: 5px !important;
         box-sizing: border-box !important;
-        display: grid !important;
-        grid-template-columns: 1fr 1fr !important;
-        grid-template-rows: auto auto !important;
-        gap: 10px !important;
-        justify-items: center !important;
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+        gap: 8px !important;
+        justify-content: center !important;
+        align-items: center !important;
     }
 
     body:has(img[src*="corredera telescópica push Open/dibujo del plano"]) .section-2 .specs-all-logos img {
-        width: 100% !important;
-        max-width: 130px !important;
-        height: auto !important;
+        width: 70px !important;
+        max-width: 70px !important;
+        height: 70px !important;
         object-fit: contain !important;
         margin: 0 !important;
     }
@@ -2234,24 +2238,25 @@
         height: auto !important;
     }
 
-    /* Especificaciones - mostrar en 2x2 compacto */
+    /* Especificaciones - mostrar en fila horizontal */
     body:has(img[src*="corredera telescópica estándar H45/CORREDERA TELESCOPICA ESTANDAR H45 (2).JPG"]) .section-2 .specs-all-logos {
         width: 100% !important;
         padding: 0 10px !important;
         margin: 0px !important;
         margin-top: 5px !important;
         box-sizing: border-box !important;
-        display: grid !important;
-        grid-template-columns: 1fr 1fr !important;
-        grid-template-rows: auto auto !important;
-        gap: 10px !important;
-        justify-items: center !important;
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+        gap: 8px !important;
+        justify-content: center !important;
+        align-items: center !important;
     }
 
     body:has(img[src*="corredera telescópica estándar H45/CORREDERA TELESCOPICA ESTANDAR H45 (2).JPG"]) .section-2 .specs-all-logos img {
-        width: 100% !important;
-        max-width: 130px !important;
-        height: auto !important;
+        width: 70px !important;
+        max-width: 70px !important;
+        height: 70px !important;
         object-fit: contain !important;
         margin: 0 !important;
     }
@@ -2359,23 +2364,24 @@
         overflow-wrap: break-word !important;
     }
 
-    /* Los 4 logos juntos en grid 2x2 */
+    /* Los 4 logos juntos en fila horizontal */
     body:has(img[src*="corredera Z/CORREDERA Z (2).JPG"]) .section-1 .specs-all-logos-combined {
         width: 100% !important;
         padding: 0 10px !important;
         margin: 15px 0 !important;
         box-sizing: border-box !important;
-        display: grid !important;
-        grid-template-columns: 1fr 1fr !important;
-        grid-template-rows: auto auto !important;
-        gap: 15px !important;
-        justify-items: center !important;
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+        gap: 8px !important;
+        justify-content: center !important;
+        align-items: center !important;
     }
 
     body:has(img[src*="corredera Z/CORREDERA Z (2).JPG"]) .section-1 .specs-all-logos-combined img {
-        width: 100% !important;
-        max-width: 130px !important;
-        height: auto !important;
+        width: 70px !important;
+        max-width: 70px !important;
+        height: 70px !important;
         object-fit: contain !important;
         margin: 0 !important;
     }
@@ -2670,22 +2676,48 @@
         height: auto !important;
     }
 
-    /* Logos de especificaciones en grid 2x2 - GENÉRICO */
+    /* Logos de especificaciones en fila horizontal - GENÉRICO */
     .specs-all-logos {
-        display: grid !important;
-        grid-template-columns: repeat(2, 1fr) !important;
-        gap: 20px !important;
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+        gap: 8px !important;
         width: 100% !important;
-        max-width: 250px !important;
+        max-width: 100% !important;
         margin: 20px auto !important;
-        padding: 0 20px !important;
-        justify-items: center !important;
+        padding: 0 10px !important;
+        justify-content: center !important;
+        align-items: center !important;
     }
 
-    .specs-all-logos img {
-        width: 100% !important;
-        max-width: 80px !important;
-        height: auto !important;
+    .specs-all-logos img,
+    .producto-section-unified .specs-all-logos img,
+    #rueda-nylon-simple .specs-all-logos img,
+    #pata-plastica-simple .specs-all-logos img,
+    #rueda-nylon .specs-all-logos img,
+    #pata-plastica .specs-all-logos img,
+    .section-2 .specs-all-logos img,
+    .section-3 .specs-all-logos img {
+        width: 70px !important;
+        max-width: 70px !important;
+        height: 70px !important;
+        object-fit: contain !important;
+    }
+
+    /* Iconos de especificaciones en manijas - 70px uniform */
+    .specs-table-image img[src*="acero"],
+    .specs-table-image img[src*="peso"],
+    .specs-table-image img[src*="negro"],
+    .specs-table-image img[src*="plastico"],
+    .specs-table-image img[src*="unidades"],
+    .specs-table-image img[src*="5o unidades"],
+    .specs-table-image img[src*="50 unidades"],
+    .specs-table-image img[src*="200 unidades"],
+    #tirador-boton .specs-table-image img:not([src*="tabla"]),
+    #manija-oval .specs-table-image img:not([src*="tabla"]) {
+        width: 70px !important;
+        max-width: 70px !important;
+        height: 70px !important;
         object-fit: contain !important;
     }
 
