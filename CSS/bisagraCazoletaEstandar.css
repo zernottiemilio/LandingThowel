@@ -972,7 +972,7 @@ body {
     }
 
     .producto-section-unified .specs-extra-images img {
-        max-width: 100px;
+        max-width: 80px;
         height: auto;
     }
 }
