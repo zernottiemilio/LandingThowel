@@ -4,6 +4,45 @@
 
 let lastScrollTop = 0;
 
+function optimizeLandingImages() {
+  const images = document.querySelectorAll('img');
+  if (!images.length) return;
+
+  const criticalImageSelectors = [
+    '.navbar .logo img',
+    '.navbar .logo-mobile img',
+    '.image-sticky-container img.active',
+    '.image-sticky-container img:first-child',
+    '.hero img',
+    '.main-banner img'
+  ];
+
+  images.forEach((img) => {
+    const isCritical = criticalImageSelectors.some((selector) => img.matches(selector));
+
+    if (!img.hasAttribute('decoding')) {
+      img.setAttribute('decoding', 'async');
+    }
+
+    if (isCritical) {
+      if (!img.hasAttribute('loading')) {
+        img.setAttribute('loading', 'eager');
+      }
+      if (!img.hasAttribute('fetchpriority')) {
+        img.setAttribute('fetchpriority', 'high');
+      }
+      return;
+    }
+
+    if (!img.hasAttribute('loading')) {
+      img.setAttribute('loading', 'lazy');
+    }
+    if (!img.hasAttribute('fetchpriority')) {
+      img.setAttribute('fetchpriority', 'low');
+    }
+  });
+}
+
 window.addEventListener('scroll', () => {
   const scrolled = window.pageYOffset;
   const navbar = document.querySelector('.navbar');
@@ -172,8 +211,12 @@ function initNavMenu() {
 
 // Inicializar cuando el DOM esté listo
 if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initNavMenu);
+    document.addEventListener('DOMContentLoaded', () => {
+        optimizeLandingImages();
+        initNavMenu();
+    });
 } else {
+    optimizeLandingImages();
     initNavMenu();
 }
 

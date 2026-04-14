@@ -7,8 +7,8 @@
     <link rel="icon" type="image/png" href="/assets/LOGO-11.png">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/CSS/PistonAGas.css">
-    <script src="https://cdn.jsdelivr.net/npm/i18next@23.7.6/i18next.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/i18next@23.7.6/i18next.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
     <link rel="stylesheet" href="/CSS/responsive.css">
 </head>
 <body>
@@ -82,9 +82,9 @@
             <!-- Contenedor de imágenes sticky -->
             <div class="left-content">
                 <div class="image-sticky-container">
-                    <img src="/assets/piston a gas/PISTONAGAS.png" alt="Pistón a Gas" class="active" data-section="descripcion">
-                    <img src="/assets/piston a gas/ambientePistonGas.png" alt="Ambiente" data-section="especificaciones">
-                    <img src="/assets/piston a gas/PISTON A GAS (2).JPG" alt="Pistón a Gas" data-section="codazos">
+                    <img src="/assets/piston a gas/PISTONAGAS.png" alt="Pistón a Gas" class="active" data-section="descripcion" loading="eager" fetchpriority="high" decoding="async">
+                    <img src="/assets/piston a gas/ambientePistonGas.png" alt="Ambiente" data-section="especificaciones" loading="lazy" decoding="async">
+                    <img src="/assets/piston a gas/PISTON A GAS (2).JPG" alt="Pistón a Gas" data-section="codazos" loading="lazy" decoding="async">
                 </div>
             </div>
 
@@ -98,18 +98,18 @@
                             <span class="estandar">PARA PUERTA</span>
                         </h1>
                         <div class="badge-thowel">
-                            <img src="/assets/estandar.png" alt="Thowel Badge">
+                            <img src="/assets/estandar.png" alt="Thowel Badge" loading="lazy" decoding="async">
                         </div>
                     </div>
                     <p class="producto-descripcion">
                         Se destacan por la facilidad de montaje, que <strong>no requiere seguros y se realiza con un solo clic</strong>. Esta característica agiliza los tiempos de instalación, ofreciendo al mismo tiempo una alta durabilidad y calidad.
                     </p>
                     <div class="specs-table-image">
-                        <img src="/assets/piston a gas/PISTON ESTANDAR (1).png" alt="Tabla Tipo Ascendente y Descendente">
+                        <img src="/assets/piston a gas/PISTON ESTANDAR (1).png" alt="Tabla Tipo Ascendente y Descendente" loading="lazy" decoding="async">
                     </div>
                     <div class="specs-icons-mini specs-icons-mini-dual specs-icons-mini-dual-large">
-                        <img src="/assets/piston a gas/PISTON ESTANDAR (5).png" alt="Especificaciones Smooth" class="spec-mini-smooth">
-                        <img src="/assets/piston a gas/PISTON SMOOTH (5).png" alt="Especificaciones Estándar" class="spec-mini-estandaar">
+                        <img src="/assets/piston a gas/PISTON ESTANDAR (5).png" alt="Especificaciones Smooth" class="spec-mini-smooth" loading="lazy" decoding="async">
+                        <img src="/assets/piston a gas/PISTON SMOOTH (5).png" alt="Especificaciones Estándar" class="spec-mini-estandaar" loading="lazy" decoding="async">
                     </div>
                 </div>
 
@@ -121,18 +121,18 @@
                             <span class="estandar">SOFT CLOSING</span>
                         </h1>
                         <div class="badge-thowel">
-                            <img src="/assets/TecnologiaSmooth.png" alt="Soft Closing Badge">
+                            <img src="/assets/TecnologiaSmooth.png" alt="Soft Closing Badge" loading="lazy" decoding="async">
                         </div>
                     </div>
 
                     <div class="soft-closing-layout">
                         <div class="soft-closing-left">
-                            <img src="/assets/piston a gas/AMBOS PISTONES.png" alt="Tabla Soft Closing">
-                            <img src="/assets/piston a gas/PISTON ESTANDAR.png" alt="Tabla Pistón Estándar">
+                            <img src="/assets/piston a gas/AMBOS PISTONES.png" alt="Tabla Soft Closing" loading="lazy" decoding="async">
+                            <img src="/assets/piston a gas/PISTON ESTANDAR.png" alt="Tabla Pistón Estándar" loading="lazy" decoding="async">
                         </div>
                         <div class="soft-closing-right">
-                            <img src="/assets/piston a gas/PISTON SMOOTH (2).png" alt="Tabla Códigos Soft Closing">
-                            <img src="/assets/piston a gas/PISTON SMOOTH.png" alt="Especificaciones Soft Closing">
+                            <img src="/assets/piston a gas/PISTON SMOOTH (2).png" alt="Tabla Códigos Soft Closing" loading="lazy" decoding="async">
+                            <img src="/assets/piston a gas/PISTON SMOOTH.png" alt="Especificaciones Soft Closing" loading="lazy" decoding="async">
                         </div>
                     </div>
                 </div>
@@ -140,8 +140,8 @@
                 <!-- Sección 3: Diagramas -->
                 <div class="text-section" data-section="codazos">
                     <div class="codazos-imagenes dual-codazos">
-                        <img src="/assets/piston a gas/CodoPistonGas80mm.png" alt="Codo 80mm">
-                        <img src="/assets/piston a gas/CodoPistonGas100mm.png" alt="Codo 100mm">
+                        <img src="/assets/piston a gas/CodoPistonGas80mm.png" alt="Codo 80mm" loading="lazy" decoding="async">
+                        <img src="/assets/piston a gas/CodoPistonGas100mm.png" alt="Codo 100mm" loading="lazy" decoding="async">
                     </div>
                 </div>
             </div>
@@ -163,37 +163,37 @@
             <!-- Carousel Track -->
             <div class="catalog-track" id="catalogTrack">
                 <div class="catalog-item">
-                    <img src="/assets/bisagra push open/BISAGRAPUSHOPEN.png" alt="Bisagra Push Open">
+                    <img src="/assets/bisagra push open/BISAGRAPUSHOPEN.png" alt="Bisagra Push Open" loading="lazy" decoding="async">
                     <div class="catalog-overlay">
                         <div class="catalog-overlay-text">BISAGRA PUSH OPEN</div>
                     </div>
                 </div>
                 <div class="catalog-item">
-                    <img src="/assets/bisagra cazoleta estandar/BISAGRACAZOLETAESTANDAR.png" alt="Bisagra Cazoleta Estandar">
+                    <img src="/assets/bisagra cazoleta estandar/BISAGRACAZOLETAESTANDAR.png" alt="Bisagra Cazoleta Estandar" loading="lazy" decoding="async">
                     <div class="catalog-overlay">
                         <div class="catalog-overlay-text">BISAGRA CAZOLETA ESTANDAR</div>
                     </div>
                 </div>
                 <div class="catalog-item">
-                    <img src="/assets/bisagra clip 3D/BISAGRACLIP.png" alt="Bisagra Clip 3D">
+                    <img src="/assets/bisagra clip 3D/BISAGRACLIP.png" alt="Bisagra Clip 3D" loading="lazy" decoding="async">
                     <div class="catalog-overlay">
                         <div class="catalog-overlay-text">BISAGRA CLIP 3D</div>
                     </div>
                 </div>
                 <div class="catalog-item">
-                    <img src="/assets/bisagra soft closing/BSC.png" alt="Bisagra Soft Closing">
+                    <img src="/assets/bisagra soft closing/BSC.png" alt="Bisagra Soft Closing" loading="lazy" decoding="async">
                     <div class="catalog-overlay">
                         <div class="catalog-overlay-text">BISAGRA SOFT CLOSING</div>
                     </div>
                 </div>
                 <div class="catalog-item">
-                    <img src="/assets/reten expulsor/RetenesExpulsor.png" alt="Retén Expulsor">
+                    <img src="/assets/reten expulsor/RetenesExpulsor.png" alt="Retén Expulsor" loading="lazy" decoding="async">
                     <div class="catalog-overlay">
                         <div class="catalog-overlay-text">RETÉN EXPULSOR</div>
                     </div>
                 </div>
                 <div class="catalog-item">
-                    <img src="/assets/bisagra angulos especiales/BISAGRAANGULOSESPECIALES135.png" alt="Bisagra Ángulos Especiales">
+                    <img src="/assets/bisagra angulos especiales/BISAGRAANGULOSESPECIALES135.png" alt="Bisagra Ángulos Especiales" loading="lazy" decoding="async">
                     <div class="catalog-overlay">
                         <div class="catalog-overlay-text">BISAGRA ÁNGULOS ESPECIALES</div>
                     </div>
@@ -207,8 +207,8 @@
     <div class="footer-container">
         <!-- Hexágonos decorativos -->
         <div class="footer-hexagons">
-            <a href="mailto:info@thowel.com" class="hexagon hex-mail" title="Email"><img src="/assets/MAIL.png" alt="Email"></a>
-            <a href="#" class="hexagon hex-instagram" title="Instagram" target="_blank"><img src="/assets/INSTAGRAM.png" alt="Instagram"></a>
+            <a href="mailto:info@thowel.com" class="hexagon hex-mail" title="Email"><img src="/assets/MAIL.png" alt="Email" loading="lazy" decoding="async"></a>
+            <a href="#" class="hexagon hex-instagram" title="Instagram" target="_blank"><img src="/assets/INSTAGRAM.png" alt="Instagram" loading="lazy" decoding="async"></a>
         </div>
 
         <!-- Contenido del footer -->
@@ -218,8 +218,8 @@
     </div>
     </footer>
 
-    <script src="/JS/common.js"></script>
-    <script src="/JS/Bisagras.js"></script>
-    <script src="/JS/i18n.js"></script>
+    <script defer src="/JS/common.js"></script>
+    <script defer src="/JS/Bisagras.js"></script>
+    <script defer src="/JS/i18n.js"></script>
 </body>
 </html>
