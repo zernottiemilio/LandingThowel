@@ -323,6 +323,13 @@ body {
     margin-bottom: 20px;
 }
 
+.titulo-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
 .titulo-con-badge .producto-titulo {
     margin-bottom: 0;
 }
@@ -916,6 +923,13 @@ body {
     background: white !important;
 }
 
+.estandar {
+    font-size: clamp(24px, 3vw, 38px);
+    font-weight: 400;
+    color: #e74c3c;
+    margin-bottom: 20px;
+  }
+  
 .producto-section-unified .text-section {
     min-height: 100vh;
     display: flex !important;
