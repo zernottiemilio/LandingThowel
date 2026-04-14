@@ -231,41 +231,69 @@ document.addEventListener('DOMContentLoaded', () => {
         firstImage.classList.add('active');
     }
 
+    const allImages = document.querySelectorAll('.image-sticky-container img');
     const imageChangeOptions = {
-        threshold: [0, 0.25, 0.5, 0.75, 1],
-        rootMargin: '-20% 0px -20% 0px'
+        threshold: [0, 0.1, 0.25, 0.5, 0.75, 1],
+        rootMargin: '-10% 0px -10% 0px'
     };
 
-    const imageObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            // Solo cambiar cuando la sección esté al menos 50% visible
-            if (entry.isIntersecting && entry.intersectionRatio >= 0.5) {
-                const sectionId = entry.target.getAttribute('data-section');
+    const activateImageBySection = (sectionId) => {
+        if (!sectionId) return;
+        allImages.forEach(img => {
+            img.classList.remove('active');
+            img.style.opacity = '0';
+        });
 
-                console.log('Sección visible:', sectionId); // Para debug
+        const activeImage = document.querySelector(`.image-sticky-container img[data-section="${sectionId}"]`);
+        if (activeImage) {
+            activeImage.classList.add('active');
+            activeImage.style.opacity = '1';
+        }
+    };
 
-                // Remover clase active de todas las imágenes
-                const allImages = document.querySelectorAll('.image-sticky-container img');
-                allImages.forEach(img => {
-                    img.classList.remove('active');
-                    img.style.opacity = '0';
-                });
+    const updateActiveSectionByViewport = () => {
+        let bestSection = null;
+        let bestDistance = Infinity;
+        const viewportCenter = window.innerHeight * 0.45;
 
-                // Agregar clase active a la imagen correspondiente
-                const activeImage = document.querySelector(`.image-sticky-container img[data-section="${sectionId}"]`);
-                if (activeImage) {
-                    activeImage.classList.add('active');
-                    activeImage.style.opacity = '1';
-                    console.log('Imagen activada:', activeImage.getAttribute('data-section')); // Para debug
-                }
+        textSections.forEach(section => {
+            const rect = section.getBoundingClientRect();
+            const isVisible = rect.bottom > 0 && rect.top < window.innerHeight;
+            if (!isVisible) return;
+
+            const sectionCenter = rect.top + (rect.height / 2);
+            const distance = Math.abs(sectionCenter - viewportCenter);
+
+            if (distance < bestDistance) {
+                bestDistance = distance;
+                bestSection = section;
             }
         });
+
+        if (bestSection) {
+            activateImageBySection(bestSection.getAttribute('data-section'));
+        }
+    };
+
+    const imageObserver = new IntersectionObserver(() => {
+        updateActiveSectionByViewport();
     }, imageChangeOptions);
 
-    // Observar todas las secciones de texto para cambiar imágenes
     textSections.forEach(section => {
-        const sectionId = section.getAttribute('data-section');
-        console.log('Observando sección:', sectionId); // Para debug
         imageObserver.observe(section);
     });
+
+    let ticking = false;
+    const onScrollOrResize = () => {
+        if (ticking) return;
+        ticking = true;
+        window.requestAnimationFrame(() => {
+            updateActiveSectionByViewport();
+            ticking = false;
+        });
+    };
+
+    window.addEventListener('scroll', onScrollOrResize, { passive: true });
+    window.addEventListener('resize', onScrollOrResize);
+    updateActiveSectionByViewport();
 });

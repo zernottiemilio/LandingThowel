@@ -361,6 +361,22 @@ body {
     height: auto;
 }
 
+.specs-table-double {
+    width: 100%;
+    max-width: 760px;
+    margin: 15px auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.specs-table-double img {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+}
+
 /* Iconos de especificaciones */
 .specs-icons {
     display: flex;
@@ -387,6 +403,74 @@ body {
 .specs-icons-mini img {
     width: 100%;
     max-width: 400px;
+    height: auto;
+}
+
+.specs-icons-mini-dual {
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+
+.specs-icons-mini-dual .spec-mini-smooth {
+    max-width: 150px;
+}
+
+.specs-icons-mini-dual .spec-mini-estandaar {
+    max-width: 150px;
+}
+
+.specs-icons-mini-dual-large .spec-mini-smooth {
+    max-width: 280px;
+}
+
+.specs-icons-mini-dual-large .spec-mini-estandaar {
+    max-width: 280px;
+}
+
+.soft-closing-layout {
+    width: 100%;
+    max-width: 780px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 20px;
+    margin: 10px auto 0;
+}
+
+.soft-closing-left,
+.soft-closing-right {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.soft-closing-left {
+    flex-direction: column;
+    gap: 14px;
+}
+
+.soft-closing-left img {
+    width: 100%;
+    max-width: 420px;
+    height: auto;
+}
+
+.soft-closing-right {
+    flex-direction: column;
+    gap: 14px;
+}
+
+.soft-closing-right img:first-child {
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+}
+
+.soft-closing-right img:last-child {
+    width: 100%;
+    max-width: 200px;
     height: auto;
 }
 
@@ -683,6 +767,41 @@ body {
     .specs-icons-mini img {
         max-width: 300px !important;
         width: 100% !important;
+    }
+
+    .specs-icons-mini-dual {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .specs-icons-mini-dual .spec-mini-smooth {
+        max-width: 190px !important;
+    }
+
+    .specs-icons-mini-dual .spec-mini-estandaar {
+        max-width: 240px !important;
+    }
+
+    .specs-icons-mini-dual-large .spec-mini-smooth,
+    .specs-icons-mini-dual-large .spec-mini-estandaar {
+        max-width: 290px !important;
+    }
+
+    .soft-closing-layout {
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+    }
+
+    .soft-closing-left img,
+    .soft-closing-right img:first-child,
+    .soft-closing-right img:last-child {
+        max-width: 340px;
+    }
+
+    .specs-table-double {
+        flex-direction: column;
+        align-items: center;
     }
 
     /* Mostrar todas las imágenes en móvil/tablet */
