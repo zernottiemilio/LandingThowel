@@ -367,6 +367,13 @@ body {
   margin-bottom: 20px;
 }
 
+.smooth {
+  font-size: clamp(24px, 3vw, 38px);
+  font-weight: 400;
+  color: #e74c3c;
+  margin-bottom: 20px;
+}
+
 .producto-descripcion {
     font-size: 18px;
     color: #1e3a8a;

@@ -367,6 +367,28 @@ body {
   margin-bottom: 20px;
 }
 
+.smooth,
+.producto-titulo .smooth,
+.producto-section-unified .smooth {
+  font-size: clamp(24px, 3vw, 38px) !important;
+  font-weight: 900 !important;
+  color: #e74c3c !important;
+  margin-bottom: 20px;
+  white-space: nowrap !important;
+  display: block !important;
+}
+
+.touch,
+.producto-titulo .touch,
+.producto-section-unified .touch {
+  font-size: clamp(24px, 3vw, 38px) !important;
+  font-weight: 900 !important;
+  color: #e74c3c !important;
+  margin-bottom: 20px;
+  white-space: nowrap !important;
+  display: block !important;
+}
+
 .producto-descripcion {
     font-size: 18px;
     color: #1e3a8a;
@@ -673,8 +695,12 @@ body {
         margin-bottom: 20px;
     }
 
-    .estandar {
+    .estandar,
+    .smooth,
+    .touch {
         font-size: 40px;
+        color: #e74c3c !important;
+        white-space: nowrap !important;
     }
 
     .producto-descripcion {
@@ -741,8 +767,12 @@ body {
         margin-bottom: 15px;
     }
 
-    .estandar {
+    .estandar,
+    .smooth,
+    .touch {
         font-size: 32px;
+        color: #e74c3c !important;
+        white-space: nowrap !important;
     }
 
     .producto-descripcion {
@@ -833,8 +863,12 @@ body {
         margin-bottom: 12px;
     }
 
-    .estandar {
+    .estandar,
+    .smooth,
+    .touch {
         font-size: 26px;
+        color: #e74c3c !important;
+        white-space: nowrap !important;
     }
 
     .producto-descripcion {
@@ -1108,9 +1142,14 @@ body {
     }
 
     .producto-section-unified .estandar,
+    .producto-section-unified .smooth,
+    .producto-section-unified .touch,
     .producto-section-unified .soft,
     .producto-section-unified .closing {
         font-size: 24px !important;
+        color: #e74c3c !important;
+        display: block !important;
+        white-space: nowrap !important;
     }
 
     .producto-section-unified .producto-descripcion {
@@ -1195,9 +1234,14 @@ body {
     }
 
     .producto-section-unified .estandar,
+    .producto-section-unified .smooth,
+    .producto-section-unified .touch,
     .producto-section-unified .soft,
     .producto-section-unified .closing {
         font-size: 20px !important;
+        color: #e74c3c !important;
+        display: block !important;
+        white-space: nowrap !important;
     }
 
     .producto-section-unified .producto-descripcion {

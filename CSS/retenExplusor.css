@@ -321,6 +321,14 @@ body {
     margin-bottom: 0;
 }
 
+.touch {
+    font-size: clamp(20px, 2.5vw, 32px);
+    font-weight: 900;
+    color: #e74c3c !important;
+    margin-bottom: 0;
+    display: block;
+}
+
 .producto-descripcion {
     font-size: 15px;
     color: #1e3a8a;
