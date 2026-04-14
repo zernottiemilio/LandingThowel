@@ -371,7 +371,7 @@ body {
 .producto-titulo .smooth,
 .producto-section-unified .smooth {
   font-size: clamp(24px, 3vw, 38px) !important;
-  font-weight: 900 !important;
+  font-weight: 400 !important;
   color: #e74c3c !important;
   margin-bottom: 20px;
   white-space: nowrap !important;
