@@ -313,6 +313,27 @@ body {
     width: 100vh;
 }
 
+/* Contenedor título + badge en línea */
+.titulo-con-badge {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 15px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.titulo-con-badge .producto-titulo {
+    margin-bottom: 0;
+}
+
+.titulo-con-badge .badge-thowel {
+    position: relative;
+    top: auto;
+    right: auto;
+    flex-shrink: 0;
+}
+
 .badge-thowel {
     position: absolute;
     top: 130px;
@@ -320,7 +341,7 @@ body {
 }
 
 .badge-thowel img {
-    width: 100px;
+    width: 60px;
     height: auto;
 }
 
@@ -1076,13 +1097,20 @@ body {
         position: relative !important;
         top: 0 !important;
         right: 0 !important;
-        margin-bottom: 15px !important;
+        margin-bottom: 0 !important;
         text-align: left !important;
     }
 
     .producto-section-unified .badge-thowel img {
-        width: 50px !important;
+        width: 40px !important;
         height: auto !important;
+    }
+
+    .producto-section-unified .titulo-con-badge {
+        flex-direction: row !important;
+        align-items: center !important;
+        gap: 15px !important;
+        justify-content: center !important;
     }
 
     .producto-section-unified .diagrama-tecnico {
@@ -1155,7 +1183,11 @@ body {
     }
 
     .producto-section-unified .badge-thowel img {
-        width: 45px !important;
+        width: 35px !important;
+    }
+
+    .producto-section-unified .titulo-con-badge {
+        gap: 10px !important;
     }
 
     .producto-section-unified .diagrama-tecnico img {

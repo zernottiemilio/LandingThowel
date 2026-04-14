@@ -116,7 +116,7 @@ body {
 }
 
 .navbar .logo {
-    padding: 0; 
+    padding: 0;
     margin: 0;
     background: none !important;
     border-radius: 0;
@@ -271,7 +271,7 @@ body {
 
 /* izquierda (solo imagen, sin fondo beige) */
 .left-content {
-  background: none !important; 
+  background: none !important;
 }
 
 .left-content img {
@@ -295,7 +295,7 @@ body {
 
 
 /* ========================================
-   SECCIÓN 1 - BISAGRA CAZOLETA ESTÁNDAR
+   SECCIÓN 1 - BISAGRA CLIP 3D
    ======================================== */
 
 .section-1 .right-content {
@@ -304,13 +304,34 @@ body {
     height: 100vh;
     align-items: flex-start;
     justify-content: flex-start;
-    padding: 140px 60px 40px;
+    padding: 200px 60px 40px;
     position: relative;
 }
 
 .section-1 .left-content img {
     object-position: center;
     width: 100vh;
+}
+
+/* Contenedor título + badge en línea */
+.titulo-con-badge {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.titulo-con-badge .producto-titulo {
+    margin-bottom: 0;
+}
+
+.titulo-con-badge .badge-thowel {
+    position: relative;
+    top: auto;
+    right: auto;
+    flex-shrink: 0;
 }
 
 .badge-thowel {
@@ -320,7 +341,7 @@ body {
 }
 
 .badge-thowel img {
-    width: 100px;
+    width: 60px;
     height: auto;
 }
 
@@ -330,11 +351,6 @@ body {
     color: #1e3a8a;
     line-height: 1.1;
     margin-bottom: 20px;
-}
-
-.producto-titulo b {
-    white-space: nowrap !important;
-    display: inline-block;
 }
 
 .estandar {
@@ -416,18 +432,14 @@ body {
 }
 
 .specs-table-image {
-    width: 100% !important;
-    max-width: 450px !important;
-    margin: 20px auto !important;
-    display: flex !important;
-    justify-content: center !important;
+    width: 100%;
+    max-width: 600px;
 }
 
 .specs-table-image img {
-    width: 100% !important;
-    max-width: 100% !important;
-    height: auto !important;
-    display: block !important;
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
 .specs-extra-images {
@@ -448,11 +460,27 @@ body {
     display: block;
 }
 
+.specs-table-image {
+    width: 100% !important;
+    max-width: 450px !important;
+    margin: 20px auto !important;
+    display: flex !important;
+    justify-content: center !important;
+}
+
+.specs-table-image img {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    display: block !important;
+}
+
 /* ========================================
    SECCIÓN 3 - CODAZOS
    ======================================== */
 
-.section-3 .left-content {
+
+   .section-3 .left-content {
     background: #d4d4d4;
     padding: 0;
 }
@@ -485,6 +513,7 @@ body {
     height: auto;
     display: block;
 }
+
 
 /* ========================================
    SECCIÓN 4 - VIDEO ELABORADO
@@ -1068,13 +1097,20 @@ body {
         position: relative !important;
         top: 0 !important;
         right: 0 !important;
-        margin-bottom: 15px !important;
+        margin-bottom: 0 !important;
         text-align: left !important;
     }
 
     .producto-section-unified .badge-thowel img {
-        width: 50px !important;
+        width: 40px !important;
         height: auto !important;
+    }
+
+    .producto-section-unified .titulo-con-badge {
+        flex-direction: row !important;
+        align-items: center !important;
+        gap: 15px !important;
+        justify-content: center !important;
     }
 
     .producto-section-unified .diagrama-tecnico {
@@ -1147,7 +1183,11 @@ body {
     }
 
     .producto-section-unified .badge-thowel img {
-        width: 45px !important;
+        width: 35px !important;
+    }
+
+    .producto-section-unified .titulo-con-badge {
+        gap: 10px !important;
     }
 
     .producto-section-unified .diagrama-tecnico img {

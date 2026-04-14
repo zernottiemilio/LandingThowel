@@ -116,7 +116,7 @@ body {
 }
 
 .navbar .logo {
-    padding: 0; 
+    padding: 0;
     margin: 0;
     background: none !important;
     border-radius: 0;
@@ -271,7 +271,7 @@ body {
 
 /* izquierda (solo imagen, sin fondo beige) */
 .left-content {
-  background: none !important; 
+  background: none !important;
 }
 
 .left-content img {
@@ -295,17 +295,17 @@ body {
 
 
 /* ========================================
-   SECCIÓN 1 - BISAGRA CAZOLETA 155°
+   SECCIÓN 1 - BISAGRA CLIP 3D
    ======================================== */
 
 .section-1 .right-content {
-  background: white;
-  flex-direction: column;
+    background: white;
+    flex-direction: column;
     height: 100vh;
-  align-items: flex-start;
-  justify-content: flex-start;
-  padding: 120px 60px 40px;
-  position: relative;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 200px 60px 40px;
+    position: relative;
 }
 
 .section-1 .left-content img {
@@ -313,13 +313,25 @@ body {
     width: 100vh;
 }
 
-.section-1 .right-content {
-    background: white;
-    flex-direction: column;
-    height: 100vh;
+/* Contenedor título + badge en línea */
+.titulo-con-badge {
+    display: flex;
     align-items: flex-start;
     justify-content: center;
+    gap: 15px;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.titulo-con-badge .producto-titulo {
+    margin-bottom: 0;
+}
+
+.titulo-con-badge .badge-thowel {
     position: relative;
+    top: auto;
+    right: auto;
+    flex-shrink: 0;
 }
 
 .badge-thowel {
@@ -329,42 +341,47 @@ body {
 }
 
 .badge-thowel img {
-    width: 100px;
+    width: 60px;
     height: auto;
 }
 
 .producto-titulo {
-    font-size: 42px;
+    font-size: 36px;
     font-weight: 900;
     color: #1e3a8a;
     line-height: 1.1;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .estandar {
-  font-size: clamp(24px, 3vw, 38px);
+  font-size: clamp(20px, 2.5vw, 32px);
   font-weight: 400;
   color: #e74c3c;
-  margin-bottom: 20px;
+  margin-bottom: 0;
 }
 
 .producto-descripcion {
-    font-size: 18px;
-    color: #333;
-    line-height: 1.8;
-    margin-bottom: 20px;
-    max-width: 600px;
+    font-size: 15px;
+    color: #1e3a8a;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    max-width: 520px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .diagrama-tecnico {
-    margin-top: 0px;
-    margin-left: 150px;
+    margin: 15px auto;
+    text-align: center;
+    width: 100%;
+    max-width: 480px;
 }
 
 .diagrama-tecnico img {
-  max-width: 350px;
-  width: 100%;
-  height: auto;
+    max-width: 480px;
+    width: 100%;
+    height: auto;
 }
 
 /* ========================================
@@ -409,11 +426,12 @@ body {
 }
 
 .specs-intro {
-    font-size: 18px;
+    font-size: 15px;
     color: #1e3a8a;
-    line-height: 1.8;
-    margin-bottom: 30px;
-    max-width: 600px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+    max-width: 520px;
+    text-align: center;
 }
 
 .specs-table-image {
@@ -427,11 +445,45 @@ body {
     display: block;
 }
 
+.specs-extra-images {
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.specs-extra-images img {
+    width: 100px;
+    height: auto;
+    display: block;
+}
+
+.specs-table-image {
+    width: 100% !important;
+    max-width: 450px !important;
+    margin: 20px auto !important;
+    display: flex !important;
+    justify-content: center !important;
+}
+
+.specs-table-image img {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    display: block !important;
+}
+
 /* ========================================
    SECCIÓN 3 - CODAZOS
    ======================================== */
 
-.section-3 .left-content {
+
+   .section-3 .left-content {
     background: #d4d4d4;
     padding: 0;
 }
@@ -455,7 +507,7 @@ body {
     display: flex;
     flex-direction: column;
     height: auto;
-    gap: 30px;
+    gap: 15px;
 }
 
 .codazos-imagenes img {
@@ -464,6 +516,73 @@ body {
     height: auto;
     display: block;
 }
+
+/* Estilos para dos productos lado a lado */
+.dual-codazos {
+    flex-direction: row !important;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 15px;
+    max-width: 700px;
+}
+
+.dual-codazos img {
+    width: 48%;
+    max-width: 320px;
+}
+
+/* Iconos de dos productos */
+.dual-product-icons {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    width: 100%;
+    max-width: 650px;
+    margin-top: 15px;
+}
+
+.product-icons-group {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.product-icons-group .specs-icons {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    max-width: 280px;
+}
+
+.product-icons-group .specs-icons img {
+    width: 55px;
+    height: auto;
+}
+
+/* Códigos de productos */
+.codigos-productos {
+    width: 100%;
+    max-width: 650px;
+    margin: 0 auto 20px;
+    text-align: center;
+}
+
+.codigos-productos img {
+    width: 100%;
+    max-width: 650px;
+    height: auto;
+}
+
+/* Diagrama grande */
+.diagrama-grande {
+    max-width: 550px !important;
+}
+
+.diagrama-grande img {
+    max-width: 550px !important;
+}
+
 
 /* ========================================
    SECCIÓN 4 - VIDEO ELABORADO
@@ -643,6 +762,25 @@ body {
         gap: 20px;
         height: auto;
     }
+
+    .dual-product-icons {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .dual-codazos {
+        flex-direction: column !important;
+        gap: 20px;
+    }
+
+    .dual-codazos img {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .codigos-productos img {
+        max-width: 100%;
+    }
 }
 
 /* Mobile */
@@ -713,6 +851,15 @@ body {
         max-width: 100%;
     }
 
+    .specs-extra-images {
+        margin-top: 20px;
+        gap: 12px;
+    }
+
+    .specs-extra-images img {
+        width: 100px;
+    }
+
     .codazos-imagenes {
         gap: 15px;
     }
@@ -720,6 +867,40 @@ body {
     .similares-titulo {
         font-size: 28px;
         padding: 0 30px;
+    }
+
+    .dual-product-icons {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .product-icons-group .specs-icons {
+        gap: 8px;
+    }
+
+    .product-icons-group .specs-icons img {
+        width: 50px;
+    }
+
+    .dual-codazos {
+        flex-direction: column !important;
+    }
+
+    .dual-codazos img {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .codigos-productos {
+        margin-bottom: 20px;
+    }
+
+    .diagrama-grande {
+        max-width: 100% !important;
+    }
+
+    .diagrama-grande img {
+        max-width: 100% !important;
     }
 }
 
@@ -769,23 +950,40 @@ body {
         font-size: 24px;
         padding: 0 20px;
     }
+
+    .product-icons-group .specs-icons img {
+        width: 45px;
+    }
+
+    .dual-codazos img {
+        max-width: 250px;
+    }
 }
+
 /* ========================================
    SECCIÓN UNIFICADA CON EFECTO SCROLL
    ======================================== */
 
 .producto-section-unified {
-    min-height: 300vh;
+    min-height: 160vh;
     width: 100%;
     padding-top: 0;
 }
 
+.producto-section-unified.three-sections {
+    min-height: 240vh;
+}
+
 .producto-section-unified .dual-content {
-    min-height: 300vh;
+    min-height: 160vh;
     display: flex !important;
     flex-direction: row !important;
     width: 100% !important;
     margin: 0 !important;
+}
+
+.producto-section-unified.three-sections .dual-content {
+    min-height: 240vh;
 }
 
 /* Contenedor izquierdo para sticky */
@@ -849,20 +1047,36 @@ body {
 }
 
 .producto-section-unified .text-section {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    padding: 60px;
+    min-height: 80vh;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 30px 50px;
     background: white;
+    text-align: center;
+    width: 100% !important;
+    gap: 10px;
+}
+
+.producto-section-unified .text-section:first-child {
+    padding-top: 130px;
+    justify-content: flex-start !important;
 }
 
 /* Desktop - asegurar sticky */
 @media (min-width: 1201px) {
     .producto-section-unified {
-        min-height: 300vh;
+        min-height: 160vh;
         padding-top: 0;
+    }
+
+    .producto-section-unified.three-sections {
+        min-height: 240vh;
+    }
+
+    .producto-section-unified.three-sections .dual-content {
+        min-height: 240vh;
     }
 
     .producto-section-unified .image-sticky-container {
@@ -872,8 +1086,25 @@ body {
     }
 
     .producto-section-unified .text-section {
-        padding: 60px;
-        min-height: 100vh;
+        padding: 30px 50px;
+        min-height: 80vh;
+    }
+
+    .producto-section-unified .diagrama-tecnico img,
+    .producto-section-unified .specs-table-image img {
+        max-width: 480px;
+    }
+
+    .producto-section-unified .specs-extra-images {
+        max-width: 500px;
+        flex-direction: row;
+        gap: 15px;
+        justify-content: center;
+    }
+
+    .producto-section-unified .specs-extra-images img {
+        max-width: 80px;
+        height: auto;
     }
 }
 
@@ -885,8 +1116,7 @@ body {
     }
 
     .producto-section-unified .dual-content {
-        display: grid !important;
-        grid-template-columns: 1fr !important;
+        flex-direction: column !important;
         min-height: auto !important;
     }
 
@@ -894,65 +1124,59 @@ body {
         width: 100% !important;
         height: auto !important;
         position: relative !important;
-        display: contents !important;
     }
 
     .producto-section-unified .image-sticky-container {
-        display: contents !important;
+        position: relative !important;
+        height: 60vh !important;
+        top: 0 !important;
     }
 
     .producto-section-unified .image-sticky-container img {
         position: relative !important;
         opacity: 1 !important;
-        width: 100% !important;
-        height: auto !important;
-        min-height: 300px !important;
-        max-height: 400px !important;
-        object-fit: cover !important;
-        margin: 0 !important;
     }
 
     .producto-section-unified .right-content {
         width: 100% !important;
-        display: contents !important;
+        align-items: center !important;
     }
 
     .producto-section-unified .text-section {
         padding: 40px 30px !important;
         min-height: auto !important;
+        align-items: center !important;
+        text-align: center !important;
+        width: 100% !important;
     }
 
-    /* Intercalar imágenes y textos usando grid-row */
-    .producto-section-unified .image-sticky-container img:nth-child(1) {
-        grid-row: 1;
+    .producto-section-unified .diagrama-tecnico,
+    .producto-section-unified .specs-table-image {
+        display: flex !important;
+        justify-content: center !important;
+        width: 100% !important;
+        max-width: 350px !important;
     }
 
-    .producto-section-unified .text-section:nth-child(1) {
-        grid-row: 2;
+    .producto-section-unified .diagrama-tecnico img,
+    .producto-section-unified .specs-table-image img {
+        max-width: 100% !important;
+        width: 350px !important;
     }
 
-    .producto-section-unified .image-sticky-container img:nth-child(2) {
-        grid-row: 3;
+    .producto-section-unified .specs-extra-images {
+        margin: 30px auto !important;
+        max-width: 100% !important;
+        flex-wrap: wrap !important;
+        justify-content: center !important;
     }
 
-    .producto-section-unified .text-section:nth-child(2) {
-        grid-row: 4;
-    }
-
-    .producto-section-unified .image-sticky-container img:nth-child(3) {
-        grid-row: 5;
-    }
-
-    .producto-section-unified .text-section:nth-child(3) {
-        grid-row: 6;
-    }
-
-    .producto-section-unified .image-sticky-container img:nth-child(4) {
-        grid-row: 7;
-    }
-
-    .producto-section-unified .text-section:nth-child(4) {
-        grid-row: 8;
+    /* Mostrar todas las imágenes en móvil/tablet */
+    .producto-section-unified .image-sticky-container img:first-child,
+    .producto-section-unified .image-sticky-container img {
+        position: relative !important;
+        opacity: 1 !important;
+        margin-bottom: 20px;
     }
 }
 
@@ -1004,13 +1228,20 @@ body {
         position: relative !important;
         top: 0 !important;
         right: 0 !important;
-        margin-bottom: 15px !important;
+        margin-bottom: 0 !important;
         text-align: left !important;
     }
 
     .producto-section-unified .badge-thowel img {
-        width: 50px !important;
+        width: 40px !important;
         height: auto !important;
+    }
+
+    .producto-section-unified .titulo-con-badge {
+        flex-direction: row !important;
+        align-items: center !important;
+        gap: 15px !important;
+        justify-content: center !important;
     }
 
     .producto-section-unified .diagrama-tecnico {
@@ -1056,6 +1287,46 @@ body {
         width: 100% !important;
         height: auto !important;
     }
+
+    .producto-section-unified .dual-product-icons {
+        flex-direction: column !important;
+        gap: 25px !important;
+    }
+
+    .producto-section-unified .product-icons-group .specs-icons {
+        gap: 8px !important;
+    }
+
+    .producto-section-unified .product-icons-group .specs-icons img {
+        width: 50px !important;
+    }
+
+    .producto-section-unified .dual-codazos {
+        flex-direction: column !important;
+        gap: 15px !important;
+    }
+
+    .producto-section-unified .dual-codazos img {
+        width: 100% !important;
+        max-width: 280px !important;
+    }
+
+    .producto-section-unified .codigos-productos {
+        margin-bottom: 20px !important;
+    }
+
+    .producto-section-unified .codigos-productos img {
+        max-width: 100% !important;
+    }
+
+    .producto-section-unified .diagrama-grande {
+        max-width: 100% !important;
+    }
+
+    .producto-section-unified .diagrama-grande img {
+        max-width: 100% !important;
+        width: 100% !important;
+    }
 }
 
 /* Mobile Pequeño */
@@ -1083,7 +1354,11 @@ body {
     }
 
     .producto-section-unified .badge-thowel img {
-        width: 45px !important;
+        width: 35px !important;
+    }
+
+    .producto-section-unified .titulo-con-badge {
+        gap: 10px !important;
     }
 
     .producto-section-unified .diagrama-tecnico img {
@@ -1092,5 +1367,26 @@ body {
 
     .producto-section-unified .text-section {
         padding: 25px 15px !important;
+    }
+
+    .producto-section-unified .dual-product-icons {
+        flex-direction: column !important;
+        gap: 20px !important;
+    }
+
+    .producto-section-unified .product-icons-group .specs-icons img {
+        width: 40px !important;
+    }
+
+    .producto-section-unified .dual-codazos {
+        flex-direction: column !important;
+    }
+
+    .producto-section-unified .dual-codazos img {
+        max-width: 220px !important;
+    }
+
+    .producto-section-unified .codigos-productos img {
+        max-width: 280px !important;
     }
 }

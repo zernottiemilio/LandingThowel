@@ -116,7 +116,7 @@ body {
 }
 
 .navbar .logo {
-    padding: 0; 
+    padding: 0;
     margin: 0;
     background: none !important;
     border-radius: 0;
@@ -251,10 +251,6 @@ body {
   margin: 0;
 }
 
-.producto-section:first-of-type {
-  padding-top: 100px;
-}
-
 .dual-content {
   display: flex;
   width: 100%;
@@ -275,7 +271,7 @@ body {
 
 /* izquierda (solo imagen, sin fondo beige) */
 .left-content {
-  background: none !important; 
+  background: none !important;
 }
 
 .left-content img {
@@ -290,6 +286,7 @@ body {
 .right-content {
   flex: 1;
   flex-direction: column;
+    height: 100vh;
   justify-content: center;
   align-items: flex-start;
   padding: 40px 60px;
@@ -298,16 +295,17 @@ body {
 
 
 /* ========================================
-   SECCIÓN 1 - BISAGRA SOFT CLOSING
+   SECCIÓN 1 - BISAGRA CLIP 3D
    ======================================== */
 
 .section-1 .right-content {
-  background: white;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  padding: 120px 60px 40px;
-  position: relative;
+    background: white;
+    flex-direction: column;
+    height: 100vh;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 200px 60px 40px;
+    position: relative;
 }
 
 .section-1 .left-content img {
@@ -315,29 +313,18 @@ body {
     width: 100vh;
 }
 
-.section-1 .right-content {
-    background: white;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    position: relative;
-}
-
 /* Contenedor título + badge en línea */
 .titulo-con-badge {
     display: flex;
     align-items: flex-start;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 20px;
     width: 100%;
-    gap: 30px;
-}
-
-.titulo-con-badge .producto-titulo {
     margin-bottom: 20px;
 }
 
-.titulo-con-badge .producto-titulo b {
-    white-space: nowrap;
+.titulo-con-badge .producto-titulo {
+    margin-bottom: 0;
 }
 
 .titulo-con-badge .badge-thowel {
@@ -345,7 +332,6 @@ body {
     top: auto;
     right: auto;
     flex-shrink: 0;
-    margin-top: 10px;
 }
 
 .badge-thowel {
@@ -355,7 +341,7 @@ body {
 }
 
 .badge-thowel img {
-    width: 100px;
+    width: 60px;
     height: auto;
 }
 
@@ -415,6 +401,7 @@ body {
 .section-2 .right-content {
     background: white;
     flex-direction: column;
+    height: 100vh;
     align-items: flex-start;
     justify-content: center;
 }
@@ -445,18 +432,14 @@ body {
 }
 
 .specs-table-image {
-    width: 100% !important;
-    max-width: 450px !important;
-    margin: 20px auto !important;
-    display: flex !important;
-    justify-content: center !important;
+    width: 100%;
+    max-width: 600px;
 }
 
 .specs-table-image img {
-    width: 100% !important;
-    max-width: 100% !important;
-    height: auto !important;
-    display: block !important;
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
 .specs-extra-images {
@@ -477,34 +460,27 @@ body {
     display: block;
 }
 
-/* Logos de especificaciones en grid */
-.specs-all-logos {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 12px;
-    max-width: 350px;
-    margin-top: 20px;
+.specs-table-image {
+    width: 100% !important;
+    max-width: 450px !important;
+    margin: 20px auto !important;
+    display: flex !important;
+    justify-content: center !important;
 }
 
-.specs-all-logos img {
-    max-width: 75px;
-    height: auto;
-    object-fit: contain;
-}
-
-/* Para secciones con solo 3 logos (Pata Plástica, Rueda Nylon) */
-#pata-plastica .specs-all-logos,
-#rueda-nylon .specs-all-logos {
-    grid-template-columns: repeat(3, 1fr);
-    max-width: 300px;
-    justify-items: center;
+.specs-table-image img {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    display: block !important;
 }
 
 /* ========================================
    SECCIÓN 3 - CODAZOS
    ======================================== */
 
-.section-3 .left-content {
+
+   .section-3 .left-content {
     background: #d4d4d4;
     padding: 0;
 }
@@ -517,6 +493,7 @@ body {
 .section-3 .right-content {
     background: white;
     flex-direction: column;
+    height: 100vh;
     align-items: flex-start;
     justify-content: center;
 }
@@ -526,24 +503,17 @@ body {
     max-width: 600px;
     display: flex;
     flex-direction: column;
+    height: auto;
     gap: 30px;
 }
 
 .codazos-imagenes img {
     width: 100%;
+    max-width: 450px;
     height: auto;
     display: block;
 }
 
-.producto-section-unified .codazos-imagenes {
-    gap: 20px;
-    max-width: 500px;
-}
-
-.producto-section-unified .codazos-imagenes img {
-    max-width: 100%;
-    object-fit: contain;
-}
 
 /* ========================================
    SECCIÓN 4 - VIDEO ELABORADO
@@ -552,6 +522,7 @@ body {
 .section-4 .left-content {
     background: #e8e8e8;
     flex-direction: column;
+    height: 100vh;
     align-items: flex-start;
 }
 
@@ -640,16 +611,11 @@ body {
     }
 
     .diagrama-tecnico {
-        margin-left: 0;
+        margin-left: 80px;
     }
 
     .diagrama-tecnico img {
-        max-width: 320px;
-    }
-
-    .specs-table-image,
-    .specs-table-image img {
-        max-width: 320px;
+        max-width: 300px;
     }
 }
 
@@ -814,25 +780,6 @@ body {
         font-size: 28px;
         padding: 0 30px;
     }
-
-    /* Pata Plástica y Rueda Nylon - 3 logos en fila horizontal en mobile */
-    #pata-plastica .specs-all-logos,
-    #rueda-nylon .specs-all-logos {
-        display: flex !important;
-        flex-direction: row !important;
-        justify-content: center !important;
-        align-items: center !important;
-        gap: 20px !important;
-        max-width: 100% !important;
-        margin: 20px auto !important;
-    }
-
-    #pata-plastica .specs-all-logos img,
-    #rueda-nylon .specs-all-logos img {
-        max-width: 80px !important;
-        width: auto !important;
-        height: auto !important;
-    }
 }
 
 /* Mobile Pequeño */
@@ -983,108 +930,7 @@ body {
 
 .producto-section-unified .text-section:first-child {
     padding-top: 120px;
-    min-height: 100vh;
     justify-content: flex-start !important;
-}
-
-.producto-section-unified .text-section:last-child {
-    min-height: 100vh;
-    padding-bottom: 60px;
-}
-
-.producto-section-unified .text-section:first-child .badge-thowel {
-    top: 150px;
-    right: 60px;
-}
-
-.producto-section-unified .text-section:first-child .badge-thowel img {
-    width: 70px;
-}
-
-/* Scroll snap para pausar en cada producto */
-body:has(#manija-barral) {
-    scroll-snap-type: y mandatory;
-}
-
-body:has(#pata-plastica) {
-    scroll-snap-type: y mandatory;
-}
-
-/* Estilo compacto para múltiples productos en la misma página */
-.producto-section-unified.producto-compacto {
-    min-height: 100vh;
-    height: 100vh;
-    padding: 0;
-    scroll-snap-align: start;
-    scroll-snap-stop: always;
-    position: relative;
-    isolation: isolate;
-    background: white;
-    overflow: hidden;
-}
-
-.producto-section-unified.producto-compacto .dual-content {
-    min-height: 100vh;
-    height: 100vh;
-    position: relative;
-    display: flex;
-    flex-direction: row;
-}
-
-.producto-section-unified.producto-compacto .left-content {
-    position: relative;
-    height: 100vh;
-    flex: 1;
-    contain: layout style paint;
-}
-
-.producto-section-unified.producto-compacto .image-sticky-container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 100vh;
-    width: 100%;
-    overflow: hidden;
-}
-
-.producto-section-unified.producto-compacto .right-content {
-    height: 100vh;
-    overflow-y: auto;
-    flex: 1;
-}
-
-.producto-section-unified.producto-compacto .image-sticky-container img {
-    position: absolute !important;
-    top: 0 !important;
-    left: 0 !important;
-    width: 100% !important;
-    height: 100% !important;
-    object-fit: cover !important;
-    object-position: center !important;
-    display: block !important;
-    opacity: 0;
-    transition: opacity 0.5s ease;
-}
-
-.producto-section-unified.producto-compacto .image-sticky-container img.active {
-    opacity: 1;
-    z-index: 2;
-}
-
-.producto-section-unified.producto-compacto .text-section {
-    min-height: 33.33vh;
-    padding: 40px 60px;
-}
-
-.producto-section-unified.producto-compacto .text-section:first-child {
-    padding-top: 180px;
-}
-
-.producto-section-unified.producto-compacto .badge-thowel {
-    position: absolute;
-    top: 50px;
-    right: 100px;
 }
 
 /* Desktop - asegurar sticky */
@@ -1098,6 +944,10 @@ body:has(#pata-plastica) {
         min-height: 300vh;
     }
 
+    .producto-section-unified.three-sections .dual-content {
+        min-height: 300vh;
+    }
+
     .producto-section-unified .image-sticky-container {
         position: sticky;
         top: 0;
@@ -1107,11 +957,6 @@ body:has(#pata-plastica) {
     .producto-section-unified .text-section {
         padding: 40px 60px;
         min-height: 100vh;
-    }
-
-    .producto-section-unified .text-section:first-child {
-        min-height: 100vh;
-        padding-top: 120px;
     }
 
     .producto-section-unified .diagrama-tecnico img,
@@ -1252,13 +1097,20 @@ body:has(#pata-plastica) {
         position: relative !important;
         top: 0 !important;
         right: 0 !important;
-        margin-bottom: 15px !important;
+        margin-bottom: 0 !important;
         text-align: left !important;
     }
 
     .producto-section-unified .badge-thowel img {
-        width: 50px !important;
+        width: 40px !important;
         height: auto !important;
+    }
+
+    .producto-section-unified .titulo-con-badge {
+        flex-direction: row !important;
+        align-items: center !important;
+        gap: 15px !important;
+        justify-content: center !important;
     }
 
     .producto-section-unified .diagrama-tecnico {
@@ -1331,7 +1183,11 @@ body:has(#pata-plastica) {
     }
 
     .producto-section-unified .badge-thowel img {
-        width: 45px !important;
+        width: 35px !important;
+    }
+
+    .producto-section-unified .titulo-con-badge {
+        gap: 10px !important;
     }
 
     .producto-section-unified .diagrama-tecnico img {
