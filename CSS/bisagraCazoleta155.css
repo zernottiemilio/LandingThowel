@@ -415,7 +415,7 @@ body {
 .video-titulo {
     font-size: 36px;
     font-weight: 900;
-    color: #000;
+    color: #1e3a8a;
     margin-bottom: 30px;
 }
 
@@ -550,27 +550,41 @@ body {
 .product-icons-group .specs-icons {
     display: flex;
     justify-content: center;
-    gap: 8px;
+    gap: 10px;
     flex-wrap: wrap;
-    max-width: 280px;
+    max-width: 300px;
 }
 
+.info-titulo {
+    color: #1e3a8a;
+}
 .product-icons-group .specs-icons img {
-    width: 55px;
-    height: auto;
+    width: auto;
+    height: 65px;
+    max-width: 350px;
+    object-fit: contain;
+    display: block;
+}
+
+.product-icons-group {
+    margin: 10px 0;
+}
+
+.dual-product-icons {
+    margin-top: 25px;
 }
 
 /* Códigos de productos */
 .codigos-productos {
     width: 100%;
-    max-width: 650px;
+    max-width: 550px;
     margin: 0 auto 20px;
     text-align: center;
 }
 
 .codigos-productos img {
     width: 100%;
-    max-width: 650px;
+    max-width: 550px;
     height: auto;
 }
 
@@ -879,7 +893,9 @@ body {
     }
 
     .product-icons-group .specs-icons img {
-        width: 50px;
+        width: auto;
+        height: 56px;
+        max-width: 105px;
     }
 
     .dual-codazos {
@@ -952,7 +968,9 @@ body {
     }
 
     .product-icons-group .specs-icons img {
-        width: 45px;
+        width: auto;
+        height: 50px;
+        max-width: 95px;
     }
 
     .dual-codazos img {
@@ -965,7 +983,7 @@ body {
    ======================================== */
 
 .producto-section-unified {
-    min-height: 160vh;
+    min-height: 200vh;
     width: 100%;
     padding-top: 0;
 }
@@ -975,7 +993,7 @@ body {
 }
 
 .producto-section-unified .dual-content {
-    min-height: 160vh;
+    min-height: 200vh;
     display: flex !important;
     flex-direction: row !important;
     width: 100% !important;
@@ -1047,7 +1065,7 @@ body {
 }
 
 .producto-section-unified .text-section {
-    min-height: 80vh;
+    min-height: 100vh;
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
@@ -1056,7 +1074,7 @@ body {
     background: white;
     text-align: center;
     width: 100% !important;
-    gap: 10px;
+    gap: 15px;
 }
 
 .producto-section-unified .text-section:first-child {
@@ -1064,10 +1082,19 @@ body {
     justify-content: flex-start !important;
 }
 
+/* Compactar secciones con poco contenido para evitar espacios en blanco */
+.producto-section-unified .text-section[data-section="especificaciones"],
+.producto-section-unified .text-section[data-section="codazos"] {
+    min-height: 58vh;
+    justify-content: flex-start !important;
+    padding-top: 30px;
+    gap: 20px;
+}
+
 /* Desktop - asegurar sticky */
 @media (min-width: 1201px) {
     .producto-section-unified {
-        min-height: 160vh;
+        min-height: 200vh;
         padding-top: 0;
     }
 
@@ -1086,8 +1113,16 @@ body {
     }
 
     .producto-section-unified .text-section {
-        padding: 30px 50px;
-        min-height: 80vh;
+        padding: 40px 60px;
+        min-height: 100vh;
+    }
+
+    .producto-section-unified .text-section[data-section="especificaciones"],
+    .producto-section-unified .text-section[data-section="codazos"] {
+        min-height: 58vh;
+        justify-content: flex-start !important;
+        padding-top: 30px;
+        gap: 20px;
     }
 
     .producto-section-unified .diagrama-tecnico img,
@@ -1148,6 +1183,12 @@ body {
         align-items: center !important;
         text-align: center !important;
         width: 100% !important;
+    }
+
+    .producto-section-unified .text-section[data-section="especificaciones"],
+    .producto-section-unified .text-section[data-section="codazos"] {
+        min-height: auto !important;
+        padding-top: 40px !important;
     }
 
     .producto-section-unified .diagrama-tecnico,
@@ -1298,7 +1339,9 @@ body {
     }
 
     .producto-section-unified .product-icons-group .specs-icons img {
-        width: 50px !important;
+        width: auto !important;
+        height: 56px !important;
+        max-width: 105px !important;
     }
 
     .producto-section-unified .dual-codazos {
@@ -1375,7 +1418,9 @@ body {
     }
 
     .producto-section-unified .product-icons-group .specs-icons img {
-        width: 40px !important;
+        width: auto !important;
+        height: 46px !important;
+        max-width: 90px !important;
     }
 
     .producto-section-unified .dual-codazos {

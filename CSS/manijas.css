@@ -100,7 +100,7 @@ body {
 
 .navbar a {
     text-decoration: none;
-    color: #333;
+    color: #1e3a8a;
     margin: 15px;
     text-align: center;
     font-weight: 500;
@@ -120,7 +120,7 @@ body {
 
 .navbar a:not(:hover) {
     background: transparent;
-    color: #333;
+    color: #1e3a8a;
 }
 
 .navbar .logo {
@@ -435,7 +435,7 @@ body {
 
 .producto-descripcion {
     font-size: 14px;
-    color: #333;
+    color: #1e3a8a;
     line-height: 1.6;
     margin-bottom: 60px;
     max-width: 450px;
@@ -764,7 +764,7 @@ section#rueda-nylon.producto-section {
 
 .producto-descripcion {
     font-size: 18px;
-    color: #333;
+    color: #1e3a8a;
     line-height: 1.8;
     margin-bottom: 20px;
     max-width: 600px;
@@ -987,7 +987,7 @@ section#rueda-nylon.producto-section {
 .video-titulo {
     font-size: 36px;
     font-weight: 900;
-    color: #000;
+    color: #1e3a8a;
     margin-bottom: 30px;
 }
 

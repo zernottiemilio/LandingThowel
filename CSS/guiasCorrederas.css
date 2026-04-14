@@ -379,7 +379,7 @@ body {
 
 .producto-descripcion {
     font-size: 18px;
-    color: #333;
+    color: #1e3a8a;
     line-height: 1.8;
     margin-bottom: 20px;
     max-width: 600px;
@@ -429,7 +429,7 @@ body {
 .video-titulo {
     font-size: 36px;
     font-weight: 900;
-    color: #000;
+    color: #1e3a8a;
     margin-bottom: 30px;
 }
 
@@ -467,7 +467,7 @@ body {
 
 .info-lista li {
     font-size: 15px;
-    color: #333;
+    color: #1e3a8a;
     line-height: 1.6;
     margin-bottom: 10px;
     text-align: left;
