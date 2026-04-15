@@ -723,20 +723,34 @@ body {
         min-height: auto !important;
     }
 
+    /* En tablet/mobile solo mostrar imagen de ambiente */
     .producto-section-unified .left-content {
         width: 100% !important;
-        height: auto !important;
+        height: 50vh !important;
+        min-height: 300px !important;
+        max-height: 50vh !important;
+        overflow: hidden !important;
         position: relative !important;
     }
 
     .producto-section-unified .image-sticky-container {
         position: relative !important;
-        height: 60vh !important;
-        top: 0 !important;
+        height: 100% !important;
+        overflow: hidden !important;
     }
 
     .producto-section-unified .image-sticky-container img {
-        position: relative !important;
+        display: none !important;
+    }
+
+    .producto-section-unified .image-sticky-container img[data-section="especificaciones"] {
+        display: block !important;
+        position: absolute !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
         opacity: 1 !important;
     }
 
@@ -803,14 +817,6 @@ body {
         flex-direction: column;
         align-items: center;
     }
-
-    /* Mostrar todas las imágenes en móvil/tablet */
-    .producto-section-unified .image-sticky-container img:first-child,
-    .producto-section-unified .image-sticky-container img {
-        position: relative !important;
-        opacity: 1 !important;
-        margin-bottom: 20px;
-    }
 }
 
 /* Mobile */
@@ -819,15 +825,31 @@ body {
         padding-top: 80px !important;
     }
 
-    .producto-section-unified .image-sticky-container {
-        height: auto !important;
+    .producto-section-unified .left-content {
+        height: 50vh !important;
         min-height: 300px !important;
+        max-height: 50vh !important;
+        overflow: hidden !important;
+    }
+
+    .producto-section-unified .image-sticky-container {
+        height: 100% !important;
+        overflow: hidden !important;
     }
 
     .producto-section-unified .image-sticky-container img {
-        height: auto !important;
-        min-height: 300px !important;
-        max-height: 400px !important;
+        display: none !important;
+    }
+
+    .producto-section-unified .image-sticky-container img[data-section="especificaciones"] {
+        display: block !important;
+        position: absolute !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        opacity: 1 !important;
     }
 
     .producto-section-unified .text-section {
@@ -838,6 +860,8 @@ body {
         font-size: 28px !important;
         line-height: 1.2 !important;
         margin-bottom: 15px !important;
+        text-align: center !important;
+        width: 100% !important;
     }
 
     .producto-section-unified .producto-titulo b {
@@ -846,6 +870,7 @@ body {
 
     .producto-section-unified .estandar {
         font-size: 24px !important;
+        text-align: center !important;
     }
 
     .producto-section-unified .producto-descripcion {
@@ -868,10 +893,23 @@ body {
     }
 
     .producto-section-unified .titulo-con-badge {
-        flex-direction: row !important;
+        display: flex !important;
+        flex-direction: column !important;
         align-items: center !important;
-        gap: 15px !important;
         justify-content: center !important;
+        text-align: center !important;
+        width: 100% !important;
+        gap: 10px !important;
+    }
+
+    .producto-section-unified .titulo-con-badge .producto-titulo {
+        text-align: center !important;
+        width: 100% !important;
+    }
+
+    .producto-section-unified .titulo-con-badge .badge-thowel {
+        position: relative !important;
+        margin: 0 auto !important;
     }
 
     .producto-section-unified .diagrama-tecnico {
@@ -888,11 +926,19 @@ body {
     }
 
     .producto-section-unified .specs-icons {
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+        justify-content: center !important;
+        align-items: center !important;
         gap: 15px !important;
+        margin: 20px auto !important;
     }
 
     .producto-section-unified .specs-icons img {
-        width: 60px !important;
+        width: auto !important;
+        height: 60px !important;
+        max-width: 80px !important;
     }
 
     .dual-codazos {
