@@ -1497,3 +1497,29 @@ body {
         max-width: 280px !important;
     }
 }
+
+/* ========================================
+   DESACTIVAR EFECTO SCROLL EN LADO DERECHO
+   Contenido estático para evitar solapamiento
+   ======================================== */
+
+.producto-section-unified .right-content {
+    height: auto !important;
+    overflow-y: visible !important;
+}
+
+.producto-section-unified .text-section {
+    position: relative !important;
+    min-height: auto !important;
+    padding: 40px 50px !important;
+}
+
+.producto-section-unified .text-section:first-child {
+    padding-top: 130px !important;
+}
+
+.producto-section-unified .text-section[data-section="especificaciones"],
+.producto-section-unified .text-section[data-section="codazos"] {
+    min-height: auto !important;
+    padding-top: 40px !important;
+}

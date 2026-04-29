@@ -323,7 +323,7 @@ body {
 
 .touch {
     font-size: clamp(20px, 2.5vw, 32px);
-    font-weight: 900;
+    font-weight: 400;
     color: #e74c3c !important;
     margin-bottom: 0;
     display: block;
@@ -332,8 +332,8 @@ body {
 .producto-descripcion {
     font-size: 15px;
     color: #1e3a8a;
-    line-height: 1.5;
-    margin-bottom: 10px;
+    line-height: 1.4;
+    margin-bottom: 8px;
     max-width: 520px;
     text-align: center;
     margin-left: auto;
@@ -343,7 +343,7 @@ body {
 .info-titulo {
     font-size: 16px;
     color: #1e3a8a;
-    margin: 15px 0 5px;
+    margin: 10px 0 3px;
     text-align: center;
     width: 100%;
 }
@@ -352,7 +352,7 @@ body {
     font-size: 14px;
     color: #1e3a8a;
     font-style: italic;
-    margin: 10px 0;
+    margin: 5px 0;
     text-align: center;
     width: 100%;
 }
@@ -449,6 +449,73 @@ body {
 .specs-icons-mini img {
     width: 100%;
     max-width: 400px;
+    height: auto;
+}
+
+/* Fila de 2 diagramas técnicos lado a lado */
+.specs-diagramas-duo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 25px;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto 15px;
+}
+
+.specs-diagramas-duo img {
+    width: 45%;
+    max-width: 220px;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Diagrama de instalación centrado */
+.specs-diagrama-instalacion {
+    width: 100%;
+    max-width: 250px;
+    margin: 0 auto 15px;
+    text-align: center;
+}
+
+.specs-diagrama-instalacion img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Fila código + iconos proporcional */
+.codigo-specs-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.codigo-specs-row .codigo-producto {
+    flex-shrink: 0;
+}
+
+.codigo-specs-row .codigo-producto img {
+    width: 160px;
+    height: auto;
+}
+
+.codigo-specs-row .diagramas-grandes {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    margin: 0;
+}
+
+.codigo-specs-row .diagramas-grandes img {
+    width: 55px;
+    max-width: none;
     height: auto;
 }
 
@@ -558,7 +625,7 @@ body {
 }
 
 .producto-section-unified.three-sections {
-    min-height: 240vh;
+    min-height: 180vh;
 }
 
 .producto-section-unified .dual-content {
@@ -570,7 +637,7 @@ body {
 }
 
 .producto-section-unified.three-sections .dual-content {
-    min-height: 240vh;
+    min-height: 180vh;
 }
 
 /* Contenedor izquierdo para sticky */
@@ -637,15 +704,15 @@ body {
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
-    padding: 30px 50px;
+    padding: 20px 40px;
     background: white;
     text-align: center;
     width: 100% !important;
-    gap: 15px;
+    gap: 10px;
 }
 
 .producto-section-unified .text-section:first-child {
-    padding-top: 130px;
+    padding-top: 120px;
 }
 
 /* ========================================
@@ -660,11 +727,11 @@ body {
     }
 
     .producto-section-unified.three-sections {
-        min-height: 240vh;
+        min-height: 180vh;
     }
 
     .producto-section-unified.three-sections .dual-content {
-        min-height: 240vh;
+        min-height: 180vh;
     }
 
     .producto-section-unified .image-sticky-container {
@@ -674,7 +741,7 @@ body {
     }
 
     .producto-section-unified .text-section {
-        padding: 30px 50px;
+        padding: 20px 40px;
     }
 
     .producto-section-unified .diagrama-tecnico img {
@@ -795,6 +862,30 @@ body {
     .specs-icons-mini img {
         max-width: 300px !important;
         width: 100% !important;
+    }
+
+    .specs-diagramas-duo {
+        gap: 20px !important;
+    }
+
+    .specs-diagramas-duo img {
+        max-width: 180px !important;
+    }
+
+    .specs-diagrama-instalacion {
+        max-width: 220px !important;
+    }
+
+    .codigo-specs-row {
+        gap: 20px !important;
+    }
+
+    .codigo-specs-row .codigo-producto img {
+        width: 140px !important;
+    }
+
+    .codigo-specs-row .diagramas-grandes img {
+        width: 45px !important;
     }
 }
 
@@ -961,6 +1052,35 @@ body {
         width: 100% !important;
     }
 
+    .specs-diagramas-duo {
+        gap: 15px !important;
+    }
+
+    .specs-diagramas-duo img {
+        max-width: 140px !important;
+    }
+
+    .specs-diagrama-instalacion {
+        max-width: 180px !important;
+    }
+
+    .codigo-specs-row {
+        flex-direction: column !important;
+        gap: 15px !important;
+    }
+
+    .codigo-specs-row .codigo-producto img {
+        width: 130px !important;
+    }
+
+    .codigo-specs-row .diagramas-grandes {
+        justify-content: center !important;
+    }
+
+    .codigo-specs-row .diagramas-grandes img {
+        width: 40px !important;
+    }
+
     .similares-titulo {
         font-size: 28px;
         padding: 0 30px;
@@ -1033,4 +1153,25 @@ body {
     .dual-codazos img {
         max-width: 180px !important;
     }
+
+    .specs-diagramas-duo {
+        gap: 10px !important;
+    }
+
+    .specs-diagramas-duo img {
+        max-width: 110px !important;
+    }
+
+    .specs-diagrama-instalacion {
+        max-width: 150px !important;
+    }
+
+    .codigo-specs-row .codigo-producto img {
+        width: 120px !important;
+    }
+
+    .codigo-specs-row .diagramas-grandes img {
+        width: 35px !important;
+    }
 }
+
