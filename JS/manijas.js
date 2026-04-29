@@ -122,3 +122,21 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+// ========================================
+// EFECTO ZOOM SUAVE EN AMBIENTE
+// ========================================
+document.addEventListener('DOMContentLoaded', () => {
+    const ambiente = document.getElementById('ambiente');
+    if (!ambiente) return;
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('in-view');
+            }
+        });
+    }, { threshold: 0.2 });
+
+    observer.observe(ambiente);
+});
