@@ -3,13 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ThowelBox Plus - THOWEL</title>
+    <title>Lateral Cajón Metálico - THOWEL</title>
     <link rel="icon" type="image/png" href="/assets/LOGO-11.png">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="/CSS/thowelBoxPlus.css">
+    <link rel="stylesheet" href="/CSS/thowelBox.css">
     <script src="https://cdn.jsdelivr.net/npm/i18next@23.7.6/i18next.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
     <link rel="stylesheet" href="/CSS/responsive.css">
+    <style>
+        /* Desactivar efecto scroll en lado derecho - contenido estático */
+        .producto-section-unified .right-content {
+            height: auto !important;
+            overflow-y: visible !important;
+        }
+        .producto-section-unified .text-section {
+            position: relative !important;
+            min-height: auto !important;
+            padding: 30px 50px !important;
+        }
+        .producto-section-unified .text-section:first-child {
+            padding-top: 120px !important;
+        }
+    </style>
 </head>
 <body>
     <!-- Navbar flotante -->
@@ -82,9 +97,9 @@
             <!-- Contenedor de imágenes sticky -->
             <div class="left-content">
                 <div class="image-sticky-container">
-                    <img src="/assets/thowel box plus/THOWELBOXPLUS.png" alt="ThowelBox Plus" class="active" data-section="descripcion">
-                    <img src="/assets/thowel box plus/ambientethowelboxplus.JPG" alt="Ambiente ThowelBox Plus" data-section="especificaciones">
-                    <img src="/assets/thowel box/Escena 39.png" alt="Detalles ThowelBox Plus" data-section="detalles">
+                    <img src="/assets/lateral-metalico/LATERAL METALICO.JPG" alt="Lateral Cajón Metálico" class="active" data-section="descripcion">
+                    <img src="/assets/lateral-metalico/LATERAL METALICO (1).JPG" alt="Lateral Cajón Metálico Ambiente" data-section="especificaciones">
+                    <img src="/assets/lateral-metalico/LATERAL METALICO.JPG" alt="Detalles Lateral Cajón Metálico" data-section="detalles">
                 </div>
             </div>
 
@@ -92,43 +107,47 @@
             <div class="right-content">
                 <!-- Sección 1: Descripción -->
                 <div class="text-section" data-section="descripcion">
-                    <div class="titulo-con-badge">
-                        <h1 class="producto-titulo">
-                            <b>THOWELBOX PLUS</b><br>
-                            <span class="smooth">SMOOTH</span>
+                <div class="titulo-con-badge">
+                    <h1 class="producto-titulo">
+                            <b>LATERAL CAJÓN</b><br>
+                            <span class="plus">METÁLICO</span>
                         </h1>
-                        <div class="badge-thowel">
-                            <img src="/assets/TecnologiaSmooth.png" alt="Thowel Badge">
-                        </div>
+                    <div class="badge-thowel">
+                        <img src="/assets/estandar.png" alt="Estandar Badge">
                     </div>
+                </div>
                 <p class="producto-descripcion">
-                    <strong>THOWELBOX PLUS</strong> incluye <strong>olleros</strong> de alta resistencia, faciles de montar, para ajustar la altura de los cajones a <strong>119 mm o 183 mm</strong>
+                    Optimizá el montaje con nuestros cajones de <strong>LATERALES METÁLICOS</strong>, diseñados con pocos componentes para una instalación rápida y eficiente.
                 </p>
-                <div class="diagrama-tecnico">
-                    <img src="/assets/thowel box plus/THOWEL BOX PLUS-18.png" alt="Diagrama técnico">
+                <p class="producto-descripcion">
+                    Ofrecen gran estabilidad y se adaptan a múltiples aplicaciones, gracias a su variedad de anchos, alturas y largos.
+                </p>
+                <div class="diagrama-tecnico" style="max-width: 350px; margin: 15px auto;">
+                    <img src="/assets/lateral-metalico/LATERAL METALICO-21.png" alt="Lateral Cajón Metálico" style="width: 100%; height: auto;">
                 </div>
                 </div>
 
                 <!-- Sección 2: Especificaciones -->
                 <div class="text-section" data-section="especificaciones">
-<p class="specs-intro">
-    Es importante destacar que THOWELBOX PLUS se refiere exlusivamente al modelo con olleros, los cuales se colocan de <strong>manera individual a cada lado</strong> del cajón, y deben ser <strong>añadidos al sistema THOWELBOX.</strong>
-</p>
-                <div class="specs-table-image">
-                    <img src="/assets/thowel box plus/THOWEL BOX PLUS-23.png" alt="Especificaciones técnicas">
+                <p class="specs-intro">
+                    Fabricado con materiales de <strong>alta resistencia</strong>, ofreciendo una <strong>solución robusta y versátil</strong> para todo tipo de proyectos profesionales.
+                </p>
+                <div class="specs-table-image" style="max-width: 320px; margin: 10px auto;">
+                    <img src="/assets/lateral-metalico/_CAMBIAR_ LATERAL METALICO-18.png" alt="Especificaciones técnicas 86mm" style="width: 100%; height: auto;">
                 </div>
-                <div class="specs-icons">
-                    <img src="/assets/thowel box plus/THOWEL BOX PLUS-20.png" alt="30 kg/par">
-                    <img src="/assets/thowel box plus/THOWEL BOX PLUS-21.png" alt="1 set / master 6 set">
-                    <img src="/assets/thowel box plus/THOWEL BOX PLUS-22.png" alt="80.000 Ciclos de uso">
+                <div class="specs-table-image" style="max-width: 320px; margin: 10px auto;">
+                    <img src="/assets/lateral-metalico/_CAMBIAR_ LATERAL METALICO-19.png" alt="Especificaciones técnicas 118mm" style="width: 100%; height: auto;">
                 </div>
+                <div class="specs-table-image" style="max-width: 320px; margin: 10px auto;">
+                    <img src="/assets/lateral-metalico/_CAMBIAR_ LATERAL METALICO-20.png" alt="Especificaciones técnicas 150mm" style="width: 100%; height: auto;">
                 </div>
-
-                <!-- Sección 3: Detalles adicionales -->
-                <div class="text-section" data-section="detalles">
-<div class="codazos-imagenes">
-                    <img src="/assets/thowel box plus/THOWEL BOX PLUS-19.png" alt="Detalle 1">
-                    <img src="/assets/thowel box plus/THOWEL BOX PLUS-24.png" alt="Detalle 2">
+                <div class="specs-icons" style="display: flex !important; flex-direction: row !important; justify-content: center !important; align-items: center !important; gap: 25px !important; margin: 30px auto !important; width: 100% !important; visibility: visible !important; opacity: 1 !important;">
+                    <img src="/assets/lateral-metalico/LATERAL METALICO-22.png" alt="20 kg/par" style="width: 80px !important; height: auto !important; display: block !important;">
+                    <img src="/assets/lateral-metalico/LATERAL METALICO-23.png" alt="10 Set" style="width: 80px !important; height: auto !important; display: block !important;">
+                    <img src="/assets/lateral-metalico/LATERAL METALICO-24.png" alt="20.000 Ciclos de uso" style="width: 80px !important; height: auto !important; display: block !important;">
+                </div>
+                <div class="codazos-imagenes" style="margin-top: 30px;">
+                    <img src="/assets/lateral-metalico/LATERAL METALICO-25.png" alt="Diagrama técnico" style="max-width: 250px; height: auto; margin: 0 auto; display: block;">
                 </div>
                 </div>
             </div>
@@ -150,39 +169,9 @@
             <!-- Carousel Track -->
             <div class="catalog-track" id="catalogTrack">
                 <div class="catalog-item">
-                    <img src="/assets/bisagra angulos especiales/BISAGRAANGULOSESPECIALES135.png" alt="Bisagra Ángulos Especiales 135">
+                    <img src="/assets/thowel box/THOWELBOX.JPG" alt="ThowelBox">
                     <div class="catalog-overlay">
-                        <div class="catalog-overlay-text">BISAGRA ANGULOS ESPECIALES 135</div>
-                    </div>
-                </div>
-                <div class="catalog-item">
-                    <img src="/assets/bisagra angulos especiales/BISAGRAANGULOSESPECIALES175.png" alt="Bisagra Ángulos Especiales 175">
-                    <div class="catalog-overlay">
-                        <div class="catalog-overlay-text">BISAGRAS ANGULOS ESPECIALES 175</div>
-                    </div>
-                </div>
-                <div class="catalog-item">
-                    <img src="/assets/bisagra cazoleta estandar/BISAGRACAZOLETAESTANDAR.png" alt="Bisagra Cazoleta Estandar">
-                    <div class="catalog-overlay">
-                        <div class="catalog-overlay-text">BISAGRA CAZOLETA ESTANDAR</div>
-                    </div>
-                </div>
-                <div class="catalog-item">
-                    <img src="/assets/bisagra clip 3D/BISAGRACLIP.png" alt="Bisagra Clip">
-                    <div class="catalog-overlay">
-                        <div class="catalog-overlay-text">BISAGRA CLIP</div>
-                    </div>
-                </div>
-                <div class="catalog-item">
-                    <img src="/assets/bisagra push open/BISAGRAPUSHOPEN.png" alt="Bisagra Push Open">
-                    <div class="catalog-overlay">
-                        <div class="catalog-overlay-text">BISAGRA PUSH OPEN</div>
-                    </div>
-                </div>
-                <div class="catalog-item">
-                    <img src="/assets/bisagra soft closing/BSC.png" alt="Bisagra Soft Closing">
-                    <div class="catalog-overlay">
-                        <div class="catalog-overlay-text">BISAGRA SOFT CLOSING</div>
+                        <div class="catalog-overlay-text">THOWELBOX</div>
                     </div>
                 </div>
                 <div class="catalog-item">
@@ -195,6 +184,36 @@
                     <img src="/assets/thowel box plus/THOWELBOXPLUS.png" alt="Thowel Box Plus">
                     <div class="catalog-overlay">
                         <div class="catalog-overlay-text">THOWELBOX PLUS</div>
+                    </div>
+                </div>
+                <div class="catalog-item">
+                    <img src="/assets/bisagra clip 3D/BISAGRACLIP.png" alt="Bisagra Clip 3D">
+                    <div class="catalog-overlay">
+                        <div class="catalog-overlay-text">BISAGRA CLIP 3D</div>
+                    </div>
+                </div>
+                <div class="catalog-item">
+                    <img src="/assets/bisagra soft closing/BSC.png" alt="Bisagra Soft Closing">
+                    <div class="catalog-overlay">
+                        <div class="catalog-overlay-text">BISAGRA SOFT CLOSING</div>
+                    </div>
+                </div>
+                <div class="catalog-item">
+                    <img src="/assets/bisagra cazoleta estandar/BISAGRACAZOLETAESTANDAR.png" alt="Bisagra Cazoleta Estandar">
+                    <div class="catalog-overlay">
+                        <div class="catalog-overlay-text">BISAGRA CAZOLETA ESTANDAR</div>
+                    </div>
+                </div>
+                <div class="catalog-item">
+                    <img src="/assets/guia oculta 3d soft closing/GUIAOCULTA.png" alt="Guía Oculta 3D Soft Closing">
+                    <div class="catalog-overlay">
+                        <div class="catalog-overlay-text">GUÍA OCULTA 3D SOFT CLOSING</div>
+                    </div>
+                </div>
+                <div class="catalog-item">
+                    <img src="/assets/corredera telescopica soft closing/CORREDERATELESCOPICASOFTCLOSING.png" alt="Corredera Telescópica Soft Closing">
+                    <div class="catalog-overlay">
+                        <div class="catalog-overlay-text">CORREDERA TELESCÓPICA SOFT CLOSING</div>
                     </div>
                 </div>
             </div>
