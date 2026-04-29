@@ -377,6 +377,12 @@ body {
   color: #e74c3c !important;
 }
 
+/* Modelo destacado (H45/H35) en títulos */
+.modelo-destacado {
+  font-weight: 900;
+  color: #1e3a8a;
+}
+
 .producto-descripcion {
     font-size: 18px;
     color: #1e3a8a;
@@ -667,6 +673,53 @@ body {
     width: 100% !important;
     max-width: 100% !important;
     height: auto !important;
+    display: block !important;
+}
+
+/* Tablas juntas (zinc + negro lado a lado, iconos abajo) */
+.tablas-con-iconos:has(.specs-tablas-juntas) {
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 30px !important;
+}
+
+.specs-tablas-juntas {
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.specs-tablas-juntas .specs-table-image {
+    flex: 0 0 auto !important;
+    width: 280px !important;
+    max-width: 280px !important;
+    margin: 0 !important;
+    align-self: flex-start !important;
+    line-height: 0 !important;
+}
+
+.specs-tablas-juntas .specs-table-image img {
+    display: block !important;
+    vertical-align: top !important;
+    object-fit: contain !important;
+    object-position: top center !important;
+}
+
+.tablas-con-iconos .specs-tablas-juntas + .specs-iconos-centro {
+    flex-direction: row !important;
+    max-width: none !important;
+    width: 100% !important;
+    gap: 50px !important;
+    flex-wrap: wrap;
+}
+
+.tablas-con-iconos .specs-tablas-juntas + .specs-iconos-centro img {
+    max-width: 90px !important;
+    height: 90px !important;
     display: block !important;
 }
 
