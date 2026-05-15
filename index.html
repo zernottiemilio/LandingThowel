@@ -13,11 +13,11 @@
 </head>
 <body>
     <section class="header-section">
-        <img src="assets/portada.png" alt="Portada" class="portada-img">
+        <img src="assets/portada.png" alt="Portada" class="portada-img" loading="eager" fetchpriority="high" decoding="async">
 
         <nav class="navbar">
             <!-- Logo mobile (solo visible en mobile, arriba a la izquierda) -->
-            <a href="/index.html" class="logo-mobile"><img src="/assets/logoHeader.png" alt="THOWEL"></a>
+            <a href="/index.html" class="logo-mobile"><img src="/assets/logoHeader.png" alt="THOWEL" loading="eager" fetchpriority="high" decoding="async"></a>
 
             <!-- Botón hamburguesa (solo visible en mobile) -->
             <button class="hamburger" id="hamburger" aria-label="Toggle menu">
@@ -74,7 +74,7 @@
                         </div>
                     </div>
                 </li>
-                <li><a href="/index.html" class="logo"><img src="/assets/logoHeader.png" alt="THOWEL"></a></li>
+                <li><a href="/index.html" class="logo"><img src="/assets/logoHeader.png" alt="THOWEL" loading="eager" fetchpriority="high" decoding="async"></a></li>
                 <li><a href="/HTML/sobreNosotros.html" data-i18n="nav.about">SOBRE NOSOTROS</a></li>
                 <li><a href="/HTML/contacto.html" data-i18n="nav.contact">CONTACTOS</a></li>
             </ul>
@@ -88,7 +88,7 @@
             </div>
         </div>
         <div class="scroll-indicator">
-            <img src="/assets/FLECHAINICIO.png" alt="Flecha" class="flecha-img">
+            <img src="/assets/FLECHAINICIO.png" alt="Flecha" class="flecha-img" loading="eager" fetchpriority="high" decoding="async">
         </div>
     </section>
     
@@ -98,30 +98,30 @@
             <!-- SMOOTH Section -->
             <div class="product-section active" data-product="smooth">
                 <div class="split-image left-image">
-                    <img src="assets/FondoSmooth.png" alt="SMOOTH Left">
+                    <img src="assets/FondoSmooth.png" alt="SMOOTH Left" loading="lazy" decoding="async">
                 </div>
                 <div class="split-image right-image">
-                    <img src="assets/CAJONESESPECIAS.png" alt="SMOOTH Right">
+                    <img src="assets/CAJONESESPECIAS.png" alt="SMOOTH Right" loading="lazy" decoding="async">
                 </div>
             </div>
             
             <!-- TOUCH Section -->
             <div class="product-section" data-product="touch">
                 <div class="split-image left-image">
-                    <img src="assets/FondoTouch.png" alt="TOUCH Left">
+                    <img src="assets/FondoTouch.png" alt="TOUCH Left" loading="lazy" decoding="async">
                 </div>
                 <div class="split-image right-image">
-                    <img src="assets/touch.png" alt="TOUCH Right">
+                    <img src="assets/touch.png" alt="TOUCH Right" loading="lazy" decoding="async">
                 </div>
             </div>
             
             <!-- ESTÁNDAR Section -->
-            <div class="product-section" data-product="estandar">
+            <div class="product-section" data-product="estándar">
                 <div class="split-image left-image">
-                    <img src="assets/FondoEstandar.png" alt="ESTÁNDAR Left">
+                    <img src="assets/FondoEstandar.png" alt="ESTÁNDAR Left" loading="lazy" decoding="async">
                 </div>
                 <div class="split-image right-image">
-                    <img src="assets/piston a gas/PISTONAGAS.png" alt="ESTÁNDAR Right">
+                    <img src="assets/piston a gas/PISTONAGAS.png" alt="ESTÁNDAR Right" loading="lazy" decoding="async">
                 </div>
             </div>
         </div>
@@ -131,7 +131,7 @@
             <!-- SMOOTH Content -->
             <div class="product-info active" data-product="smooth">
                 <div class="product-logo">
-                    <img src="assets/S.png" alt="SMOOTH">
+                    <img src="assets/S.png" alt="SMOOTH" loading="lazy" decoding="async">
                 </div>
 
                 <p class="product-description" data-i18n="home.technology.smooth.description">
@@ -142,7 +142,7 @@
             <!-- TOUCH Content -->
             <div class="product-info" data-product="touch">
                 <div class="product-logo">
-                    <img src="assets/T.png" alt="TOUCH">
+                    <img src="assets/T.png" alt="TOUCH" loading="lazy" decoding="async">
                 </div>
 
                 <p class="product-description" data-i18n="home.technology.touch.description">
@@ -152,9 +152,9 @@
             </div>
 
             <!-- ESTÁNDAR Content -->
-            <div class="product-info" data-product="estandar">
+            <div class="product-info" data-product="estándar">
                 <div class="product-logo">
-                    <img src="assets/E.png" alt="ESTÁNDAR">
+                    <img src="assets/E.png" alt="ESTÁNDAR" loading="lazy" decoding="async">
                 </div>
 
                 <p class="product-description" data-i18n="home.technology.standard.description">
@@ -169,7 +169,7 @@
             <div class="progress-dots">
                 <span class="dot active" data-product="smooth"></span>
                 <span class="dot" data-product="touch"></span>
-                <span class="dot" data-product="estandar"></span>
+                <span class="dot" data-product="estándar"></span>
             </div>
         </div>
     </section>
@@ -185,7 +185,7 @@
                     </p>
                 </div>
                 <div class="calidad-icon">
-                    <img src="assets/calidad.png" alt="Calidad THOWEL">
+                    <img src="assets/calidad.png" alt="Calidad THOWEL" loading="lazy" decoding="async">
                 </div>
             </div>
         </div>
@@ -200,7 +200,7 @@
                     <span class="catalog-tooltip">Ver catálogo</span>
                 </a>
                 <div class="catalog-arrow">
-                    <img src="assets/FLECHACATALOGO.png" alt="Flecha Catálogo">
+                    <img src="assets/FLECHACATALOGO.png" alt="Flecha Catálogo" loading="lazy" decoding="async">
                 </div>
             </div>
 
@@ -221,79 +221,79 @@
             <button class="carousel-nav next-btn" id="nextBtn"><i class="fas fa-chevron-right"></i></button>
             <div class="catalog-track" id="catalogTrack">
                 <a href="/HTML/bisagraCazoleta155.html" class="catalog-item">
-                    <img src="assets/bisagra angulos especiales/BISAGRAANGULOSESPECIALES135.png" alt="Bisagra Ángulos Especiales 135">
-                    <div class="catalog-overlay"><div class="catalog-overlay-text">BISAGRA ANGULOS ESPECIALES 135</div></div>
+                    <img src="assets/bisagra angulos especiales/BISAGRAANGULOSESPECIALES135.png" alt="Bisagra Ángulos Especiales 135" loading="lazy" decoding="async">
+                    <div class="catalog-overlay"><div class="catalog-overlay-text">BISAGRA ÁNGULOS ESPECIALES 135</div></div>
                 </a>
                 <a href="/HTML/bisagraCazoleta155.html" class="catalog-item">
-                    <img src="assets/bisagra angulos especiales/BISAGRAANGULOSESPECIALES175.png" alt="Bisagra Ángulos Especiales 175">
-                    <div class="catalog-overlay"><div class="catalog-overlay-text">BISAGRAS ANGULOS ESPECIALES 175</div></div>
+                    <img src="assets/bisagra angulos especiales/BISAGRAANGULOSESPECIALES175.png" alt="Bisagra Ángulos Especiales 175" loading="lazy" decoding="async">
+                    <div class="catalog-overlay"><div class="catalog-overlay-text">BISAGRAS ÁNGULOS ESPECIALES 175</div></div>
                 </a>
                 <a href="/HTML/bisagraCazoletaEstandar.html" class="catalog-item">
-                    <img src="assets/bisagra cazoleta estandar/BISAGRACAZOLETAESTANDAR.png" alt="Bisagra Cazoleta Estandar">
-                    <div class="catalog-overlay"><div class="catalog-overlay-text">BISAGRA CAZOLETA ESTANDAR</div></div>
+                    <img src="assets/bisagra cazoleta estandar/BISAGRACAZOLETAESTANDAR.png" alt="Bisagra Cazoleta Estándar" loading="lazy" decoding="async">
+                    <div class="catalog-overlay"><div class="catalog-overlay-text">BISAGRA CAZOLETA ESTÁNDAR</div></div>
                 </a>
                 <a href="/HTML/bisagraClip3D.html" class="catalog-item">
-                    <img src="assets/bisagra clip 3D/BISAGRACLIP.png" alt="Bisagra Clip">
+                    <img src="assets/bisagra clip 3D/BISAGRACLIP.png" alt="Bisagra Clip" loading="lazy" decoding="async">
                     <div class="catalog-overlay"><div class="catalog-overlay-text">BISAGRA CLIP</div></div>
                 </a>
                 <a href="/HTML/bisagraPushOpen.html" class="catalog-item">
-                    <img src="assets/bisagra push open/BISAGRAPUSHOPEN.png" alt="Bisagra Push Open">
+                    <img src="assets/bisagra push open/BISAGRAPUSHOPEN.png" alt="Bisagra Push Open" loading="lazy" decoding="async">
                     <div class="catalog-overlay"><div class="catalog-overlay-text">BISAGRA PUSH OPEN</div></div>
                 </a>
                 <a href="/HTML/bisagraSoftClosing.html" class="catalog-item">
-                    <img src="assets/bisagra soft closing/BSC.png" alt="Bisagra Soft Closing">
+                    <img src="assets/bisagra soft closing/BSC.png" alt="Bisagra Soft Closing" loading="lazy" decoding="async">
                     <div class="catalog-overlay"><div class="catalog-overlay-text">BISAGRA SOFT CLOSING</div></div>
                 </a>
                 <a href="/HTML/ThowelBoxCristal.html" class="catalog-item">
-                    <img src="assets/thowel box cristal/THOWELBOXCRISTAL.png" alt="Thowel Box Cristal">
+                    <img src="assets/thowel box cristal/THOWELBOXCRISTAL.png" alt="Thowel Box Cristal" loading="lazy" decoding="async">
                     <div class="catalog-overlay"><div class="catalog-overlay-text">THOWELBOX CRISTAL</div></div>
                 </a>
                 <a href="/HTML/thowelBoxPlus.html" class="catalog-item">
-                    <img src="assets/thowel box plus/THOWELBOXPLUS.png" alt="Thowel Box Plus">
+                    <img src="assets/thowel box plus/THOWELBOXPLUS.png" alt="Thowel Box Plus" loading="lazy" decoding="async">
                     <div class="catalog-overlay"><div class="catalog-overlay-text">THOWELBOX PLUS</div></div>
                 </a>
                 <a href="/HTML/guiaOculta3DSoftClosing.html" class="catalog-item">
-                    <img src="assets/Guia oculta push Open/GUIA OCULTA.JPG" alt="Guía Oculta 3D">
+                    <img src="assets/Guia oculta push Open/GUIA OCULTA.JPG" alt="Guía Oculta 3D" loading="lazy" decoding="async">
                     <div class="catalog-overlay"><div class="catalog-overlay-text">GUÍA OCULTA 3D SOFT CLOSING</div></div>
                 </a>
                 <a href="/HTML/guiaOcultaPushOpen.html" class="catalog-item">
-                    <img src="assets/Guia oculta push Open/GUIA OCULTA.JPG" alt="Guía Oculta Push Open">
+                    <img src="assets/Guia oculta push Open/GUIA OCULTA.JPG" alt="Guía Oculta Push Open" loading="lazy" decoding="async">
                     <div class="catalog-overlay"><div class="catalog-overlay-text">GUÍA OCULTA PUSH OPEN</div></div>
                 </a>
                 <a href="/HTML/correderaTelescopicaSoftClosing.html" class="catalog-item">
-                    <img src="assets/corredera telescópica estándar H35/CORREDERA TELESCOPICA ESTANDAR H35 (2).JPG" alt="Corredera Telescópica Soft Closing">
+                    <img src="assets/corredera telescópica estándar H35/CORREDERA TELESCOPICA ESTANDAR H35 (2).JPG" alt="Corredera Telescópica Soft Closing" loading="lazy" decoding="async">
                     <div class="catalog-overlay"><div class="catalog-overlay-text">CORREDERA TELESCÓPICA SOFT CLOSING</div></div>
                 </a>
                 <a href="/HTML/correderaTelescopicaPushOpen.html" class="catalog-item">
-                    <img src="assets/corredera telescópica estándar H45/CORREDERA TELESCOPICA ESTANDAR H45 (2).JPG" alt="Corredera Telescópica Push Open">
+                    <img src="assets/corredera telescópica estándar H45/CORREDERA TELESCOPICA ESTANDAR H45 (2).JPG" alt="Corredera Telescópica Push Open" loading="lazy" decoding="async">
                     <div class="catalog-overlay"><div class="catalog-overlay-text">CORREDERA TELESCÓPICA PUSH OPEN</div></div>
                 </a>
                 <a href="/HTML/correderaTelescopicaEstandarH45.html" class="catalog-item">
-                    <img src="assets/corredera telescópica estándar H45/CORREDERA TELESCOPICA ESTANDAR H45 (2).JPG" alt="Corredera H45">
+                    <img src="assets/corredera telescópica estándar H45/CORREDERA TELESCOPICA ESTANDAR H45 (2).JPG" alt="Corredera H45" loading="lazy" decoding="async">
                     <div class="catalog-overlay"><div class="catalog-overlay-text">CORREDERA TELESCÓPICA H45</div></div>
                 </a>
                 <a href="/HTML/correderaTelescopicaEstandarH35.html" class="catalog-item">
-                    <img src="assets/corredera telescópica estándar H35/CORREDERA TELESCOPICA ESTANDAR H35 (2).JPG" alt="Corredera H35">
+                    <img src="assets/corredera telescópica estándar H35/CORREDERA TELESCOPICA ESTANDAR H35 (2).JPG" alt="Corredera H35" loading="lazy" decoding="async">
                     <div class="catalog-overlay"><div class="catalog-overlay-text">CORREDERA TELESCÓPICA H35</div></div>
                 </a>
                 <a href="/HTML/correderaZ.html" class="catalog-item">
-                    <img src="assets/corredera Z/CORREDERA Z (2).JPG" alt="Corredera Z">
+                    <img src="assets/corredera Z/CORREDERA Z (2).JPG" alt="Corredera Z" loading="lazy" decoding="async">
                     <div class="catalog-overlay"><div class="catalog-overlay-text">CORREDERA Z</div></div>
                 </a>
                 <a href="/HTML/manijas.html" class="catalog-item">
-                    <img src="assets/manija barral/MANIJA BARRAL.JPG" alt="Manija Barral">
+                    <img src="assets/manija barral/MANIJA BARRAL.JPG" alt="Manija Barral" loading="lazy" decoding="async">
                     <div class="catalog-overlay"><div class="catalog-overlay-text">MANIJAS</div></div>
                 </a>
                 <a href="/HTML/sistemasApoyo.html" class="catalog-item">
-                    <img src="assets/pata plastica/PATA PLASTICA.JPG" alt="Sistemas de Apoyo">
+                    <img src="assets/pata plastica/PATA PLASTICA.JPG" alt="Sistemas de Apoyo" loading="lazy" decoding="async">
                     <div class="catalog-overlay"><div class="catalog-overlay-text">SISTEMAS DE APOYO</div></div>
                 </a>
                 <a href="/HTML/PistonAGAS.html" class="catalog-item">
-                    <img src="assets/piston a gas/PISTONAGAS.png" alt="Pistón a Gas">
+                    <img src="assets/piston a gas/PISTONAGAS.png" alt="Pistón a Gas" loading="lazy" decoding="async">
                     <div class="catalog-overlay"><div class="catalog-overlay-text">PISTÓN A GAS</div></div>
                 </a>
                 <a href="/HTML/retenExpulsor.html" class="catalog-item">
-                    <img src="assets/reten expulsor/RetenesExpulsor.png" alt="Retén Expulsor">
+                    <img src="assets/reten expulsor/RetenesExpulsor.png" alt="Retén Expulsor" loading="lazy" decoding="async">
                     <div class="catalog-overlay"><div class="catalog-overlay-text">RETÉN EXPULSOR</div></div>
                 </a>
             </div>
@@ -306,10 +306,10 @@
 
         <div class="footer-hexagons">
             <a href="mailto:info@thowel.com" class="hexagon hex-mail" title="Email">
-                <img src="assets/MAIL.png" alt="Email">
+                <img src="assets/MAIL.png" alt="Email" loading="lazy" decoding="async">
             </a>
             <a href="#" class="hexagon hex-instagram" title="Instagram" target="_blank">
-                <img src="assets/INSTAGRAM.png" alt="Instagram">
+                <img src="assets/INSTAGRAM.png" alt="Instagram" loading="lazy" decoding="async">
             </a>
         </div>
 

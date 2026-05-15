@@ -10,11 +10,12 @@
     <script src="https://cdn.jsdelivr.net/npm/i18next@23.7.6/i18next.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
     <link rel="stylesheet" href="/CSS/responsive.css">
+    <link rel="stylesheet" href="/CSS/tipografiaProductos.css">
 </head>
 <body>
     <nav class="navbar">
         <!-- Logo mobile (solo visible en mobile, arriba a la izquierda) -->
-        <a href="/index.html" class="logo-mobile"><img src="/assets/logoHeader.png" alt="THOWEL"></a>
+        <a href="/index.html" class="logo-mobile"><img src="/assets/logoHeader.png" alt="THOWEL" loading="eager" fetchpriority="high" decoding="async"></a>
 
         <!-- Botón hamburguesa (solo visible en mobile) -->
         <button class="hamburger" id="hamburger" aria-label="Toggle menu">
@@ -70,7 +71,7 @@
                     </div>
                 </div>
             </li>
-            <li><a href="/index.html" class="logo"><img src="/assets/logoHeader.png" alt="THOWEL"></a></li>
+            <li><a href="/index.html" class="logo"><img src="/assets/logoHeader.png" alt="THOWEL" loading="eager" fetchpriority="high" decoding="async"></a></li>
             <li><a href="/HTML/sobreNosotros.html">SOBRE NOSOTROS</a></li>
             <li><a href="/HTML/contacto.html">CONTACTOS</a></li>
         </ul>
@@ -82,9 +83,9 @@
             <!-- Contenedor de imágenes sticky -->
             <div class="left-content">
                 <div class="image-sticky-container">
-                    <img src="/assets/bisagra cazoleta estandar/BISAGRACAZOLETAESTANDAR.png" alt="Bisagra Cazoleta Estándar" class="active" data-section="descripcion">
-                    <img src="/assets/ambiente.png" alt="Ambiente" data-section="especificaciones">
-                    <img src="/assets/bisagra cazoleta estandar/BCE.png" alt="Bisagra instalada" data-section="codazos">
+                    <img src="/assets/bisagra cazoleta estandar/BISAGRACAZOLETAESTANDAR.png" alt="Bisagra Cazoleta Estándar" class="active" data-section="descripcion" loading="eager" fetchpriority="high" decoding="async">
+                    <img src="/assets/ambiente.png" alt="Ambiente" data-section="especificaciones" loading="eager" fetchpriority="high" decoding="async">
+                    <img src="/assets/bisagra cazoleta estandar/BCE.png" alt="Bisagra instalada" data-section="codazos" loading="lazy" decoding="async">
                 </div>
             </div>
 
@@ -98,45 +99,45 @@
                             <span class="estandar" data-i18n="productPage.standard">ESTÁNDAR</span>
                         </h1>
                         <div class="badge-thowel">
-                            <img src="/assets/estandar.png" alt="Thowel Badge">
+                            <img src="/assets/estandar.png" alt="Thowel Badge" loading="lazy" decoding="async">
                         </div>
                     </div>
                     <p class="producto-descripcion">
                         Desarrolladas bajo nuestra tecnología <strong>ESTÁNDAR</strong>, aseguran un excelente rendimiento y resistencia en el uso diario.
                     </p>
                     <div class="diagrama-tecnico">
-                        <img src="/assets/bisagra cazoleta estandar/AnguloAperturaBCE.png" alt="Diagrama técnico">
+                        <img src="/assets/bisagra cazoleta estandar/AnguloAperturaBCE.png" alt="Diagrama técnico" loading="lazy" decoding="async">
                     </div>
                 </div>
 
                 <!-- Sección 2: Especificaciones -->
                 <div class="text-section" data-section="especificaciones">
                     <p class="producto-descripcion">
-                        Son ampliamente utilizadas en la industria del mueble, <strong>destacandose por su fiabilidad y facilidad de instalación</strong>. Fabricadas en acero de alta calidad, cumpliendo con estrictos estándares de producción, ofrecen una solución duradera y eficiente para todo tipo de amoblamientos.
+                        Son ampliamente utilizadas en la industria del mueble, <strong>destacándose por su fiabilidad y facilidad de instalación</strong>. Fabricadas en acero de alta calidad, cumpliendo con estrictos estándares de producción, ofrecen una solución duradera y eficiente para todo tipo de amoblamientos.
                     </p>
                     <div class="specs-table-image">
-                        <img src="/assets/bisagra cazoleta estandar/tabla.png" alt="Especificaciones técnicas">
+                        <img src="/assets/bisagra cazoleta estandar/tabla.png" alt="Especificaciones técnicas" loading="lazy" decoding="async">
                     </div>
                     <div class="specs-extra-images">
-                        <img src="/assets/bisagra cazoleta estandar/_CAMBIAR_ B. CAZOELTA-24.png" alt="Detalle bisagra cazoleta 9">
-                        <img src="/assets/bisagra cazoleta estandar/BISAGRA CAZOLETA-21.png" alt="Detalle bisagra cazoleta 1">
-                        <img src="/assets/bisagra cazoleta estandar/BISAGRA CAZOLETA-22.png" alt="Detalle bisagra cazoleta 2">
-                        <img src="/assets/bisagra cazoleta estandar/BISAGRA CAZOLETA-23.png" alt="Detalle bisagra cazoleta 3">
-                        <img src="/assets/bisagra cazoleta estandar/BISAGRA CAZOLETA-26.png" alt="Detalle bisagra cazoleta 4">
-                        <img src="/assets/bisagra cazoleta estandar/_CAMBIAR_ B. CAZOELTA-23.png" alt="Detalle bisagra cazoleta 1">
-                        <img src="/assets/bisagra cazoleta estandar/BISAGRA CAZOLETA-28.png" alt="Detalle bisagra cazoleta 5">
-                        <img src="/assets/bisagra cazoleta estandar/BISAGRA CAZOLETA-29.png" alt="Detalle bisagra cazoleta 6">
-                        <img src="/assets/bisagra cazoleta estandar/BISAGRA CAZOLETA-30.png" alt="Detalle bisagra cazoleta 7">
-                        <img src="/assets/bisagra cazoleta estandar/BISAGRA CAZOLETA-31.png" alt="Detalle bisagra cazoleta 8">
+                        <img src="/assets/bisagra cazoleta estandar/_CAMBIAR_ B. CAZOELTA-24.png" alt="Detalle bisagra cazoleta 9" loading="lazy" decoding="async">
+                        <img src="/assets/bisagra cazoleta estandar/BISAGRA CAZOLETA-21.png" alt="Detalle bisagra cazoleta 1" loading="lazy" decoding="async">
+                        <img src="/assets/bisagra cazoleta estandar/BISAGRA CAZOLETA-22.png" alt="Detalle bisagra cazoleta 2" loading="lazy" decoding="async">
+                        <img src="/assets/bisagra cazoleta estandar/BISAGRA CAZOLETA-23.png" alt="Detalle bisagra cazoleta 3" loading="lazy" decoding="async">
+                        <img src="/assets/bisagra cazoleta estandar/BISAGRA CAZOLETA-26.png" alt="Detalle bisagra cazoleta 4" loading="lazy" decoding="async">
+                        <img src="/assets/bisagra cazoleta estandar/_CAMBIAR_ B. CAZOELTA-23.png" alt="Detalle bisagra cazoleta 1" loading="lazy" decoding="async">
+                        <img src="/assets/bisagra cazoleta estandar/BISAGRA CAZOLETA-28.png" alt="Detalle bisagra cazoleta 5" loading="lazy" decoding="async">
+                        <img src="/assets/bisagra cazoleta estandar/BISAGRA CAZOLETA-29.png" alt="Detalle bisagra cazoleta 6" loading="lazy" decoding="async">
+                        <img src="/assets/bisagra cazoleta estandar/BISAGRA CAZOLETA-30.png" alt="Detalle bisagra cazoleta 7" loading="lazy" decoding="async">
+                        <img src="/assets/bisagra cazoleta estandar/BISAGRA CAZOLETA-31.png" alt="Detalle bisagra cazoleta 8" loading="lazy" decoding="async">
                     </div>
                 </div>
 
                 <!-- Sección 3: Codazos -->
                 <div class="text-section" data-section="codazos">
                     <div class="codazos-imagenes">
-                        <img src="/assets/bisagra cazoleta estandar/codo0.png" alt="Codazo 0">
-                        <img src="/assets/bisagra cazoleta estandar/codo9.png" alt="Codazo 9">
-                        <img src="/assets/bisagra cazoleta estandar/codo15.png" alt="Codazo 15">
+                        <img src="/assets/bisagra cazoleta estandar/codo0.png" alt="Codazo 0" loading="lazy" decoding="async">
+                        <img src="/assets/bisagra cazoleta estandar/codo9.png" alt="Codazo 9" loading="lazy" decoding="async">
+                        <img src="/assets/bisagra cazoleta estandar/codo15.png" alt="Codazo 15" loading="lazy" decoding="async">
                     </div>
                 </div>
             </div>
@@ -159,91 +160,91 @@
             <!-- Carousel Track -->
             <div class="catalog-track" id="catalogTrack">
                 <div class="catalog-item">
-                    <img src="/assets/bisagra angulos especiales/BISAGRAANGULOSESPECIALES135.png" alt="Bisagra Ángulos Especiales 135">
+                    <img src="/assets/bisagra angulos especiales/BISAGRAANGULOSESPECIALES135.png" alt="Bisagra Ángulos Especiales 135" loading="lazy" decoding="async">
                     <div class="catalog-overlay">
-                        <div class="catalog-overlay-text" data-i18n="products.hingeAngles">BISAGRA ANGULOS ESPECIALES 135</div>
+                        <div class="catalog-overlay-text" data-i18n="products.hingeAngles">BISAGRA ÁNGULOS ESPECIALES 135</div>
                     </div>
                 </div>
                 <div class="catalog-item">
-                    <img src="/assets/bisagra angulos especiales/BISAGRAANGULOSESPECIALES175.png" alt="Bisagra Ángulos Especiales 175">
+                    <img src="/assets/bisagra angulos especiales/BISAGRAANGULOSESPECIALES175.png" alt="Bisagra Ángulos Especiales 175" loading="lazy" decoding="async">
                     <div class="catalog-overlay">
-                        <div class="catalog-overlay-text" data-i18n="products.hingeAngles">BISAGRAS ANGULOS ESPECIALES 175</div>
+                        <div class="catalog-overlay-text" data-i18n="products.hingeAngles">BISAGRAS ÁNGULOS ESPECIALES 175</div>
                     </div>
                 </div>
                 <div class="catalog-item">
-                    <img src="/assets/bisagra cazoleta estandar/BISAGRACAZOLETAESTANDAR.png" alt="Bisagra Cazoleta Estandar">
+                    <img src="/assets/bisagra cazoleta estandar/BISAGRACAZOLETAESTANDAR.png" alt="Bisagra Cazoleta Estándar" loading="lazy" decoding="async">
                     <div class="catalog-overlay">
-                        <div class="catalog-overlay-text" data-i18n="products.hingeCup">BISAGRA CAZOLETA ESTANDAR</div>
+                        <div class="catalog-overlay-text" data-i18n="products.hingeCup">BISAGRA CAZOLETA ESTÁNDAR</div>
                     </div>
                 </div>
                 <div class="catalog-item">
-                    <img src="/assets/bisagra clip 3D/BISAGRACLIP.png" alt="Bisagra Clip">
+                    <img src="/assets/bisagra clip 3D/BISAGRACLIP.png" alt="Bisagra Clip" loading="lazy" decoding="async">
                     <div class="catalog-overlay">
                         <div class="catalog-overlay-text" data-i18n="products.hingeClip3d">BISAGRA CLIP</div>
                     </div>
                 </div>
                 <div class="catalog-item">
-                    <img src="/assets/bisagra push open/BISAGRAPUSHOPEN.png" alt="Bisagra Push Open">
+                    <img src="/assets/bisagra push open/BISAGRAPUSHOPEN.png" alt="Bisagra Push Open" loading="lazy" decoding="async">
                     <div class="catalog-overlay">
                         <div class="catalog-overlay-text" data-i18n="products.hingePushOpen">BISAGRA PUSH OPEN</div>
                     </div>
                 </div>
                 <div class="catalog-item">
-                    <img src="/assets/bisagra soft closing/BSC.png" alt="Bisagra Soft Closing">
+                    <img src="/assets/bisagra soft closing/BSC.png" alt="Bisagra Soft Closing" loading="lazy" decoding="async">
                     <div class="catalog-overlay">
                         <div class="catalog-overlay-text" data-i18n="products.hingeSoftClosing">BISAGRA SOFT CLOSING</div>
                     </div>
                 </div>
                 <div class="catalog-item">
-                    <img src="/assets/Guia oculta push Open/GUIA OCULTA.JPG" alt="Guías Premium">
+                    <img src="/assets/Guia oculta push Open/GUIA OCULTA.JPG" alt="Guías Premium" loading="lazy" decoding="async">
                     <div class="catalog-overlay">
                         <div class="catalog-overlay-text">GUÍA OCULTA 3D SOFT CLOSING</div>
                     </div>
                 </div>
                 <div class="catalog-item">
-                    <img src="/assets/corredera telescópica estándar H35/CORREDERA TELESCOPICA ESTANDAR H35 (2).JPG" alt="Producto 9">
+                    <img src="/assets/corredera telescópica estándar H35/CORREDERA TELESCOPICA ESTANDAR H35 (2).JPG" alt="Producto 9" loading="lazy" decoding="async">
                     <div class="catalog-overlay">
                         <div class="catalog-overlay-text">CORREDERA TELESCÓPICA SOFT CLOSING</div>
                     </div>
                 </div>
                 <div class="catalog-item">
-                    <img src="/assets/bisagra cazoleta estandar/BISAGRACAZOLETAESTANDAR.png" alt="Producto 10">
+                    <img src="/assets/bisagra cazoleta estandar/BISAGRACAZOLETAESTANDAR.png" alt="Producto 10" loading="lazy" decoding="async">
                     <div class="catalog-overlay">
                         <div class="catalog-overlay-text">BISAGRA CAZOLETA</div>
                     </div>
                 </div>
                 <div class="catalog-item">
-                    <img src="/assets/manija barral/MANIJA BARRAL.JPG" alt="Producto 11">
+                    <img src="/assets/manija barral/MANIJA BARRAL.JPG" alt="Producto 11" loading="lazy" decoding="async">
                     <div class="catalog-overlay">
                         <div class="catalog-overlay-text">MANIJAS Y TIRADORES</div>
                     </div>
                 </div>
                 <div class="catalog-item">
-                    <img src="/assets/pata plastica/PATA PLASTICA.JPG" alt="Producto 12">
+                    <img src="/assets/pata plastica/PATA PLASTICA.JPG" alt="Producto 12" loading="lazy" decoding="async">
                     <div class="catalog-overlay">
                         <div class="catalog-overlay-text">SISTEMA DE APOYO</div>
                     </div>
                 </div>
                 <div class="catalog-item">
-                    <img src="/assets/bisagra push open/BISAGRAPUSHOPEN.png" alt="Producto 13">
+                    <img src="/assets/bisagra push open/BISAGRAPUSHOPEN.png" alt="Producto 13" loading="lazy" decoding="async">
                     <div class="catalog-overlay">
                         <div class="catalog-overlay-text">SISTEMA PUSH OPEN</div>
                     </div>
                 </div>
                 <div class="catalog-item">
-                    <img src="/assets/reten expulsor/RetenesExpulsor.png" alt="Producto 14">
+                    <img src="/assets/reten expulsor/RetenesExpulsor.png" alt="Producto 14" loading="lazy" decoding="async">
                     <div class="catalog-overlay">
                         <div class="catalog-overlay-text">RETÉN EXPULSOR</div>
                     </div>
                 </div>
                 <div class="catalog-item">
-                    <img src="/assets/piston a gas/PISTONAGAS.png" alt="Producto 15">
+                    <img src="/assets/piston a gas/PISTONAGAS.png" alt="Producto 15" loading="lazy" decoding="async">
                     <div class="catalog-overlay">
                         <div class="catalog-overlay-text">PISTÓN A GAS</div>
                     </div>
                 </div>
                 <div class="catalog-item">
-                    <img src="/assets/Guia oculta push Open/GUIA OCULTA.JPG" alt="Producto 16">
+                    <img src="/assets/Guia oculta push Open/GUIA OCULTA.JPG" alt="Producto 16" loading="lazy" decoding="async">
                     <div class="catalog-overlay">
                         <div class="catalog-overlay-text">GUÍA OCULTA PUSH OPEN</div>
                     </div>
@@ -257,8 +258,8 @@
     <div class="footer-container">
         <!-- Hexágonos decorativos -->
         <div class="footer-hexagons">
-            <a href="mailto:info@thowel.com" class="hexagon hex-mail" title="Email"><img src="/assets/MAIL.png" alt="Email"></a>
-            <a href="#" class="hexagon hex-instagram" title="Instagram" target="_blank"><img src="/assets/INSTAGRAM.png" alt="Instagram"></a>
+            <a href="mailto:info@thowel.com" class="hexagon hex-mail" title="Email"><img src="/assets/MAIL.png" alt="Email" loading="lazy" decoding="async"></a>
+            <a href="#" class="hexagon hex-instagram" title="Instagram" target="_blank"><img src="/assets/INSTAGRAM.png" alt="Instagram" loading="lazy" decoding="async"></a>
         </div>
         
         <!-- Contenido del footer -->

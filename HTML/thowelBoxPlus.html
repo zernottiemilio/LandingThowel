@@ -10,12 +10,13 @@
     <script src="https://cdn.jsdelivr.net/npm/i18next@23.7.6/i18next.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
     <link rel="stylesheet" href="/CSS/responsive.css">
+    <link rel="stylesheet" href="/CSS/tipografiaProductos.css">
 </head>
 <body>
     <!-- Navbar flotante -->
     <nav class="navbar">
         <!-- Logo mobile (solo visible en mobile, arriba a la izquierda) -->
-        <a href="/index.html" class="logo-mobile"><img src="/assets/logoHeader.png" alt="THOWEL"></a>
+        <a href="/index.html" class="logo-mobile"><img src="/assets/logoHeader.png" alt="THOWEL" loading="eager" fetchpriority="high" decoding="async"></a>
 
         <!-- Botón hamburguesa (solo visible en mobile) -->
         <button class="hamburger" id="hamburger" aria-label="Toggle menu">
@@ -71,7 +72,7 @@
                     </div>
                 </div>
             </li>
-            <li><a href="/index.html" class="logo"><img src="/assets/logoHeader.png" alt="THOWEL"></a></li>
+            <li><a href="/index.html" class="logo"><img src="/assets/logoHeader.png" alt="THOWEL" loading="eager" fetchpriority="high" decoding="async"></a></li>
             <li><a href="/HTML/sobreNosotros.html">SOBRE NOSOTROS</a></li>
             <li><a href="/HTML/contacto.html">CONTACTOS</a></li>
         </ul>
@@ -83,9 +84,9 @@
             <!-- Contenedor de imágenes sticky -->
             <div class="left-content">
                 <div class="image-sticky-container">
-                    <img src="/assets/thowel box plus/THOWELBOXPLUS.png" alt="ThowelBox Plus" class="active" data-section="descripcion">
-                    <img src="/assets/thowel box plus/ambientethowelboxplus.JPG" alt="Ambiente ThowelBox Plus" data-section="especificaciones">
-                    <img src="/assets/thowel box/Escena 39.png" alt="Detalles ThowelBox Plus" data-section="detalles">
+                    <img src="/assets/thowel box plus/THOWELBOXPLUS.png" alt="ThowelBox Plus" class="active" data-section="descripcion" loading="eager" fetchpriority="high" decoding="async">
+                    <img src="/assets/thowel box plus/ambientethowelboxplus.JPG" alt="Ambiente ThowelBox Plus" data-section="especificaciones" loading="eager" fetchpriority="high" decoding="async">
+                    <img src="/assets/thowel box/Escena 39.png" alt="Detalles ThowelBox Plus" data-section="detalles" loading="lazy" decoding="async">
                 </div>
             </div>
 
@@ -99,14 +100,14 @@
                             <span class="smooth"></span>
                         </h1>
                         <div class="badge-thowel">
-                            <img src="/assets/TecnologiaSmooth.png" alt="Thowel Badge">
+                            <img src="/assets/TecnologiaSmooth.png" alt="Thowel Badge" loading="lazy" decoding="async">
                         </div>
                     </div>
                 <p class="producto-descripcion">
                     <strong>THOWELBOX PLUS</strong> incluye <strong>olleros</strong> de alta resistencia, faciles de montar, para ajustar la altura de los cajones a <strong>119 mm o 183 mm</strong>
                 </p>
                 <div class="diagrama-tecnico">
-                    <img src="/assets/thowel box plus/THOWEL BOX PLUS-18.png" alt="Diagrama técnico">
+                    <img src="/assets/thowel box plus/THOWEL BOX PLUS-18.png" alt="Diagrama técnico" loading="lazy" decoding="async">
                 </div>
                 </div>
 
@@ -116,20 +117,20 @@
     Es importante destacar que THOWELBOX PLUS se refiere exclusivamente al modelo con olleros, los cuales se colocan de <strong>manera individual a cada lado</strong> del cajón, y deben ser <strong>añadidos al sistema THOWELBOX.</strong>
 </p>
                 <div class="specs-table-image">
-                    <img src="/assets/thowel box plus/THOWEL BOX PLUS-23.png" alt="Especificaciones técnicas">
+                    <img src="/assets/thowel box plus/THOWEL BOX PLUS-23.png" alt="Especificaciones técnicas" loading="lazy" decoding="async">
                 </div>
                 <div class="specs-icons">
-                    <img src="/assets/thowel box plus/THOWEL BOX PLUS-20.png" alt="30 kg/par">
-                    <img src="/assets/thowel box plus/THOWEL BOX PLUS-21.png" alt="1 set / master 6 set">
-                    <img src="/assets/thowel box plus/THOWEL BOX PLUS-22.png" alt="80.000 Ciclos de uso">
+                    <img src="/assets/thowel box plus/THOWEL BOX PLUS-20.png" alt="30 kg/par" loading="lazy" decoding="async">
+                    <img src="/assets/thowel box plus/THOWEL BOX PLUS-21.png" alt="1 set / master 6 set" loading="lazy" decoding="async">
+                    <img src="/assets/thowel box plus/THOWEL BOX PLUS-22.png" alt="80.000 Ciclos de uso" loading="lazy" decoding="async">
                 </div>
                 </div>
 
                 <!-- Sección 3: Detalles adicionales -->
                 <div class="text-section" data-section="detalles">
 <div class="codazos-imagenes">
-                    <img src="/assets/thowel box plus/THOWEL BOX PLUS-19.png" alt="Detalle 1">
-                    <img src="/assets/thowel box plus/THOWEL BOX PLUS-24.png" alt="Detalle 2">
+                    <img src="/assets/thowel box plus/THOWEL BOX PLUS-19.png" alt="Detalle 1" loading="lazy" decoding="async">
+                    <img src="/assets/thowel box plus/THOWEL BOX PLUS-24.png" alt="Detalle 2" loading="lazy" decoding="async">
                 </div>
                 </div>
             </div>
@@ -151,49 +152,49 @@
             <!-- Carousel Track -->
             <div class="catalog-track" id="catalogTrack">
                 <div class="catalog-item">
-                    <img src="/assets/bisagra angulos especiales/BISAGRAANGULOSESPECIALES135.png" alt="Bisagra Ángulos Especiales 135">
+                    <img src="/assets/bisagra angulos especiales/BISAGRAANGULOSESPECIALES135.png" alt="Bisagra Ángulos Especiales 135" loading="lazy" decoding="async">
                     <div class="catalog-overlay">
-                        <div class="catalog-overlay-text">BISAGRA ANGULOS ESPECIALES 135</div>
+                        <div class="catalog-overlay-text">BISAGRA ÁNGULOS ESPECIALES 135</div>
                     </div>
                 </div>
                 <div class="catalog-item">
-                    <img src="/assets/bisagra angulos especiales/BISAGRAANGULOSESPECIALES175.png" alt="Bisagra Ángulos Especiales 175">
+                    <img src="/assets/bisagra angulos especiales/BISAGRAANGULOSESPECIALES175.png" alt="Bisagra Ángulos Especiales 175" loading="lazy" decoding="async">
                     <div class="catalog-overlay">
-                        <div class="catalog-overlay-text">BISAGRAS ANGULOS ESPECIALES 175</div>
+                        <div class="catalog-overlay-text">BISAGRAS ÁNGULOS ESPECIALES 175</div>
                     </div>
                 </div>
                 <div class="catalog-item">
-                    <img src="/assets/bisagra cazoleta estandar/BISAGRACAZOLETAESTANDAR.png" alt="Bisagra Cazoleta Estandar">
+                    <img src="/assets/bisagra cazoleta estandar/BISAGRACAZOLETAESTANDAR.png" alt="Bisagra Cazoleta Estándar" loading="lazy" decoding="async">
                     <div class="catalog-overlay">
-                        <div class="catalog-overlay-text">BISAGRA CAZOLETA ESTANDAR</div>
+                        <div class="catalog-overlay-text">BISAGRA CAZOLETA ESTÁNDAR</div>
                     </div>
                 </div>
                 <div class="catalog-item">
-                    <img src="/assets/bisagra clip 3D/BISAGRACLIP.png" alt="Bisagra Clip">
+                    <img src="/assets/bisagra clip 3D/BISAGRACLIP.png" alt="Bisagra Clip" loading="lazy" decoding="async">
                     <div class="catalog-overlay">
                         <div class="catalog-overlay-text">BISAGRA CLIP</div>
                     </div>
                 </div>
                 <div class="catalog-item">
-                    <img src="/assets/bisagra push open/BISAGRAPUSHOPEN.png" alt="Bisagra Push Open">
+                    <img src="/assets/bisagra push open/BISAGRAPUSHOPEN.png" alt="Bisagra Push Open" loading="lazy" decoding="async">
                     <div class="catalog-overlay">
                         <div class="catalog-overlay-text">BISAGRA PUSH OPEN</div>
                     </div>
                 </div>
                 <div class="catalog-item">
-                    <img src="/assets/bisagra soft closing/BSC.png" alt="Bisagra Soft Closing">
+                    <img src="/assets/bisagra soft closing/BSC.png" alt="Bisagra Soft Closing" loading="lazy" decoding="async">
                     <div class="catalog-overlay">
                         <div class="catalog-overlay-text">BISAGRA SOFT CLOSING</div>
                     </div>
                 </div>
                 <div class="catalog-item">
-                    <img src="/assets/thowel box cristal/THOWELBOXCRISTAL.png" alt="Thowel Box Cristal">
+                    <img src="/assets/thowel box cristal/THOWELBOXCRISTAL.png" alt="Thowel Box Cristal" loading="lazy" decoding="async">
                     <div class="catalog-overlay">
                         <div class="catalog-overlay-text">THOWELBOX CRISTAL</div>
                     </div>
                 </div>
                 <div class="catalog-item">
-                    <img src="/assets/thowel box plus/THOWELBOXPLUS.png" alt="Thowel Box Plus">
+                    <img src="/assets/thowel box plus/THOWELBOXPLUS.png" alt="Thowel Box Plus" loading="lazy" decoding="async">
                     <div class="catalog-overlay">
                         <div class="catalog-overlay-text">THOWELBOX PLUS</div>
                     </div>
@@ -207,8 +208,8 @@
     <div class="footer-container">
         <!-- Hexágonos decorativos -->
         <div class="footer-hexagons">
-            <a href="mailto:info@thowel.com" class="hexagon hex-mail" title="Email"><img src="/assets/MAIL.png" alt="Email"></a>
-            <a href="#" class="hexagon hex-instagram" title="Instagram" target="_blank"><img src="/assets/INSTAGRAM.png" alt="Instagram"></a>
+            <a href="mailto:info@thowel.com" class="hexagon hex-mail" title="Email"><img src="/assets/MAIL.png" alt="Email" loading="lazy" decoding="async"></a>
+            <a href="#" class="hexagon hex-instagram" title="Instagram" target="_blank"><img src="/assets/INSTAGRAM.png" alt="Instagram" loading="lazy" decoding="async"></a>
         </div>
 
         <!-- Contenido del footer -->

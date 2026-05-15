@@ -1,0 +1,26 @@
+# macOS
+.DS_Store
+**/.DS_Store
+
+# Backups de imágenes originales (pre-optimización)
+assets/_originales/
+
+# Archivos pesados / fuentes (no se sirven en producción)
+*.pdf
+*.zip
+
+# Backups y temporales
+*.backup
+*.backup2
+*.OLD
+*.tmp
+
+# Dependencias
+node_modules/
+
+# Logs
+*.log
+
+# Editor
+.vscode/
+.idea/

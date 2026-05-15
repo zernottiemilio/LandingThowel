@@ -1,0 +1,121 @@
+/* ========================================
+   TIPOGRAFÍA NORMALIZADA - PÁGINAS DE PRODUCTO
+   Escala canónica para todas las secciones de productos
+   Se carga DESPUÉS del CSS específico de cada producto
+   para sobreescribir tamaños inconsistentes.
+   ======================================== */
+
+/* --- Desktop (base) --- */
+
+.producto-titulo {
+    font-size: 40px !important;
+    line-height: 1.1 !important;
+}
+
+.estandar {
+    font-size: clamp(24px, 3vw, 36px) !important;
+}
+
+.producto-descripcion,
+.specs-intro {
+    font-size: 16px !important;
+    line-height: 1.5 !important;
+}
+
+.video-titulo,
+.similares-titulo {
+    font-size: 28px !important;
+    line-height: 1.2 !important;
+}
+
+/* Texto técnico (tablas, specs) */
+.specs-table-image,
+.specs-extra-images,
+.codigos-productos,
+.specs-texto,
+.tabla-texto {
+    font-size: 14px !important;
+}
+
+/* Badges, pills, navbar */
+.badge,
+.badge-thowel,
+.navbar a,
+.navbar-link {
+    font-size: 13px !important;
+}
+
+/* --- Tablet (≤1200px) --- */
+@media (max-width: 1200px) {
+    .producto-titulo {
+        font-size: 40px !important;
+    }
+}
+
+/* --- Tablet / Laptop chico (≤1024px) --- */
+@media (max-width: 1024px) {
+    .producto-titulo {
+        font-size: 36px !important;
+    }
+    .estandar {
+        font-size: clamp(22px, 2.8vw, 32px) !important;
+    }
+    .producto-descripcion,
+    .specs-intro {
+        font-size: 16px !important;
+    }
+    .video-titulo,
+    .similares-titulo {
+        font-size: 26px !important;
+    }
+}
+
+/* --- Mobile (≤768px) --- */
+@media (max-width: 768px) {
+    .producto-titulo {
+        font-size: 32px !important;
+    }
+    .estandar {
+        font-size: 24px !important;
+    }
+    .producto-descripcion,
+    .specs-intro {
+        font-size: 15px !important;
+    }
+    .video-titulo,
+    .similares-titulo {
+        font-size: 24px !important;
+    }
+    .specs-table-image,
+    .specs-extra-images,
+    .codigos-productos,
+    .specs-texto,
+    .tabla-texto {
+        font-size: 14px !important;
+    }
+}
+
+/* --- Mobile pequeño (≤480px) --- */
+@media (max-width: 480px) {
+    .producto-titulo {
+        font-size: 26px !important;
+    }
+    .estandar {
+        font-size: 20px !important;
+    }
+    .producto-descripcion,
+    .specs-intro {
+        font-size: 14px !important;
+    }
+    .video-titulo,
+    .similares-titulo {
+        font-size: 22px !important;
+    }
+    .specs-table-image,
+    .specs-extra-images,
+    .codigos-productos,
+    .specs-texto,
+    .tabla-texto {
+        font-size: 13px !important;
+    }
+}

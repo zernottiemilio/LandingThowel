@@ -13,7 +13,7 @@
   <!-- Navbar flotante -->
   <nav class="navbar">
     <!-- Logo mobile (solo visible en mobile, arriba a la izquierda) -->
-    <a href="/index.html" class="logo-mobile"><img src="/assets/logoHeader.png" alt="THOWEL"></a>
+    <a href="/index.html" class="logo-mobile"><img src="/assets/logoHeader.png" alt="THOWEL" loading="eager" fetchpriority="high" decoding="async"></a>
 
     <!-- Botón hamburguesa (solo visible en mobile) -->
     <button class="hamburger" id="hamburger" aria-label="Toggle menu">
@@ -70,7 +70,7 @@
                         </div>
                     </div>
                 </li>
-                <li><a href="/index.html" class="logo"><img src="/assets/logoHeader.png" alt="THOWEL"></a></li>
+                <li><a href="/index.html" class="logo"><img src="/assets/logoHeader.png" alt="THOWEL" loading="eager" fetchpriority="high" decoding="async"></a></li>
                 <li><a href="/HTML/sobreNosotros.html" data-i18n="nav.about">SOBRE NOSOTROS</a></li>
                 <li><a href="/HTML/contacto.html" data-i18n="nav.contact">CONTACTOS</a></li>
             </ul>
@@ -78,12 +78,12 @@
 
     <!-- Header Section con imagen de fondo -->
     <section class="header-section">
-        <img src="/assets/PORTADA SOBRE NOSOTROS.png" alt="Portada" class="portada-img">
+        <img src="/assets/PORTADA SOBRE NOSOTROS.png" alt="Portada" class="portada-img" loading="eager" fetchpriority="high" decoding="async">
         <div class="header-overlay">
             <h1 class="header-title" data-i18n="about.headerTitle" data-i18n-html="true">Creamos <span class="highlight">herrajes</span> pensados para <span class="highlight">mejorar</span><br>cada proyecto.</h1>
         </div>
         <div class="scroll-indicator">
-            <img src="/assets/FLECHAINICIO.png" alt="Flecha" class="flecha-img">
+            <img src="/assets/FLECHAINICIO.png" alt="Flecha" class="flecha-img" loading="eager" fetchpriority="high" decoding="async">
         </div>
     </section>
 
@@ -93,8 +93,8 @@
             <!-- Contenedor de imágenes sticky -->
             <div class="left-content">
                 <div class="image-sticky-container">
-                    <img src="/assets/ambiente.png" alt="Acerca de Nosotros" class="active" data-section="acerca">
-                    <img src="/assets/ambienteSN.png" alt="Misión y Visión" data-section="mision">
+                    <img src="/assets/ambiente.png" alt="Acerca de Nosotros" class="active" data-section="acerca" loading="lazy" decoding="async">
+                    <img src="/assets/ambienteSN.png" alt="Misión y Visión" data-section="mision" loading="lazy" decoding="async">
                 </div>
             </div>
 
@@ -142,10 +142,10 @@
         <div class="footer-container">
             <div class="footer-hexagons">
                 <a href="mailto:info@thowel.com" class="hexagon hex-mail" title="Email">
-                    <img src="/assets/MAIL.png" alt="Email">
+                    <img src="/assets/MAIL.png" alt="Email" loading="lazy" decoding="async">
                 </a>
                 <a href="#" class="hexagon hex-instagram" title="Instagram" target="_blank">
-                    <img src="/assets/INSTAGRAM.png" alt="Instagram">
+                    <img src="/assets/INSTAGRAM.png" alt="Instagram" loading="lazy" decoding="async">
                 </a>
             </div>
             <div class="footer-content">

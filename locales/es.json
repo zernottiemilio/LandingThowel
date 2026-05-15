@@ -19,7 +19,7 @@
     "hingeCup": "BISAGRA CAZOLETA",
     "hingePushOpen": "BISAGRA PUSH OPEN",
     "hingeCup155": "BISAGRA CAZOLETA 155° Y 175°",
-    "hingeAngles": "BISAGRA ANGULOS ESPECIALES",
+    "hingeAngles": "BISAGRA ÁNGULOS ESPECIALES",
     "retainerExpeller": "RETÉN EXPULSOR",
     "gasPiston": "PISTÓN A GAS",
     "hiddenSlide3d": "GUÍA OCULTA 3D SOFT CLOSING",
@@ -76,7 +76,7 @@
     }
   },
   "contact": {
-    "title": "CONTACTANOS",
+    "title": "CONTÁCTANOS",
     "form": {
       "name": "Nombre:",
       "phone": "Número:",

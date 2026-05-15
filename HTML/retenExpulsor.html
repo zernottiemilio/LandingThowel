@@ -10,12 +10,13 @@
     <script src="https://cdn.jsdelivr.net/npm/i18next@23.7.6/i18next.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
     <link rel="stylesheet" href="/CSS/responsive.css">
+    <link rel="stylesheet" href="/CSS/tipografiaProductos.css">
 </head>
 <body>
     <!-- Navbar flotante -->
     <nav class="navbar">
         <!-- Logo mobile (solo visible en mobile, arriba a la izquierda) -->
-        <a href="/index.html" class="logo-mobile"><img src="/assets/logoHeader.png" alt="THOWEL"></a>
+        <a href="/index.html" class="logo-mobile"><img src="/assets/logoHeader.png" alt="THOWEL" loading="eager" fetchpriority="high" decoding="async"></a>
 
         <!-- Botón hamburguesa (solo visible en mobile) -->
         <button class="hamburger" id="hamburger" aria-label="Toggle menu">
@@ -45,7 +46,7 @@
                             <a href="/HTML/bisagraSoftClosing.html">BISAGRA SOFT CLOSING</a>
                             <a href="/HTML/bisagraCazoletaEstandar.html">BISAGRA CAZOLETA</a>
                             <a href="/HTML/bisagraPushOpen.html">BISAGRA PUSH OPEN</a>
-                            <a href="/HTML/bisagraCazoleta155.html">BISAGRA ANGULOS ESPECIALES</a>
+                            <a href="/HTML/bisagraCazoleta155.html">BISAGRA ÁNGULOS ESPECIALES</a>
                             <a href="/HTML/retenExpulsor.html">RETÉN EXPULSOR</a>
                             <a href="/HTML/PistonAGAS.html">PISTÓN A GAS</a>
                         </div>
@@ -71,7 +72,7 @@
                     </div>
                 </div>
             </li>
-            <li><a href="/index.html" class="logo"><img src="/assets/logoHeader.png" alt="THOWEL"></a></li>
+            <li><a href="/index.html" class="logo"><img src="/assets/logoHeader.png" alt="THOWEL" loading="eager" fetchpriority="high" decoding="async"></a></li>
             <li><a href="/HTML/sobreNosotros.html">SOBRE NOSOTROS</a></li>
             <li><a href="/HTML/contacto.html">CONTACTOS</a></li>
         </ul>
@@ -83,9 +84,9 @@
             <!-- Contenedor de imágenes sticky -->
             <div class="left-content">
                 <div class="image-sticky-container">
-                    <img src="/assets/reten expulsor/RetenExp.png" alt="Retén Expulsor" class="active" data-section="descripcion">
-                    <img src="/assets/reten expulsor/RETEN EXPULSOR.JPG" alt="Retén instalado" data-section="especificaciones">
-                    <img src="/assets/reten expulsor/RetenesExpulsor.png" alt="Retén detalle" data-section="codigos">
+                    <img src="/assets/reten expulsor/RetenExp.png" alt="Retén Expulsor" class="active" data-section="descripcion" loading="eager" fetchpriority="high" decoding="async">
+                    <img src="/assets/reten expulsor/RETEN EXPULSOR.JPG" alt="Retén instalado" data-section="especificaciones" loading="eager" fetchpriority="high" decoding="async">
+                    <img src="/assets/reten expulsor/RetenesExpulsor.png" alt="Retén detalle" data-section="codigos" loading="lazy" decoding="async">
                 </div>
             </div>
 
@@ -99,7 +100,7 @@
                             <span class="touch">PUSH OPEN</span>
                         </h1>
                         <div class="badge-thowel">
-                            <img src="/assets/tecnologiaTouch.png" alt="Thowel Badge">
+                            <img src="/assets/tecnologiaTouch.png" alt="Thowel Badge" loading="lazy" decoding="async">
                         </div>
                     </div>
                     <p class="producto-descripcion">
@@ -115,11 +116,11 @@
                 <!-- Sección 2: Diagramas técnicos -->
                 <div class="text-section" data-section="especificaciones">
                     <div class="specs-diagramas-duo">
-                        <img src="/assets/reten expulsor/_CAMBIAR_ RETEN EXPULSOR-19.png" alt="Diagrama 1">
-                        <img src="/assets/reten expulsor/_CAMBIAR_ RETEN EXPULSOR-20.png" alt="Diagrama 2">
+                        <img src="/assets/reten expulsor/_CAMBIAR_ RETEN EXPULSOR-19.png" alt="Diagrama 1" loading="lazy" decoding="async">
+                        <img src="/assets/reten expulsor/_CAMBIAR_ RETEN EXPULSOR-20.png" alt="Diagrama 2" loading="lazy" decoding="async">
                     </div>
                     <div class="specs-diagrama-instalacion">
-                        <img src="/assets/reten expulsor/_CAMBIAR_ RETEN EXPULSOR-21.png" alt="Diagrama instalación">
+                        <img src="/assets/reten expulsor/_CAMBIAR_ RETEN EXPULSOR-21.png" alt="Diagrama instalación" loading="lazy" decoding="async">
                     </div>
                 </div>
 
@@ -127,11 +128,11 @@
                 <div class="text-section" data-section="codigos">
                     <div class="codigo-specs-row">
                         <div class="codigo-producto">
-                            <img src="/assets/reten expulsor/RETEN-20.png" alt="Código T001-DPO">
+                            <img src="/assets/reten expulsor/RETEN-20.png" alt="Código T001-DPO" loading="lazy" decoding="async">
                         </div>
                         <div class="diagramas-grandes">
-                            <img src="/assets/reten expulsor/RETEN-21.png" alt="Acero">
-                            <img src="/assets/reten expulsor/RETEN-22.png" alt="50 Unid.">
+                            <img src="/assets/reten expulsor/RETEN-21.png" alt="Acero" loading="lazy" decoding="async">
+                            <img src="/assets/reten expulsor/RETEN-22.png" alt="50 Unid." loading="lazy" decoding="async">
                         </div>
                     </div>
                 </div>
@@ -155,37 +156,37 @@
             <!-- Carousel Track -->
             <div class="catalog-track" id="catalogTrack">
                 <div class="catalog-item">
-                    <img src="/assets/bisagra push open/BISAGRAPUSHOPEN.png" alt="Bisagra Push Open">
+                    <img src="/assets/bisagra push open/BISAGRAPUSHOPEN.png" alt="Bisagra Push Open" loading="lazy" decoding="async">
                     <div class="catalog-overlay">
                         <div class="catalog-overlay-text">BISAGRA PUSH OPEN</div>
                     </div>
                 </div>
                 <div class="catalog-item">
-                    <img src="/assets/bisagra cazoleta estandar/BISAGRACAZOLETAESTANDAR.png" alt="Bisagra Cazoleta Estandar">
+                    <img src="/assets/bisagra cazoleta estandar/BISAGRACAZOLETAESTANDAR.png" alt="Bisagra Cazoleta Estándar" loading="lazy" decoding="async">
                     <div class="catalog-overlay">
-                        <div class="catalog-overlay-text">BISAGRA CAZOLETA ESTANDAR</div>
+                        <div class="catalog-overlay-text">BISAGRA CAZOLETA ESTÁNDAR</div>
                     </div>
                 </div>
                 <div class="catalog-item">
-                    <img src="/assets/bisagra clip 3D/BISAGRACLIP.png" alt="Bisagra Clip 3D">
+                    <img src="/assets/bisagra clip 3D/BISAGRACLIP.png" alt="Bisagra Clip 3D" loading="lazy" decoding="async">
                     <div class="catalog-overlay">
                         <div class="catalog-overlay-text">BISAGRA CLIP 3D</div>
                     </div>
                 </div>
                 <div class="catalog-item">
-                    <img src="/assets/bisagra soft closing/BSC.png" alt="Bisagra Soft Closing">
+                    <img src="/assets/bisagra soft closing/BSC.png" alt="Bisagra Soft Closing" loading="lazy" decoding="async">
                     <div class="catalog-overlay">
                         <div class="catalog-overlay-text">BISAGRA SOFT CLOSING</div>
                     </div>
                 </div>
                 <div class="catalog-item">
-                    <img src="/assets/piston a gas/PISTONAGAS.png" alt="Pistón a Gas">
+                    <img src="/assets/piston a gas/PISTONAGAS.png" alt="Pistón a Gas" loading="lazy" decoding="async">
                     <div class="catalog-overlay">
                         <div class="catalog-overlay-text">PISTÓN A GAS</div>
                     </div>
                 </div>
                 <div class="catalog-item">
-                    <img src="/assets/bisagra angulos especiales/BISAGRAANGULOSESPECIALES135.png" alt="Bisagra Ángulos Especiales">
+                    <img src="/assets/bisagra angulos especiales/BISAGRAANGULOSESPECIALES135.png" alt="Bisagra Ángulos Especiales" loading="lazy" decoding="async">
                     <div class="catalog-overlay">
                         <div class="catalog-overlay-text">BISAGRA ÁNGULOS ESPECIALES</div>
                     </div>
@@ -199,8 +200,8 @@
     <div class="footer-container">
         <!-- Hexágonos decorativos -->
         <div class="footer-hexagons">
-            <a href="mailto:info@thowel.com" class="hexagon hex-mail" title="Email"><img src="/assets/MAIL.png" alt="Email"></a>
-            <a href="#" class="hexagon hex-instagram" title="Instagram" target="_blank"><img src="/assets/INSTAGRAM.png" alt="Instagram"></a>
+            <a href="mailto:info@thowel.com" class="hexagon hex-mail" title="Email"><img src="/assets/MAIL.png" alt="Email" loading="lazy" decoding="async"></a>
+            <a href="#" class="hexagon hex-instagram" title="Instagram" target="_blank"><img src="/assets/INSTAGRAM.png" alt="Instagram" loading="lazy" decoding="async"></a>
         </div>
 
         <!-- Contenido del footer -->

@@ -13,7 +13,7 @@
     <!-- Navbar flotante -->
     <nav class="navbar">
         <!-- Logo mobile (solo visible en mobile, arriba a la izquierda) -->
-        <a href="/index.html" class="logo-mobile"><img src="/assets/logoHeader.png" alt="THOWEL"></a>
+        <a href="/index.html" class="logo-mobile"><img src="/assets/logoHeader.png" alt="THOWEL" loading="eager" fetchpriority="high" decoding="async"></a>
 
         <!-- Botón hamburguesa (solo visible en mobile) -->
         <button class="hamburger" id="hamburger" aria-label="Toggle menu">
@@ -70,7 +70,7 @@
                         </div>
                     </div>
                 </li>
-                <li><a href="/index.html" class="logo"><img src="/assets/logoHeader.png" alt="THOWEL"></a></li>
+                <li><a href="/index.html" class="logo"><img src="/assets/logoHeader.png" alt="THOWEL" loading="eager" fetchpriority="high" decoding="async"></a></li>
                 <li><a href="/HTML/sobreNosotros.html" data-i18n="nav.about">SOBRE NOSOTROS</a></li>
                 <li><a href="/HTML/contacto.html" data-i18n="nav.contact">CONTACTOS</a></li>
             </ul>
@@ -79,21 +79,21 @@
 
     <!-- Header Section con imagen de fondo -->
     <section class="header-section">
-        <img src="/assets/PORTADA CONTACTOS.png" alt="Portada" class="portada-img">
+        <img src="/assets/PORTADA CONTACTOS.png" alt="Portada" class="portada-img" loading="eager" fetchpriority="high" decoding="async">
         <div class="header-overlay">
             <h1 class="header-title" data-i18n="contact.title">
-                CONTACTANOS
+                CONTÁCTANOS
             </h1>
         </div>
         <div class="scroll-indicator">
-            <img src="/assets/FLECHAINICIO.png" alt="Flecha" class="flecha-img">
+            <img src="/assets/FLECHAINICIO.png" alt="Flecha" class="flecha-img" loading="eager" fetchpriority="high" decoding="async">
         </div>
     </section>
 
     <!-- Sección Formulario de Contacto -->
     <section class="contacto-section">
         <div class="contacto-container">
-            <h2 class="contacto-titulo" data-i18n="contact.title">CONTACTANOS</h2>
+            <h2 class="contacto-titulo" data-i18n="contact.title">CONTÁCTANOS</h2>
 
             <form class="contacto-form" id="contactoForm" action="https://formsubmit.co/info@thowel.com" method="POST">
                 <!-- Configuración de FormSubmit -->
@@ -156,10 +156,10 @@
         <div class="footer-container">
             <div class="footer-hexagons">
                 <a href="mailto:info@thowel.com" class="hexagon hex-mail" title="Email">
-                    <img src="/assets/MAIL.png" alt="Email">
+                    <img src="/assets/MAIL.png" alt="Email" loading="lazy" decoding="async">
                 </a>
                 <a href="#" class="hexagon hex-instagram" title="Instagram" target="_blank">
-                    <img src="/assets/INSTAGRAM.png" alt="Instagram">
+                    <img src="/assets/INSTAGRAM.png" alt="Instagram" loading="lazy" decoding="async">
                 </a>
             </div>
             <div class="footer-content">
