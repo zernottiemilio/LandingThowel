@@ -16,7 +16,7 @@
     <!-- Navbar flotante -->
     <nav class="navbar">
         <!-- Logo mobile (solo visible en mobile, arriba a la izquierda) -->
-        <a href="/index.html" class="logo-mobile"><img src="/assets/logoHeader.png" alt="THOWEL" loading="eager" fetchpriority="high" decoding="async"></a>
+        <a href="/index.html" class="logo-mobile"><img src="/assets/logoHeader.png" alt="THOWEL" loading="lazy" decoding="async"></a>
 
         <!-- Botón hamburguesa (solo visible en mobile) -->
         <button class="hamburger" id="hamburger" aria-label="Toggle menu">
@@ -72,28 +72,11 @@
                     </div>
                 </div>
             </li>
-            <li><a href="/index.html" class="logo"><img src="/assets/logoHeader.png" alt="THOWEL" loading="eager" fetchpriority="high" decoding="async"></a></li>
+            <li><a href="/index.html" class="logo"><img src="/assets/logoHeader.png" alt="THOWEL" loading="lazy" decoding="async"></a></li>
             <li><a href="/HTML/sobreNosotros.html">SOBRE NOSOTROS</a></li>
             <li><a href="/HTML/contacto.html">CONTACTOS</a></li>
         </ul>
     </nav>
-
-    <!-- ============================================
-         AMBIENTE - Introducción
-         ============================================ -->
-    <section id="ambiente" class="producto-section">
-        <div class="dual-content">
-            <div class="left-content">
-                <img src="/assets/PATA PLASTICA AJUSTABLE/ambiente apoyo.JPG" alt="Ambiente Sistemas de Apoyo" loading="eager" fetchpriority="high" decoding="async">
-            </div>
-            <div class="right-content">
-                <h1 class="producto-titulo-principal">SISTEMAS DE APOYO</h1>
-                <p class="producto-descripcion">
-                    Aportan <strong>estabilidad y practicidad</strong> en cada aplicación. Fabricados con materiales durables, resisten el uso constante sin comprometer su desempeño. Su diseño compacto y funcional se adapta a distintas superficies, garantizando un apoyo <strong>seguro y eficiente en el tiempo</strong>.
-                </p>
-            </div>
-        </div>
-    </section>
 
     <!-- ============================================
          RUEDA NYLON
@@ -104,10 +87,14 @@
                 <img src="/assets/rueda nylon/RUEDA NYLON.JPG" alt="Rueda Nylon" loading="eager" fetchpriority="high" decoding="async">
             </div>
             <div class="right-content">
+                <h1 class="producto-titulo-principal">SISTEMAS DE APOYO</h1>
+                <p class="producto-descripcion">
+                    Aportan <strong>estabilidad y practicidad</strong> en cada aplicación. Fabricados con materiales durables, resisten el uso constante sin comprometer su desempeño. Su diseño compacto y funcional se adapta a distintas superficies, garantizando un apoyo <strong>seguro y eficiente en el tiempo</strong>.
+                </p>
                 <h2 class="producto-titulo">RUEDA NYLON</h2>
                 <p class="producto-subtitulo">Sin freno</p>
                 <div class="diagrama-tecnico">
-                    <img src="/assets/rueda nylon/dibujo de planos .png" alt="Dibujo técnico Rueda Nylon" loading="lazy" decoding="async">
+                    <img src="/assets/rueda nylon/dibujo de planos .png" alt="Dibujo técnico Rueda Nylon" loading="eager" fetchpriority="high" decoding="async">
                 </div>
                 <div class="specs-all-logos">
                     <img src="/assets/rueda nylon/acero.png" alt="Nylon + Acero" loading="lazy" decoding="async">
@@ -139,7 +126,7 @@
                 <div class="specs-all-logos">
                     <img src="/assets/pata plastica/plastico.png" alt="Plástico" loading="lazy" decoding="async">
                     <img src="/assets/pata plastica/peso.png" alt="100 kg/par" loading="lazy" decoding="async">
-                    <img src="/assets/rueda nylon/200 unidases .png" alt="200 Unid." loading="lazy" decoding="async">
+                    <img src="/assets/pata plastica/4 a 200 unidades.png" alt="200 Unid." loading="lazy" decoding="async">
                     <img src="/assets/pata plastica/negro.png" alt="Negro" loading="lazy" decoding="async">
                 </div>
                 <div class="specs-table-image">
@@ -152,83 +139,88 @@
     <!-- ============================================
          PRODUCTOS SIMILARES - CAROUSEL
          ============================================ -->
-    <section class="productos-similares">
-        <h2 class="similares-titulo">PRODUCTOS SIMILARES</h2>
+        <section class="productos-similares">
+        <h2 class="similares-titulo" data-i18n="productPage.similarProducts">PRODUCTOS SIMILARES</h2>
         <div class="catalog-carousel">
-            <!-- Navigation Arrows -->
-            <button class="carousel-nav prev-btn" id="prevBtn">
-                <i class="fas fa-chevron-left"></i>
-            </button>
-            <button class="carousel-nav next-btn" id="nextBtn">
-                <i class="fas fa-chevron-right"></i>
-            </button>
-
-            <!-- Carousel Track -->
+            <button class="carousel-nav prev-btn" id="prevBtn"><i class="fas fa-chevron-left"></i></button>
+            <button class="carousel-nav next-btn" id="nextBtn"><i class="fas fa-chevron-right"></i></button>
             <div class="catalog-track" id="catalogTrack">
-                <div class="catalog-item">
-                    <a href="/HTML/manijas.html#manija-barral">
-                        <img src="/assets/manija barral/MANIJA BARRAL.JPG" alt="Manija Barral" loading="lazy" decoding="async">
-                        <div class="catalog-overlay">
-                            <div class="catalog-overlay-text">MANIJA BARRAL</div>
-                        </div>
-                    </a>
-                </div>
-                <div class="catalog-item">
-                    <a href="/HTML/manijas.html#manija-boton">
-                        <img src="/assets/manija boton/MANIJA BOTON.JPG" alt="Manija Botón" loading="lazy" decoding="async">
-                        <div class="catalog-overlay">
-                            <div class="catalog-overlay-text">MANIJA BOTÓN</div>
-                        </div>
-                    </a>
-                </div>
-                <div class="catalog-item">
-                    <a href="/HTML/bisagraSoftClosing.html">
-                        <img src="/assets/bisagra soft closing/BSC.png" alt="Bisagra Soft Closing" loading="lazy" decoding="async">
-                        <div class="catalog-overlay">
-                            <div class="catalog-overlay-text">BISAGRA SOFT CLOSING</div>
-                        </div>
-                    </a>
-                </div>
-                <div class="catalog-item">
-                    <a href="/HTML/bisagraClip3D.html">
-                        <img src="/assets/BC3D.png" alt="Bisagra Clip 3D" loading="lazy" decoding="async">
-                        <div class="catalog-overlay">
-                            <div class="catalog-overlay-text">BISAGRA CLIP 3D</div>
-                        </div>
-                    </a>
-                </div>
-                <div class="catalog-item">
-                    <a href="/HTML/retenExpulsor.html">
-                        <img src="/assets/reten expulsor/Reten.png" alt="Retén Expulsor" loading="lazy" decoding="async">
-                        <div class="catalog-overlay">
-                            <div class="catalog-overlay-text">RETÉN EXPULSOR</div>
-                        </div>
-                    </a>
-                </div>
-                <div class="catalog-item">
-                    <a href="/HTML/PistonAGAS.html">
-                        <img src="/assets/piston a gas/PISTONAGAS.png" alt="Pistón a Gas" loading="lazy" decoding="async">
-                        <div class="catalog-overlay">
-                            <div class="catalog-overlay-text">PISTÓN A GAS</div>
-                        </div>
-                    </a>
-                </div>
-                <div class="catalog-item">
-                    <a href="/HTML/guiaOculta3DSoftClosing.html">
-                        <img src="/assets/Guia oculta push Open/GUIA OCULTA.JPG" alt="Guía Oculta 3D" loading="lazy" decoding="async">
-                        <div class="catalog-overlay">
-                            <div class="catalog-overlay-text">GUÍA OCULTA 3D</div>
-                        </div>
-                    </a>
-                </div>
-                <div class="catalog-item">
-                    <a href="/HTML/ThowelBoxCristal.html">
-                        <img src="/assets/thowel box cristal/THOWELBOXCRISTAL.png" alt="Thowel Box Cristal" loading="lazy" decoding="async">
-                        <div class="catalog-overlay">
-                            <div class="catalog-overlay-text">THOWELBOX CRISTAL</div>
-                        </div>
-                    </a>
-                </div>
+                <a href="/HTML/bisagraCazoleta155.html" class="catalog-item">
+                    <img src="/assets/bisagra angulos especiales/BISAGRAANGULOSESPECIALES135.png" alt="Bisagra Ángulos Especiales 135" loading="lazy" decoding="async">
+                    <div class="catalog-overlay"><div class="catalog-overlay-text">BISAGRA ÁNGULOS ESPECIALES 135</div></div>
+                </a>
+                <a href="/HTML/bisagraCazoleta155.html" class="catalog-item">
+                    <img src="/assets/bisagra angulos especiales/BISAGRAANGULOSESPECIALES175.png" alt="Bisagra Ángulos Especiales 175" loading="lazy" decoding="async">
+                    <div class="catalog-overlay"><div class="catalog-overlay-text">BISAGRAS ÁNGULOS ESPECIALES 175</div></div>
+                </a>
+                <a href="/HTML/bisagraCazoletaEstandar.html" class="catalog-item">
+                    <img src="/assets/bisagra cazoleta estandar/BISAGRACAZOLETAESTANDAR.png" alt="Bisagra Cazoleta Estándar" loading="lazy" decoding="async">
+                    <div class="catalog-overlay"><div class="catalog-overlay-text">BISAGRA CAZOLETA ESTÁNDAR</div></div>
+                </a>
+                <a href="/HTML/bisagraClip3D.html" class="catalog-item">
+                    <img src="/assets/bisagra clip 3D/BISAGRACLIP.png" alt="Bisagra Clip" loading="lazy" decoding="async">
+                    <div class="catalog-overlay"><div class="catalog-overlay-text">BISAGRA CLIP</div></div>
+                </a>
+                <a href="/HTML/bisagraPushOpen.html" class="catalog-item">
+                    <img src="/assets/bisagra push open/BISAGRAPUSHOPEN.png" alt="Bisagra Push Open" loading="lazy" decoding="async">
+                    <div class="catalog-overlay"><div class="catalog-overlay-text">BISAGRA PUSH OPEN</div></div>
+                </a>
+                <a href="/HTML/bisagraSoftClosing.html" class="catalog-item">
+                    <img src="/assets/bisagra soft closing/BSC.png" alt="Bisagra Soft Closing" loading="lazy" decoding="async">
+                    <div class="catalog-overlay"><div class="catalog-overlay-text">BISAGRA SOFT CLOSING</div></div>
+                </a>
+                <a href="/HTML/ThowelBoxCristal.html" class="catalog-item">
+                    <img src="/assets/thowel box cristal/THOWELBOXCRISTAL.png" alt="Thowel Box Cristal" loading="lazy" decoding="async">
+                    <div class="catalog-overlay"><div class="catalog-overlay-text">THOWELBOX CRISTAL</div></div>
+                </a>
+                <a href="/HTML/thowelBoxPlus.html" class="catalog-item">
+                    <img src="/assets/thowel box plus/THOWELBOXPLUS.png" alt="Thowel Box Plus" loading="lazy" decoding="async">
+                    <div class="catalog-overlay"><div class="catalog-overlay-text">THOWELBOX PLUS</div></div>
+                </a>
+                <a href="/HTML/guiaOculta3DSoftClosing.html" class="catalog-item">
+                    <img src="/assets/Guia oculta push Open/GUIA OCULTA.JPG" alt="Guía Oculta 3D" loading="lazy" decoding="async">
+                    <div class="catalog-overlay"><div class="catalog-overlay-text">GUÍA OCULTA 3D SOFT CLOSING</div></div>
+                </a>
+                <a href="/HTML/guiaOcultaPushOpen.html" class="catalog-item">
+                    <img src="/assets/Guia oculta push Open/GUIA OCULTA (2).JPG" alt="Guía Oculta Push Open" loading="lazy" decoding="async">
+                    <div class="catalog-overlay"><div class="catalog-overlay-text">GUÍA OCULTA PUSH OPEN</div></div>
+                </a>
+                <a href="/HTML/correderaTelescopicaSoftClosing.html" class="catalog-item">
+                    <img src="/assets/corredera telescópica estándar H35/CORREDERA TELESCOPICA ESTANDAR H35 (2).JPG" alt="Corredera Telescópica Soft Closing" loading="lazy" decoding="async">
+                    <div class="catalog-overlay"><div class="catalog-overlay-text">CORREDERA TELESCÓPICA SOFT CLOSING</div></div>
+                </a>
+                <a href="/HTML/correderaTelescopicaPushOpen.html" class="catalog-item">
+                    <img src="/assets/corredera telescópica estándar H45/CORREDERA TELESCOPICA ESTANDAR H45 (2).JPG" alt="Corredera Telescópica Push Open" loading="lazy" decoding="async">
+                    <div class="catalog-overlay"><div class="catalog-overlay-text">CORREDERA TELESCÓPICA PUSH OPEN</div></div>
+                </a>
+                <a href="/HTML/correderaTelescopicaEstandarH45.html" class="catalog-item">
+                    <img src="/assets/corredera telescópica estándar H45/CORREDERA TELESCOPICA ESTANDAR H45.JPG" alt="Corredera H45" loading="lazy" decoding="async">
+                    <div class="catalog-overlay"><div class="catalog-overlay-text">CORREDERA TELESCÓPICA H45</div></div>
+                </a>
+                <a href="/HTML/correderaTelescopicaEstandarH35.html" class="catalog-item">
+                    <img src="/assets/corredera telescópica estándar H35/CORREDERA TELESCOPICA ESTANDAR H35.JPG" alt="Corredera H35" loading="lazy" decoding="async">
+                    <div class="catalog-overlay"><div class="catalog-overlay-text">CORREDERA TELESCÓPICA H35</div></div>
+                </a>
+                <a href="/HTML/correderaZ.html" class="catalog-item">
+                    <img src="/assets/corredera Z/CORREDERA Z.JPG" alt="Corredera Z" loading="lazy" decoding="async">
+                    <div class="catalog-overlay"><div class="catalog-overlay-text">CORREDERA Z</div></div>
+                </a>
+                <a href="/HTML/manijas.html" class="catalog-item">
+                    <img src="/assets/manija barral/MANIJA BARRAL.JPG" alt="Manija Barral" loading="lazy" decoding="async">
+                    <div class="catalog-overlay"><div class="catalog-overlay-text">MANIJAS</div></div>
+                </a>
+                <a href="/HTML/sistemasApoyo.html" class="catalog-item">
+                    <img src="/assets/pata plastica/PATA PLASTICA.JPG" alt="Sistemas de Apoyo" loading="lazy" decoding="async">
+                    <div class="catalog-overlay"><div class="catalog-overlay-text">SISTEMAS DE APOYO</div></div>
+                </a>
+                <a href="/HTML/PistonAGAS.html" class="catalog-item">
+                    <img src="/assets/piston a gas/PISTONAGAS.png" alt="Pistón a Gas" loading="lazy" decoding="async">
+                    <div class="catalog-overlay"><div class="catalog-overlay-text">PISTÓN A GAS</div></div>
+                </a>
+                <a href="/HTML/retenExpulsor.html" class="catalog-item">
+                    <img src="/assets/reten expulsor/RetenesExpulsor.png" alt="Retén Expulsor" loading="lazy" decoding="async">
+                    <div class="catalog-overlay"><div class="catalog-overlay-text">RETÉN EXPULSOR</div></div>
+                </a>
             </div>
         </div>
     </section>
