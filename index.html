@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="CSS/styles.css">
     <script src="https://cdn.jsdelivr.net/npm/i18next@23.7.6/i18next.min.js"></script>
     <link rel="stylesheet" href="CSS/responsive.css">
+    <link rel="stylesheet" href="/CSS/responsive-fix.css">
 </head>
 <body>
     <section class="header-section">
@@ -74,7 +75,7 @@
                         </div>
                     </div>
                 </li>
-                <li><a href="/index.html" class="logo"><img src="/assets/logoHeader.png" alt="THOWEL" loading="lazy" decoding="async"></a></li>
+                <li><a href="index.html" class="logo"><img src="assets/logoHeader.png" alt="THOWEL" loading="eager" decoding="sync"></a></li>
                 <li><a href="/HTML/sobreNosotros.html" data-i18n="nav.about">SOBRE NOSOTROS</a></li>
                 <li><a href="/HTML/contacto.html" data-i18n="nav.contact">CONTACTOS</a></li>
             </ul>
@@ -195,7 +196,7 @@
     <section class="catalog-header-section" id="catalogo">
         <div class="catalog-header">
             <div class="catalog-title-section">
-                <a href="CATÁLOGO THOWEL 2026.pdf" target="_blank" class="catalog-title-link">
+                <a href="assets/catalogo/CatalogoThowl.pdf" target="_blank" class="catalog-title-link">
                     <h2 class="catalog-title" data-i18n="home.catalog.title">CATÁLOGO</h2>
                     <span class="catalog-tooltip">Ver catálogo</span>
                 </a>

@@ -784,7 +784,7 @@
    ======================================== */
 
 /* Ocultar elementos móviles en desktop por defecto */
-@media (min-width: 769px) {
+@media (min-width: 901px) {
     .hamburger,
     .logo-mobile {
         display: none !important;

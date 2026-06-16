@@ -1,7 +1,7 @@
 // Product Showcase Controller - EFECTO PERSIANA
 class ProductShowcase {
     constructor() {
-        this.products = ['smooth', 'touch', 'estandar'];
+        this.products = ['smooth', 'touch', 'estándar'];
         this.currentProduct = 0;
         this.isTransitioning = false;
         this.init();
@@ -572,17 +572,75 @@ function startAutoAdvance() {
     }, 5000); // Desplaza hacia la derecha cada 5 segundos
 }
 
+// ============================================
+// RESPONSIVE - REORGANIZAR DOM PARA MOBILE
+// ============================================
+function reorganizeProductSectionsForMobile() {
+    const isMobile = window.innerWidth <= 1024;
+
+    if (isMobile) {
+        console.log('Reorganizando secciones para mobile...');
+
+        // Obtener todas las secciones de productos
+        const productSections = document.querySelectorAll('.product-section[data-product]');
+
+        productSections.forEach(section => {
+            const productType = section.getAttribute('data-product');
+
+            // Buscar el product-info correspondiente
+            const productInfo = document.querySelector(`.product-info[data-product="${productType}"]`);
+
+            if (productInfo && !section.contains(productInfo)) {
+                // Clonar el product-info y agregarlo a la sección
+                const productInfoClone = productInfo.cloneNode(true);
+                productInfoClone.style.display = 'block';
+                section.appendChild(productInfoClone);
+
+                console.log(`Product info movido para ${productType}`);
+            }
+        });
+
+        // Ocultar el product-content-overlay original
+        const overlay = document.querySelector('.product-content-overlay');
+        if (overlay) {
+            overlay.style.display = 'none';
+        }
+
+        console.log('Reorganización completa');
+    }
+}
+
 // Initialize everything when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
     // El menú mobile ya se inicializa arriba
 
-    // Initialize product showcase
-    productShowcaseInstance = new ProductShowcase();
+    // Reorganizar para mobile ANTES de inicializar el showcase
+    reorganizeProductSectionsForMobile();
 
-    // Animar la primera sección activa al cargar
+    // Initialize product showcase solo en desktop
+    if (window.innerWidth > 1024) {
+        productShowcaseInstance = new ProductShowcase();
+    }
+
+    // Re-organizar al cambiar tamaño de ventana
+    let resizeTimeout;
+    window.addEventListener('resize', () => {
+        clearTimeout(resizeTimeout);
+        resizeTimeout = setTimeout(() => {
+            const wasMobile = window.innerWidth <= 1024;
+            reorganizeProductSectionsForMobile();
+
+            // Reiniciar showcase si cambió a desktop
+            if (!wasMobile && !productShowcaseInstance) {
+                productShowcaseInstance = new ProductShowcase();
+            }
+        }, 250);
+    });
+
+    // Animar la primera sección activa al cargar (solo desktop)
     setTimeout(() => {
         const firstSection = document.querySelector('.product-section.active');
-        if (firstSection && typeof anime !== 'undefined') {
+        if (firstSection && typeof anime !== 'undefined' && window.innerWidth > 1024) {
             const leftImage = firstSection.querySelector('.split-image.left-image');
             const rightImage = firstSection.querySelector('.split-image.right-image');
 

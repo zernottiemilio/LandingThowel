@@ -1,0 +1,1073 @@
+/* ========================================
+   SISTEMA RESPONSIVE PROFESIONAL - THOWEL
+   Solución completa para todos los dispositivos
+   Mobile First Approach
+   ======================================== */
+
+/* ========================================
+   RESET Y BASE
+   ======================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    -webkit-text-size-adjust: 100%;
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100vw;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ========================================
+   NAVBAR RESPONSIVE - HAMBURGER MOBILE
+   ======================================== */
+
+/* Logo mobile y central - control por breakpoint */
+.logo-mobile {
+    display: none;
+}
+
+/* Logo central visible en desktop */
+.navbar li .logo {
+    display: inline-flex !important;
+    align-items: center;
+}
+
+@media (min-width: 901px) {
+    .navbar li .logo {
+        display: inline-flex !important;
+    }
+}
+
+@media (max-width: 900px) {
+    /* Logo mobile visible */
+    .logo-mobile {
+        display: block !important;
+        position: absolute !important;
+        left: 15px !important;
+        top: 50% !important;
+        transform: translateY(-50%) !important;
+        z-index: 1002 !important;
+    }
+
+    .logo-mobile img {
+        height: clamp(40px, 8vw, 50px) !important;
+        width: auto !important;
+        mix-blend-mode: multiply !important;
+    }
+
+    /* Botón hamburguesa - FORZAR visibilidad */
+    .hamburger {
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: space-around !important;
+        position: absolute !important;
+        right: 15px !important;
+        top: 50% !important;
+        transform: translateY(-50%) !important;
+        width: 35px !important;
+        height: 35px !important;
+        padding: 5px !important;
+        background: transparent !important;
+        border: none !important;
+        cursor: pointer !important;
+        z-index: 1002 !important;
+        pointer-events: auto !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+    }
+
+    .hamburger span {
+        display: block !important;
+        width: 100% !important;
+        height: 3px !important;
+        background-color: #333 !important;
+        transition: all 0.3s ease !important;
+        border-radius: 3px !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        pointer-events: none !important;
+    }
+
+    /* Animación hamburguesa activo */
+    .hamburger.active span:nth-child(1) {
+        transform: rotate(45deg) translate(6px, 6px) !important;
+    }
+
+    .hamburger.active span:nth-child(2) {
+        opacity: 0 !important;
+    }
+
+    .hamburger.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -7px) !important;
+    }
+
+    /* Navbar mobile */
+    .navbar {
+        padding: 10px 20px !important;
+        width: calc(100% - 40px) !important;
+        max-width: calc(100% - 40px) !important;
+        margin: 15px 20px !important;
+        border-radius: 30px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        position: relative !important;
+        height: 60px !important;
+        overflow: visible !important;
+    }
+
+    /* Menu oculto por defecto */
+    .navbar ul {
+        position: fixed !important;
+        top: 75px !important;
+        left: -100% !important;
+        width: 100% !important;
+        height: calc(100vh - 75px) !important;
+        background: white !important;
+        flex-direction: column !important;
+        gap: 0 !important;
+        padding: 20px 0 !important;
+        margin: 0 !important;
+        overflow-y: auto !important;
+        transition: left 0.3s ease !important;
+        z-index: 999 !important;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1) !important;
+    }
+
+    /* Menu activo */
+    .navbar ul.active {
+        left: 0 !important;
+    }
+
+    /* Logo central del navbar - oculto en mobile */
+    .navbar li .logo {
+        display: none !important;
+    }
+
+    /* Items del menu */
+    .navbar li {
+        width: 100% !important;
+        border-bottom: 1px solid #f0f0f0 !important;
+    }
+
+    .navbar li a {
+        display: block !important;
+        width: 100% !important;
+        padding: 15px 20px !important;
+        margin: 0 !important;
+        text-align: left !important;
+        font-size: 14px !important;
+    }
+
+    /* Dropdowns en mobile */
+    .dropdown {
+        position: relative !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        box-shadow: none !important;
+        border-radius: 0 !important;
+        padding: 0 !important;
+        background: #f9f9f9 !important;
+    }
+
+    .dropdown a {
+        padding: 12px 30px !important;
+        font-size: 13px !important;
+    }
+
+    .subdropdown {
+        position: relative !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        box-shadow: none !important;
+        border-radius: 0 !important;
+        padding: 0 !important;
+        background: #f0f0f0 !important;
+    }
+
+    .subdropdown a {
+        padding: 10px 40px !important;
+        font-size: 12px !important;
+    }
+
+    /* Mostrar dropdowns cuando estén abiertos */
+    .navbar li.dropdown-open > .dropdown,
+    .dropdown-item.subdropdown-open > .subdropdown {
+        opacity: 1 !important;
+        visibility: visible !important;
+        transform: none !important;
+        display: block !important;
+        max-height: 2000px !important;
+    }
+}
+
+/* ========================================
+   HEADER SECTIONS - TODAS LAS PÁGINAS
+   ======================================== */
+
+.header-section {
+    position: relative;
+    width: 100%;
+    min-height: clamp(400px, 60vh, 800px);
+    overflow: hidden;
+}
+
+.header-section img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.header-title {
+    font-size: clamp(1.5rem, 4vw, 3rem) !important;
+    line-height: 1.2 !important;
+    padding: 0 clamp(15px, 5vw, 50px) !important;
+    text-align: center !important;
+}
+
+/* Flecha scroll indicator - siempre full width */
+.scroll-indicator {
+    position: absolute !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    transform: none !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    padding: clamp(20px, 3vw, 30px) 0 !important;
+    z-index: 10 !important;
+}
+
+.scroll-indicator .flecha-img {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    object-fit: contain !important;
+    display: block !important;
+}
+
+/* ========================================
+   INDEX - SECCIÓN DE PRODUCTOS (SMOOTH/TOUCH/ESTÁNDAR)
+   ======================================== */
+
+/* Logos de productos - Adaptación fluida (solo mobile/tablet) */
+@media (max-width: 1024px) {
+    .product-logo {
+        width: clamp(50px, 12vw, 100px) !important;
+        height: clamp(50px, 12vw, 100px) !important;
+        margin: 0 auto clamp(15px, 3vw, 40px) !important;
+    }
+
+    .product-logo img {
+        width: clamp(80px, 18vw, 140px) !important;
+        height: clamp(80px, 18vw, 140px) !important;
+        object-fit: contain !important;
+    }
+}
+
+/* Descripción de productos */
+.product-description {
+    font-size: clamp(0.875rem, 2vw, 1.2rem) !important;
+    line-height: 1.6 !important;
+    padding: 0 clamp(15px, 4vw, 40px) !important;
+}
+
+/* Sección unificada de productos */
+@media (max-width: 1024px) {
+    .unified-product-section {
+        min-height: auto !important;
+        height: auto !important;
+        position: relative !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        overflow: hidden !important;
+    }
+
+    .background-images {
+        position: relative !important;
+        width: 100% !important;
+        height: auto !important;
+    }
+
+    .product-section {
+        position: relative !important;
+        display: flex !important;
+        flex-direction: column !important;
+        height: auto !important;
+        min-height: 60vh !important;
+        width: 100% !important;
+        opacity: 1 !important;
+        pointer-events: auto !important;
+        margin-bottom: clamp(40px, 8vw, 80px) !important;
+    }
+
+    /* Ocultar las imágenes divididas en mobile - mostrar solo como fondo */
+    .split-image {
+        display: none !important;
+    }
+
+    /* Agregar imagen de fondo a cada sección */
+    .product-section[data-product="smooth"] {
+        background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('/assets/FondoSmooth.png') center/cover no-repeat !important;
+    }
+
+    .product-section[data-product="touch"] {
+        background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('/assets/FondoTouch.png') center/cover no-repeat !important;
+    }
+
+    .product-section[data-product="estándar"] {
+        background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('/assets/FondoEstandar.png') center/cover no-repeat !important;
+    }
+
+    .product-content-overlay {
+        position: relative !important;
+        width: 100% !important;
+        height: auto !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        background: transparent !important;
+        display: none !important;
+        top: auto !important;
+        left: auto !important;
+        transform: none !important;
+    }
+
+    /* Product-info dentro de product-section (movido por JavaScript) */
+    .product-section .product-info {
+        position: relative !important;
+        display: block !important;
+        opacity: 1 !important;
+        top: auto !important;
+        left: auto !important;
+        transform: none !important;
+        padding: clamp(40px, 6vw, 60px) clamp(20px, 4vw, 40px) !important;
+        text-align: center !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+        background: transparent !important;
+        z-index: 10 !important;
+    }
+
+    .product-logo {
+        margin: 0 auto clamp(20px, 4vw, 30px) !important;
+        text-align: center !important;
+    }
+
+    .product-logo img {
+        width: clamp(80px, 18vw, 140px) !important;
+        height: clamp(80px, 18vw, 140px) !important;
+        margin: 0 auto !important;
+        filter: drop-shadow(0 2px 8px rgba(0,0,0,0.3)) !important;
+    }
+
+    .product-description {
+        font-size: clamp(0.875rem, 2vw, 1.1rem) !important;
+        line-height: 1.6 !important;
+        text-align: center !important;
+        color: white !important;
+        text-shadow: 0 1px 3px rgba(0,0,0,0.5) !important;
+        margin: 0 !important;
+        padding: 0 clamp(15px, 3vw, 30px) !important;
+    }
+
+    /* Ocultar el indicador de progreso en mobile */
+    .product-progress {
+        display: none !important;
+    }
+}
+
+/* Mobile específico */
+@media (max-width: 768px) {
+    .main-text h1 {
+        font-size: clamp(1.5rem, 4vw, 2rem) !important;
+    }
+
+    .main-text p,
+    .main-content p {
+        font-size: clamp(0.875rem, 2vw, 1rem) !important;
+    }
+
+    .product-logo img {
+        width: clamp(60px, 14vw, 120px) !important;
+        height: clamp(60px, 14vw, 120px) !important;
+    }
+}
+
+/* Mobile muy pequeño */
+@media (max-width: 480px) {
+    .product-logo img {
+        width: clamp(50px, 12vw, 100px) !important;
+        height: clamp(50px, 12vw, 100px) !important;
+    }
+
+    .product-description {
+        font-size: clamp(0.75rem, 1.8vw, 0.875rem) !important;
+    }
+}
+
+/* ========================================
+   DUAL CONTENT - LAYOUT UNIVERSAL
+   ======================================== */
+
+@media (max-width: 1024px) {
+    .dual-content {
+        flex-direction: column !important;
+        min-height: auto !important;
+    }
+
+    .left-content,
+    .right-content {
+        width: 100% !important;
+        min-height: auto !important;
+    }
+
+    /* Imágenes en left-content */
+    .left-content img {
+        width: 100% !important;
+        height: clamp(300px, 50vh, 600px) !important;
+        object-fit: cover !important;
+    }
+
+    /* Contenido de texto */
+    .right-content {
+        padding: clamp(30px, 5vw, 60px) clamp(20px, 4vw, 40px) !important;
+    }
+}
+
+/* ========================================
+   SOBRE NOSOTROS - PÁGINA ESPECÍFICA
+   ======================================== */
+
+@media (max-width: 1024px) {
+    .sobre-nosotros-section .dual-content {
+        flex-direction: column !important;
+    }
+
+    .sobre-nosotros-section .left-content {
+        width: 100% !important;
+        height: clamp(300px, 50vh, 500px) !important;
+        max-height: 50vh !important;
+        position: relative !important;
+    }
+
+    .sobre-nosotros-section .image-sticky-container {
+        position: relative !important;
+        height: 100% !important;
+    }
+
+    .sobre-nosotros-section .image-sticky-container img {
+        position: absolute !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+    }
+
+    .sobre-nosotros-section .right-content {
+        width: 100% !important;
+        padding: clamp(30px, 5vw, 50px) clamp(20px, 4vw, 40px) !important;
+    }
+
+    .sobre-nosotros-section .text-section {
+        padding: clamp(30px, 4vw, 50px) 0 !important;
+    }
+
+    .section-title {
+        font-size: clamp(1.5rem, 4vw, 2.5rem) !important;
+        margin-bottom: clamp(15px, 3vw, 30px) !important;
+        text-align: center !important;
+    }
+
+    .section-description {
+        font-size: clamp(0.875rem, 2vw, 1.1rem) !important;
+        line-height: 1.6 !important;
+        text-align: justify !important;
+    }
+
+    .section-description p {
+        margin-bottom: clamp(12px, 2vw, 20px) !important;
+    }
+}
+
+/* ========================================
+   PRODUCTOS - PÁGINAS DE PRODUCTOS
+   ======================================== */
+
+@media (max-width: 1024px) {
+    /* Sección unificada de productos */
+    .producto-section-unified {
+        min-height: auto !important;
+        padding-top: 80px !important;
+    }
+
+    .producto-section-unified .dual-content {
+        flex-direction: column !important;
+        min-height: auto !important;
+    }
+
+    .producto-section-unified .left-content {
+        width: 100% !important;
+        height: clamp(300px, 50vh, 500px) !important;
+        max-height: 50vh !important;
+        position: relative !important;
+    }
+
+    .producto-section-unified .image-sticky-container {
+        position: relative !important;
+        height: 100% !important;
+    }
+
+    /* Mostrar solo imagen de ambiente en mobile */
+    .producto-section-unified .image-sticky-container img {
+        display: none !important;
+    }
+
+    .producto-section-unified .image-sticky-container img[data-section="especificaciones"] {
+        display: block !important;
+        position: absolute !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        opacity: 1 !important;
+    }
+
+    .producto-section-unified .right-content {
+        width: 100% !important;
+        padding: 0 !important;
+    }
+
+    .producto-section-unified .text-section {
+        padding: clamp(30px, 5vw, 50px) clamp(20px, 4vw, 40px) !important;
+        min-height: auto !important;
+        text-align: center !important;
+    }
+
+    .producto-section-unified .text-section:first-child {
+        padding-top: clamp(30px, 5vw, 50px) !important;
+    }
+
+    /* Títulos de productos */
+    .producto-titulo {
+        font-size: clamp(1.5rem, 4vw, 2.5rem) !important;
+        line-height: 1.2 !important;
+        margin-bottom: clamp(15px, 3vw, 25px) !important;
+        text-align: center !important;
+    }
+
+    .producto-titulo b {
+        font-size: clamp(1.5rem, 4vw, 2.5rem) !important;
+    }
+
+    /* Descripciones */
+    .producto-descripcion,
+    .specs-intro {
+        font-size: clamp(0.875rem, 2vw, 1rem) !important;
+        line-height: 1.6 !important;
+        margin-bottom: clamp(12px, 2vw, 20px) !important;
+        text-align: center !important;
+    }
+
+    /* Badge */
+    .titulo-con-badge {
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: clamp(10px, 2vw, 15px) !important;
+    }
+
+    .badge-thowel {
+        position: relative !important;
+        top: auto !important;
+        right: auto !important;
+        margin: 0 auto !important;
+    }
+
+    .badge-thowel img {
+        width: clamp(35px, 6vw, 50px) !important;
+        height: auto !important;
+    }
+
+    /* Diagramas técnicos */
+    .diagrama-tecnico,
+    .specs-table-image {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: clamp(15px, 3vw, 25px) auto !important;
+        text-align: center !important;
+    }
+
+    .diagrama-tecnico img,
+    .specs-table-image img {
+        max-width: 100% !important;
+        width: clamp(200px, 80vw, 500px) !important;
+        height: auto !important;
+        margin: 0 auto !important;
+    }
+
+    /* Iconos de especificaciones */
+    .specs-icons {
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        align-items: center !important;
+        gap: clamp(10px, 3vw, 20px) !important;
+        margin: clamp(15px, 3vw, 25px) auto !important;
+        max-width: 100% !important;
+    }
+
+    .specs-icons img {
+        width: auto !important;
+        height: clamp(50px, 10vw, 80px) !important;
+        max-width: clamp(60px, 15vw, 100px) !important;
+    }
+
+    /* Codazos/detalles */
+    .codazos-imagenes {
+        flex-direction: column !important;
+        gap: clamp(12px, 2vw, 20px) !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 auto !important;
+    }
+
+    .codazos-imagenes img {
+        max-width: 100% !important;
+        width: 100% !important;
+        height: auto !important;
+    }
+}
+
+/* ========================================
+   PRODUCTOS SIMILARES - CAROUSEL
+   ======================================== */
+
+@media (max-width: 1024px) {
+    .productos-similares {
+        min-height: auto !important;
+        padding: clamp(40px, 6vw, 60px) 0 0 0 !important;
+    }
+
+    .similares-titulo {
+        font-size: clamp(1.5rem, 4vw, 2.5rem) !important;
+        padding: 0 clamp(20px, 4vw, 40px) !important;
+        margin-bottom: clamp(20px, 3vw, 30px) !important;
+    }
+
+    .productos-similares .catalog-carousel {
+        min-height: auto !important;
+        height: auto !important;
+        overflow-x: auto !important;
+        overflow-y: visible !important;
+        -webkit-overflow-scrolling: touch !important;
+        padding: clamp(15px, 3vw, 25px) 0 !important;
+    }
+
+    .productos-similares .catalog-track {
+        height: auto !important;
+        min-height: auto !important;
+        display: flex !important;
+        flex-wrap: nowrap !important;
+        gap: clamp(10px, 2vw, 15px) !important;
+    }
+
+    .productos-similares .catalog-item {
+        flex: 0 0 auto !important;
+        width: clamp(160px, 40vw, 250px) !important;
+        height: clamp(220px, 50vw, 350px) !important;
+        min-width: 160px !important;
+        min-height: 220px !important;
+    }
+
+    .productos-similares .catalog-item img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+    }
+
+    /* Flechas de navegación */
+    .carousel-nav {
+        width: clamp(35px, 8vw, 50px) !important;
+        height: clamp(35px, 8vw, 50px) !important;
+        font-size: clamp(14px, 3vw, 18px) !important;
+    }
+
+    .prev-btn {
+        left: clamp(5px, 2vw, 15px) !important;
+    }
+
+    .next-btn {
+        right: clamp(5px, 2vw, 15px) !important;
+    }
+}
+
+/* ========================================
+   CATALOG SECTION - PÁGINA PRINCIPAL
+   ======================================== */
+
+@media (max-width: 1024px) {
+    .catalog-section {
+        min-height: auto !important;
+        height: auto !important;
+        padding: clamp(40px, 6vw, 60px) clamp(15px, 3vw, 30px) !important;
+    }
+
+    .catalog-container {
+        height: auto !important;
+    }
+
+    .catalog-header {
+        flex-direction: column !important;
+        align-items: center !important;
+        padding: clamp(30px, 5vw, 50px) 0 !important;
+    }
+
+    .catalog-title-section {
+        width: 100% !important;
+        height: auto !important;
+        margin-bottom: clamp(15px, 3vw, 25px) !important;
+        justify-content: center !important;
+    }
+
+    .catalog-arrow {
+        position: relative !important;
+        width: auto !important;
+        height: clamp(80px, 15vw, 150px) !important;
+        margin: 0 auto clamp(10px, 2vw, 15px) !important;
+    }
+
+    .catalog-arrow img {
+        height: 100% !important;
+        width: auto !important;
+    }
+
+    .catalog-title {
+        font-size: clamp(1.5rem, 5vw, 3rem) !important;
+        margin: 0 !important;
+        text-align: center !important;
+    }
+
+    .catalog-description-section {
+        width: 100% !important;
+        max-width: 100% !important;
+        text-align: center !important;
+        padding: 0 clamp(15px, 3vw, 30px) !important;
+    }
+
+    .catalog-description {
+        font-size: clamp(0.875rem, 2vw, 1rem) !important;
+        line-height: 1.6 !important;
+    }
+
+    .catalog-carousel {
+        height: auto !important;
+        min-height: clamp(250px, 50vw, 400px) !important;
+        overflow-x: auto !important;
+        -webkit-overflow-scrolling: touch !important;
+    }
+
+    .catalog-track {
+        width: auto !important;
+        height: auto !important;
+        min-height: clamp(250px, 50vw, 400px) !important;
+        display: flex !important;
+        flex-wrap: nowrap !important;
+        gap: clamp(10px, 2vw, 15px) !important;
+        padding: clamp(10px, 2vw, 15px) !important;
+    }
+
+    .catalog-slide {
+        width: auto !important;
+        height: auto !important;
+        min-height: 100% !important;
+        display: flex !important;
+        flex-wrap: nowrap !important;
+        gap: clamp(10px, 2vw, 15px) !important;
+    }
+
+    .catalog-item {
+        flex: 0 0 auto !important;
+        width: clamp(160px, 40vw, 250px) !important;
+        height: clamp(220px, 50vw, 350px) !important;
+        min-width: 160px !important;
+        min-height: 220px !important;
+    }
+
+    .catalog-item:hover {
+        border-width: clamp(6px, 1.5vw, 10px) !important;
+    }
+
+    .catalog-overlay-text {
+        font-size: clamp(0.75rem, 2vw, 1rem) !important;
+        padding: clamp(10px, 2vw, 15px) !important;
+    }
+}
+
+/* ========================================
+   CALIDAD SECTION
+   ======================================== */
+
+@media (max-width: 1024px) {
+    .calidad-section {
+        min-height: auto !important;
+        padding: clamp(40px, 6vw, 60px) clamp(20px, 4vw, 40px) !important;
+    }
+
+    .calidad-content {
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: clamp(25px, 4vw, 40px) !important;
+    }
+
+    .calidad-icon {
+        max-width: clamp(150px, 30vw, 250px) !important;
+        opacity: 0.3 !important;
+    }
+
+    .calidad-text {
+        text-align: center !important;
+    }
+
+    .calidad-title {
+        font-size: clamp(1.5rem, 5vw, 3rem) !important;
+        line-height: 1.2 !important;
+        letter-spacing: clamp(0.5px, 0.1vw, 2px) !important;
+        margin-bottom: clamp(15px, 3vw, 25px) !important;
+    }
+
+    .calidad-description {
+        font-size: clamp(0.875rem, 2vw, 1.1rem) !important;
+        line-height: 1.6 !important;
+    }
+}
+
+/* ========================================
+   CONTACTO PAGE
+   ======================================== */
+
+@media (max-width: 1024px) {
+    .contacto-section {
+        min-height: auto !important;
+        padding: clamp(40px, 8vw, 80px) clamp(15px, 3vw, 30px) !important;
+    }
+
+    .contacto-container {
+        padding: clamp(30px, 5vw, 50px) clamp(20px, 4vw, 40px) !important;
+        max-width: 100% !important;
+    }
+
+    .contacto-titulo {
+        font-size: clamp(1.5rem, 4vw, 2.5rem) !important;
+        margin-bottom: clamp(25px, 4vw, 40px) !important;
+    }
+
+    .form-group {
+        margin-bottom: clamp(20px, 3vw, 30px) !important;
+    }
+
+    .form-label {
+        font-size: clamp(0.875rem, 2vw, 1rem) !important;
+        margin-bottom: clamp(8px, 1.5vw, 12px) !important;
+    }
+
+    .form-input,
+    .form-textarea {
+        font-size: clamp(0.875rem, 2vw, 1rem) !important;
+        padding: clamp(12px, 2.5vw, 18px) clamp(15px, 3vw, 20px) !important;
+    }
+
+    .form-textarea {
+        min-height: clamp(120px, 25vw, 180px) !important;
+    }
+
+    .submit-btn {
+        width: 100% !important;
+        padding: clamp(14px, 3vw, 18px) clamp(30px, 6vw, 50px) !important;
+        font-size: clamp(0.875rem, 2vw, 1.1rem) !important;
+    }
+}
+
+/* ========================================
+   FOOTER
+   ======================================== */
+
+@media (max-width: 768px) {
+    .footer-red {
+        padding: clamp(12px, 2.5vw, 18px) clamp(10px, 2vw, 15px) !important;
+    }
+
+    .footer-container {
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+
+    .footer-hexagons {
+        position: relative !important;
+        left: auto !important;
+        bottom: auto !important;
+        flex-direction: row !important;
+        justify-content: center !important;
+        margin-bottom: clamp(10px, 2vw, 15px) !important;
+        gap: clamp(8px, 2vw, 12px) !important;
+    }
+
+    .hexagon {
+        width: clamp(25px, 5vw, 35px) !important;
+        height: clamp(25px, 5vw, 35px) !important;
+    }
+
+    .footer-content {
+        text-align: center !important;
+    }
+
+    .footer-content p {
+        font-size: clamp(0.75rem, 2vw, 0.9rem) !important;
+        line-height: 1.4 !important;
+    }
+}
+
+/* ========================================
+   UTILIDADES GENERALES
+   ======================================== */
+
+/* Evitar overflow horizontal en todos los elementos */
+@media (max-width: 1024px) {
+    body > * {
+        max-width: 100vw !important;
+        overflow-x: hidden !important;
+    }
+
+    /* Scroll suave en carousels */
+    .catalog-carousel,
+    .productos-similares .catalog-carousel {
+        scroll-behavior: smooth !important;
+        scrollbar-width: thin !important;
+    }
+
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    .catalog-carousel::-webkit-scrollbar,
+    .productos-similares .catalog-carousel::-webkit-scrollbar {
+        height: 6px !important;
+    }
+
+    .catalog-carousel::-webkit-scrollbar-track,
+    .productos-similares .catalog-carousel::-webkit-scrollbar-track {
+        background: #f1f1f1 !important;
+        border-radius: 10px !important;
+    }
+
+    .catalog-carousel::-webkit-scrollbar-thumb,
+    .productos-similares .catalog-carousel::-webkit-scrollbar-thumb {
+        background: #888 !important;
+        border-radius: 10px !important;
+    }
+
+    .catalog-carousel::-webkit-scrollbar-thumb:hover,
+    .productos-similares .catalog-carousel::-webkit-scrollbar-thumb:hover {
+        background: #555 !important;
+    }
+
+    /* Mejorar legibilidad en textos */
+    p, .producto-descripcion, .specs-intro, .section-description {
+        -webkit-font-smoothing: antialiased !important;
+        -moz-osx-font-smoothing: grayscale !important;
+        text-rendering: optimizeLegibility !important;
+    }
+
+    /* Asegurar que los enlaces sean táctiles */
+    a, button {
+        min-height: 44px !important;
+        min-width: 44px !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+}
+
+/* ========================================
+   BREAKPOINT MUY PEQUEÑO (< 375px)
+   ======================================== */
+
+@media (max-width: 374px) {
+    .navbar {
+        padding: 8px 15px !important;
+        margin: 10px 15px !important;
+    }
+
+    .header-title {
+        font-size: 1.25rem !important;
+    }
+
+    .section-title,
+    .producto-titulo,
+    .similares-titulo,
+    .calidad-title {
+        font-size: 1.25rem !important;
+    }
+
+    .section-description,
+    .producto-descripcion,
+    .specs-intro {
+        font-size: 0.8125rem !important;
+    }
+
+    .catalog-item,
+    .productos-similares .catalog-item {
+        width: 140px !important;
+        min-width: 140px !important;
+        height: 200px !important;
+        min-height: 200px !important;
+    }
+}
+
+/* ========================================
+   LOGO CENTRAL NAVBAR - FORZADO
+   ======================================== */
+
+@media (min-width: 901px) {
+    nav.navbar ul li a.logo,
+    nav.navbar ul li a.logo img {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+
+    nav.navbar ul li a.logo {
+        padding: 0 !important;
+        margin: 0 !important;
+        background: none !important;
+        height: 60px !important;
+        width: auto !important;
+    }
+
+    nav.navbar ul li a.logo img {
+        height: 60px !important;
+        width: auto !important;
+        mix-blend-mode: multiply !important;
+    }
+}
+
+/* ========================================
+   FIN DEL ARCHIVO RESPONSIVE
+   ======================================== */
