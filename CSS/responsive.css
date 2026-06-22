@@ -444,49 +444,84 @@
         font-size: 13px;
     }
 
-    /* Index - Product showcase - CAMBIAR LAYOUT A VERTICAL */
+    /* Index - Product showcase - LAYOUT VERTICAL APILADO */
+    /* En mobile mostramos los 3 productos uno debajo del otro (info + imágenes)
+       en vez del scroll-trigger que cambia el producto solo */
     .unified-product-section {
-        padding: 40px 15px;
+        padding: 0 !important;
+        margin: 0 !important;
         height: auto !important;
         min-height: auto !important;
+        display: flex !important;
+        flex-direction: column !important;
+        background: linear-gradient(135deg, #3a3169 0%, #4a4179 100%);
     }
 
-    /* Cambiar layout de las secciones de producto a vertical */
+    /* Aplanar los wrappers para poder intercalar info + imágenes con `order` */
+    .background-images,
+    .product-content-overlay {
+        display: contents !important;
+    }
+
+    /* Mostrar TODAS las secciones e infos, no solo la activa */
+    .product-section,
+    .product-info {
+        display: flex !important;
+        opacity: 1 !important;
+    }
+
+    /* Intercalar: por cada producto, primero el bloque de info, después las imágenes */
+    .product-info[data-product="smooth"]      { order: 1 !important; }
+    .product-section[data-product="smooth"]   { order: 2 !important; }
+    .product-info[data-product="touch"]       { order: 3 !important; }
+    .product-section[data-product="touch"]    { order: 4 !important; }
+    .product-info[data-product="estándar"]    { order: 5 !important; }
+    .product-section[data-product="estándar"] { order: 6 !important; }
+    .product-info[data-product="estandar"]    { order: 5 !important; }
+    .product-section[data-product="estandar"] { order: 6 !important; }
+
+    /* Cada bloque de info (logo + texto) ocupa ancho completo con padding propio */
+    .product-info {
+        position: relative !important;
+        top: auto !important;
+        left: auto !important;
+        transform: none !important;
+        opacity: 1 !important;
+        max-width: 100% !important;
+        width: 100% !important;
+        padding: 40px 20px !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        text-align: center !important;
+        color: white !important;
+    }
+
+    /* Cada bloque de imágenes apila left + right verticalmente */
     .product-section {
         flex-direction: column !important;
         height: auto !important;
+        width: 100% !important;
         position: relative !important;
-        display: flex !important;
     }
 
     .product-section .split-image {
         width: 100% !important;
-        height: 50vh !important;
+        height: 35vh !important;
         flex: none !important;
+        opacity: 1 !important;
+        transform: none !important;
     }
 
-    /* Orden: primero contenido (texto), después imágenes */
-    .product-content-overlay {
-        position: relative !important;
-        width: 100% !important;
+    .product-section .split-image img {
+        opacity: 1 !important;
+        transform: none !important;
+    }
+
+    .product-logo {
+        width: auto !important;
         height: auto !important;
-        order: 1 !important;
-        padding: 30px 20px !important;
-        background: linear-gradient(135deg, #3a3169 0%, #4a4179 100%) !important;
-    }
-
-    .background-images {
-        position: relative !important;
-        order: 2 !important;
-        height: auto !important;
-    }
-
-    .product-section .split-image.left-image {
-        order: 3 !important;
-    }
-
-    .product-section .split-image.right-image {
-        order: 4 !important;
+        margin: 0 auto 20px !important;
     }
 
     .product-logo img {
@@ -499,8 +534,9 @@
         color: rgba(255, 255, 255, 0.9) !important;
     }
 
+    /* Ocultar el indicador de progreso lateral en mobile */
     .product-progress {
-        bottom: 30px;
+        display: none !important;
     }
 
     /* Contacto */
@@ -629,7 +665,8 @@
 
     /* Index - Product sections */
     .unified-product-section {
-        padding: 30px 10px;
+        padding: 0 !important;
+        margin: 0 !important;
         min-height: auto;
     }
 
@@ -1085,13 +1122,8 @@
 
     /* Sección de productos principal */
     .unified-product-section {
-        min-height: 100vh !important;
-        padding: 80px 20px 40px !important;
-    }
-
-    .product-content-overlay {
-        padding: 20px !important;
-        bottom: 100px !important;
+        min-height: auto !important;
+        padding: 0 !important;
     }
 
     .product-info {
@@ -1107,11 +1139,6 @@
         font-size: 14px !important;
         line-height: 1.6 !important;
         padding: 0 10px !important;
-    }
-
-    /* Indicador de progreso */
-    .product-progress {
-        bottom: 40px !important;
     }
 
     /* Sección de calidad */
@@ -1281,10 +1308,10 @@
 
     /* Items dentro de slides */
     .catalog-slide .catalog-item {
-        min-width: 180px !important;
-        max-width: 180px !important;
-        width: 180px !important;
-        height: 240px !important;
+        min-width: 220px !important;
+        max-width: 220px !important;
+        width: 220px !important;
+        height: 420px !important;
         flex-shrink: 0 !important;
         border-radius: 8px !important;
         overflow: hidden !important;
@@ -1295,10 +1322,10 @@
 
     /* Items directos en track (sin slides) */
     .catalog-track > .catalog-item {
-        min-width: 180px !important;
-        max-width: 180px !important;
-        width: 180px !important;
-        height: 240px !important;
+        min-width: 220px !important;
+        max-width: 220px !important;
+        width: 220px !important;
+        height: 420px !important;
         flex-shrink: 0 !important;
         border-radius: 8px !important;
         overflow: hidden !important;

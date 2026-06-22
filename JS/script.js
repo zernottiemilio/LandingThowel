@@ -34,6 +34,7 @@ class ProductShowcase {
     }
 
     updateParallaxEffect() {
+        if (window.innerWidth <= 768) return;
         const activeSection = document.querySelector('.product-section.active');
         if (!activeSection) return;
 
@@ -55,6 +56,7 @@ class ProductShowcase {
     }
 
     updateShowcase() {
+        if (window.innerWidth <= 768) return;
         const showcase = document.querySelector('.unified-product-section');
         if (!showcase) return;
 
