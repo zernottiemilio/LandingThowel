@@ -94,7 +94,7 @@ img {
         width: 100% !important;
         height: 3px !important;
         background-color: #333 !important;
-        transition: all 0.3s ease !important;
+        transition: transform 0.3s ease, opacity 0.3s ease !important;
         border-radius: 3px !important;
         opacity: 1 !important;
         visibility: visible !important;
@@ -116,17 +116,24 @@ img {
 
     /* Navbar mobile */
     .navbar {
-        padding: 10px 20px !important;
-        width: calc(100% - 40px) !important;
-        max-width: calc(100% - 40px) !important;
-        margin: 15px 20px !important;
+        padding: 0 !important;
+        width: calc(100% - 30px) !important;
+        max-width: calc(100% - 30px) !important;
+        margin: 12px auto !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
         border-radius: 30px !important;
         display: flex !important;
         align-items: center !important;
         justify-content: center !important;
-        position: relative !important;
+        position: fixed !important;
+        top: 0 !important;
         height: 60px !important;
         overflow: visible !important;
+    }
+
+    .navbar.hidden {
+        transform: translateX(-50%) translateY(-100px) !important;
     }
 
     /* Menu oculto por defecto */
@@ -301,70 +308,62 @@ img {
         overflow: hidden !important;
     }
 
+    /* Ocultar el bloque de imágenes divididas — en mobile usamos
+       la imagen de fondo dentro de cada .product-info */
     .background-images {
-        position: relative !important;
-        width: 100% !important;
-        height: auto !important;
+        display: none !important;
     }
 
-    .product-section {
+    /* El overlay de contenido pasa a ser el único bloque visible:
+       flujo normal, columna, sin posición fija */
+    .product-content-overlay {
         position: relative !important;
         display: flex !important;
         flex-direction: column !important;
-        height: auto !important;
-        min-height: 60vh !important;
-        width: 100% !important;
-        opacity: 1 !important;
-        pointer-events: auto !important;
-        margin-bottom: clamp(40px, 8vw, 80px) !important;
-    }
-
-    /* Ocultar las imágenes divididas en mobile - mostrar solo como fondo */
-    .split-image {
-        display: none !important;
-    }
-
-    /* Agregar imagen de fondo a cada sección */
-    .product-section[data-product="smooth"] {
-        background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('/assets/FondoSmooth.png') center/cover no-repeat !important;
-    }
-
-    .product-section[data-product="touch"] {
-        background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('/assets/FondoTouch.png') center/cover no-repeat !important;
-    }
-
-    .product-section[data-product="estándar"] {
-        background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('/assets/FondoEstandar.png') center/cover no-repeat !important;
-    }
-
-    .product-content-overlay {
-        position: relative !important;
         width: 100% !important;
         height: auto !important;
+        top: auto !important;
+        left: auto !important;
+        transform: none !important;
         padding: 0 !important;
         margin: 0 !important;
         background: transparent !important;
-        display: none !important;
-        top: auto !important;
-        left: auto !important;
-        transform: none !important;
     }
 
-    /* Product-info dentro de product-section (movido por JavaScript) */
-    .product-section .product-info {
+    /* Cada product-info se convierte en una tarjeta completa con
+       su propia imagen de fondo y texto centrado encima */
+    .product-content-overlay .product-info {
         position: relative !important;
-        display: block !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
         opacity: 1 !important;
         top: auto !important;
         left: auto !important;
         transform: none !important;
-        padding: clamp(40px, 6vw, 60px) clamp(20px, 4vw, 40px) !important;
-        text-align: center !important;
         width: 100% !important;
         max-width: 100% !important;
+        min-height: clamp(300px, 60vw, 500px) !important;
+        padding: clamp(40px, 8vw, 70px) clamp(20px, 5vw, 50px) !important;
+        text-align: center !important;
         margin: 0 !important;
-        background: transparent !important;
-        z-index: 10 !important;
+        background-size: cover !important;
+        background-position: center !important;
+        background-repeat: no-repeat !important;
+    }
+
+    /* Imagen de fondo específica por producto */
+    .product-content-overlay .product-info[data-product="smooth"] {
+        background-image: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url('/assets/FondoSmooth.png') !important;
+    }
+
+    .product-content-overlay .product-info[data-product="touch"] {
+        background-image: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url('/assets/FondoTouch.png') !important;
+    }
+
+    .product-content-overlay .product-info[data-product="estándar"] {
+        background-image: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url('/assets/FondoEstandar.png') !important;
     }
 
     .product-logo {
@@ -380,13 +379,13 @@ img {
     }
 
     .product-description {
-        font-size: clamp(0.875rem, 2vw, 1.1rem) !important;
+        font-size: clamp(0.875rem, 2.5vw, 1.1rem) !important;
         line-height: 1.6 !important;
         text-align: center !important;
-        color: white !important;
-        text-shadow: 0 1px 3px rgba(0,0,0,0.5) !important;
+        color: rgba(255, 255, 255, 0.92) !important;
+        text-shadow: 0 1px 3px rgba(0,0,0,0.6) !important;
         margin: 0 !important;
-        padding: 0 clamp(15px, 3vw, 30px) !important;
+        padding: 0 !important;
     }
 
     /* Ocultar el indicador de progreso en mobile */
@@ -397,13 +396,24 @@ img {
 
 /* Mobile específico */
 @media (max-width: 768px) {
+    /* Hero: texto centrado en portada - asegurar que no se corte */
+    .main-content {
+        width: calc(100% - 40px) !important;
+        max-width: 100% !important;
+        padding: 0 20px !important;
+        box-sizing: border-box !important;
+    }
+
     .main-text h1 {
-        font-size: clamp(1.5rem, 4vw, 2rem) !important;
+        font-size: clamp(1.4rem, 5vw, 2rem) !important;
+        line-height: 1.25 !important;
+        word-break: break-word !important;
     }
 
     .main-text p,
     .main-content p {
-        font-size: clamp(0.875rem, 2vw, 1rem) !important;
+        font-size: clamp(0.875rem, 3.5vw, 1rem) !important;
+        line-height: 1.5 !important;
     }
 
     .product-logo img {
@@ -995,13 +1005,12 @@ img {
         text-rendering: optimizeLegibility !important;
     }
 
-    /* Asegurar que los enlaces sean táctiles */
-    a, button {
+    /* Touch targets mínimos solo en elementos interactivos clave */
+    .carousel-nav,
+    .hamburger,
+    .hexagon {
         min-height: 44px !important;
         min-width: 44px !important;
-        display: inline-flex !important;
-        align-items: center !important;
-        justify-content: center !important;
     }
 }
 

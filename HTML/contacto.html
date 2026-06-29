@@ -17,7 +17,7 @@
         <a href="/index.html" class="logo-mobile"><img src="/assets/logoHeader.png" alt="THOWEL" loading="eager" fetchpriority="high" decoding="async"></a>
 
         <!-- Botón hamburguesa (solo visible en mobile) -->
-        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <button class="hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false" aria-controls="navMenu">
             <span></span>
             <span></span>
             <span></span>
@@ -104,46 +104,61 @@
                 <input type="text" name="_honey" style="display:none">
 
                 <div class="form-group">
+                    <label for="nombre" class="form-label" data-i18n="contact.form.nameLabel">Nombre</label>
                     <input
+                        id="nombre"
                         type="text"
                         name="nombre"
-                        placeholder="Nombre:"
+                        placeholder="Tu nombre completo"
                         data-i18n="contact.form.name"
                         required
+                        autocomplete="name"
                         class="form-input"
+                        aria-required="true"
                     >
                 </div>
 
                 <div class="form-group">
+                    <label for="numero" class="form-label" data-i18n="contact.form.phoneLabel">Teléfono</label>
                     <input
+                        id="numero"
                         type="tel"
                         name="numero"
-                        placeholder="Número:"
+                        placeholder="+54 11 1234-5678"
                         data-i18n="contact.form.phone"
                         required
+                        autocomplete="tel"
                         class="form-input"
+                        aria-required="true"
                     >
                 </div>
 
                 <div class="form-group">
+                    <label for="mail" class="form-label" data-i18n="contact.form.emailLabel">Email</label>
                     <input
+                        id="mail"
                         type="email"
                         name="mail"
-                        placeholder="Mail:"
+                        placeholder="tu@email.com"
                         data-i18n="contact.form.email"
                         required
+                        autocomplete="email"
                         class="form-input"
+                        aria-required="true"
                     >
                 </div>
 
                 <div class="form-group">
+                    <label for="mensaje" class="form-label" data-i18n="contact.form.messageLabel">Mensaje</label>
                     <textarea
+                        id="mensaje"
                         name="mensaje"
-                        placeholder="Mensaje:"
+                        placeholder="¿En qué podemos ayudarte?"
                         data-i18n="contact.form.message"
                         rows="5"
                         required
                         class="form-input form-textarea"
+                        aria-required="true"
                     ></textarea>
                 </div>
 
@@ -164,7 +179,7 @@
                 </a>
             </div>
             <div class="footer-content">
-                <p data-i18n="footer.copyright">&copy; 2025 THOWEL. Todos los derechos reservados.</p>
+                <p data-i18n="footer.copyright">&copy; 2026 THOWEL. Todos los derechos reservados.</p>
             </div>
         </div>
     </footer>

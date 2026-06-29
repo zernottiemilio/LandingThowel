@@ -101,24 +101,6 @@
         padding: 5px 30px;
     }
 
-    }
-
-    /* Index - Product Showcase */
-    .product-description {
-        font-size: 16px;
-        padding: 0 40px;
-    }
-
-
-/* ========================================
-   TABLET HORIZONTAL (900px - 1024px)
-   ======================================== */
-
-@media (max-width: 1024px) and (min-width: 901px) {
-    .navbar {
-        padding: 5px 30px;
-    }
-
     .navbar ul {
         gap: 25px;
     }
@@ -465,28 +447,16 @@
         flex: none !important;
     }
 
-    /* Orden: primero contenido (texto), después imágenes */
+    /* El overlay pasa a flujo normal - gestionado en responsive-fix.css */
     .product-content-overlay {
         position: relative !important;
         width: 100% !important;
         height: auto !important;
-        order: 1 !important;
-        padding: 30px 20px !important;
-        background: linear-gradient(135deg, #3a3169 0%, #4a4179 100%) !important;
     }
 
     .background-images {
         position: relative !important;
-        order: 2 !important;
         height: auto !important;
-    }
-
-    .product-section .split-image.left-image {
-        order: 3 !important;
-    }
-
-    .product-section .split-image.right-image {
-        order: 4 !important;
     }
 
     .product-logo img {
@@ -881,7 +851,7 @@
         height: 3px;
         background-color: #333;
         border-radius: 10px;
-        transition: all 0.3s ease;
+        transition: transform 0.3s ease, opacity 0.3s ease;
     }
 
     .hamburger.active span:nth-child(1) {

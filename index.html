@@ -5,10 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>THOWEL - Soluciones de Herrajes</title>
     <link rel="icon" type="image/png" href="/assets/LOGO-11.png">
+    <link rel="preload" href="assets/portada.png" as="image" fetchpriority="high">
+    <link rel="preload" href="fonts/Montserrat-Regular.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="fonts/Montserrat-Bold.ttf" as="font" type="font/ttf" crossorigin>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="CSS/navbar.css">
     <link rel="stylesheet" href="CSS/styles.css">
-    <script src="https://cdn.jsdelivr.net/npm/i18next@23.7.6/i18next.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/i18next@23.7.6/i18next.min.js" defer></script>
     <link rel="stylesheet" href="CSS/responsive.css">
     <link rel="stylesheet" href="/CSS/responsive-fix.css">
 </head>
@@ -21,63 +24,66 @@
             <a href="/index.html" class="logo-mobile"><img src="/assets/logoHeader.png" alt="THOWEL" loading="lazy" decoding="async"></a>
 
             <!-- Botón hamburguesa (solo visible en mobile) -->
-            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+            <button class="hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false" aria-controls="navMenu">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
 
             <ul class="nav-menu" id="navMenu">
-                <li><a href="#inicio" data-i18n="nav.home">INICIO</a></li>
-                <li>
-                    <a href="#productos" class="productos-link" data-i18n="nav.products">PRODUCTOS</a>
-                    <div class="dropdown">
-                        <div class="dropdown-item">
-                            <a href="#cajones" data-i18n="nav.drawers">CAJONES</a>
-                            <div class="subdropdown">
-                                <a href="/HTML/ThowelBoxCristal.html" data-i18n="products.thowelBoxCristal">THOWELBOX CRISTAL</a>
-                                <a href="/HTML/thowelBoxPlus.html" data-i18n="products.thowelBoxPlus">THOWELBOX PLUS</a>
-                                <a href="/HTML/thowelBox.html" data-i18n="products.thowelBox">THOWELBOX</a>
-                                <a href="/HTML/lateralCajonMetalico.html" data-i18n="products.lateralCajonMetalico">LATERAL CAJÓN METÁLICO</a>
+                <div class="nav-group nav-left">
+                    <li><a href="#inicio" data-i18n="nav.home">INICIO</a></li>
+                    <li>
+                        <a href="#productos" class="productos-link" data-i18n="nav.products">PRODUCTOS</a>
+                        <div class="dropdown">
+                            <div class="dropdown-item">
+                                <a href="#cajones" data-i18n="nav.drawers">CAJONES</a>
+                                <div class="subdropdown">
+                                    <a href="/HTML/ThowelBoxCristal.html" data-i18n="products.thowelBoxCristal">THOWELBOX CRISTAL</a>
+                                    <a href="/HTML/thowelBoxPlus.html" data-i18n="products.thowelBoxPlus">THOWELBOX PLUS</a>
+                                    <a href="/HTML/thowelBox.html" data-i18n="products.thowelBox">THOWELBOX</a>
+                                    <a href="/HTML/lateralCajonMetalico.html" data-i18n="products.lateralCajonMetalico">LATERAL CAJÓN METÁLICO</a>
+                                </div>
+                            </div>
+                            <div class="dropdown-item">
+                                <a href="#bisagras" data-i18n="nav.hinges">BISAGRAS</a>
+                                <div class="subdropdown">
+                                    <a href="/HTML/bisagraClip3D.html" data-i18n="products.hingeClip3d">BISAGRA CLIP 3D</a>
+                                    <a href="/HTML/bisagraSoftClosing.html" data-i18n="products.hingeSoftClosing">BISAGRA SOFT CLOSING</a>
+                                    <a href="/HTML/bisagraCazoletaEstandar.html" data-i18n="products.hingeCup">BISAGRA CAZOLETA</a>
+                                    <a href="/HTML/bisagraPushOpen.html" data-i18n="products.hingePushOpen">BISAGRA PUSH OPEN</a>
+                                    <a href="/HTML/bisagraCazoleta155.html" data-i18n="products.hingeCup155">BISAGRA CAZOLETA 155° Y 175°</a>
+                                    <a href="/HTML/retenExpulsor.html" data-i18n="products.retainerExpeller">RETÉN EXPULSOR</a>
+                                    <a href="/HTML/PistonAGAS.html" data-i18n="products.gasPiston">PISTÓN A GAS</a>
+                                </div>
+                            </div>
+                            <div class="dropdown-item">
+                                <a href="#guias" data-i18n="nav.slides">GUÍAS Y CORREDERAS</a>
+                                <div class="subdropdown">
+                                    <a href="/HTML/guiaOculta3DSoftClosing.html" data-i18n="products.hiddenSlide3d">GUÍA OCULTA 3D SOFT CLOSING</a>
+                                    <a href="/HTML/guiaOcultaPushOpen.html" data-i18n="products.hiddenSlidePush">GUÍA OCULTA PUSH OPEN</a>
+                                    <a href="/HTML/correderaTelescopicaSoftClosing.html" data-i18n="products.telescopicSlideSoft">CORREDERA TELESCÓPICA SOFT CLOSING</a>
+                                    <a href="/HTML/correderaTelescopicaPushOpen.html" data-i18n="products.telescopicSlidePush">CORREDERA TELESCÓPICA PUSH OPEN</a>
+                                    <a href="/HTML/correderaTelescopicaEstandarH45.html" data-i18n="products.telescopicSlideH45">CORREDERA TELESCÓPICA ESTÁNDAR H45</a>
+                                    <a href="/HTML/correderaTelescopicaEstandarH35.html" data-i18n="products.telescopicSlideH35">CORREDERA TELESCÓPICA ESTÁNDAR H35</a>
+                                    <a href="/HTML/correderaZ.html" data-i18n="products.slideZ">CORREDERA Z</a>
+                                </div>
+                            </div>
+                            <div class="dropdown-item">
+                                <a href="#tiradores" data-i18n="nav.handles">TIRADORES, MANIJAS Y SISTEMAS DE APOYO</a>
+                                <div class="subdropdown">
+                                    <a href="/HTML/manijas.html" data-i18n="products.handles">MANIJAS</a>
+                                    <a href="/HTML/sistemasApoyo.html" data-i18n="products.supportSystems">SISTEMAS DE APOYO</a>
+                                </div>
                             </div>
                         </div>
-
-                        <div class="dropdown-item">
-                            <a href="#bisagras" data-i18n="nav.hinges">BISAGRAS</a>
-                            <div class="subdropdown">
-                                <a href="/HTML/bisagraClip3D.html" data-i18n="products.hingeClip3d">BISAGRA CLIP 3D</a>
-                                <a href="/HTML/bisagraSoftClosing.html" data-i18n="products.hingeSoftClosing">BISAGRA SOFT CLOSING</a>
-                                <a href="/HTML/bisagraCazoletaEstandar.html" data-i18n="products.hingeCup">BISAGRA CAZOLETA</a>
-                                <a href="/HTML/bisagraPushOpen.html" data-i18n="products.hingePushOpen">BISAGRA PUSH OPEN</a>
-                                <a href="/HTML/bisagraCazoleta155.html" data-i18n="products.hingeCup155">BISAGRA CAZOLETA 155° Y 175°</a>
-                                <a href="/HTML/retenExpulsor.html" data-i18n="products.retainerExpeller">RETÉN EXPULSOR</a>
-                                <a href="/HTML/PistonAGAS.html" data-i18n="products.gasPiston">PISTÓN A GAS</a>
-                            </div>
-                        </div>
-                        <div class="dropdown-item">
-                            <a href="#guias" data-i18n="nav.slides">GUÍAS Y CORREDERAS</a>
-                            <div class="subdropdown">
-                                <a href="/HTML/guiaOculta3DSoftClosing.html" data-i18n="products.hiddenSlide3d">GUÍA OCULTA 3D SOFT CLOSING</a>
-                                <a href="/HTML/guiaOcultaPushOpen.html" data-i18n="products.hiddenSlidePush">GUÍA OCULTA PUSH OPEN</a>
-                                <a href="/HTML/correderaTelescopicaSoftClosing.html" data-i18n="products.telescopicSlideSoft">CORREDERA TELESCÓPICA SOFT CLOSING</a>
-                                <a href="/HTML/correderaTelescopicaPushOpen.html" data-i18n="products.telescopicSlidePush">CORREDERA TELESCÓPICA PUSH OPEN</a>
-                                <a href="/HTML/correderaTelescopicaEstandarH45.html" data-i18n="products.telescopicSlideH45">CORREDERA TELESCÓPICA ESTÁNDAR H45</a>
-                                <a href="/HTML/correderaTelescopicaEstandarH35.html" data-i18n="products.telescopicSlideH35">CORREDERA TELESCÓPICA ESTÁNDAR H35</a>
-                                <a href="/HTML/correderaZ.html" data-i18n="products.slideZ">CORREDERA Z</a>
-                            </div>
-                        </div>
-                        <div class="dropdown-item">
-                            <a href="#tiradores" data-i18n="nav.handles">TIRADORES, MANIJAS Y SISTEMAS DE APOYO</a>
-                            <div class="subdropdown">
-                                <a href="/HTML/manijas.html" data-i18n="products.handles">MANIJAS</a>
-                                <a href="/HTML/sistemasApoyo.html" data-i18n="products.supportSystems">SISTEMAS DE APOYO</a>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                <li><a href="index.html" class="logo"><img src="assets/logoHeader.png" alt="THOWEL" loading="eager" decoding="sync"></a></li>
-                <li><a href="/HTML/sobreNosotros.html" data-i18n="nav.about">SOBRE NOSOTROS</a></li>
-                <li><a href="/HTML/contacto.html" data-i18n="nav.contact">CONTACTOS</a></li>
+                    </li>
+                </div>
+                <li class="nav-logo-item"><a href="index.html" class="logo"><img src="assets/logoHeader.png" alt="THOWEL" loading="eager" decoding="sync"></a></li>
+                <div class="nav-group nav-right">
+                    <li><a href="/HTML/sobreNosotros.html" data-i18n="nav.about">SOBRE NOSOTROS</a></li>
+                    <li><a href="/HTML/contacto.html" data-i18n="nav.contact">CONTACTOS</a></li>
+                </div>
             </ul>
         </nav>
 
@@ -166,11 +172,11 @@
         
         <!-- Progress Indicator -->
         <div class="product-progress">
-            <div class="progress-bar"></div>
-            <div class="progress-dots">
-                <span class="dot active" data-product="smooth"></span>
-                <span class="dot" data-product="touch"></span>
-                <span class="dot" data-product="estándar"></span>
+            <div class="progress-bar" role="progressbar" aria-hidden="true"></div>
+            <div class="progress-dots" role="tablist" aria-label="Tecnologías de producto">
+                <button class="dot active" data-product="smooth" role="tab" aria-selected="true" aria-label="SMOOTH"></button>
+                <button class="dot" data-product="touch" role="tab" aria-selected="false" aria-label="TOUCH"></button>
+                <button class="dot" data-product="estándar" role="tab" aria-selected="false" aria-label="ESTÁNDAR"></button>
             </div>
         </div>
     </section>
@@ -179,13 +185,13 @@
     <section class="calidad-section">
         <div class="calidad-container">
             <div class="calidad-content">
-                <div class="calidad-text">
+                <div class="calidad-text" data-animate>
                     <h2 class="calidad-title" data-i18n="home.quality.title">CALIDAD</h2>
                     <p class="calidad-description" data-i18n="home.quality.description">
                         Diseñamos y desarrollamos soluciones pensadas para productos con movimientos silenciosos y duraderos en sus ciclos de uso. Aportamos practicidad en la organización de tus espacios, generando calidad de vida en cada decisión para tus proyectos.
                     </p>
                 </div>
-                <div class="calidad-icon">
+                <div class="calidad-icon" data-animate data-delay="200">
                     <img src="assets/calidad.png" alt="Calidad THOWEL" loading="lazy" decoding="async">
                 </div>
             </div>
@@ -195,7 +201,7 @@
     <!-- Sección Header del Catálogo -->
     <section class="catalog-header-section" id="catalogo">
         <div class="catalog-header">
-            <div class="catalog-title-section">
+            <div class="catalog-title-section" data-animate>
                 <a href="assets/catalogo/CatalogoThowl.pdf" target="_blank" class="catalog-title-link">
                     <h2 class="catalog-title" data-i18n="home.catalog.title">CATÁLOGO</h2>
                     <span class="catalog-tooltip">Ver catálogo</span>
@@ -205,7 +211,7 @@
                 </div>
             </div>
 
-            <div class="catalog-description-section">
+            <div class="catalog-description-section" data-animate data-delay="200">
                 <p class="catalog-description" data-i18n="home.catalog.description">
                     Descubre nuestros herrajes creados para ofrecer funcionalidad, estilo y
                     durabilidad en cada proyecto. Con tecnología de vanguardia y diseños innovadores,
@@ -306,17 +312,17 @@
     <div class="footer-container">
 
         <div class="footer-hexagons">
-            <a href="mailto:info@thowel.com" class="hexagon hex-mail" title="Email">
-                <img src="assets/MAIL.png" alt="Email" loading="lazy" decoding="async">
+            <a href="mailto:info@thowel.com" class="hexagon hex-mail" title="Email" aria-label="Enviar email a THOWEL">
+                <img src="assets/MAIL.png" alt="" loading="lazy" decoding="async">
             </a>
-            <a href="#" class="hexagon hex-instagram" title="Instagram" target="_blank">
-                <img src="assets/INSTAGRAM.png" alt="Instagram" loading="lazy" decoding="async">
+            <a href="https://www.instagram.com/thowel.ok/" class="hexagon hex-instagram" title="Instagram" target="_blank" rel="noopener noreferrer" aria-label="Instagram de THOWEL">
+                <img src="assets/INSTAGRAM.png" alt="" loading="lazy" decoding="async">
             </a>
         </div>
 
 
         <div class="footer-content">
-            <p data-i18n="footer.copyright">&copy; 2024 THOWEL. Todos los derechos reservados.</p>
+            <p data-i18n="footer.copyright">&copy; 2026 THOWEL. Todos los derechos reservados.</p>
         </div>
     </div>
 </footer>

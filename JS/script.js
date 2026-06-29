@@ -34,6 +34,8 @@ class ProductShowcase {
     }
 
     updateParallaxEffect() {
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
         const activeSection = document.querySelector('.product-section.active');
         if (!activeSection) return;
 
@@ -41,14 +43,12 @@ class ProductShowcase {
         const sectionRect = activeSection.getBoundingClientRect();
         const sectionTop = sectionRect.top + scrollY;
 
-        // Calcular el offset de parallax basado en la posición del scroll
         const offset = (scrollY - sectionTop) * 0.15;
 
         const leftImage = activeSection.querySelector('.split-image.left-image img');
         const rightImage = activeSection.querySelector('.split-image.right-image img');
 
         if (leftImage && rightImage) {
-            // Aplicar efecto parallax sutil
             leftImage.style.transform = `translateY(${offset}px)`;
             rightImage.style.transform = `translateY(${-offset}px)`;
         }
@@ -104,14 +104,13 @@ class ProductShowcase {
         const newSection = document.querySelector(`[data-product="${this.products[newProduct]}"].product-section`);
 
         // PASO 1: Animar salida de la sección anterior
-        if (oldSection && typeof anime !== 'undefined') {
+        const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        if (oldSection && typeof anime !== 'undefined' && !prefersReduced) {
             const oldLeftImage = oldSection.querySelector('.split-image.left-image');
             const oldRightImage = oldSection.querySelector('.split-image.right-image');
 
-            // Determinar dirección de salida (izquierda si vamos hacia adelante, derecha si retrocedemos)
             const direction = newProduct > oldProduct ? -1 : 1;
 
-            // Animar salida de imágenes
             anime({
                 targets: oldLeftImage,
                 translateX: direction * -150 + 'px',
@@ -142,22 +141,25 @@ class ProductShowcase {
             });
             document.querySelectorAll('.dot').forEach(dot => {
                 dot.classList.remove('active');
+                dot.setAttribute('aria-selected', 'false');
             });
 
             // Activar nueva sección
             document.querySelector(`[data-product="${this.products[newProduct]}"].product-info`)?.classList.add('active');
             newSection?.classList.add('active');
-            document.querySelectorAll('.dot')[newProduct]?.classList.add('active');
+            const activeDot = document.querySelectorAll('.dot')[newProduct];
+            if (activeDot) {
+                activeDot.classList.add('active');
+                activeDot.setAttribute('aria-selected', 'true');
+            }
 
             // PASO 3: Animar entrada de la nueva sección
-            if (newSection && typeof anime !== 'undefined') {
+            if (newSection && typeof anime !== 'undefined' && !prefersReduced) {
                 const leftImage = newSection.querySelector('.split-image.left-image');
                 const rightImage = newSection.querySelector('.split-image.right-image');
 
-                // Determinar dirección de entrada (opuesta a la salida)
                 const direction = newProduct > oldProduct ? 1 : -1;
 
-                // Reset estilos inline
                 if (leftImage) {
                     leftImage.style.opacity = '';
                     leftImage.style.transform = '';
@@ -167,7 +169,6 @@ class ProductShowcase {
                     rightImage.style.transform = '';
                 }
 
-                // Animar entrada imagen izquierda
                 anime({
                     targets: leftImage,
                     translateX: [direction * -120 + 'px', '0px'],
@@ -178,7 +179,6 @@ class ProductShowcase {
                     delay: 50
                 });
 
-                // Animar entrada imagen derecha
                 anime({
                     targets: rightImage,
                     translateX: [direction * 120 + 'px', '0px'],
@@ -352,6 +352,17 @@ let lastScrollTop = 0;
 let productShowcaseInstance;
 let catalogCarouselInstance;
 
+function throttle(fn, ms) {
+    let last = 0;
+    return function (...args) {
+        const now = Date.now();
+        if (now - last >= ms) {
+            last = now;
+            fn.apply(this, args);
+        }
+    };
+}
+
 // ============================================
 // MENÚ HAMBURGUESA - MOBILE
 // ============================================
@@ -360,7 +371,6 @@ function initMobileMenu() {
     const hamburger = document.getElementById('hamburger');
     const navMenu = document.getElementById('navMenu');
 
-    console.log('Inicializando menú mobile...', {hamburger, navMenu});
 
     if (!hamburger || !navMenu) {
         console.error('No se encontraron elementos del menú');
@@ -372,15 +382,15 @@ function initMobileMenu() {
         e.preventDefault();
         e.stopPropagation();
 
-        console.log('Click en hamburguesa');
 
         hamburger.classList.toggle('active');
         navMenu.classList.toggle('active');
 
-        console.log('Menú activo:', navMenu.classList.contains('active'));
+        const isOpen = navMenu.classList.contains('active');
+        hamburger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        hamburger.setAttribute('aria-label', isOpen ? 'Cerrar menú' : 'Abrir menú');
 
-        // Prevenir scroll cuando el menú está abierto
-        if (navMenu.classList.contains('active')) {
+        if (isOpen) {
             document.body.style.overflow = 'hidden';
         } else {
             document.body.style.overflow = '';
@@ -510,7 +520,6 @@ function initMobileMenu() {
         }
     });
 
-    console.log('Menú mobile inicializado correctamente');
 }
 
 // Inicializar cuando el DOM esté listo
@@ -521,36 +530,31 @@ if (document.readyState === 'loading') {
 }
 
 // Parallax effect for main text and navbar hide functionality
-window.addEventListener('scroll', () => {
+window.addEventListener('scroll', throttle(() => {
     const scrolled = window.pageYOffset;
     const parallax = document.querySelector('.main-text');
     const navbar = document.querySelector('.navbar');
 
-    // Parallax effect
-    if (parallax) {
+    if (parallax && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
         parallax.style.transform = `translateY(${scrolled * 0.2}px)`;
     }
 
-    // Navbar hide/show functionality
     if (navbar) {
-        // No esconder el navbar si el menú móvil está abierto
         const navMenu = document.querySelector('.navbar ul');
         if (navMenu && navMenu.classList.contains('active')) {
             return;
         }
 
         if (scrolled > lastScrollTop && scrolled > 100) {
-            // Scrolling down and past header
             navbar.classList.add('hidden');
         } else {
-            // Scrolling up or at top
             navbar.classList.remove('hidden');
             const opacity = scrolled > 50 ? 0.98 : 0.95;
             navbar.style.background = `rgba(255, 255, 255, ${opacity})`;
         }
         lastScrollTop = scrolled;
     }
-});
+}, 16));
 
 // Smooth scroll for navigation
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -579,7 +583,6 @@ function reorganizeProductSectionsForMobile() {
     const isMobile = window.innerWidth <= 1024;
 
     if (isMobile) {
-        console.log('Reorganizando secciones para mobile...');
 
         // Obtener todas las secciones de productos
         const productSections = document.querySelectorAll('.product-section[data-product]');
@@ -596,7 +599,6 @@ function reorganizeProductSectionsForMobile() {
                 productInfoClone.style.display = 'block';
                 section.appendChild(productInfoClone);
 
-                console.log(`Product info movido para ${productType}`);
             }
         });
 
@@ -606,7 +608,6 @@ function reorganizeProductSectionsForMobile() {
             overlay.style.display = 'none';
         }
 
-        console.log('Reorganización completa');
     }
 }
 
@@ -638,13 +639,13 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Animar la primera sección activa al cargar (solo desktop)
+    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     setTimeout(() => {
         const firstSection = document.querySelector('.product-section.active');
-        if (firstSection && typeof anime !== 'undefined' && window.innerWidth > 1024) {
+        if (firstSection && typeof anime !== 'undefined' && window.innerWidth > 1024 && !prefersReduced) {
             const leftImage = firstSection.querySelector('.split-image.left-image');
             const rightImage = firstSection.querySelector('.split-image.right-image');
 
-            // Reset estilos inline antes de animar
             if (leftImage) {
                 leftImage.style.opacity = '';
                 leftImage.style.transform = '';
@@ -675,6 +676,27 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
     }, 500);
+
+    // IntersectionObserver para entry animations
+    if ('IntersectionObserver' in window) {
+        const animateObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    animateObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.15 });
+
+        document.querySelectorAll('[data-animate]').forEach(el => {
+            animateObserver.observe(el);
+        });
+    } else {
+        // Fallback sin IntersectionObserver
+        document.querySelectorAll('[data-animate]').forEach(el => {
+            el.classList.add('is-visible');
+        });
+    }
 
     // Initialize catalog carousel
     catalogCarouselInstance = new CatalogCarousel();

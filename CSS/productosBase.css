@@ -26,6 +26,7 @@
     src: url('/fonts/Montserrat-Regular.ttf') format('truetype');
     font-weight: 400;
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
@@ -33,6 +34,7 @@
     src: url('/fonts/Montserrat-Bold.ttf') format('truetype');
     font-weight: 700;
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
@@ -40,6 +42,7 @@
     src: url('/fonts/Montserrat-Light.ttf') format('truetype');
     font-weight: 300;
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
@@ -47,6 +50,7 @@
     src: url('/fonts/Montserrat-Medium.ttf') format('truetype');
     font-weight: 500;
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
@@ -54,6 +58,7 @@
     src: url('/fonts/Montserrat-ExtraLight.ttf') format('truetype');
     font-weight: 200;
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
@@ -61,6 +66,7 @@
     src: url('/fonts/Montserrat-Black.ttf') format('truetype');
     font-weight: 900;
     font-style: normal;
+    font-display: swap;
 }
 
 * {
@@ -91,7 +97,7 @@ body {
     left: 50%;
     transform: translateX(-50%);
     z-index: 1000;
-    transition: all 0.3s ease;
+    transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94), opacity 0.3s ease;
 }
 
 .navbar.hidden {
@@ -118,7 +124,7 @@ body {
     font-weight: 500;
     padding: 10px 20px;
     border-radius: 25px;
-    transition: all 0.3s ease;
+    transition: background-color 0.25s ease, color 0.25s ease;
     text-transform: uppercase;
     font-size: 14px;
     background: transparent;
@@ -168,7 +174,7 @@ body {
     opacity: 0;
     visibility: hidden;
     transform: translateY(-10px);
-    transition: all 0.3s ease;
+    transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s ease;
     z-index: 1001;
     text-align: left;
 }
@@ -213,7 +219,7 @@ body {
     opacity: 0;
     visibility: hidden;
     transform: translateX(-10px);
-    transition: all 0.3s ease;
+    transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s ease;
     z-index: 1002;
 }
 

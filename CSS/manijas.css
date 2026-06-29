@@ -10,6 +10,7 @@
     src: url('../fonts/Montserrat-Regular.ttf') format('truetype');
     font-weight: 400;
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
@@ -17,6 +18,7 @@
     src: url('../fonts/Montserrat-Bold.ttf') format('truetype');
     font-weight: 700;
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
@@ -24,6 +26,7 @@
     src: url('../fonts/Montserrat-Light.ttf') format('truetype');
     font-weight: 300;
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
@@ -31,6 +34,7 @@
     src: url('../fonts/Montserrat-Medium.ttf') format('truetype');
     font-weight: 500;
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
@@ -38,6 +42,7 @@
     src: url('../fonts/Montserrat-ExtraLight.ttf') format('truetype');
     font-weight: 200;
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
@@ -45,6 +50,7 @@
     src: url('../fonts/Montserrat-Black.ttf') format('truetype');
     font-weight: 900;
     font-style: normal;
+    font-display: swap;
 }
 
 * {
@@ -79,7 +85,7 @@ body {
     left: 50%;
     transform: translateX(-50%);
     z-index: 1000;
-    transition: all 0.3s ease;
+    transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94), opacity 0.3s ease;
 }
 
 .navbar.hidden {
@@ -100,13 +106,13 @@ body {
 
 .navbar a {
     text-decoration: none;
-    color: #1e3a8a;
+    color: #1a1a1a;
     margin: 15px;
     text-align: center;
     font-weight: 500;
     padding: 10px 20px;
     border-radius: 25px;
-    transition: all 0.3s ease;
+    transition: background-color 0.25s ease, color 0.25s ease;
     text-transform: uppercase;
     font-size: 14px;
     background: transparent;
@@ -120,7 +126,7 @@ body {
 
 .navbar a:not(:hover) {
     background: transparent;
-    color: #1e3a8a;
+    color: #1a1a1a;
 }
 
 .navbar .logo {
@@ -156,7 +162,7 @@ body {
     opacity: 0;
     visibility: hidden;
     transform: translateY(-10px);
-    transition: all 0.3s ease;
+    transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s ease;
     z-index: 1001;
     text-align: left;
 }
@@ -201,7 +207,7 @@ body {
     opacity: 0;
     visibility: hidden;
     transform: translateX(-10px);
-    transition: all 0.3s ease;
+    transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s ease;
     z-index: 1002;
 }
 
@@ -429,13 +435,13 @@ body {
 .producto-titulo-principal {
     font-size: 28px;
     font-weight: 900;
-    color: #1e3a8a;
+    color: #1a1a1a;
     margin-bottom: 15px;
 }
 
 .producto-descripcion {
     font-size: 14px;
-    color: #1e3a8a;
+    color: #1a1a1a;
     line-height: 1.6;
     margin-bottom: 60px;
     max-width: 450px;
@@ -750,7 +756,7 @@ section#rueda-nylon.producto-section {
 .producto-titulo {
     font-size: 24px;
     font-weight: 900;
-    color: #1e3a8a;
+    color: #1a1a1a;
     line-height: 1.1;
     margin-bottom: 15px;
 }
@@ -764,7 +770,7 @@ section#rueda-nylon.producto-section {
 
 .producto-descripcion {
     font-size: 18px;
-    color: #1e3a8a;
+    color: #1a1a1a;
     line-height: 1.8;
     margin-bottom: 20px;
     max-width: 600px;
@@ -842,7 +848,7 @@ section#rueda-nylon.producto-section {
 
 .specs-intro {
     font-size: 18px;
-    color: #1e3a8a;
+    color: #1a1a1a;
     line-height: 1.8;
     margin-bottom: 30px;
     max-width: 600px;
@@ -987,7 +993,7 @@ section#rueda-nylon.producto-section {
 .video-titulo {
     font-size: 36px;
     font-weight: 900;
-    color: #1e3a8a;
+    color: #1a1a1a;
     margin-bottom: 30px;
 }
 
@@ -1014,7 +1020,7 @@ section#rueda-nylon.producto-section {
 .similares-titulo {
     font-size: 36px;
     font-weight: 900;
-    color: #1e3a8a;
+    color: #1a1a1a;
     text-align: center;
     margin: 0 0 20px 0;
     padding: 0 60px;
