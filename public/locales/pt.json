@@ -1,0 +1,194 @@
+{
+  "nav": {
+    "home": "INÍCIO",
+    "products": "PRODUTOS",
+    "drawers": "GAVETAS",
+    "hinges": "DOBRADIÇAS",
+    "slides": "GUIAS E CORREDIÇAS",
+    "handles": "PUXADORES, ALÇAS E SISTEMAS DE APOIO",
+    "about": "SOBRE NÓS",
+    "contact": "CONTATO"
+  },
+  "products": {
+    "thowelBoxCristal": "THOWEL BOX CRISTAL",
+    "thowelBoxPlus": "THOWEL BOX PLUS",
+    "thowelBox": "THOWEL BOX",
+    "hingeClip3d": "DOBRADIÇA CLIP 3D",
+    "hingeSoftClosing": "DOBRADIÇA SOFT CLOSING",
+    "hingeCup": "DOBRADIÇA CANECO",
+    "hingePushOpen": "DOBRADIÇA PUSH OPEN",
+    "hingeCup155": "DOBRADIÇA CANECO 155° E 175°",
+    "hingeAngles": "DOBRADIÇA ÂNGULOS ESPECIAIS",
+    "retainerExpeller": "RETENTOR EXPULSOR",
+    "gasPiston": "PISTÃO A GÁS",
+    "hiddenSlide3d": "GUIA OCULTA 3D SOFT CLOSING",
+    "hiddenSlidePush": "GUIA OCULTA PUSH OPEN",
+    "telescopicSlideSoft": "CORREDIÇA TELESCÓPICA SOFT CLOSING",
+    "telescopicSlidePush": "CORREDIÇA TELESCÓPICA PUSH OPEN",
+    "telescopicSlideH45": "CORREDIÇA TELESCÓPICA PADRÃO H45",
+    "telescopicSlideH35": "CORREDIÇA TELESCÓPICA PADRÃO H35",
+    "slideZ": "CORREDIÇA Z",
+    "handles": "ALÇAS",
+    "supportSystems": "SISTEMAS DE APOIO",
+    "plasticLeg": "PÉ PLÁSTICO",
+    "nylonWheel": "RODA DE NAILON"
+  },
+  "home": {
+    "hero": {
+      "title": "Explore nossa linha de produtos",
+      "subtitle": "e encontre a solução perfeita para cada necessidade"
+    },
+    "technology": {
+      "smooth": {
+        "description": "Nossa tecnologia SMOOTH permite fechamentos amortecidos e silenciosos, o que proporciona grande conforto aos móveis."
+      },
+      "touch": {
+        "description": "A inovadora tecnologia TOUCH permite aberturas completamente mecânicas, sem esforço e frentes de móveis sem alças ou puxadores."
+      },
+      "standard": {
+        "description": "A tecnologia PADRÃO garante grande durabilidade e excelente desempenho para os produtos que desenvolvemos, por isso é aplicada em muitos de nossos designs."
+      }
+    },
+    "quality": {
+      "title": "QUALIDADE",
+      "description": "Projetamos e desenvolvemos soluções pensadas para produtos com movimentos silenciosos e duráveis em seus ciclos de uso. Proporcionamos praticidade na organização de seus espaços, gerando qualidade de vida em cada decisão para seus projetos."
+    },
+    "catalog": {
+      "title": "CATÁLOGO",
+      "description": "Descubra nossas ferragens criadas para oferecer funcionalidade, estilo e durabilidade em cada projeto. Com tecnologia de ponta e designs inovadores, cada produto é projetado para superar as expectativas mais exigentes."
+    }
+  },
+  "about": {
+    "headerTitle": "Criamos <span class=\"highlight\">ferragens</span> pensadas para <span class=\"highlight\">melhorar</span><br>cada projeto.",
+    "sectionTitle": "SOBRE NÓS",
+    "paragraph1": "A marca começou a partir de um impulso pessoal em 2016, pois somos a terceira geração na comercialização de produtos para a indústria moveleira. A partir do qual há experiência e também motivação para continuar aprendendo e inovando.",
+    "paragraph2": "No início fabricamos artigos básicos. Posteriormente, em 2017, realizamos estudos de mercado e de produtos a fim de nos inspirarmos nas novidades em nível mundial, trazendo originalidade a cada projeto. Ao mesmo tempo, nos aventuramos na criação técnica, onde a qualidade e durabilidade também representam nosso rumo.",
+    "paragraph3": "O objetivo é e continua sendo facilitar o acesso a produtos modernos que contribuirão para concretizar cada ideia de forma fácil, eficaz e persistente.",
+    "mission": {
+      "title": "MISSÃO",
+      "description": "Ouvir e entender clientes tradicionais e novos que confiam na marca para implementar produtos com a melhor tecnologia e padrões de qualidade."
+    },
+    "vision": {
+      "title": "VISÃO",
+      "paragraph1": "Criar e desenvolver produtos para a fabricação e aplicação de cada móvel, otimizando cada espaço e suportando demandas de uso diário a longo prazo.",
+      "paragraph2": "Fortalecer a marca em mercados futuros, transcender gerações e deixar uma marca em cada experiência de seu uso."
+    }
+  },
+  "contact": {
+    "title": "ENTRE EM CONTATO",
+    "form": {
+      "name": "Nome:",
+      "phone": "Telefone:",
+      "email": "E-mail:",
+      "message": "Mensagem:",
+      "submit": "ENVIAR"
+    }
+  },
+  "productPage": {
+    "standard": "PADRÃO",
+    "similarProducts": "PRODUTOS SIMILARES",
+    "handles": {
+      "barral": {
+        "title": "ALÇA<br>BARRA",
+        "description1": "Desenvolvida sob nossa tecnologia <strong>PADRÃO</strong> garante excelente desempenho e resistência no uso diário.",
+        "description2": "Amplamente utilizada na indústria moveleira, <strong>destacando-se por sua confiabilidade, ergonomia e facilidade de instalação.</strong>",
+        "specs": "Fabricadas em aço de <strong>alta qualidade</strong> com vários acabamentos, oferecem uma <strong>solução versátil e durável</strong> para todos os tipos de móveis."
+      },
+      "boton": {
+        "title": "PUXADOR<br>BOTÃO",
+        "description1": "Desenvolvido sob nossa tecnologia <strong>PADRÃO</strong> garante excelente desempenho e resistência no uso diário.",
+        "description2": "Amplamente utilizado na indústria moveleira, <strong>destacando-se por seu design compacto, ergonomia e facilidade de instalação.</strong>",
+        "specs": "Fabricados em aço de <strong>alta qualidade</strong> com vários acabamentos, oferecem uma <strong>solução versátil e durável</strong> para todos os tipos de móveis."
+      },
+      "oval": {
+        "title": "ALÇA<br>OVAL",
+        "description1": "Desenvolvida sob nossa tecnologia <strong>PADRÃO</strong> garante excelente desempenho e resistência no uso diário.",
+        "description2": "Amplamente utilizada na indústria moveleira, <strong>destacando-se por seu design elegante, ergonomia e facilidade de instalação.</strong>",
+        "specs": "Fabricadas em aço de <strong>alta qualidade</strong> com vários acabamentos, oferecem uma <strong>solução versátil e durável</strong> para todos os tipos de móveis."
+      }
+    },
+    "hinges": {
+      "cup": {
+        "title": "DOBRADIÇA<br>CANECO",
+        "description1": "Desenvolvidas sob nossa tecnologia <strong>PADRÃO</strong> garantem excelente desempenho e resistência no uso diário.",
+        "description2": "Amplamente utilizadas na indústria moveleira, <strong>destacando-se por sua confiabilidade e facilidade de instalação.</strong>",
+        "specs": "Fabricadas em aço de <strong>alta qualidade</strong> atendendo a rigorosos padrões de produção, oferecem uma <strong>solução durável e eficiente</strong> para todos os tipos de móveis."
+      },
+      "softClosing": {
+        "title": "SOFT<br>CLOSING",
+        "tag": "DOBRADIÇA",
+        "description1": "Desenvolvidas sob nossa tecnologia <strong>PADRÃO</strong> garantem excelente desempenho e resistência no uso diário.",
+        "description2": "Amplamente utilizadas na indústria moveleira, <strong>destacando-se por sua confiabilidade e facilidade de instalação.</strong>",
+        "specs": "Fabricadas em aço de <strong>alta qualidade</strong> atendendo a rigorosos padrões de produção, oferecem uma <strong>solução durável e eficiente</strong> para todos os tipos de móveis."
+      }
+    },
+    "slides": {
+      "hiddenSlide3d": {
+        "title": "GUIA OCULTA<br>3D SOFT CLOSING",
+        "tag": "SMOOTH",
+        "description1": "Desenvolvida sob nossa tecnologia <strong>SMOOTH</strong> oferece fechamento amortecido e silencioso com ajuste tridimensional.",
+        "description2": "Amplamente utilizada em gavetas de alta qualidade, <strong>destacando-se por sua suavidade, precisão e facilidade de instalação.</strong>",
+        "specs": "Fabricadas em aço de <strong>alta qualidade</strong> com diversos acabamentos, oferecem uma <strong>solução versátil e durável</strong> para todos os tipos de móveis."
+      },
+      "hiddenSlidePush": {
+        "title": "GUIA OCULTA<br>PUSH OPEN",
+        "tag": "TOUCH",
+        "description1": "Desenvolvida sob nossa tecnologia <strong>TOUCH</strong> permite abertura com um simples toque, eliminando a necessidade de alças.",
+        "description2": "Ideal para designs minimalistas, <strong>destacando-se por sua funcionalidade inovadora e estética limpa.</strong>",
+        "specs": "Fabricadas em aço de <strong>alta qualidade</strong> com mecanismos de precisão, oferecem uma <strong>solução inovadora e durável</strong> para móveis modernos."
+      },
+      "telescopicSlideSoft": {
+        "title": "CORREDIÇA<br>TELESCÓPICA",
+        "tag": "SOFT CLOSING",
+        "description1": "Desenvolvida sob nossa tecnologia <strong>SMOOTH</strong> oferece fechamento amortecido e silencioso com extensão total.",
+        "description2": "Amplamente utilizada em gavetas de alta qualidade, <strong>destacando-se por sua suavidade, capacidade de carga e facilidade de instalação.</strong>",
+        "specs": "Fabricadas em aço de <strong>alta qualidade</strong> com rolamentos de precisão, oferecem uma <strong>solução durável e eficiente</strong> para todos os tipos de gavetas."
+      },
+      "telescopicSlidePush": {
+        "title": "CORREDIÇA<br>TELESCÓPICA",
+        "tag": "SOFT CLOSING",
+        "description1": "Desenvolvida sob nossa tecnologia <strong>SMOOTH</strong> oferece fechamento amortecido e silencioso com extensão total.",
+        "description2": "Amplamente utilizada em gavetas de alta qualidade, <strong>destacando-se por sua suavidade, capacidade de carga e facilidade de instalação.</strong>",
+        "specs": "Fabricadas em aço de <strong>alta qualidade</strong> com rolamentos de precisão, oferecem uma <strong>solução durável e eficiente</strong> para todos os tipos de gavetas."
+      },
+      "telescopicSlideH45": {
+        "title": "CORREDIÇA<br>TELESCÓPICA",
+        "tag": "SOFT CLOSING",
+        "description1": "Desenvolvida sob nossa tecnologia <strong>SMOOTH</strong> oferece fechamento amortecido e silencioso com extensão total.",
+        "description2": "Amplamente utilizada em gavetas de alta qualidade, <strong>destacando-se por sua suavidade, capacidade de carga e facilidade de instalação.</strong>",
+        "specs": "Fabricadas em aço de <strong>alta qualidade</strong> com rolamentos de precisão, oferecem uma <strong>solução durável e eficiente</strong> para todos os tipos de gavetas."
+      },
+      "telescopicSlideH35": {
+        "title": "CORREDIÇA<br>TELESCÓPICA",
+        "tag": "PADRÃO H35",
+        "description1": "Desenvolvida sob nossa tecnologia <strong>PADRÃO</strong> garante excelente desempenho e resistência no uso diário.",
+        "description2": "Com <strong>80.000 ciclos de uso</strong> e capacidade de carga de <strong>20 unidades</strong>, amplamente utilizada na indústria moveleira, destacando-se por sua confiabilidade e facilidade de instalação.",
+        "specs": "Fabricadas em <strong>aço de alta qualidade</strong> atendendo a rigorosos padrões de produção, oferecem uma solução durável e eficiente para todos os tipos de gavetas."
+      },
+      "slideZ": {
+        "title": "CORREDIÇA Z",
+        "tag": "PADRÃO",
+        "description1": "Projetada para aplicações específicas, a corrediça Z oferece uma <strong>solução prática e confiável</strong> para diversos tipos de móveis.",
+        "description2": "Com tecnologia <strong>PADRÃO</strong>, garante durabilidade e funcionamento suave no uso diário.",
+        "specs": "Fabricadas em <strong>aço de alta qualidade</strong>, as corrediças Z oferecem resistência e funcionalidade para múltiplas aplicações em móveis e sistemas de armazenamento."
+      }
+    },
+    "supportSystems": {
+      "plasticLeg": {
+        "title": "PÉ<br>PLÁSTICO",
+        "description1": "Desenvolvido sob nossa tecnologia <strong>PADRÃO</strong> garante excelente desempenho e resistência no uso diário.",
+        "description2": "Amplamente utilizado na indústria moveleira, <strong>destacando-se por sua durabilidade e facilidade de instalação.</strong>",
+        "specs": "Fabricados em plástico de <strong>alta qualidade</strong> com diversos acabamentos, oferecem uma <strong>solução versátil e durável</strong> para todos os tipos de móveis."
+      },
+      "nylonWheel": {
+        "title": "RODA DE<br>NAILON",
+        "description1": "Desenvolvida sob nossa tecnologia <strong>PADRÃO</strong> garante excelente desempenho e resistência no uso diário.",
+        "description2": "Amplamente utilizada na indústria moveleira, <strong>destacando-se por sua suavidade de deslocamento e facilidade de instalação.</strong>",
+        "specs": "Fabricadas em nailon de <strong>alta qualidade</strong> com componentes de aço, oferecem uma <strong>solução versátil e durável</strong> para todos os tipos de móveis."
+      }
+    }
+  },
+  "footer": {
+    "copyright": "© 2024 THOWEL. Todos os direitos reservados."
+  }
+}
